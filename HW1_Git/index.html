@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+        integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+        <title>HW #1 - Git</title>
+    </head>
+
+    <body>
+        <header>
+           <div > <p><img src="img/flash_cute.jpg" alt="flash"></p>
+            <h1>Домашня робота №1</h1>
+            <h2>Тема лекції: <i>"VCS (Git, Github, gh-pages, FTP)"</i></h2>
+            </div>    
+        </header>
+
+        <main>
+            <div>
+                <h3>Базові команди</h3>
+                <ul class="main_list">
+                    <li>
+                        <span>git config --global user.name blabla</span> - встановлює ім'я, яке буде 
+                        відображатися у створювальних комітах;
+                    </li>
+                    <li>
+                        <span>git config --global user.email blabal@bla</span> - встановлює адрес електроної пошти,
+                        яке буде відображатися у створювальних комітах;
+                    </li>
+                    <li>
+                        <span>git init</span>  - створює новий репозиторій в поточній папці;
+                    </li>
+                    <li>
+                        <span>git status</span> - допомагає дізнатися поточний стан репозиторію;
+                    </li>
+                    <li>
+                        <span>git add</span> - додає файли в поточний коміт;
+                    </li>
+                    <li>
+                        <span>git commit</span> - допомагає зберегти всі дані у внутрішній базі,
+                        які були додані завдяки <i>git add</i>;
+                    </li>
+                    <li>
+                        <span>git log</span> - показує історію коммітів, які були створенні
+                        в поточному репозиторію;
+                    </li>
+                    <li>
+                        <span>git checkout</span> - використовуючи цю команду: 
+                        <ul class="second_list">
+                            <li>можна повернутися до задоного коміту;</li>
+                            <li>переключатися між гілками;</li>
+                        </ul>  
+                    </li>
+                    <li>
+                        <span>git branch</span> - завдяки цій команді можна наступні дії:
+                        <ul class="second_list">
+                            <li>створити нову гілку;</li>
+                            <li>побачити список гілок;</li>
+                            <li>видалити гілку;</li>
+                            <li>змінити ім'я гілки;</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>git push</span> - завантажує всі зміни в локальному репозиторію
+                        у віддалений;
+                    </li>
+                    <li>
+                        <span>git pull</span> - завантажує історію з віддаленого репозиторію;
+                    </li>
+                    <li>
+                        <span>git merge</span> - змерджує(об'єднує) одну або декілька гілок
+                        в одну;
+                    </li>
+                    <li>
+                        <span>git clone</span> - клонує(копіює) віддалений репозиторій.
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>А для чого потрібний .gitignore файл?<i class="far fa-surprise"></i></h3>
+                <p>Такий файл слугує для того, щоб вказати в ньому які папки і файли потрібно приховати віддалений
+                    VSC Github.
+                    У файлі .gitignore в кожному рядку якого міститься шаблон файлу 
+                    або каталогу, який необхідно проігнорувати. </p>
+                    <h4>Приклад рядків файлу:</h4>
+                    <div class="codeGitignore">
+                    <code>
+                        # Object files <br>
+                            *.o <br>
+                            *.ko <br>
+                            *.obj <br>
+                            *.elf <br>
+                    </code>
+                    </div>
+                </p>
+            </div>
+        
+            <div>
+                <h3>Додаткові команди</h3>
+                <ul class= "main_list">
+                    <li><span>git revert</span> - створює ще один комміт "антикоміт"
+                    для конкретного коміту, таким чином скасовує зміни, які були виконані в ньому;</li>
+                    <li><span>git reset</span> - виконує скасування змін. Містить три основних флажка:
+                    <ul class="second_list">
+                        <li><span>--soft@n</span> - повертається назад на n коммітів, але при цьому зміни
+                        зберігаються;</li>
+                        <li><span>--mixed@n</span>- за замовчуванням;</li>
+                        <li><span>--hard@n</span>- повертається назад на n коммітів і видаляє зміни;</li>
+                    </ul></li>
+                    <li><span>git rebase</span> - дозволяє згрупувати всі коміти в один патч і перенестиміж гілками;</li>
+                    <li><span>git cherry-pick</span> - дозволяє перенести конкретний коміт з одної гілки в іншу, без
+                    використання <em>git merge</em>;</li>
+                    <li><span>git stash</span>- дозволяє зберегти зміни у поточному файлі в окреому сховищі, а сам 
+                    файл повернути до початкого стану.</li>
+                </ul>
+            </div>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+h1, h2 {
+    text-align: center;
+}
+header {
+    margin: 150px;
+}
+img {
+    height: 200px;
+    float: left;
+    margin: 0 10px 0 0;
+}
+
+ul.main_list {
+    list-style: none;
+}
+li span{
+    font-weight: 600;
+    font-style: italic;
+}
+ul.main_list li:before {
+    content: '☑ ';
+  }
+ul.second_list li::before {
+    content: '';
+}
+
+ .codeGitignore{
+    background: rgb(214, 214, 194);
+    width: 70px;  
+}
+
