@@ -25,7 +25,14 @@ fieldset {
 }
 
 .btn {
-    margin: 5px;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.tuk {
+    margin: 0;
+    padding: 0;
+    font-size: 0.8em;
 }
 
 .sex {
@@ -36,7 +43,7 @@ fieldset {
     color: #ffffff;
     text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 40px #ff00de, 0 0 80px #ff00de, 0 0 90px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
     position: absolute;
-    color: white;
+    color: #ffffff;
     font-size: 30px;
     left: 600px;
     top: 30%;
