@@ -20,8 +20,7 @@ main {
     width: 100%;
 }
 
-fieldset {
-   
+fieldset { 
     width: 40%;
 }
 
@@ -48,7 +47,7 @@ fieldset {
     position: absolute;
     font-size: 20px;
     left: 600px;
-    top: 40%;
+    top: 43%;
     bottom: 0; right: 0;
 }
 footer {

@@ -13,14 +13,12 @@ img {
 }
 
 table {
-   
-    margin-left: 50%; 
-    margin-top: 5%;
-    
+    margin-left: 45%; 
+    margin-top: 4%;
     border-collapse: collapse;
     border: 2px double rgb(245, 216, 216);
     color: rgb(255, 255, 255);
-    font-size: 25px;
+    font-size: 20px;
 }
 
 th, td {
@@ -49,6 +47,9 @@ p {
     text-transform: uppercase;
 }
 
+.profile-ref:hover {
+   text-decoration: none;
+  }
 .hover-Tr:hover {
     background: #b56ce6; 
    }
