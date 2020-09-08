@@ -1,0 +1,54 @@
+html {
+    height: 100%;
+    background:linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url('../img/10.jpg');
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover; 
+}
+
+img {
+    height: 50px;
+    width: 50px;
+}
+
+table {
+   
+    margin-left: 50%; 
+    margin-top: 5%;
+    
+    border-collapse: collapse;
+    border: 2px double rgb(245, 216, 216);
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+}
+
+th, td {
+    padding: 10px 20px;
+    border: 1.5px solid rgb(245, 216, 216);
+}
+
+caption {
+    font-size: 1.2em;
+    color:rgba(212, 14, 37, 0.788);
+    font-weight: 700;
+    padding: 10px;
+
+}
+
+p {
+    margin-left: 50%; 
+    margin-top: 4%;
+    font-weight: 700;
+    font-size: 20px;
+    color: rgb(245, 216, 216);
+}
+
+.profile-ref {
+    color:rgb(240, 232, 232);
+    text-transform: uppercase;
+}
+
+.hover-Tr:hover {
+    background: #b56ce6; 
+   }

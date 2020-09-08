@@ -1,0 +1,58 @@
+html {
+    height: 100%;
+    background:linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url('../img/11.jpg');
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover; 
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    color: rgb(255,255,255);
+}
+
+main {
+    flex: 1;
+    float: both;
+    width: 100%;
+}
+
+fieldset {
+   
+    width: 40%;
+}
+
+.btn {
+    margin: 5px;
+}
+.sex {
+    margin-left: 30px;
+}
+#finish {
+    color: #ffffff;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 40px #ff00de, 0 0 80px #ff00de, 0 0 90px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+    position: absolute;
+    color: white;
+    font-size: 30px;
+    left: 600px;
+    top: 30%;
+    bottom: 0; right: 0;
+}
+
+#mb {
+    color: #ffffff;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 40px #150f35, 0 0 80px #150f35, 0 0 90px #150f35, 0 0 100px #150f35, 0 0 150px #150f35;
+    position: absolute;
+    font-size: 20px;
+    left: 600px;
+    top: 40%;
+    bottom: 0; right: 0;
+}
+footer {
+    background: rgb(8, 57, 73);
+    color: seashell;
+    padding: 10px;
+}
