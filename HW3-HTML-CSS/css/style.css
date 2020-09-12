@@ -1,0 +1,70 @@
+body {
+    background-color:rgb(44, 44, 44);
+}
+
+.first-table {
+    margin-top: 100px;
+}
+
+table {
+    border: 1px solid rgb(104, 104, 104);
+    border-collapse: separate;
+    border-radius: 5px;
+    margin-left: 80px;
+    margin-top: 50px;
+    box-sizing: 670px;
+    background: rgb(53, 52, 53);
+    color: rgb(255, 255, 255)
+}
+
+table:last-child {
+    margin-bottom: 50px;
+}
+
+th {
+    font-weight: 500;
+    text-align: left;
+}
+
+td {
+    border-top: 1px solid rgb(104, 104, 104);  
+}
+
+tr th, 
+tr td {
+    width: 15em;
+    height: 30px;
+    padding: 15px;
+}
+
+tr td:last-child, 
+.table-search  {
+    text-align: right;
+}
+
+.table-data, .dots {
+    color: rgb(141, 141, 141);
+}
+
+.arrow-down {
+    color: rgb(255, 255, 255);
+    margin-left: 5px;
+    width: 10px;
+}
+
+input[type = search] {
+    position: relative;
+    background: rgb(77, 73, 73);
+    border-radius: 7px;
+    width: 150px;
+    text-align: left;
+    height: 35px;
+}
+
+input [type=checkbox] {
+    margin-left: 30px;
+}
+
+
+
+
