@@ -45,6 +45,9 @@ tr td:last-child,
 .table-data, .dots {
     color: rgb(141, 141, 141);
 }
+.dots-white {
+    color: rgb(255, 255, 255);
+}
 
 .arrow-down {
     color: rgb(255, 255, 255);
