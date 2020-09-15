@@ -1,0 +1,134 @@
+body {
+    font-family: 'Lato', sans-serif;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgba(213, 32, 71, 0.8) 0%,rgba(238, 61, 27, 0.8) 100%), url('../img/background.jpg');
+
+
+    background-size: cover;
+}
+
+.cloud-header-flex {
+    display: flex;
+}
+.site-header {
+    justify-content: space-around;
+    align-items: center;
+    text-transform: uppercase;
+    padding: 10px 100px 0px 100px;
+}
+
+select {
+    -webkit-appearance: none;
+}
+.cloud-logo {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.125em;
+    line-height: 1.375em;
+    text-align: center;
+    align-items: center;
+}
+
+.logo-img {
+    padding-right: 0.625em;
+}
+
+li {
+    list-style-type: none;
+}
+
+.cloud-navigation-list {
+    justify-content: space-between;
+}
+
+.cloud-navigation-link {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.875em;
+    line-height:  1.0625em;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    justify-content: center;
+    align-items: center;
+    padding: 15px;   
+}
+
+.active {
+    font-weight: bold;
+}
+
+.cloud-lang {
+    align-items: center;
+}
+.cloud-navigation-lang {
+    border: none;
+    background: none;
+    color: rgb(255, 255, 255);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.875em;
+    line-height: 1.0625em;
+    text-transform: uppercase;
+    padding-left: 10px;
+}
+
+.cloud-navigation-btn {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.875em;
+    line-height: 1.0625em;
+    display: inline;
+    width: 100px;
+    height: 40px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 6px;
+}
+
+.cloud-btn-login {
+    padding: 12px 28px;
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.cloud-block {
+    margin-top: 150px;
+    text-align: center;
+}
+
+.heading {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 72px;
+    line-height: 86px;
+    text-transform: uppercase;
+}
+.cloud-text {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 150%;
+    white-space: pre-line;
+
+}
+
+.cloud-block-btn {
+    border: 1px solid rgb(255, 255, 255);
+    width: 160px;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 6px;
+    display: inline-block;
+    margin-top: 50px;
+}
+
+.btn-sign-up {
+    padding: 17px 28px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.875em;
+    line-height: 1.0625em;
+    text-transform: uppercase;
+    color: #ED4C5C;
+    text-decoration: none;  
+    display: block;
+}
