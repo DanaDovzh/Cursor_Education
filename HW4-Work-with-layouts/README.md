@@ -8,3 +8,6 @@
 
 [Результат домашнього завдання.](https://danadovzh.github.io/Cursor_Education/HW4-Work-with-layouts/index.html)
 
+Спроби зробити трішки адаптивного дизайну:
+
+![Щось таке](imgRM/some_adap.jpg)
