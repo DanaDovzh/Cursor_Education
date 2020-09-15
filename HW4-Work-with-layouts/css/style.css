@@ -132,3 +132,48 @@ li {
     text-decoration: none;  
     display: block;
 }
+
+@media (max-width: 700px) {
+    .cloud-header-flex {
+        display: inline-block;  
+    }
+
+   .cloud-lang, .cloud-logo {
+        display: flex;
+    }
+    .heading {
+       font-size: 38px;
+    }
+    .cloud-text {
+       font-size: 16px;
+    }
+
+    .site-header {
+        padding: 0;
+        margin: 0;
+    }
+
+    .cloud-block {
+        margin-top: 50px;
+    }
+
+    .cloud-block-btn {
+        width: 150px;
+        height: 30px;
+        margin-top: 30px;
+    }
+
+    .btn-sign-up {
+        padding: 10px 20px;
+    }
+
+    .cloud-navigation-link {
+        font-size: 0.75em;  
+        padding: 7px;
+    }
+
+    .container {
+        text-align: center;
+    }
+
+}
