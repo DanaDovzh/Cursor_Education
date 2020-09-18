@@ -128,7 +128,7 @@ input, select {
     width: 540px;
 }
 
-.submit {
+.submit-btn {
     text-transform: uppercase;
     width: 160px;
     height: 50px;
@@ -137,7 +137,15 @@ input, select {
     border: none;
     color:rgb(255, 255, 255);
     box-shadow: none;
+    transition-duration: 1s;
 }
+
+.submit-btn:hover {
+    border: 1px solid #ED4C5C;
+    background-color: rgb(255, 255, 255);
+    color: #ED4C5C;
+}
+
 .sel-service {
 }
 
@@ -165,12 +173,16 @@ li {
 .footer-block-text, 
 .text-address, 
 .copyright {
-font-style: normal;
-font-weight: normal;
-font-size: 12px;
-line-height: 150%;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 150%;
 }
 .footer-heading {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
 }
 ul {
     padding: 0;
