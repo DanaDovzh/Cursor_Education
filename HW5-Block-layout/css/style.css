@@ -63,6 +63,9 @@ body {
     flex-direction: column;
 }
 
+.icon-app:hover, .icon-link:hover {
+    transform: scale(2);
+}
 .header-gallery {
     margin-left: 49px;
 }
@@ -123,18 +126,16 @@ select {
     width: 540px;
 }
 
-select {
+select option[value=select-servicem], select {
     color: grey;
 }
-
-option:not(:checked) { 
-    background-color: white; 
+option:not(:checked) {  
     color:#000;
 }
 
-option:checked { 
-    background-color: white; 
-    color:#040;
+select:checked { 
+    background-color: blue; 
+    color:#000;
 }
 
 .submit-btn {
