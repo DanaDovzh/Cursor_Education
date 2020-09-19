@@ -12,9 +12,7 @@ body {
 .copyright {
     padding-left: 11.5%;
     padding-right: 5%;
-    tex
 }
-
 
 .header-container {
     background-color: #ED4C5C;
@@ -22,45 +20,46 @@ body {
     min-height: 500px;
     display: flex;
     padding-top: 130px;
+    width: auto;
 }
 
-.select-service{
-    color:red;
-}
 .header-tblock {
-    width: 90%;
+    width: 480px;
 }
+
 .header-heading {
     margin-top: 0;
     font-weight: 600;
     font-size: 36px;
     line-height: 43px;
 }
+
 .header-text {
     display: inline-block;
     width: 445px;
     font-size: 14px;
     line-height: 140%;
-    text-align: justify;
-    margin-top: 85px;
+    margin-top: 80px;
 }
-.img-app, .img-link {
+
+.img-app, 
+.img-link {
     display: flex;
     align-items: center;
     justify-content: space-around;
-
 }
 
 .img-app {
     width: 135px;
     margin-top: 40px;
 }
+
 .img-link {
     width: 66px;
     margin-top: 20px;
 } 
+
 .icon-app, .icon-link {
-   
     flex-direction: column;
 }
 
@@ -72,16 +71,13 @@ body {
     width: 533px;
     height: 311px;
 }
+
 .main-container {
     display: flex;
     height: 500px;
-    width: 100%;
     background-color: rgb(255, 255, 255);
-    background-size: contain;
     color: rgb(0, 0, 0);
     padding-top: 117px;
-}
-.contact-block {
 }
 
 .main-heading {
@@ -102,7 +98,8 @@ body {
     margin-left: 114px;
 }
 
-input, select {
+input, 
+select {
     height: 60px;
     border-radius: 6px;
     margin-bottom: 24px;
@@ -113,19 +110,31 @@ input, select {
     margin-right: 30px;
 }
 
-#first-name, #last-name {
+#first-name, 
+#last-name {
     width: 255px;
 }
 .names {
     display: flex;
 }
 
-.select-service {
-    color: rgba(19, 39, 67, 0.5);
+ #number, 
+ select {
+    width: 540px;
 }
 
- #number, select {
-    width: 540px;
+select {
+    color: grey;
+}
+
+option:not(:checked) { 
+    background-color: white; 
+    color:#000;
+}
+
+option:checked { 
+    background-color: white; 
+    color:#040;
 }
 
 .submit-btn {
@@ -146,14 +155,13 @@ input, select {
     color: #ED4C5C;
 }
 
-.sel-service {
-}
 
 footer {
     height: 435px;
     background-color: #FAFAFA;
     width: 100%;
 }
+
 .footer-container {
     display: flex;
     height: 165px;
@@ -164,12 +172,15 @@ a {
     text-decoration: none;
     color: rgb(1, 1, 1);
 }
+
+ul {
+    padding: 0;
+}
+
 li {
     list-style-type: none;
 }
-.footer-block {
 
-}
 .footer-block-text, 
 .text-address, 
 .copyright {
@@ -178,23 +189,18 @@ li {
     font-size: 12px;
     line-height: 150%;
 }
+
 .footer-heading {
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
     line-height: 22px;
 }
-ul {
-    padding: 0;
-}
 
 .text-address {
     width: 180px;
 }
-.img-networks {
-}
-.img-supports {
-}
+
 .copyright {
     margin-top: 148px;
     vertical-align: middle;
