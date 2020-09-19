@@ -156,8 +156,8 @@ select:checked {
     color: #ED4C5C;
 }
 
-
 footer {
+    padding-top: 85px;
     height: 435px;
     background-color: #FAFAFA;
     width: 100%;
@@ -203,6 +203,6 @@ li {
 }
 
 .copyright {
-    margin-top: 148px;
+    margin-top: 85px;
     vertical-align: middle;
 }
