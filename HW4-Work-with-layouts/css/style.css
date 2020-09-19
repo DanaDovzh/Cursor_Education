@@ -51,6 +51,7 @@ li {
     justify-content: center;
     align-items: center;
     padding: 15px;   
+    outline: none;
 }
 
 .active {
@@ -83,6 +84,11 @@ li {
     border: 1px solid rgb(255, 255, 255);
     border-radius: 6px;
 }
+
+.cloud-navigation-btn:hover {
+    transform: scale(1.1);
+}
+
 
 .cloud-btn-login {
     padding: 12px 28px;
@@ -119,6 +125,13 @@ li {
     border-radius: 6px;
     display: inline-block;
     margin-top: 50px;
+    transition-duration: 1s;
+}
+
+.cloud-block-btn:hover {
+    background-color: rgb(236, 204, 204);
+    border: 1px solid rgb(236, 204, 204);
+    transform: translateY(-10px);
 }
 
 .btn-sign-up {
@@ -132,6 +145,8 @@ li {
     text-decoration: none;  
     display: block;
 }
+
+
 
 @media (max-width: 700px) {
     .cloud-header-flex {
