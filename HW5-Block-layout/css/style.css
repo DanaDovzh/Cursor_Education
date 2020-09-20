@@ -109,6 +109,13 @@ select {
     border: 1px solid rgb(0, 0, 0);
 }
 
+input:focus, 
+select:focus {
+    box-shadow: 0 0 15px #ED4C5C;
+    border: 1px solid #f83347;
+    outline: none;
+}
+
 #first-name {
     margin-right: 30px;
 }
@@ -206,3 +213,4 @@ li {
     margin-top: 85px;
     vertical-align: middle;
 }
+
