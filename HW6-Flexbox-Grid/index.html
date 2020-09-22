@@ -20,35 +20,34 @@
         <div>
             <nav>
                 <ul class="nav-header">
-                    <li class="nax-text active"><a href="#">About</a></li>
-                    <li class="nax-text"><a href="#">Help</a></li>
-                    <li class="nax-text"><a href="#">Features</a></li>
-                    <li class="nax-text"><a href="#">Signup</a></li>
+                    <li><a href="#about" class="nav-text">About</a></li>
+                    <li><a href="#help" class="nav-text">Help</a></li>
+                    <li><a href="#features" class="nav-text">Features</a></li>
+                    <li><a href="#signup" class="nav-text">Signup</a></li>
                 </ul>
             </nav>
         </div>
 
-        <button class="btn-request">
-            <span class="btn-rd-text">Request Demo</span> 
-            <img src="img/arrow.svg" alt="arrow right" aria-hidden="true">
+        <button class="btn-request btn-request-first">
+            <a href="#" class="btn-rd-text">Request Demo</a> 
+            <img src="img/arrow.svg" alt="arrow right" aria-hidden="true"  class="arrow">
         </button>
         </div>
     </header>
 
     <main class="site-main">
 
-        <div class="save-data-storage">
+        <div class="save-data-storage" id="about">
             <div>
-            <h1 class="sds-heading">Save your data storage here.</h1>
-            <div class="sds-description">
-                <p>Data Warehouse is a data storage area that has been tested for security, so you can 
+                <h1 class="sds-heading">Save your data storage here.</h1>
+                <div class="sds-description">
+                    <p>Data Warehouse is a data storage area that has been tested for security, so you can 
                     store your data here safely but not be afraid of being stolen by others.</p>
-            </div>
+                </div>
             
-
-            <button class="btn-more">
-                Learn more
-            </button>
+                <button class="btn-more btn-more-first">
+                    Learn more
+                </button>
             </div>
             <div class="sds-block-img">
                 <img src="img/image1.png" alt="Girls manage your data storage" class="sds-img"/>
@@ -69,12 +68,12 @@
         </div>
 
 
-        <div class="features">
+        <div class="features" id="features">
             <h2 class="features-heading">Features</h2>
             <div class="fheading-text">Some of the features and advantages that we provide for those of you who store data 
                 in this Data Warehouse.</div>
             <div class="type-of-features">
-                <div class="type">
+                <!-- <div class="type"> -->
                     <div>
                         <img src="img/image31.png" alt="Man searches data" class="search-data-img">
                     </div>
@@ -87,12 +86,13 @@
                         </div>
                         <div class="type-more">
                             <a href="#"> 
-                                Learn more <img src="img/arrow.svg" alt="arrow right" aria-hidden="true">
+                                Learn more <img src="img/arrow.svg" alt="arrow right" 
+                                aria-hidden="true" class="arrow">
                              </a>
                         </div>
                     </div>
-                </div>
-                <div class="type">
+                <!-- </div>
+                <div class="type"> -->
                     <div><img src="img/image32.png" alt="Girl sits behind a laptop" class="access-24-img">
                     </div>
                     <div>
@@ -102,12 +102,12 @@
                             comfort when you need data when urgent.</div>
                         <div class="type-more">
                             <a href="#"> 
-                               Learn more <img src="img/arrow.svg" alt="arrow right" aria-hidden="true">
+                               Learn more <img src="img/arrow.svg" alt="arrow right" aria-hidden="true"  class="arrow">
                             </a>
                         </div>
                     </div>
-                </div>
-                <div class="type">
+                <!-- </div>
+                <div class="type"> -->
                     <div><img src="img/image33.png" alt="Purple printer" class="printer-img">
                     </div>
                     <div>
@@ -118,16 +118,16 @@
                         </div>
                         <div class="type-more">
                            <a href="#"> 
-                               Learn more <img src="img/arrow.svg" alt="arrow right" aria-hidden="true">
+                               Learn more <img src="img/arrow.svg" alt="arrow right" aria-hidden="true"  class="arrow">
                             </a>
                             </div>
                     </div>
-                </div>
-                <div class="type">
+                <!-- </div>
+                <div class="type"> -->
                     <div>
                         <img src="img/image34.png" alt="Girl cares about security of data" class="security-img">
                     </div>
-                    <div>
+                    <div class="grid-item">
                         <h5 class="type-heading">Security Code</h5>
                         <div class="type-description">
                             Data Security is one of our best facilities. Allows for your 
@@ -136,11 +136,11 @@
                         </div>
                         <div class="type-more">
                             <a href="#"> 
-                                Learn more <img src="img/arrow.svg" alt="arrow right" aria-hidden="true">
+                                Learn more <img src="img/arrow.svg" alt="arrow right" aria-hidden="true"  class="arrow">
                              </a>
                         </div>
                     </div>
-                </div>
+                <!-- </div> -->
             </div>
         </div>
 
@@ -179,12 +179,13 @@
                     <p class="tfb-text">Get limited 1 week free try our features!</p>
                 </div>
                 <div class="btns">
-                        <button class="btn-more">
+                        <button class="btn-more btn-more-second">
                             Learn more
                         </button>
                         <button class="btn-request">
-                            Request Demo 
-                            <img src="img/arrow.svg" alt="arrow right" aria-hidden="true">
+                            <a href="#" class="btn-rd-text">Request Demo</a> 
+                            <img src="img/arrow.svg" alt="arrow right" aria-hidden="true" 
+                            class="arrow">
                         </button>
                 </div>
             
@@ -197,14 +198,14 @@
             <div class="fm-contacts">
                 <div class="logo">
                     <img src="img/Logo.svg" alt="logo" class="logo-img">
-                    <p class="logo-text">DataWarehouse</p>
+                    <span class="logo-text">DataWarehouse</span>
+                </div>
                     <div class="info">
                         <p>Warehouse Society, 234</p>
                         <p>Bahagia Ave Street PRBW 29281</p>
                         <p class="footer-block-text"><a href="mailto:info@warehouse.project">info@warehouse.project</a></p>
                         <p class="footer-block-text"><a href="tel:1-232-3434">1-232-3434 (Main)</a></p>
                     </div>
-                </div>
             </div>
 
             <div class="fm-block">
