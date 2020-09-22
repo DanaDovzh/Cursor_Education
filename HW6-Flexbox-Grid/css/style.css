@@ -1,0 +1,401 @@
+body {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding-top: 50px;
+    color: #212353;
+    background: linear-gradient(180deg, #F6FAFD 0%, #FFFFFF 19.4%);
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(1, 1, 1);
+}
+
+.site-header {
+    display: flex;
+    align-self: center;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+.logo-img {
+    height: 49px;
+    width: 35px;
+    padding-right: 5.25%;
+}
+.nav-header {
+    display: flex;
+    width: 401px;
+    justify-content: space-around;
+}
+
+.nax-text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 160%;
+}
+
+.active {
+    font-weight: 800;
+}
+
+button {
+    display: block;
+}
+.btn-request {
+    width: 210px;
+    height: 60px;
+    background: #FFFFFF;
+    border: none;
+    box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
+    border-radius: 50px;
+    margin-left: 25%;
+    flex-shrink: 0;
+}
+
+.btn-request:focus,
+a:focus,
+.btn-more:focus {
+    outline: none;
+}
+
+.site-main {
+}
+.save-data-storage {
+    margin-left: 15%;
+    margin-right: 7%;
+}
+
+.sds-heading {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 110%;
+    max-width: 645px;
+}
+
+.sds-description {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 160%;
+    color: #4B5D68;
+    max-width: 380px;
+}
+.sds-img {  
+    max-width: 885px;
+    max-height: 468px;
+    margin-top: -330px;
+}
+
+.sds-block-img {
+    margin-right: 0;
+}
+
+.btn-more {
+    margin-top: 50px;
+    width: 170px;
+    height: 60px;
+    background: #9C69E2;
+    border-radius: 50px;
+    border: none;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 160%;
+    color: rgb(255, 255, 255)
+}
+.we-are-bank {
+    display: flex;
+    max-width: 1117px;
+max-height: 560px;
+background: rgba(240, 99, 184, 0.15);
+border-radius: 50px;
+
+margin-top: 100px;
+margin-left: 15%;
+margin-right: 15.1%;
+margin-bottom: 150px;
+padding-right: 8.2%;
+}
+.wab-heading {
+    margin-top: 22%;
+
+    font-style: normal;
+font-weight: bold;
+font-size: 40px;
+line-height: 130%;
+}
+.wab-description {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 160%;
+    color: #4B5D68;
+    margin-bottom: 22%;
+   
+}
+.wab-img {
+    width: 477px;
+height: 504px;
+margin-right: 5.5%;
+}
+.features {
+    margin-bottom: 175px;
+}
+.features-heading {
+    
+    font-weight: bold;
+font-size: 40px;
+line-height: 130%;
+text-align: center;
+
+}
+.fheading-text {
+    
+    max-width: 580px;
+    font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 160%;
+text-align: center;
+margin: 0 auto;
+align-content: center;
+margin-bottom: 150px;
+}
+.type-of-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 105px;
+    column-gap: 55px;
+    margin-left: 13.75%;
+    margin-right: 15%;
+
+}
+.type {
+    display: flex;
+    align-items: center;
+}
+.type-heading {
+    font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 130%;
+}
+.type-description {
+    font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 160%;
+color: #4B5D68;
+
+width: 220px;
+height: 160px;
+}
+
+
+.search-data-img {
+    width: 232px;
+height: 211px;
+margin-right: 30px;
+}
+
+.access-24-img {
+    width: 241px;
+height: 185px;
+margin-right: 33%;
+}
+
+.printer-img {
+    width: 245px;
+height: 181px;
+margin-right: 35px;
+}
+
+.security-img {
+    width: 230px;
+height: 201px;
+margin-right: 40px;
+}
+.type-more {
+    font-style: normal;
+font-weight: 900;
+font-size: 16px;
+line-height: 160%;
+
+color: #212353;
+margin-top: 20px;
+}
+.testimonials {
+    width: 1118px;
+height: 709px;
+background: #9C69E2;
+border-radius: 50px;
+margin: 0 auto;
+z-index: 0;
+padding-left: 93px;
+padding-top: 109px;
+}
+.testimonials-heading {
+    
+    margin-bottom: 88px;
+    font-style: normal;
+font-weight: bold;
+font-size: 40px;
+line-height: 130%;
+color: #FFFFFF;
+}
+.testimonials-person {
+    display: flex;
+    width: 949px;
+height: 330px;
+background: #FFFFFF;
+box-shadow: 0px 20px 0px rgb(49, 14, 99);
+border-radius: 20px;
+z-index: 1;
+padding-top: 60px;
+padding-left: 102px;
+margin-bottom: 60px;
+
+}
+.testimonials-img {
+    width: 132.42px;
+height: 90px;
+margin-right: 45px;
+}
+.john-fang {
+    font-style: normal;
+font-weight: 900;
+font-size: 18px;
+line-height: 160%;
+}
+.testimonials-text {
+}
+.fang-com {
+    font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 160%;
+color: #9C69E2;
+}
+.testimonial {
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 180%;
+color: #4B5D68;
+width: 566.46px;
+}
+.decorations {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.site-footer {
+}
+.footer-header {
+}
+.fh {
+}
+.try-free {
+    font-style: normal;
+font-weight: bold;
+font-size: 40px;
+line-height: 130%;
+color: #212353;
+}
+
+.tfb-text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 160%;
+    color: #4B5D68;
+}
+
+.try-free-block {
+
+    display: flex;
+    justify-content: space-between;
+    margin-left: 15%;
+}
+.btns {
+    display: flex;
+    align-items: center;
+}
+
+footer {
+    background: #E5E5E5;
+    margin-top: auto;
+}
+.main-footer {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-around;
+}
+.fm-contacts {
+}
+.logo {
+}
+.logo-text {
+    font-style: normal;
+font-weight: 900;
+font-size: 20px;
+line-height: 160%;
+}
+.info {
+}
+.fm-block {
+}
+
+.fmb-list {
+}
+.fm-social {
+}
+.fm-block-heading {
+    font-style: normal;
+font-weight: 900;
+font-size: 16px;
+line-height: 160%;
+}
+.fm-logos-social {
+    display: flex;
+    width: 178px;
+    justify-content: space-between;
+}
+.logo-social {
+background-color: grey;
+width: 50px;
+height: 50px;
+border-radius: 50%;
+align-items: center;
+}
+
+.logo-social:hover {
+    background-color: blue;
+    transform: scale(1.5);
+}
+.social-img-fb {
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+.social-img-tw-in {
+    margin-top: 17px;
+    margin-left: 16px;
+}
+
+.copyright {
+}
+.copy-text {
+}
+.messenger {
+}
+.messenger-img {
+}
