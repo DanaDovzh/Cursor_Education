@@ -5,12 +5,9 @@ body {
     padding-top: 50px;
     color: #212353;
     background: linear-gradient(180deg, #F6FAFD 0%, #FFFFFF 19.4%);
-
-   
-        max-width: 1600px;
-        width: 100%;
-        margin: 0 auto;
-
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 li {
@@ -21,20 +18,26 @@ a {
     text-decoration: none;
 }
 
+ul.ul-footer {
+    padding-left: 0;
+}
+
 .site-header {
     display: flex;
     align-self: center;
     margin-left: 15%;
     margin-right: 15%;
 }
+
 .logo-img {
     height: 49px;
     width: 35px;
     padding-right: 5.25%;
 }
+
 .nav-header {
     display: flex;
-    width: 401px;
+    min-width: 401px;
     justify-content: space-around;
 }
 
@@ -54,6 +57,7 @@ a.nav-text:hover {
 button {
     display: block;
 }
+
 .btn-request {
     width: 210px;
     height: 60px;
@@ -85,19 +89,19 @@ a:focus,
     outline: none;
 }
 
-.site-main {
-}
 .save-data-storage {
     margin-left: 15%;
     margin-right: 7%;
+    position: relative;
 }
 
 .sds-heading {
     font-style: normal;
     font-weight: bold;
-    font-size: 80px;
+    /* font-size: 80px; */
     line-height: 110%;
     max-width: 645px;
+    font-size: calc(24px + (56*100vw/1600)); /* спроби адаптиву */
 }
 
 .sds-description {
@@ -106,22 +110,23 @@ a:focus,
     font-size: 18px;
     line-height: 160%;
     color: #4B5D68;
-    max-width: 380px;
-}
-.sds-img {  
-    max-width: 85px;
-    max-height: 468px;
-    /* position: absolute; */
+    width: 30%;
 }
 
-.sds-block-img {
-    
+.sds-img {  
+    width: auto;
+    max-height: 370px;
+    position: absolute;
+    top: 170px;
+    right:0%;
+    margin-left: 7%;
 }
+
  main {
     width: 100%;
  }
+
 .btn-more {
-    
     width: 170px;
     height: 60px;
     background: #9C69E2;
@@ -131,7 +136,8 @@ a:focus,
     font-weight: 800;
     font-size: 18px;
     line-height: 160%;
-    color: rgb(255, 255, 255)
+    color: rgb(255, 255, 255);
+    transition-duration: 2s;
 }
 
 .btn-more-first {
@@ -140,30 +146,33 @@ a:focus,
 
 .btn-more-second {
     background: #F063B8;
+    margin-right: 30px;
 }
+
 .btn-more:hover {
-    transform: scale(0.7);
+    transform: scale(0.8);
 }
+
 .we-are-bank {
     display: flex;
-    max-width: 1117px;
-   
-    max-height: 560px;
+    width: 70%;
+    height: 12%;
     background: rgba(240, 99, 184, 0.15);
     border-radius: 50px;
-
-    margin-top: 100px;
+    margin-top: 150px;
     margin-left: 15%;
-    margin-right: 15.1%;
+    margin-right: 15%;
     margin-bottom: 150px;
     padding-right: 8.2%;
 }
+
 .wab-heading {
     margin-top: 22%;
     font-style: normal;
     font-weight: bold;
     font-size: 40px;
     line-height: 130%;
+    margin-left: 150px;
 }
 
 .wab-description {
@@ -173,36 +182,43 @@ a:focus,
     line-height: 160%;
     color: #4B5D68;
     margin-bottom: 22%;
+    width: 90%;
+    margin-left: 150px;
 }
 
 .wab-img {
-    width: 477px;
-    height: 504px;
     margin-right: 5.5%;
 }
+
+.wab-img img {
+    width: 170%;
+}
+
 .features {
     margin-bottom: 175px;
+    width: 70%;
+    margin-left: 13.75%;
+    margin-right: 15%;
 }
-.features-heading {
-    
-    font-weight: bold;
-font-size: 40px;
-line-height: 130%;
-text-align: center;
 
+.features-heading {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 130%;
+    text-align: center;
 }
+
 .fheading-text {
-    
     max-width: 580px;
     font-style: normal;
-font-weight: 500;
-font-size: 18px;
-line-height: 160%;
-text-align: center;
-margin: 0 auto;
-align-content: center;
-margin-bottom: 150px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 160%;
+    text-align: center;
+    margin: 0 auto; 
+    margin-bottom: 70px;
 }
+
 .type-of-features {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -211,55 +227,52 @@ margin-bottom: 150px;
     align-items: center;
     /* row-gap: 105px;
     column-gap: 55px; */
-    margin-left: 13.75%;
-    margin-right: 15%;
-
 }
 
 .type {
-    
     align-items: center;
 }
+
 .type-heading {
     font-style: normal;
-font-weight: normal;
-font-size: 24px;
-line-height: 130%;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 130%;
 }
+
 .type-description {
     font-style: normal;
-font-weight: normal;
-font-size: 16px;
-line-height: 160%;
-color: #4B5D68;
-
-width: 220px;
-height: 160px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 160%;
+    color: #4B5D68;
+    width: 220px;
+    height: 160px;
 }
 
 
 .search-data-img {
     width: 232px;
-height: 211px;
-margin-right: 30px;
+    height: 211px;
+    margin-right: 30px;
 }
 
 .access-24-img {
     width: 241px;
-height: 185px;
-/* margin-right: 33%; */
+    height: 185px;
+    margin-right: 33%;
 }
 
 .printer-img {
     width: 245px;
-height: 181px;
-margin-right: 35px;
+    height: 181px;
+    margin-right: 35px;
 }
 
 .security-img {
     width: 230px;
-height: 201px;
-margin-right: 40px;
+    height: 201px;
+    margin-right: 40px;
 }
 
 .type-more {
@@ -267,24 +280,27 @@ margin-right: 40px;
     font-weight: 900;
     font-size: 16px;
     line-height: 160%;
-
     color: #212353;
     margin-top: 20px;
 }
 
+.type-more a:hover {
+    text-decoration: underline;
+}
 
 .testimonials {
-    max-width: 1118px;
-    height: 709px;
+    width: 70%;
+    max-height: 709px;
     background: #9C69E2;
     border-radius: 50px;
     margin: 0 auto;
     z-index: 0;
     padding-left: 93px;
     padding-right: 76px;
-    padding-top: 109px;
-    margin-left: 15.8%;
-    margin-right: 14.25%;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 .testimonials-heading {
     
@@ -295,9 +311,10 @@ font-size: 40px;
 line-height: 130%;
 color: #FFFFFF;
 }
+
 .testimonials-person {
     display: flex;
-    max-width: 949px;
+    width: 90%;
     height: 330px;
     background: #FFFFFF;
     box-shadow: 0px 20px 0px rgb(49, 14, 99);
@@ -341,6 +358,7 @@ color: #9C69E2;
     flex-direction: row;
     justify-content: space-between;
 }
+
 .site-footer {
 }
 .footer-header {
@@ -365,47 +383,67 @@ color: #212353;
 
 .try-free-block {
     display: flex;
-    align-self: center;
+    align-items: center;
     margin-left: 15%;
     margin-right: 15%;
     margin-top: 120px;
-    align-items: center;
     justify-content: space-between;
-   
+    width: 70%;
 }
 
 .btns {
     display: flex;
-    
    
 }
 
 footer {
-    
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 90px;
 }
 .main-footer {
     display: flex;
-    margin-left: 15%;
-    margin-right: 15%;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
 }
 .fm-contacts {
 }
 .logo {
-    text-align: center;
-}
-
-.logo-text {
     font-style: normal;
     font-weight: 900;
     font-size: 20px;
     line-height: 160%;
+    
+
+    display: flex;
+    align-items: center;
+}
+
+
+
+.contacts-text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 180%;
 }
 .info {
+    font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 180%;
+letter-spacing: 0.01em;
+color: #212353;
+}
+
+.info {
+    margin-bottom: 0;
+}
+
+.ul-footer li {
+    margin-bottom: 20px;
 }
 .fm-block {
-    text-align: center;
+   
 }
 
 .fmb-list {
@@ -414,10 +452,13 @@ footer {
 }
 .fm-block-heading {
     font-style: normal;
-font-weight: 900;
-font-size: 16px;
-line-height: 160%;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 160%;
+    margin-top: 0;
+   
 }
+
 .fm-logos-social {
     display: flex;
     width: 178px;
@@ -446,10 +487,37 @@ align-items: center;
 }
 
 .copyright {
+    font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 180%;
+width: 360px;
+}
+
+.footer-ground {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
 }
 .copy-text {
 }
-.messenger {
+.messenger:hover {
+    animation-name: swing;
+    animation-duration: 1s;
+  
 }
 .messenger-img {
 }
+
+
+@keyframes swing {
+    10% {transform: translateX(12px);}
+    20% {transform: translateX(-12px);}
+    30% {transform: translateX(9px);}
+    40% {transform: translateX(-9px);}
+    50% {transform: translateX(6px);}
+    60% {transform: translateX(-6px);}
+    70% {transform: translateX(3px);}
+    80% {transform: translateX(-3px);}
+    100% {transform: translateX(0);}
+  }
