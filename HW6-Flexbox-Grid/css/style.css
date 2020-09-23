@@ -175,7 +175,7 @@ a:focus,
     background: rgba(240, 99, 184, 0.15);
     border-radius: 50px;
     margin-top: 150px;
-    margin-left: 15%;
+    margin-left: 10%;
     margin-right: 15%;
     margin-bottom: 150px;
     padding-right: 8.2%;
@@ -297,13 +297,13 @@ a:focus,
     max-height: 709px;
     background: #9C69E2;
     border-radius: 50px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     z-index: 0;
     padding-left: 93px;
     padding-right: 76px;
     padding-top: 100px;
     padding-bottom: 50px;
-    margin-left: 15%;
+    margin-left: 10%;
     margin-right: 15%;
 }
 
