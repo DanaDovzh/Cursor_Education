@@ -68,8 +68,6 @@ button {
     border-radius: 50px; 
     flex-shrink: 0;
     position: relative;
-
-    
     font-weight: 800;
     font-size: 16px;
     line-height: 160%;
@@ -257,7 +255,6 @@ a:focus,
     height: 160px;
 }
 
-
 .search-data-img {
     width: 232px;
     height: 211px;
@@ -308,6 +305,7 @@ a:focus,
     margin-left: 15%;
     margin-right: 15%;
 }
+
 .testimonials-heading {
     margin-bottom: 88px;
     font-weight: bold;
@@ -327,27 +325,27 @@ a:focus,
     padding-top: 60px;
     padding-left: 102px;
     margin-bottom: 60px;
-
 }
+
 .testimonials-img {
     width: 132.42px;
     height: 90px;
     margin-right: 45px;
 }
+
 .john-fang {
     font-weight: 900;
     font-size: 18px;
     line-height: 160%;
 }
 
-.testimonials-text {
-}
 .fang-com {
     font-weight: 500;
     font-size: 14px;
     line-height: 160%;
     color: #9C69E2;
 }
+
 .testimonial {
     font-weight: normal;
     font-size: 18px;
@@ -355,23 +353,18 @@ a:focus,
     color: #4B5D68;
     max-width: 566.46px;
 }
+
 .decorations {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.site-footer {
-}
-.footer-header {
-}
-.fh {
-}
 .try-free {
-font-weight: bold;
-font-size: 40px;
-line-height: 130%;
-color: #212353;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 130%;
+    color: #212353;
 }
 
 .tfb-text {
@@ -384,16 +377,16 @@ color: #212353;
 .try-free-block {
     display: flex;
     align-items: center;
-    margin-left: 15%;
     margin-right: 15%;
+    margin-left: 15%;
     margin-top: 120px;
+    margin-bottom: 150px;
     justify-content: space-between;
     width: 70%;
 }
 
 .btns {
     display: flex;
-   
 }
 
 footer {
@@ -401,35 +394,32 @@ footer {
     margin-right: 15%;
     margin-bottom: 90px;
 }
+
 .main-footer {
     display: flex;
     justify-content: space-between;
 }
-.fm-contacts {
-}
+
 .logo {
     font-weight: 900;
     font-size: 20px;
     line-height: 160%;
-    
-
     display: flex;
     align-items: center;
 }
-
-
 
 .contacts-text {
     font-weight: 500;
     font-size: 16px;
     line-height: 180%;
 }
+
 .info {
-font-weight: normal;
-font-size: 16px;
-line-height: 180%;
-letter-spacing: 0.01em;
-color: #212353;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 180%;
+    letter-spacing: 0.01em;
+    color: #212353;
 }
 
 .info {
@@ -439,20 +429,12 @@ color: #212353;
 .ul-footer li {
     margin-bottom: 20px;
 }
-.fm-block {
-   
-}
 
-.fmb-list {
-}
-.fm-social {
-}
 .fm-block-heading {
     font-weight: 900;
     font-size: 16px;
     line-height: 160%;
-    margin-top: 0;
-   
+    margin-top: 0;   
 }
 
 .fm-logos-social {
@@ -460,18 +442,20 @@ color: #212353;
     width: 178px;
     justify-content: space-between;
 }
+
 .logo-social {
-background-color: grey;
-width: 50px;
-height: 50px;
-border-radius: 50%;
-align-items: center;
+    background-color: grey;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    align-items: center;
 }
 
 .logo-social:hover {
     background-color: rgb(96, 96, 168);
     transform: scale(1.5);
 }
+
 .social-img-fb {
     margin-top: 15px;
     margin-left: 20px;
@@ -483,10 +467,10 @@ align-items: center;
 }
 
 .copyright {
-font-weight: normal;
-font-size: 12px;
-line-height: 180%;
-width: 360px;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 180%;
+    width: 360px;
 }
 
 .footer-ground {
@@ -494,16 +478,11 @@ width: 360px;
     justify-content: space-between;
     margin-top: 100px;
 }
-.copy-text {
-}
+
 .messenger:hover {
     animation-name: swing;
-    animation-duration: 1s;
-  
+    animation-duration: 1s; 
 }
-.messenger-img {
-}
-
 
 @keyframes swing {
     10% {transform: translateX(12px);}
@@ -515,4 +494,4 @@ width: 360px;
     70% {transform: translateX(3px);}
     80% {transform: translateX(-3px);}
     100% {transform: translateX(0);}
-  }
+}
