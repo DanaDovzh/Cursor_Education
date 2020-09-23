@@ -24,6 +24,11 @@ ul.ul-footer {
     padding-left: 0;
 }
 
+.ul-footer li a:hover {
+    text-decoration: underline;
+    color: #5155ce;
+
+}
 .site-header {
     display: flex;
     align-self: center;
@@ -52,6 +57,7 @@ a.nav-text {
 
 a.nav-text:hover {
     font-weight: 800;
+    font-size: 18px;
     color: #595cb3;
 }
 
@@ -77,8 +83,7 @@ button {
     margin-left: 25%;
 }
 
-.btn-request:hover
-{
+.btn-request:hover{
     top: 3px;
 }
 
@@ -232,8 +237,8 @@ a:focus,
     grid-template-rows: 1fr 1fr;
     justify-items: center;
     align-items: center;
-    /* row-gap: 105px;
-    column-gap: 55px; */
+    /* row-gap: 105px;*/
+    column-gap: 20px; 
 }
 
 .type {
@@ -258,25 +263,21 @@ a:focus,
 .search-data-img {
     width: 232px;
     height: 211px;
-    margin-right: 30px;
 }
 
 .access-24-img {
     width: 241px;
     height: 185px;
-    margin-right: 33%;
 }
 
 .printer-img {
     width: 245px;
     height: 181px;
-    margin-right: 35px;
 }
 
 .security-img {
     width: 230px;
     height: 201px;
-    margin-right: 40px;
 }
 
 .type-more {
