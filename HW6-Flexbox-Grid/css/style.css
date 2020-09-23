@@ -12,6 +12,10 @@ body {
     font-style: normal;
 }
 
+form {
+    color: #212353;
+}
+
 li {
     list-style-type: none;
 }
@@ -34,6 +38,7 @@ ul.ul-footer {
     align-self: center;
     margin-left: 15%;
     margin-right: 15%;
+   justify-content: space-between; */
 }
 
 .logo-img {
