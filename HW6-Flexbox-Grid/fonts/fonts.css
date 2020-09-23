@@ -1,0 +1,14 @@
+
+@font-face {
+	font-family: 'Avenir';
+	src: url('AvenirNextLTPro-Demi.eot');
+	src: local('☺'), url('AvenirNextLTPro-Demi.woff') format('woff'), url('AvenirNextLTPro-Demi.ttf') format('truetype'), url('AvenirNextLTPro-Demi.svg') format('svg');
+}
+
+@font-face {
+	font-family: 'Helvetican';
+	src: url('helveticaneuecyr-roman.eot');
+	src: local('☺'), url('helveticaneuecyr-roman.woff') format('woff'), url('helveticaneuecyr-roman.ttf') format('truetype'), url('helveticaneuecyr-roman.svg') format('svg');
+}
+
+

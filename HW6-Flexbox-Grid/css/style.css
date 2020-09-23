@@ -8,6 +8,8 @@ body {
     max-width: 1600px;
     width: 100%;
     margin: 0 auto;
+    font-family: 'Avenir';
+    font-style: normal;
 }
 
 li {
@@ -42,7 +44,6 @@ ul.ul-footer {
 }
 
 a.nav-text {
-    font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 160%;
@@ -67,6 +68,11 @@ button {
     border-radius: 50px; 
     flex-shrink: 0;
     position: relative;
+
+    
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 160%;
 }
 
 .btn-request-first {
@@ -95,8 +101,16 @@ a:focus,
     position: relative;
 }
 
+.wab-heading, 
+.sds-heading,
+.features-heading,
+.fheading-text,
+.type-heading,
+.testimonials-heading {
+    font-family: 'Helvetican';
+} 
+
 .sds-heading {
-    font-style: normal;
     font-weight: bold;
     /* font-size: 80px; */
     line-height: 110%;
@@ -105,7 +119,6 @@ a:focus,
 }
 
 .sds-description {
-    font-style: normal;
     font-weight: 500;
     font-size: 18px;
     line-height: 160%;
@@ -132,7 +145,6 @@ a:focus,
     background: #9C69E2;
     border-radius: 50px;
     border: none;
-    font-style: normal;
     font-weight: 800;
     font-size: 18px;
     line-height: 160%;
@@ -168,7 +180,6 @@ a:focus,
 
 .wab-heading {
     margin-top: 22%;
-    font-style: normal;
     font-weight: bold;
     font-size: 40px;
     line-height: 130%;
@@ -176,7 +187,6 @@ a:focus,
 }
 
 .wab-description {
-    font-style: normal;
     font-weight: 500;
     font-size: 18px;
     line-height: 160%;
@@ -210,7 +220,6 @@ a:focus,
 
 .fheading-text {
     max-width: 580px;
-    font-style: normal;
     font-weight: 500;
     font-size: 18px;
     line-height: 160%;
@@ -234,14 +243,12 @@ a:focus,
 }
 
 .type-heading {
-    font-style: normal;
     font-weight: normal;
     font-size: 24px;
     line-height: 130%;
 }
 
 .type-description {
-    font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 160%;
@@ -276,7 +283,6 @@ a:focus,
 }
 
 .type-more {
-    font-style: normal;
     font-weight: 900;
     font-size: 16px;
     line-height: 160%;
@@ -303,13 +309,11 @@ a:focus,
     margin-right: 15%;
 }
 .testimonials-heading {
-    
     margin-bottom: 88px;
-    font-style: normal;
-font-weight: bold;
-font-size: 40px;
-line-height: 130%;
-color: #FFFFFF;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 130%;
+    color: #FFFFFF;
 }
 
 .testimonials-person {
@@ -327,26 +331,24 @@ color: #FFFFFF;
 }
 .testimonials-img {
     width: 132.42px;
-height: 90px;
-margin-right: 45px;
+    height: 90px;
+    margin-right: 45px;
 }
 .john-fang {
-    font-style: normal;
-font-weight: 900;
-font-size: 18px;
-line-height: 160%;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 160%;
 }
+
 .testimonials-text {
 }
 .fang-com {
-    font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 160%;
-color: #9C69E2;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 160%;
+    color: #9C69E2;
 }
 .testimonial {
-    font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 180%;
@@ -366,7 +368,6 @@ color: #9C69E2;
 .fh {
 }
 .try-free {
-    font-style: normal;
 font-weight: bold;
 font-size: 40px;
 line-height: 130%;
@@ -374,7 +375,6 @@ color: #212353;
 }
 
 .tfb-text {
-    font-style: normal;
     font-weight: 500;
     font-size: 18px;
     line-height: 160%;
@@ -408,7 +408,6 @@ footer {
 .fm-contacts {
 }
 .logo {
-    font-style: normal;
     font-weight: 900;
     font-size: 20px;
     line-height: 160%;
@@ -421,13 +420,11 @@ footer {
 
 
 .contacts-text {
-    font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 180%;
 }
 .info {
-    font-style: normal;
 font-weight: normal;
 font-size: 16px;
 line-height: 180%;
@@ -451,7 +448,6 @@ color: #212353;
 .fm-social {
 }
 .fm-block-heading {
-    font-style: normal;
     font-weight: 900;
     font-size: 16px;
     line-height: 160%;
@@ -487,7 +483,6 @@ align-items: center;
 }
 
 .copyright {
-    font-style: normal;
 font-weight: normal;
 font-size: 12px;
 line-height: 180%;
