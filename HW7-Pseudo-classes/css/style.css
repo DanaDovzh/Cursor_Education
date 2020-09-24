@@ -7,21 +7,22 @@ body {
 
 .heading, .text-square {
     text-align: center;
-    font-family: 'Kumbh Sans', sans-serif;
+    font-family: 'Righteous', cursive;
 }
 .heading {
     font-size: 24px;
 }
  .text-square {
      font-size: 14px;
-     font-family: 'Kumbh Sans', sans-serif;
+     font-family: 'Indie Flower', cursive;
      color: rgb(80, 77, 77);
  }
 
 .heading:first-letter {
-    font-size: 28px;
-    color: #dd8585;
-    font-weight: bold;
+    font-family: 'Indie Flower', cursive;
+    font-size: 42px;
+    color: #9e3283;
+    font-weight: 1000;
     border-radius: 50%;
   }
 
@@ -39,6 +40,14 @@ body {
     height: 50px;
     background: rgb(92, 90, 90);
     margin: 10px;
+
+    font-family: 'Kumbh Sans', sans-serif;
+    color: rgb(247, 214, 214);
+    font-size: 22px;
+    font-weight: 900;
+    text-align: end;
+    padding-top: 3px;
+    padding-right: 3px;
 }
 
 .square:last-child,
@@ -53,7 +62,7 @@ body {
 
 .square:hover:nth-child(4n + 3) {
     border-radius: 50%;
-    background-color: rgb(211, 17, 185);
+    background-color: rgba(211, 17, 185, 0.5);
 }
 .btn {
     display: flex;
@@ -70,6 +79,7 @@ body {
     border: none;
     cursor: pointer;
 
+    font-family: 'Kumbh Sans', sans-serif;
     text-transform: uppercase;
     color: rgb(255, 255, 255);
     font-style: normal;
