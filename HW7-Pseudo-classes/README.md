@@ -7,4 +7,5 @@
 - За допомогою **псевдоелементів** [створіть ось таку кнопку](https://www.figma.com/file/xUuuVEvs8MjNil097ZCfZL/Pseudo-class-homework?node-id=0%3A1). Використовуйте не більше 2-ох тегів
 
 Нещасні спроби **js** :sweat_smile:
+
 **[Результат домашнього завдання.](https://danadovzh.github.io/Cursor_Education/HW7-Pseudo-classes/index.html)**
