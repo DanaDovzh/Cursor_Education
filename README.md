@@ -1,7 +1,7 @@
-CURSOR EDUCATION
-Front-End Education
+# CURSOR EDUCATION
+## Front-End Education
 
-List of homeworks
+**List of homeworks**
 
 | №  | Name of HW                               | Page | Folder    | 
 | -- | ---------------------------------------- |------| --------- |
