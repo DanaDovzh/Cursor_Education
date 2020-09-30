@@ -206,6 +206,7 @@ header p {
 
 .btn {
     max-width: 120px;
+    width: 100px;
     height: 40px;
     border: none;
     background-color: rgb(1, 1, 1);
@@ -429,7 +430,7 @@ margin-right: 9%;
     align-items: baseline;
     justify-content: space-between;
 
-    height: 30%;
+    /* height: 30%; */
 }
 
 .select {
@@ -440,7 +441,7 @@ div select {
     background: #F5F5F7;
     border-radius: 8px;
     border: none;
-    height: 45%;
+    height: 32%;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
@@ -473,8 +474,12 @@ padding-bottom: 7%;
 padding-left: 5%;
 padding-right: 5%;
 margin-top: 7%;
+position: relative;
+
+top: 28px;
 }
 
 .premium img {
     width: 28%;
+
 }
