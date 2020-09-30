@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Roboto&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="nav-main">
+        <div>
+            <a href="#"><img src="img/logo.svg" alt="logo" aria-hidden="true"></a>
+        </div> 
+        
+        <ul class="nav-list">
+            <li><a href="#home"><img src="img/home.svg" alt="home-icon" aria-hidden="true" title="Home"></a></li>
+            <li><a href="#courses"><img src="img/study.svg" alt="courses-icon" aria-hidden="true" title="Courses"></a></li>
+            <li><a href="#profile"><img src="img/profile.svg" alt="profile-icon" aria-hidden="true" title="Profile"></a></li>
+            <li><a href="#messages"><img src="img/message.svg" alt="message-icon" aria-hidden="true" title="Messages"></a></li>
+            <li><a href="#settings"><img src="img/setting.svg" alt="setting-icon" aria-hidden="true" title="Settings"></a></li>
+        </ul>
+
+        <div>
+            <a href="#exit"><img src="img/exit.svg" alt="exit-icon" aria-hidden="true" title="Exit"></a>
+        </div>
+    </nav>
+
+    <div class="container-header-main">
+        <header>
+            <div class="header-container">
+                <div class="header-text">
+                    <h2 class="heading-hello">Hello Josh!</h2>
+                    <p>It's good to see you again.</p>
+                </div>
+            
+                <img src="img/Illustration_hello.png" alt="Person waves to you" class="header-img">
+            </div>
+        </header>
+
+        <main>
+            <div class="active-courses">
+                <div class="in-block">
+                    <div class="type-act-course spanish">
+                        <h4 class="name-course">Spanish B2</h4>
+                        <p class="author-course">by Alejandro Velazquez</p>
+                    </div>
+                    <div class="active-progress">
+                        <!-- <svg> -->
+                            <!-- <circle cx="50" cy="50" r="20" stroke="rgb(1,1,1)"/> -->
+                            <!-- <circle cx="50" cy="50" r="20" stroke="rgb(1,1,1)"/> -->
+                          <!-- Sorry, your browser does not support inline SVG. -->
+                        <!-- </svg> -->
+                        <p class="percent">83%</p>
+                    </div>
+                    <button class="btn">Continue</button>
+                </div>
+
+                <div class="actives-switch">
+                    <img src="img/arrow-left.svg" alt="" class="arrow-switch">
+                    <img src="img/arrow-right.svg" alt="" class="arrow-switch">
+                </div>
+            </div>
+
+            <div class="courses">
+                <h3 class="heading-blocks">Courses</h3>
+                <div class="courses-tabs">
+                    <div class="tab-c">
+                        <input type="radio" id="AllCourses" name="tab-group" checked>
+                        <label for="AllCourses" class="tab-title">All Courses</label> 
+                        <section class="tab-content courses-tables">
+                            <div class="one-courses">
+                                <div class="type-act-course figma">
+                                    <h4 class="name-course">Learn Figma</h4>
+                                    <p class="author-course">by Christopher Morgan</p>
+                                </div>
+                                <div class="sum-time">
+                                    <time>6h 30min</time>
+                                </div>
+
+                                <div class="sum-mark">
+                                    <p>4.9</p>
+                                </div>
+                                <button class="btn">View course</button>
+                            </div>
+
+                            <div class="one-courses">
+                                <div class="type-act-course analog-photo">
+                                    <h4 class="name-course">Analog photography</h4>
+                                    <p class="author-course">by Gordon Norman</p>
+                                </div>
+                                <div class="sum-time">
+                                    <time>3h 15min</time>
+                                </div>
+
+                                <div class="sum-mark">
+                                    <p>4.7</p>
+                                </div>
+                                <button class="btn">View course</button>
+                            </div>
+                            <div class="one-courses">
+                                <div class="type-act-course instagram">
+                                    <h4 class="name-course">Master Instagram</h4>
+                                    <p class="author-course">by Sophine Gill</p>
+                                </div>
+                                <div class="sum-time">
+                                    <time>7h 40min</time>
+                                </div>
+
+                                <div class="sum-mark">
+                                    <p>4.6</p>
+                                </div>
+                                <button class="btn">View course</button>
+                            </div>
+                            <div class="one-courses">
+                                <div class="type-act-course drawing">
+                                    <h4 class="name-course">Basics of drawing</h4>
+                                    <p class="author-course">by Jean Tate</p>
+                                </div>
+                                <div class="sum-time">
+                                    <time>11h 30min</time>
+                                </div>
+
+                                <div class="sum-mark">
+                                    <p>4.8</p>
+                                </div>
+                                <button class="btn">View course</button>
+                            </div>
+
+                            <div class="one-courses">
+                                <div class="type-act-course ps">
+                                    <h4 class="name-course">Photoshop - Essence</h4>
+                                    <p class="author-course">by David Green</p>
+                                </div>
+                                <div class="sum-time">
+                                    <time>5h 35min</time>
+                                </div>
+
+                                <div class="sum-mark">
+                                    <p>4.7</p>
+                                </div>
+                                <button class="btn">View course</button>
+                            </div>
+                        </section>
+                    </div> 
+                    <div class="tab-c">
+                        <input type="radio" id="tab2" name="tab-group">
+                        <label for="tab2" class="tab-title">The Newest</label> 
+                        <section class="tab-content other-tabs">Два</section>
+                    </div>
+                    <div class="tab-c">
+                        <input type="radio" id="tab3" name="tab-group">
+                        <label for="tab3" class="tab-title">Top Rated</label> 
+                        <section class="tab-content">Три</section> 
+                    </div> 
+                    <div class="tab-c">
+                        <input type="radio" id="tab4" name="tab-group">
+                        <label for="tab4" class="tab-title">Most Popular</label> 
+                        <section class="tab-content">Один</section>
+                    </div> 
+                       
+                </div>
+               
+            </div>
+        </main>
+    </div>
+    <aside>
+        <nav class="nav-aside">
+            <div>
+                <input type="text">
+            </div>
+            <ul class="aside-ul">
+                <li><a href="#"><img src="img/notification.svg" alt="Notifications"></a></li>
+                <li><a href="#"><img src="img/avatar.svg" alt="Avatar"></a></li>
+            </ul>
+        </nav>
+
+        <div class="aside-summary-courses">
+            <div>
+                <div class="number-sum-courses">11</div>
+                <div class="text-sum-courses">Courses completed</div>
+            </div>
+            <div>
+                <div class="number-sum-courses">4</div>
+                <div class="text-sum-courses">Courses in progress</div>
+            </div>
+        </div>
+
+        <div class="statistic">
+            <h3 class="heading-blocks">Your statistics</h3>
+                <div class="menu-statistic">
+                <div class="courses-tabs">
+                    <div class="tab-c">
+                        <input type="radio" id="LernHours" name="tab-group" checked>
+                        <label for="LernHours" class="tab-title">Learning Hours</label> 
+                        <section class="tab-content tab-graph">
+                            <img src="img/graph.png" alt="">
+                        </section>
+                    </div>
+                    <div class="tab-c">
+                        <input type="radio" id="MyCourses" name="tab-group">
+                        <label for="MyCourses" class="tab-title">Top Rated</label> 
+                        <section class="tab-content">Три</section> 
+                    </div> 
+
+                    <div class="statistic-graph">
+                        <div class="graph-tab"></div>
+                        <div class="img graph"></div>
+                    </div>
+                </div>
+
+                <div class="select">
+                    <select name="" id="graph">
+                        <option value="week" checked>Weekly</option>
+                        <option value="month">Monthly</option>
+                        <option value="day">Every day</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="premium">
+            <div class="premium-text">
+                <h3 class="heading-blocks">Learn even more!</h3>
+                <p>Unlock premium features only for .99 per month.</p>
+                <button class="btn">Go premium</button>
+            </div>
+
+            
+                <img src="img/Frame.png" alt="Frame" aria-hidden="true">
+        </div>
+
+    </aside>
+</body>
+</html>
