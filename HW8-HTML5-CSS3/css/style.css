@@ -93,7 +93,7 @@ header {
 .heading-hello {
     font-family: 'Baloo Bhai 2', cursive;
     font-style: normal;
-    font-weight: normal;
+    font-weight: bold;
     font-size: 36px;
     line-height: 57px;  
 }
@@ -393,6 +393,7 @@ input[type=text] {
     background-size: 21px;
     margin-right: 10px;
     padding-left: 50px;
+    cursor: pointer;
 }
 
 
@@ -411,7 +412,7 @@ input[type=text] {
     width: 100%;
 }
 
-.aside-summary-courses div {
+.aside-summary-courses > div {
     height: 100%;
     width: auto;
     background-color: #F5F5F7;
@@ -419,6 +420,13 @@ input[type=text] {
     margin-right: 5%;
     display: flex;
     align-items: center;
+    transition-duration: 0.2s;
+}
+
+.aside-summary-courses > div:active {
+    background-color: #474749;
+    color: rgb(255, 255, 255);
+    transform: scale(1.2);
 }
 
 .number-sum-courses {
