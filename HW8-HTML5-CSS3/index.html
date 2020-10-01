@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
+
 <body>
     <nav class="nav-main">
         <div>
@@ -47,19 +48,15 @@
                         <p class="author-course">by Alejandro Velazquez</p>
                     </div>
                     <div class="active-progress">
-                        <!-- <svg> -->
-                            <!-- <circle cx="50" cy="50" r="20" stroke="rgb(1,1,1)"/> -->
-                            <!-- <circle cx="50" cy="50" r="20" stroke="rgb(1,1,1)"/> -->
-                          <!-- Sorry, your browser does not support inline SVG. -->
-                        <!-- </svg> -->
+                        <img src="img/Ellipse.svg" alt="Progress circle" aria-hidden="true">
                         <p class="percent">83%</p>
                     </div>
                     <button class="btn">Continue</button>
                 </div>
 
-                <div class="actives-switch">
-                    <img src="img/arrow-left.svg" alt="" class="arrow-switch">
-                    <img src="img/arrow-right.svg" alt="" class="arrow-switch">
+                <div>
+                    <img src="img/arrow-left.svg" alt="Arrow left" class="arrow-switch" aria-hidden="true">
+                    <img src="img/arrow-right.svg" alt="arrow-right" class="arrow-switch" aria-hidden="true">
                 </div>
             </div>
 
@@ -69,7 +66,7 @@
                     <div class="tab-c">
                         <input type="radio" id="AllCourses" name="tab-group" checked>
                         <label for="AllCourses" class="tab-title">All Courses</label> 
-                        <section class="tab-content courses-tables">
+                        <section class="tab-content">
                             <div class="one-courses">
                                 <div class="type-act-course figma">
                                     <h4 class="name-course">Learn Figma</h4>
@@ -144,27 +141,33 @@
                             </div>
                         </section>
                     </div> 
+
                     <div class="tab-c">
                         <input type="radio" id="tab2" name="tab-group">
                         <label for="tab2" class="tab-title">The Newest</label> 
-                        <section class="tab-content other-tabs">Два</section>
+                        <section class="tab-content other-tabs">
+                            <p class="text-tabs-content">In progress</p>
+                        </section>
                     </div>
+
                     <div class="tab-c">
                         <input type="radio" id="tab3" name="tab-group">
                         <label for="tab3" class="tab-title">Top Rated</label> 
-                        <section class="tab-content">Три</section> 
+                        <section class="tab-content">
+                            <img src="img/unicorn.svg" alt="unicorn">
+                        </section> 
                     </div> 
+
                     <div class="tab-c">
                         <input type="radio" id="tab4" name="tab-group">
                         <label for="tab4" class="tab-title">Most Popular</label> 
-                        <section class="tab-content">Один</section>
+                        <section class="tab-content "><p class="popular"> Be happy! You are popular!</p></section>
                     </div> 
-                       
                 </div>
-               
             </div>
         </main>
     </div>
+
     <aside>
         <nav class="nav-aside">
             <div>
@@ -195,14 +198,20 @@
                         <input type="radio" id="LernHours" name="tab-group-statistics" checked>
                         <label for="LernHours" class="tab-title">Learning Hours</label> 
                         <section class="tab-content tab-graph">
-                            <img src="img/graph.png" alt="">
+                            <img src="img/graph.png" alt="Graph">
                         </section>
                     </div>
+                    
                     <div class="tab-c">
                         <input type="radio" id="MyCourses" name="tab-group-statistics">
                         <label for="MyCourses" class="tab-title">My courses</label> 
-                        <section class="tab-content group-statistics">
-                            In prosses
+                        <section class="tab-content">
+                           <ul class="group-statistics-courses">
+                               <li>Spanish B2</li>
+                               <li>Learn Avocode</li>
+                               <li>Animation for everybody</li>
+                               <li>Make stickers</li>
+                           </ul>
                         </section> 
                     </div> 
 
@@ -226,8 +235,6 @@
                 <p>Unlock premium features only for .99 per month.</p>
                 <button class="btn">Go premium</button>
             </div>
-
-            
                 <img src="img/Frame.png" alt="Frame" aria-hidden="true">
         </div>
 

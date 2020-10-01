@@ -7,7 +7,6 @@ body {
     width: auto;
     box-sizing: border-box;
     display: flex;
-
 }
 
 a:focus, button:focus,
@@ -22,7 +21,6 @@ select:focus {
     width: 9.1%;
     margin-bottom: 2.5%;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -32,6 +30,7 @@ select:focus {
 ul {
     padding: 0;
 }
+
 li {
     list-style-type: none;
 }
@@ -43,6 +42,7 @@ li {
     height: 44.6%;
     margin-bottom: 26%;
 }
+
 .container-header-main {
     display: flex;
     height: 100%;
@@ -71,7 +71,6 @@ li {
 }
 
 header {
-    /* width: 43%; */
     height: 21%;
     padding-top: 3.5%;
 }
@@ -81,9 +80,7 @@ header {
     background: #F5F5F7;
     border-radius: 14px;
     height: 90%;
-    /* width: 100%; */
     padding-left: 5%;
-    /* margin-top: 14%; */
     margin-bottom: 0;
     position: relative;
     display: flex;
@@ -92,14 +89,13 @@ header {
 .header-text {
     margin: auto 0;
 }
+
 .heading-hello {
     font-family: 'Baloo Bhai 2', cursive;
     font-style: normal;
     font-weight: normal;
     font-size: 36px;
-    line-height: 57px;
-
-    
+    line-height: 57px;  
 }
 
 header p {
@@ -113,7 +109,6 @@ header p {
 .header-img {
     width: 28%;
     height: auto;
-
     position: absolute;
     bottom: 0;
     right: 16%;
@@ -121,9 +116,7 @@ header p {
 
 .type-act-course::before {
     content: '';
-    /* max-width: 106px; */
     width: 55px;
-    /* max-height: 97px; */
     height: 55px;
     border-radius: 12px;
     background-color: rgb(255, 255, 255);
@@ -132,14 +125,11 @@ header p {
     bottom: 8px;
     margin: auto;
     z-index: 0;
-    /* right: 2px; */
-    /* margin-left: 2%; */
     top: 4px;
-    /* left: 1px; */
     position: absolute;
-    /* margin-right: 10px; */
     left: -58px;
 }
+
 .type-act-course.spanish::before {
     background-image: url(../img/spanish-icon.svg);
 }
@@ -173,10 +163,6 @@ header p {
     margin-right: 2%;
 }
 
-.active-courses {
-    
-    
-}
 .arrow-switch+.arrow-switch {
     margin-left: 10px;
 }
@@ -188,21 +174,23 @@ header p {
     justify-content: space-between;
 }
 
-.active-courses > div {}
-
 .type-act-course{
     margin: auto 0;
     z-index: 1;
     position: relative;
     left: 60px;
-    /* padding: 0 0 0 70px; */ 
 }
-
 
 .active-progress {
- 
+    position: relative;
+    margin-left: 13%;
 }
 
+.percent {
+    position: absolute;
+    top: 14px;
+    left: 5px;
+}
 
 .btn {
     max-width: 120px;
@@ -213,18 +201,20 @@ header p {
     color: rgb(255, 255, 255);
     border-radius: 8px;
     cursor: pointer;
-
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
     font-size: 13px;
     line-height: 15px;
+    transition-duration: 0.5s;
+}
+
+.btn:active {
+    transform: scale(0.6);
 }
 
 .in-block .btn {
     margin-right: 2%;
-}
-.actives-switch {
 }
 
 .heading-blocks {
@@ -233,15 +223,12 @@ header p {
     font-weight: bold;
     font-size: 24px;
     line-height: 38px;
-
 }
+
 .courses {
     margin-top: 4%;
     height: 62%;
 }
-.courses-heading {
-}
-
 
 .courses-tabs {
     position: relative;
@@ -249,12 +236,20 @@ header p {
 }
 
 .tab-c, .tab-title {
-    display: inline-block; /* Выстраиваем по горизонтали */
+    display: inline-block; 
  
 }
+
 .tab-c input[type="radio"] { 
     display: none; 
 }
+
+label, 
+.arrow-switch, 
+.aside-summary-courses div {
+    cursor: pointer;
+}
+
 .tab-title {
     font-family: 'Baloo Bhai 2', cursive;
     font-style: normal;
@@ -262,34 +257,31 @@ header p {
     font-size: 16px;
     line-height: 26px;
     color: rgb(134, 126, 126);
-    padding: 5px 10px;
-    
-   }
-   .tab-content {
-    position: absolute; /* Абсолютное позиционирование */
-    /* border: 1px solid #666; Параметры рамки */
-    /* padding: 10px; Поля вокруг текста */
-    /* Размещаем у левого края */
-    /* width: calc(100% - 20px); Ширина содержимого */
+    padding: 5px 10px;  
+}
+
+.tab-content {
+    position: absolute; 
     width: 100%;
     height: auto;
-    display: none; /* Прячем вкладку */
-   }
-   .tab-c :checked + .tab-title {
-    position: relative; /* Относительное позиционирование */
-    background: #fff; /* Цвет фона */
-    top: 1px; /* Сдвигаем вниз */
-    z-index: 1; /* Отображаем поверх содержимого */
+    display: none;
+}
+
+.tab-c :checked + .tab-title {
+    position: relative; 
+    top: 1px; 
+    z-index: 1;
     color: rgb(1, 1, 1);
-   }
-   .tab-c :checked ~ .tab-content {
-    display: block; /* Показываем активную вкладку */
-    
-   }
+}
+
+.tab-c :checked ~ .tab-content {
+    display: block;
+}
   
 main {
     height: 80%;
-}   
+}  
+
 .one-courses {
     height: 80px;
     background: #F5F5F7;
@@ -297,18 +289,47 @@ main {
     padding-left: 1.3%;
     padding-right: 3.7%;
 }   
+
 .one-courses:not(:last-child) {
     margin-bottom: 1.5%;
 }
-.courses-tables {
-    display: flex;
-    flex-direction: column;
+
+.text-tabs-content {
+    text-align: center;
+    font-size: 6em;
+    transform: skewY(10deg);
+    font-size: 5em;
+    top: 52px;
+    margin-top: 25%;
+    margin-left: -45%;
+    font-weight: bolder;
+    color: rgba(14, 13, 13, 0.644);
+    text-shadow: 30px 21px 6px rgba(167, 150, 150, 1);
+}
+
+ img[alt=unicorn] {
+    width: 70%;
+    margin-top: 9px;
+    margin-left: -115px;
+}
+
+.popular {
+   font-family: 'Baloo Bhai 2';
+   font-style: normal;
+   font-weight: bold;
+   font-size: 32px;
+   margin-top: 115px;
+   margin-left: -175px;
+   text-shadow: 0 0 15px #999;
+   color: transparent;
+   transition: all .5s;
+}
+
+.popular:hover {
+    text-shadow: 0 0 0 #333;
 }
 
 .one-courses {
-    /* display: flex;
-    align-items: center;
-    justify-content: space-between; */
     display: grid;
     grid-template-columns: 50% 20% 10% 20%;
     align-items: center;
@@ -336,43 +357,44 @@ main {
 .sum-time::before {
     background-image: url(../img/clock.svg);
 }
+
 .sum-mark::before {
     background-image: url(../img/fire.svg);
 }
 
 aside {
     width: 31%;
-
     display: flex;
     flex-direction: column;
     margin-top: 1.5%;
     
 }
+
 .nav-aside {
     width: 100%;
     height: 4.7%;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
 }
 
 .nav-aside > div {
     height: 100%;
     width: 100%;
 }
+
 input[type=text] {
     background: #F5F5F7;
-border-radius: 8px;
-border: none;
-height: inherit;
-    width: inherit;
-
+    border-radius: 8px;
+    border: none;
+    height: inherit;
+    width: calc(100% - 50px);
     background: url(../img/search.svg) 15px center no-repeat, #F5F5F7;
     background-size: 21px;
     margin-right: 10px;
+    padding-left: 50px;
 }
+
 
 .aside-ul {
     display: flex;
@@ -381,9 +403,9 @@ height: inherit;
 .aside-ul li {
     margin-left: 15px;
 }
+
 .aside-summary-courses {
     display: flex;
-
     margin-top: 4%;
     height: 11%;
     width: 100%;
@@ -395,42 +417,36 @@ height: inherit;
     background-color: #F5F5F7;
     border-radius: 14px;
     margin-right: 5%;
-   
     display: flex;
     align-items: center;
-    
 }
 
 .number-sum-courses {
     font-family: 'Baloo Bhai 2';
-font-style: normal;
-font-weight: bold;
-font-size: 64px;
-line-height: 102px;
-margin-left: 9%;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 102px;
+    margin-left: 9%;
 }
 
 .text-sum-courses {
     font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-line-height: 24px;
-margin-right: 9%;
-
-
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    margin-right: 9%;
 }
+
 .statistic {
     margin-top: 4%;
-    height: 150%;
 }
 
 .menu-statistic {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
-
-    /* height: 30%; */
 }
 
 .select {
@@ -453,33 +469,43 @@ div select {
     width: 200%;
     height: 70%;
 }
-.heading-statistic {
+
+.group-statistics-courses {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 15px;
+    margin-top: 30px;
+    margin-left: -100px;
 }
-.statistic-graph {
+
+.group-statistics-courses li{
+    margin-bottom: 5%;
+    list-style-type: circle;
 }
-.graph-tab {
-}
-.img {
-}
-.graph {
-}
+
 .premium {
     width: 100%;
     height: 22%;
     display: flex;
     background: #F5F5F7;
-border-radius: 14px;
-padding-top: 8%;
-padding-bottom: 7%;
-padding-left: 5%;
-padding-right: 5%;
-margin-top: 7%;
-position: relative;
+    border-radius: 14px;
+    padding-top: 8%;
+    padding-bottom: 7%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 7%;
+    position: relative;
+    top: 40%;
+}
 
-top: 28px;
+.premium-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .premium img {
     width: 28%;
-
 }
