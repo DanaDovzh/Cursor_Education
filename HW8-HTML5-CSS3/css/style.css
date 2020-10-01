@@ -517,3 +517,9 @@ div select {
 .premium img {
     width: 28%;
 }
+
+@media (min-width: 1440px) {
+    .premium {
+        margin-top: -10%;
+    }
+}
