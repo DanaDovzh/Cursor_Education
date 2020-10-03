@@ -509,28 +509,50 @@ border-radius: 4px;
 footer {
     background: #00ADEE;
     font-family: Lato;
-font-style: normal;
-font-weight: bold;
-font-size: 16px;
-line-height: 21px;
-/* identical to box height */
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
 
-
-/* #FFFFFF */
-
-color: #FFFFFF;
-
-display: flex;
-}
-
-footer nav {
-    display: inherit;
-}
-
-footer nav ul {
     display: flex;
-    width: 25.7%;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    padding: 51px 162px;
+    flex-wrap: wrap;
+
+    
+}
+
+footer .logo {
+    margin-left: 0;
+    margin-bottom: 0;
+    
+}
+
+.logo-text {
+    color: #ffffff; 
+}
+nav, .nav-footer {
+    display: flex;
+    /* justify-content: space-between; */
+}
+nav { width: 100%;}
+.list-services {
+    /* width: 33.6%; */
+    margin-right: 18%;
+    /* justify-content: space-between; */
+    margin-left: 18%;
+}
+
+.list-services .nav-footer li+li {
+    margin-left: 20%;
+}
+.nav-footer.list-social-networks a+a {
+    margin-left: 17px;
+}
+
+.nav-footer.list-social-networks {
+    align-self: auto;
 }
 
 @media (max-width: 720px) {
@@ -659,8 +681,7 @@ footer nav ul {
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax(100px, auto);
     column-gap: 4%;
-    margin-left: 12.5%;
-    margin-right: 12.5%;
+    margin: 0;
     /* margin-bottom: 68px; */
     /* justify-content: space-between; */
     align-items: center;
@@ -676,4 +697,33 @@ footer nav ul {
 .div5 { grid-area: 2 / 3 / 3 / 4; }
 .div6 { grid-area: 3 / 1 / 4 / 3; }
 
+
+footer { 
+    flex-direction: column;
+    padding: 41px 19px;}
+nav { flex-wrap: wrap-reverse;}
+.nav-footer.list-social-networks {
+    margin-top: 11px;
+    margin-bottom: 34px;
+}
+
+.list-services {
+    /* width: 33.6%; */
+    margin-right: 0;
+    /* justify-content: space-between; */
+    margin-left: 0;
+}
+.list-services .nav-footer li+li {
+    margin-left: 3%;
+}
+
+footer > nav {
+    order: 3;
+}
+
+.list-social-networks {order:2;}
+footer .logo {
+    order:1;
+    align-self: start;
+}
 }
