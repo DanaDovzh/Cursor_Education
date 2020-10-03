@@ -66,9 +66,28 @@ header {
     margin-left: 163px;
 }
 
-.download-in {
+header .download-in,
+.text-get-up .download-in {
     display: flex;
     align-items: center;
+    margin-top: 38px;
+  
+}
+.text-get-up {
+    margin-top: 105px;
+    margin-left: 5%;
+    width: 37%;
+}
+.text-get-up .download-in {
+    /* display: flex; */
+    flex-direction: row;
+    margin-bottom: 98px;
+  
+}
+.text-get-up  button {
+    padding-left: 17.8%;
+}
+header .download-in {
     width: 24.1%;
     justify-content: space-between;
     margin-top: 50px;
@@ -492,20 +511,28 @@ border-radius: 4px;
     /* margin-bottom: 68px; */
     /* justify-content: space-between; */
     align-items: center;
+    grid-auto-flow: row;
 } 
 
 .item-featured{
     width: auto;
 }
 .get-up-close {
-    background-image: url(../img/background-get.png);
-    background-repeat: no-repeat;
-    margin-left: 743px;
-    margin-top: 105px;
-    margin-bottom: 98px;
-    margin-left: 162px;
-}
+  
+    /* padding-left: 743px;
+    padding-top: 105px;
+    padding-bottom: 98px;*/
+    /* padding-right: 162px;  */
+    display: flex;
 
+ 
+}
+.img-like-bg img {
+    object-fit: fill;
+    height: 100%;
+    /* object-position: -82% bottom; */
+    width: 100%;
+}
 footer {
     background: #00ADEE;
     font-family: Lato;
@@ -529,7 +556,7 @@ footer .logo {
     
 }
 
-.logo-text {
+footer .logo-text {
     color: #ffffff; 
 }
 nav, .nav-footer {
@@ -588,7 +615,8 @@ nav { width: 100%;}
     content: "";
     background-image: url(../img/basket.svg);
 }
-    .blocks-text, .blocks-heading, .short-info-text, .short-info-text-learn {
+    .blocks-text, .blocks-heading, .short-info-text, .short-info-text-learn,
+    .text-get-up {
         align-self: center;
         text-align: center;
         letter-spacing: 0.9px;
@@ -657,6 +685,7 @@ nav { width: 100%;}
     row-gap: 20px;
     margin: 0;
     text-align: center;
+
 }
 
 .about-addition {
@@ -697,6 +726,12 @@ nav { width: 100%;}
 .div5 { grid-area: 2 / 3 / 3 / 4; }
 .div6 { grid-area: 3 / 1 / 4 / 3; }
 
+.get-up-close {
+
+    display: flex;
+    flex-direction: column-reverse;
+ 
+}
 
 footer { 
     flex-direction: column;
