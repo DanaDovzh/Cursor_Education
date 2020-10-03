@@ -352,7 +352,7 @@ box-shadow: 0px 2.09791px 2.09791px rgba(0, 0, 0, 0.25);
 .blocks-heading {
     color: #333333;
     font-family: Lato;
-    font-size: 28px;
+    font-size: 1.740em;
     font-weight: 700;
     line-height: 36.09px;
     margin-bottom: 27px;
@@ -360,7 +360,7 @@ box-shadow: 0px 2.09791px 2.09791px rgba(0, 0, 0, 0.25);
 .blocks-text {
     color: #4f4f4f;
     font-family: Lato;
-    font-size: 16px;
+    font-size: 1em;
     font-weight: 400;
     line-height: 22.5px;
 }
@@ -387,7 +387,7 @@ box-shadow: 0px 2.09791px 2.09791px rgba(0, 0, 0, 0.25);
 .short-info-text, .short-info-text-learn a {
     color: #00adee;
     font-family: 'Lato', sans-serif;
-    font-size: 16px;
+    font-size: 1em;
     font-weight: 700;
     line-height: 20.63px;
     
@@ -542,7 +542,7 @@ footer {
     font-family: Lato;
     font-style: normal;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 1em;
     line-height: 21px;
     color: #FFFFFF;
 
@@ -593,7 +593,9 @@ nav { width: 100%;}
         padding: 0;
      margin:0px
     }
-    
+    header .logo{
+        margin-top: 32px;
+    }
     .header-heading, .header-text,.text-about,
     .about-addition .blocks-text {
         width: 88.8%;
@@ -602,7 +604,10 @@ nav { width: 100%;}
         letter-spacing: 0.9px;
         margin-left: 0;
     }
-
+header .download-in {
+    width: 88.8%;
+    margin-left: 0;
+}
     .about-addition{
         /* flex-direction: column-reverse; */
     }
@@ -688,10 +693,10 @@ nav { width: 100%;}
     }
 
     .header-heading {
-        font-size: 30px;
+        font-size: 1.875em;
     }
     .header-text {
-        font-size: 16px;
+        font-size: 1em;
     }
 
     .logo {
