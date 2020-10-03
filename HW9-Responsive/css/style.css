@@ -173,9 +173,13 @@ button p:last-child {
     background-position: left;
     /* background-position-x: 112%; */
     background-size: contain;
-   position: relative;
+   /* position: relative; */
   
    /* flex-wrap: wrap; */
+}
+
+.picturesd-addition {
+    position: relative; 
 }
 
 .about-addition > div{
@@ -217,7 +221,7 @@ margin-bottom: 13px;
 } */
 .pictures-football-commands {
     margin-left: 202px;
-    /* position: relative; */
+    position: relative;
     bottom: -260px;
     z-index: 4555;
     left: 144px;
@@ -583,19 +587,24 @@ nav { width: 100%;}
 }
 
 @media (max-width: 720px) {
-    header, .get-started {
+    header, .get-started, .about-addition {
         background-image: none;
         /* padding: 0 5.5%; */
         padding: 0;
      margin:0px
     }
     
-    .header-heading, .header-text {
+    .header-heading, .header-text,.text-about,
+    .about-addition .blocks-text {
         width: 88.8%;
         align-self: center;
         text-align: center;
         letter-spacing: 0.9px;
         margin-left: 0;
+    }
+
+    .about-addition{
+        /* flex-direction: column-reverse; */
     }
 .get-started div:first-child{
     align-self: center;
@@ -609,6 +618,50 @@ nav { width: 100%;}
 
 .get-started div:first-child {
     
+}
+ .picturesd-addition {
+    
+    background-image:  linear-gradient(270deg, #FFFFFF 45.16%, rgba(255, 255, 255, 0.5) 97.14%, rgba(255, 255, 255, 0.5)), url(../img/Background-experience.png);
+    background-color: rgb(255, 255, 255);
+    background-repeat: no-repeat;
+    background-position: left;
+    /* background-position-x: 112%; */
+    background-size: cover;
+
+    align-items: center;
+ 
+ }
+
+ .video {
+    z-index: 0;
+    border-radius: 4px;
+    /* margin-top: 296px; */
+    margin-left: 22%;
+    margin-bottom: 77px;
+    /* margin-right: 168px; */
+    width: 360px;
+    height: 219px;
+ }
+
+ .match-notification {
+    box-shadow: -22px 24px 49px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    background-color: #ffffff;
+    width: 360px;
+    height: 219px;
+    margin-top: 109px;
+    margin-left: 10%;
+    z-index: 1;
+    top: 103px;
+    left: -14px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+
+.pictures-football-commands {
+    margin-left: 105px;
+   
 }
 
 .phone-img::after {
