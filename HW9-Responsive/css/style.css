@@ -148,19 +148,23 @@ button p:last-child {
  
 .about-addition {
     display: flex;
-
-    background-image:  linear-gradient(270deg, #FFFFFF 5.16%, rgba(255, 255, 255, 0) 67.14%, rgba(255, 255, 255, 0.5)), url(../img/Background-experience.png);
+    background-image:  linear-gradient(270deg, #FFFFFF 45.16%, rgba(255, 255, 255, 0.5) 97.14%, rgba(255, 255, 255, 0.5)), url(../img/Background-experience.png);
     background-color: rgb(255, 255, 255);
     background-repeat: no-repeat;
     background-position: left;
     /* background-position-x: 112%; */
     background-size: contain;
    position: relative;
-   flex-wrap: wrap;
+  
+   /* flex-wrap: wrap; */
 }
 
 .about-addition > div{
-    flex-basis: 50%;
+    flex: 1 1 auto;
+}
+
+.text-about {
+    margin-left: 30%;
 }
 .match-notification {
     box-shadow: -22px 24px 49px rgba(0, 0, 0, 0.5);
@@ -194,10 +198,11 @@ margin-bottom: 13px;
 } */
 .pictures-football-commands {
     margin-left: 202px;
-    position: relative;
+    /* position: relative; */
     bottom: -260px;
     z-index: 4555;
     left: 144px;
+    
 }
 
 img[alt=Arsenal] {
@@ -222,7 +227,7 @@ img[alt=Chelsea] {
     height: 49.27px;
     vertical-align: auto;
     bottom: 0;
-    margin-top: 0;
+    margin-top: 47px;
     padding-left: 15px;
     font-family: Lato;
     font-style: normal;
@@ -314,9 +319,11 @@ box-shadow: 0px 2.09791px 2.09791px rgba(0, 0, 0, 0.25);
     
     border-radius: 4px;
     margin-top: 296px;
-    margin-left: 269px;
+    margin-left: 76%;
     margin-bottom: 77px;
-    margin-right: 168px;
+    /* margin-right: 168px; */
+    width: 360px;
+    height: 219px;
 }
 
 .blocks-heading {
@@ -351,9 +358,10 @@ box-shadow: 0px 2.09791px 2.09791px rgba(0, 0, 0, 0.25);
 
 .get-started div:first-child {
     /* margin-left: 162px; */
+    width: 45%;
 }
 
-.short-info-text, .short-info-text-learn {
+.short-info-text, .short-info-text-learn a {
     color: #00adee;
     font-family: 'Lato', sans-serif;
     font-size: 16px;
@@ -371,7 +379,7 @@ box-shadow: 0px 2.09791px 2.09791px rgba(0, 0, 0, 0.25);
 }
 
 .about-addition div:last-child {
-    margin-top: 26px;
+    /* margin-top: 26px; */
 }
 
 .about-addition .blocks-text {
@@ -384,11 +392,11 @@ box-shadow: 0px 2.09791px 2.09791px rgba(0, 0, 0, 0.25);
 }
 .phone-img {
     align-self: center;
-    margin-right: 289px;
-    margin-left: 289px;
     margin-top: 104px;
     position: relative;
     margin-bottom: 100px;
+    margin-left: 8%;
+    margin-right: 4%;
 }
 
 .phone-img::before,
@@ -519,10 +527,11 @@ footer nav ul {
 }
 
 @media (max-width: 720px) {
-    header {
+    header, .get-started {
         background-image: none;
         /* padding: 0 5.5%; */
-        padding-left: 0;
+        padding: 0;
+     margin:0px
     }
     
     .header-heading, .header-text {
@@ -531,6 +540,32 @@ footer nav ul {
         text-align: center;
         letter-spacing: 0.9px;
         margin-left: 0;
+    }
+.get-started div:first-child{
+    align-self: center;
+    margin-top: 62px;
+    width: auto;
+}
+
+.get-started div:first-child .blocks-text {
+
+}
+
+.get-started div:first-child {
+    
+}
+
+.phone-img::after {
+    content: "";
+    background-image: url(../img/basket.svg);
+}
+    .blocks-text, .blocks-heading, .short-info-text, .short-info-text-learn {
+        align-self: center;
+        text-align: center;
+        letter-spacing: 0.9px;
+        margin-left: 20px;
+        margin-right: 20px;
+        width: 88.8%;
     }
 
     .download-in, .logo {
@@ -591,7 +626,23 @@ footer nav ul {
     grid-template-rows: repeat(9, 1fr);
     grid-template-columns: 1fr;
     row-gap: 20px;
-    margin: 0 163px 66px;
+    margin: 0;
     text-align: center;
+}
+
+.about-addition {
+    flex-wrap: wrap-reverse;
+}
+
+
+
+.get-started {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.phone-img {
+    margin: 0;
+    padding: 0;
 }
 }
