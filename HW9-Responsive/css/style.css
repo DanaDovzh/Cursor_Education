@@ -12,6 +12,7 @@ li {
 
 body {
     width: 100%;
+    max-width: 1440px;
     box-sizing: border-box;
 }
 
@@ -24,12 +25,12 @@ header {
     background-color: #f4f6f9;
     background-repeat: no-repeat;
     background-position: right;
-    background-position-x: 99%;
+    background-position-x: 99%; 
     background-size: contain;
+    object-position: right bottom;
     padding-top: 63px;
-    /* padding-left: 11.45%; */
-    /* padding-left: 163px; */
 }
+
 .logo {
     display: flex;
     align-items: center;
@@ -78,7 +79,8 @@ header {
 
 form {
     width: 45.25%;
-    height: 100%;
+    /* height: 100%; */
+    flex: 1 1 auto;
 }
  button {
     width: 100%;
@@ -91,6 +93,7 @@ form {
     font-family: Roboto;
     text-align: left;
     padding-left: 31.8%;
+    max-width: 156px;
  }
 
 
@@ -99,23 +102,23 @@ form {
  }
 
 .down-google-play p:first-child {
-    font-size: 11px;
+    font-size: 0.688em;
 }
 
 .down-app-store p:first-child {
-    font-size: 10px;
+    font-size: 0.625em;
 }
 
 button p:last-child {
-    font-size: 21px;
+    font-size: 1.313em;
     font-weight: 500;
  }
 
  .down-google-play p:last-child {
-     font-size: 19px;
+     font-size: 1.188em;
  }
  .down-google-play p:last-child span {
-    font-size: 18px;
+    font-size: 1.125em;
     font-weight: 300;
  }
 
@@ -130,9 +133,9 @@ button p:last-child {
      background-position: center;
      background-repeat: no-repeat;
      width: 26px;
-    height: 31px;
-    left: 7.6%;
-    top: 17%;
+     height: 31px;
+     left: 7.6%;
+     top: 17%;
  }
 
  .down-app-store::before {
@@ -142,6 +145,7 @@ button p:last-child {
     background-image: url(../img/google-play-logo.svg);
  }
 
+ 
 .about-addition {
     display: flex;
 
@@ -521,11 +525,21 @@ footer nav ul {
         padding-left: 0;
     }
     
-    .header-heading, .header-text, .download-in {
+    .header-heading, .header-text {
         width: 88.8%;
         align-self: center;
         text-align: center;
         letter-spacing: 0.9px;
+        margin-left: 0;
+    }
+
+    .download-in, .logo {
+        align-self: center;
+        margin-left: 0;
+    }
+    .download-in {
+       
+        width: 80%;
     }
 
     .header-heading {
@@ -540,22 +554,22 @@ footer nav ul {
     }
 
     button p:last-child {
-        font-size: 20px;
+        font-size: 1.125em;
     }
 
     .down-google-play p:first-child {
-        font-size: 10px;
+        font-size: 0.625em;
     }
     
     .down-app-store p:first-child {
-        font-size: 9px;
+        font-size: 0.563empx;
     }
 
     .down-google-play p:last-child span {
-        font-size: 16px;
+        font-size: 1em;
      }
      .down-google-play p:last-child {
-        font-size: 17px;
+        font-size: 1.063em;
     }
 
     .down-app-store::before,
