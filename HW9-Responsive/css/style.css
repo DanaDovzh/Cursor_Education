@@ -656,7 +656,7 @@ footer nav ul {
 .list-featured-in {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: 12% 19% 10%;
+    grid-template-columns: 33% 33% 33%;
     grid-auto-rows: minmax(100px, auto);
     column-gap: 4%;
     margin-left: 12.5%;
