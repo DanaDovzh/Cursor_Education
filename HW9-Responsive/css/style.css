@@ -627,12 +627,13 @@ footer {
     padding: 51px 160px;
     /* flex-wrap: wrap; */
     align-items: center;
+    justify-content: space-between;
     
 }
 
 .list-services {
-    margin-left: 271px;
-    margin-right: 261px;
+    /* margin-left: 271px;
+    margin-right: 261px; */
 }
 footer .logo-text {
     color: #FFFFFF;
@@ -658,10 +659,10 @@ line-height: 21px;
 }
 
 @media(max-width: 1024px) {
-    .list-services {
+    /* .list-services {
         margin-left: 130px;
         margin-right: 121px;
-    }
+    } */
 }
 @media (max-width: 720px) {
 
