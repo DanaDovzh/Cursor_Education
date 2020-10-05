@@ -38,12 +38,15 @@ button {
     width: 156px;
     position: relative;
     padding-right: 5px;
+    margin-bottom: 4px;
  }
 
 .btn-download {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     width: 27%;
+
 }
 
  .down-app-store::before,
@@ -965,11 +968,7 @@ footer .logo-text {color: #FFFFFF;}
 
 
 @media (max-width: 360px) {
-    .btn-download {
-        flex-wrap: wrap;
-    }
-
-    .pictures-match {
+       .pictures-match {
         padding-left: 0;
     }
 
