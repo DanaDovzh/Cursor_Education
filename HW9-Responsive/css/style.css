@@ -26,7 +26,7 @@ body {
 .logo-text {
     color: #5282f0;
     font-family: "Product Sans";
-    font-size: 24px;
+   font-size: 1.500em
     font-weight: 700;
 }
 
@@ -47,7 +47,7 @@ button {
 .btn-download {
     display: flex;
     justify-content: space-between;
-    width: 60%;
+    width: 27%;
 }
 
  .down-app-store::before,
@@ -83,7 +83,7 @@ button {
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
-    font-size: 21.2716px;
+    font-size: 1.2em;
     line-height: 25px;
 
     padding-left: 25px;
@@ -93,7 +93,7 @@ button {
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 1.125em;
     line-height: 25px;
 
     padding-left: 13px;
@@ -103,7 +103,7 @@ button {
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 1.125em;
     line-height: 25px;
     color:red;
  }
@@ -112,7 +112,7 @@ button {
     font-family: Lato;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 1em;
     line-height: 23px;
     color: #4F4F4F;
  }
@@ -135,7 +135,7 @@ button {
     font-family: Lato;
     font-style: normal;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 1em;
     line-height: 21px;
  
     color: #00ADEE;
@@ -269,7 +269,7 @@ time {
     font-family: Lato;
     font-style: normal;
     font-weight: bold;
-    font-size: 16.7833px;
+    font-size: 1em;
     line-height: 22px;
 
     color: #4F4F4F;
@@ -282,7 +282,7 @@ time {
     font-family: Lato;
 font-style: normal;
 font-weight: 500;
-font-size: 18px;
+font-size: 1.125em;
 line-height: 24px;
 
 color: #000000;
@@ -293,7 +293,7 @@ width: 76px;
     font-family: Lato;
 font-style: normal;
 font-weight: normal;
-font-size: 16px;
+font-size: 1em;
 line-height: 21px;
 
 color: #000000;
@@ -310,7 +310,7 @@ color: #000000;
     font-family: Lato;
 font-style: normal;
 font-weight: normal;
-font-size: 18.8812px;
+font-size: 1.125em;
 line-height: 25px;
 
 color: #4F4F4F;
@@ -466,7 +466,7 @@ img[alt=Chelsea] {
     transform: scale(-1, 1);
     position: absolute; 
     top: 200px;
-    left: 151px;
+    left: 95px;
 }
 
 .arrow-right {
@@ -540,7 +540,7 @@ border-radius: 4px;
     font-family: Lato;
 font-style: normal;
 font-weight: bold;
-font-size: 16px;
+font-size: 1em;
 line-height: 19px;
 color: #333333;
 margin-left: 11px;
@@ -551,7 +551,7 @@ margin-left: 11px;
     font-family: Lato;
 font-style: normal;
 font-weight: normal;
-font-size: 14px;
+font-size: 0.875em;
 line-height: 18px;
 max-width: 279px;
 
@@ -608,6 +608,10 @@ color: #4F4F4F;
     margin-bottom: 38px;
 }
 
+.text-get-up .btn-download {
+    width: 64%;
+}
+
 
 footer {
     background: #00ADEE;
@@ -637,7 +641,7 @@ footer .logo-text {
     font-family: Lato;
 font-style: normal;
 font-weight: bold;
-font-size: 16px;
+font-size: 1em;
 line-height: 21px;
 }
 
@@ -653,32 +657,38 @@ line-height: 21px;
     margin-left: 15px;
 }
 
+@media(max-width: 1024px) {
+    .list-services {
+        margin-left: 130px;
+        margin-right: 121px;
+    }
+}
 @media (max-width: 720px) {
 
 /*----------------------------------*/
     button p:first-child {
-        font-size: 9.34901px;
+        font-size: 0.563em;
         line-height: 11px;
     }
 
     .down-app-store p:last-child {
-        font-size: 19.8868px;
+        font-size: 1.188em;
         line-height: 23px;
      }
     
      .down-google-play p span {
-        font-size: 16px;
+        font-size: 1em;
         line-height: 24px;
      }
 
      .blocks-text {
-        font-size: 16px;
+        font-size: 1em;
         line-height: 23px;
         text-align: center;
      }
 
      .blocks-heading {
-        font-size: 28px;
+        font-size: 1.750em;
         line-height: 37px;
         text-align: center;
      }
@@ -696,14 +706,14 @@ line-height: 21px;
         margin-bottom: 30px;
     }
     .header-heading {
-        font-size: 30px;
+        font-size: 1.875em;
         line-height: 40px;
         font-weight: bold;
         letter-spacing: 0.03em;
     }
 
     .header-text {
-        font-size: 16px;
+        font-size: 1em;
     line-height: 23px;
     }
     .header-block-text {
@@ -719,7 +729,8 @@ line-height: 21px;
     .btn-download {
         display: flex;
         justify-content: space-evenly;
-        width: 100%;
+        width: 88%;
+        flex: 0 0;
         margin-bottom: 59px;
 
     }
@@ -771,7 +782,7 @@ height: 149.58px;
     left: -165px;
 }
     time {
-        font-size: 11.5188px;
+        font-size: 0.7em;
         line-height: 15px;
         margin-top: 27px;
         margin-bottom: 12px;
@@ -779,7 +790,7 @@ height: 149.58px;
     
     .commands {
     
-    font-size: 12.3539px;
+    font-size: 0.755em;
 line-height: 16px;
     
    
@@ -787,14 +798,14 @@ line-height: 16px;
     width: 76px;
     }
     .description-match {
-        font-size: 10.9812px;
+        font-size: 0.685;
         line-height: 14px;
     }
     
     .turn-match {
       
         height: 33px;
-        font-size: 12.9587px;
+        font-size: 0.755em;
         line-height: 17px;
     
     color: #4F4F4F;
