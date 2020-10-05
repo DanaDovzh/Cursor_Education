@@ -264,19 +264,58 @@ header {
 }
 
 .turn-match {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background: #EEEEEE;
     border-radius: 0px 0px 4px 4px;
     height: 47px;
+    padding-top: 13px;
+}
+
+.turn-match .turn-match-text {
     font-family: Lato;
     font-style: normal;
     font-weight: normal;
     font-size: 1.125em;
     line-height: 25px;
-
     color: #4F4F4F;
     flex: 0 0 auto;
-    padding-top: 13px;
 }
+
+input.switch {
+    position: relative;
+    -webkit-appearance: none;
+    outline: none;
+    width: 27.29px;
+     height: 12.58px;
+    background-color: grey;
+    border: 1px solid #D9DADC;
+    border-radius: 50px;
+  /*   box-shadow: inset -20px 0 0 0 white; */
+    z-index: 0;
+  }
+  
+  input.switch:after {
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: -9px;
+    background: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    z-index: 1;
+    border: 1px solid black;
+  }
+  
+  input.switch:checked {
+    background-color: blue;
+  }
+  
+  input.switch:checked:after {
+    left: 10px;
+  }
 
 .wid-content-mn, .turn-match {padding-left: 15px;}
 
