@@ -23,7 +23,7 @@ body {
 .logo-text {
     color: #5282f0;
     font-family: "Product Sans";
-    font-size: 1.500em
+    font-size: 1.500em;
     font-weight: 700;
 }
 
@@ -88,15 +88,19 @@ button {
     padding-left: 13px;
  }
 
- .down-google-play p:last-child(:not span) {
+ .down-google-play p:last-child {
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
     font-size: 1.125em;
     line-height: 25px;
-    color:red;
  }
-
+ .down-google-play p:last-child  span {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.063em;
+ }
  .blocks-text {
     font-family: Lato;
     font-style: normal;
@@ -222,7 +226,7 @@ header {
     flex-direction: column;
 }
 
-time {
+.time {
     font-family: Lato;
     font-style: normal;
     font-weight: bold;
@@ -702,7 +706,7 @@ footer .logo-text {color: #FFFFFF;}
         left: -165px;
     }
 
-    time {
+    .time {
         font-size: 0.7em;
         line-height: 15px;
         margin-top: 27px;
@@ -717,7 +721,7 @@ footer .logo-text {color: #FFFFFF;}
     }
 
     .description-match {
-        font-size: 0.685;
+        font-size: 0.685em;
         line-height: 14px;
     }
     
@@ -879,7 +883,7 @@ footer .logo-text {color: #FFFFFF;}
         height: 119px;
     }
 
-    time {
+    .time {
          margin-top: 5px;
     }
 
@@ -911,7 +915,7 @@ footer .logo-text {color: #FFFFFF;}
     .arrow-left {
         left: 3px;
     }
-    
+
     .arrow-right {
         right: 3px;
     }
