@@ -624,10 +624,10 @@ footer {
 
     display: flex;
     /* justify-content: space-between; */
-    padding: 51px 160px;
+    padding: 51px 0;
     /* flex-wrap: wrap; */
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     
 }
 
@@ -658,11 +658,32 @@ line-height: 21px;
     margin-left: 15px;
 }
 
-@media(max-width: 1024px) {
+@media(max-width: 768px) {
     /* .list-services {
         margin-left: 130px;
         margin-right: 121px;
     } */
+    .what-it-does {
+        flex-direction: column-reverse;
+        background-image: none;  
+    }
+    .wid-text {
+        margin: 0;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        padding: 2%;
+    }
+
+    .pictures-match {
+        align-items: center;
+        padding: 0;
+        margin-top: 0;
+    }
+
 }
 @media (max-width: 720px) {
 
@@ -746,12 +767,13 @@ line-height: 21px;
     }
 
 /*---------------------*/
-    .what-it-does {
+    /* .what-it-does {
         flex-direction: column-reverse;
         background-image: none;  
-    }
+    } */
 
-    .wid-text, .get-started {
+    /* .wid-text,  */
+    .get-started {
         margin: 0;
         display: flex;
         text-align: center;
@@ -763,7 +785,7 @@ line-height: 21px;
         padding: 3%;
     }
     .pictures-match {
-        background-image:  linear-gradient(270deg, #FFFFFF 45.16%, rgba(255, 255, 255, 0.5) 97.14%, rgba(255, 255, 255, 0.5)), url(../img/Background-experience.png);
+    background-image:  linear-gradient(270deg, #FFFFFF 45.16%, rgba(255, 255, 255, 0.5) 97.14%, rgba(255, 255, 255, 0.5)), url(../img/Background-experience.png);
     background-color: rgb(255, 255, 255);
     background-repeat: no-repeat;
     background-position: left;
@@ -774,6 +796,11 @@ line-height: 21px;
     padding-left: 20px;
     padding-right: 20px;
     }
+
+    .pictures-match div{
+       
+    }
+    
 
     .match-notifications, .video img {
         width: 247.21px;
@@ -842,7 +869,8 @@ line-height: 16px;
 
         background-image: url(../img/back-phone.png);
         background-repeat: no-repeat;
-    
+        
+        transform: translateX(-11px);
     }
     
     .phone-img::after {
@@ -933,7 +961,9 @@ line-height: 16px;
 .text-get-up {
     width: auto;
 }
-
+.text-get-up .btn-download {
+    width: 88%;
+}
 footer {
 
     flex-direction: column;
@@ -985,7 +1015,7 @@ margin-bottom: 34px;}
 
 /*--------*/
 
-@media (max-width: 320px) {
+@media (max-width: 360px) {
     .btn-download {
         flex-wrap: wrap;
     }
@@ -995,5 +1025,12 @@ margin-bottom: 34px;}
     }
     .video {
         left: -210px;
+    }
+
+    .arrow-left {
+        left: 3px;
+    }
+    .arrow-right {
+        right: 3px;
     }
 } 
