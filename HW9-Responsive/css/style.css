@@ -921,7 +921,30 @@ margin-bottom: 34px;}
 }
 
 
+@media (max-width: 440px) {
+    .match-notifications, .video img {
+        width: 220px;
+        height: 119px;
+    }
 
+    time {
+    
+         margin-top: 5px;
+       
+    }
+
+    .turn-match {
+        height: 15px;
+        
+        padding-top: 5px;
+    }
+
+    .commands-emblem {
+        left: 120px;
+        bottom: 110px;
+       
+    }
+}
 
 
 /*--------*/
