@@ -782,7 +782,7 @@ line-height: 16px;
     }
     
     .pictures-match {
-        padding-left: 100px;
+        padding-left: 20px;
     }
     .commands-emblem {
         left: 140px;
@@ -911,11 +911,16 @@ nav {order:3;}
 .list-social-networks{order:2;
 margin-top: 11px;
 margin-bottom: 34px;}
-}
 
+.nav-footer li+li {
+    margin-left: 19px;
+}
 .list-services {
     margin: 0;
 }
+}
+
+
 
 
 
