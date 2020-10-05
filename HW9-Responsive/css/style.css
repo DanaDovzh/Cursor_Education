@@ -133,6 +133,10 @@ button {
  .upper-text {
      text-transform: uppercase;
  }
+
+ button:active{
+     transform: scale(1.2);
+ }
 /* ------------------------- */
 
 header {
@@ -628,10 +632,24 @@ footer .logo-text {color: #FFFFFF;}
         padding: 2%;
     }
 
+    .what-it-does .learn-more, .get-started-text .learn-more {
+        margin-bottom: 20px; 
+    }
+
+    .phone-img {
+        margin-top: -42px;
+        margin-right: 55px;
+    }
+
     .pictures-match {
         align-items: center;
         padding: 0;
         margin-top: 0;
+    }
+
+    .get-started-text {
+        margin-top: 65px;
+        margin-left: 45px;
     }
 
     .btn-download {
