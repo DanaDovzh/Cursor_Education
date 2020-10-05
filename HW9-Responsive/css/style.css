@@ -321,9 +321,10 @@ input.switch {
 
 .commands-emblem {
     bottom: 170px;
-    left: 195px;
+    right: -185px;
     z-index: 1234;
     position: relative;
+    width: 170px;
 }
 
 img[alt=Chelsea] {
@@ -633,6 +634,12 @@ footer .logo-text {color: #FFFFFF;}
         margin-top: 0;
     }
 
+    .btn-download {
+        width: 52%;
+    }
+    .text-get-up .btn-download {
+       flex-direction: column;
+    }
 }
 
 @media (max-width: 720px) {
