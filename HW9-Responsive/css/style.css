@@ -819,6 +819,7 @@ footer .logo-text {color: #FFFFFF;}
         overflow: unset;
     }
 
+    .arrow-left {display: none;}
     /*-----------------------*/
     .list-featured-in {
         display: grid;
@@ -910,10 +911,6 @@ footer .logo-text {color: #FFFFFF;}
 
     .video {
         left: -210px;
-    }
-
-    .arrow-left {
-        left: 3px;
     }
 
     .arrow-right {
