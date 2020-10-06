@@ -899,12 +899,12 @@ footer .logo-text {color: #FFFFFF;}
         margin-right: 20px;
     } 
 
-    .div1 { grid-area: 1 / 1 / 2 / 2; }
-    .div2 { grid-area: 1 / 2 / 2 / 3; }
-    .div3 { grid-area: 2 / 1 / 3 / 2; }
-    .div4 { grid-area: 2 / 2 / 3 / 3; }
-    .div5 { grid-area: 2 / 3 / 3 / 4; }
-    .div6 { grid-area: 3 / 1 / 4 / 3; }
+    .sport-tv { grid-area: 1 / 1 / 2 / 2; }
+    .sports { grid-area: 1 / 2 / 2 / 3; }
+    .nbc-sports { grid-area: 2 / 1 / 3 / 2; }
+    .designer-techology { grid-area: 2 / 2 / 3 / 3; }
+    .designer-news { grid-area: 2 / 3 / 3 / 4; }
+    .sky-sports { grid-area: 3 / 1 / 4 / 3; }
 
 /*------------------------------*/
     .get-up-close {
