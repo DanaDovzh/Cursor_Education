@@ -64,7 +64,7 @@ button {
  .down-app-store::before {background-image: url(../img/app-store-logo.svg);}
  .down-google-play::before {background-image: url(../img/google-play-logo.svg);}
 
- button p:first-child {
+ button span:first-child {
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -73,7 +73,7 @@ button {
     padding-left: 20px;
  }
 
- .down-app-store p:last-child {
+ .down-app-store span:last-child {
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
@@ -82,7 +82,7 @@ button {
     padding-left: 25px;
  }
 
- .down-google-play p span {
+ .down-google-play span:nth-child(3) {
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
@@ -91,14 +91,14 @@ button {
     padding-left: 13px;
  }
 
- .down-google-play p:last-child {
+ .down-google-play span:nth-child(2) {
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
     font-size: 1.125em;
     line-height: 25px;
  }
- .down-google-play p:last-child  span {
+ .down-google-play span:nth-child(3) {
     font-family: Roboto;
     font-style: normal;
     font-weight: 300;
@@ -665,17 +665,17 @@ footer .logo-text {color: #FFFFFF;}
 
 @media (max-width: 720px) {
 /*----------------------------------*/
-    button p:first-child {
+    button span:first-child {
         font-size: 0.563em;
         line-height: 11px;
     }
 
-    .down-app-store p:last-child {
+    .down-app-store span:last-child {
         font-size: 1.188em;
         line-height: 23px;
      }
     
-     .down-google-play p span {
+     .down-google-play span:nth-child(3) {
         font-size: 1em;
         line-height: 24px;
      }
