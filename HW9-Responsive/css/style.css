@@ -584,7 +584,7 @@ img[alt=Chelsea] {
     margin-bottom: 38px;
 }
 
-.text-get-up .btn-download {width: 64%;}
+.text-get-up .btn-download {width: 80%;}
 
 footer {
     background: #00ADEE;
@@ -918,6 +918,8 @@ footer .logo-text {color: #FFFFFF;}
 
     .text-get-up .btn-download {
         width: 88%;
+        flex-direction: row;
+        flex-wrap: nowrap;
     }
 
     footer {
