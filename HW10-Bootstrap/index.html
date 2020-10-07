@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" /> 
+    <link rel="shortcut icon" href="img/instagram-icon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">   
+    <title>Instagram</title>
+</head>
+
+<body>
+    <div class="main-container">
+        <nav class="navbar sticky-top navbar-light bg-white line">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="img/instagram.svg" alt="Logo" aria-hidden="true"></a>
+                <form class="form-inline">
+                    <input class="form-control" type="search" placeholder="	&#128269; Search" aria-label="Search">
+                </form>
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link link-black" href="#fat">
+                            <svg width="1.438em" height="1.735em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M7.646 1.146a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5H9.5a.5.5 0 0 1-.5-.5v-4H7v4a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6zM2.5 7.707V14H6v-4a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v4h3.5V7.707L8 2.207l-5.5 5.5z"/>
+                                <path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link-black" href="#mdo">
+                            <svg width="1.375em" height="1.188em" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21.5131 0H0.460947C0.0399037 0 -0.147226 0.509019 0.133469 0.786666L7.61868 8.09803L10.1917 18.6486C10.2853 19.0651 10.8467 19.1113 11.0338 18.7874L21.9341 0.694117C22.1213 0.370196 21.8874 0 21.5131 0ZM2.75329 1.38823H18.4254L8.69468 6.7098C8.50755 6.80234 8.27363 6.75607 8.13329 6.61725L2.75329 1.38823ZM11.0338 16.1035L9.1625 8.42195C9.11572 8.23685 9.20928 8.00548 9.39641 7.91293L19.174 2.54509L11.0338 16.1035Z" fill="#262626"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link-black" href="#mdo">
+                            <svg width="1.375em" height="1.438em" viewBox="0 0 16 17" class="bi bi-compass" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016zm6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                                <path d="M6.94 7.44l4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link-black" href="#mdo">
+                            <svg  width="1.375em" height="1.438em" viewBox="0 0 16 16" class="bi bi-heart" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="btn-group dropleft">
+                            <img src="img/main-foto.png" class="rounded-circle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" alt="Icon main photo" aria-hidden="true" width="22px" height="22px">
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                                        <path fill-rule="evenodd" d="M2 15v-1c0-1 1-4 6-4s6 3 6 4v1H2zm6-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                    </svg> 
+                                    <p>&nbsp;Profile</p>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-bookmark" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
+                                    </svg>
+                                    <p>&nbsp;Saved</p>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-tools" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M0 1l1-1 3.081 2.2a1 1 0 0 1 .419.815v.07a1 1 0 0 0 .293.708L10.5 9.5l.914-.305a1 1 0 0 1 1.023.242l3.356 3.356a1 1 0 0 1 0 1.414l-1.586 1.586a1 1 0 0 1-1.414 0l-3.356-3.356a1 1 0 0 1-.242-1.023L9.5 10.5 3.793 4.793a1 1 0 0 0-.707-.293h-.071a1 1 0 0 1-.814-.419L0 1zm11.354 9.646a.5.5 0 0 0-.708.708l3 3a.5.5 0 0 0 .708-.708l-3-3z"/>
+                                        <path fill-rule="evenodd" d="M15.898 2.223a3.003 3.003 0 0 1-3.679 3.674L5.878 12.15a3 3 0 1 1-2.027-2.027l6.252-6.341A3 3 0 0 1 13.778.1l-2.142 2.142L12 4l1.757.364 2.141-2.141zm-13.37 9.019L3.001 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026z"/>
+                                    </svg>
+                                    <p>&nbsp;Settings</p>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Log out</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>    
+        </nav>
+
+        <header class="container">
+            <div class="row">
+                <div class="header-wrapper col">
+                    <div class="header-photo">
+                        <img src="img/main-foto.png" class="rounded-circle" alt="Main photo">
+                    </div>
+
+                    <div class="header-info col">
+                        <nav class="navbar nav-main-user">
+                            <p class="nickname-user" id="nicknameUser">Peace_of_mind</p>
+
+                            <div class="btn-header">
+                                <button type="button" class="btn btn-primary">Follow</button> 
+                                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="collapse" 
+                                    data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></button>
+                            </div>
+                            <button type="button" class="btn dots" data-toggle="modal" data-target="#exampleModal">
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-three-dots" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+                                </svg>
+                            </button>
+                        </nav>
+
+                        <div class="general-data-user">
+                            <ul class="list-general-data">
+                                <li>79 posts</li>
+                                <li>379 followers</li>
+                                <li>34 following</li>
+                            </ul>
+                        </div>
+
+                        <div class="personal-info-user">
+                            <p class="username">Dana</p>
+                            <div class="main-info">
+                                <p>You gotta go and reach for the top</p>
+                                <p>Believe in every dream that you got</p>
+                                <p>You only living one so tell me?</p>
+                                <p>What are you, what are you waiting for?</p>
+                                <a class="standard-link" href="https://github.com/DanaDovzh/Cursor_Education" target="_blank">https://github.com/DanaDovzh/Cursor_Education</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="stories-user">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-2">
+                            <figure class="figure">
+                                <img src="img/story-1.jpg" class="figure-img img-fluid rounded rounded-circle" alt="Story">
+                                <figcaption class="figure-caption">Happy </figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-2"><figure class="figure">
+                            <img src="img/story-2.jpg" class="figure-img img-fluid rounded rounded-circle" alt="...">
+                            <figcaption class="figure-caption">Smile</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-2"><figure class="figure">
+                            <img src="img/story-3.jpg" class="figure-img img-fluid rounded rounded-circle" alt="...">
+                            <figcaption class="figure-caption">Hugs</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-2"><figure class="figure">
+                            <img src="img/story-4.jpg" class="figure-img img-fluid rounded rounded-circle" alt="...">
+                            <figcaption class="figure-caption">People</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-2"><figure class="figure">
+                            <img src="img/story-5.jpg" class="figure-img img-fluid rounded rounded-circle" alt="...">
+                            <figcaption class="figure-caption">World</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+        <!-- --------------------------------- -->
+        <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <p class="modal-text-pink">Block this user</p>
+                        <p class="modal-text-pink">Restrict</p>
+                        <p class="modal-text-pink">Report user</p>
+                        <p class="modal-text close " data-dismiss="modal" aria-label="Close">Cancel</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- --------------------------------- -->
+            <div class="collapse container" id="collapseExample">
+                <div class="card-deck row">
+                    <div class="card col">
+                        <img src="img/card-1.jpg" class="card-img-top rounded-circle align-self-center" alt="...">
+                        <div class="card-body">
+                        <a class="card-title">@robertdowneyjr</a>
+                        <p class="card-text">Robert Downey Jr.</p>
+                        <a href="#" class="btn btn-primary">Follow</a>
+                        </div>
+                    </div>
+                    <div class="card col">
+                        <img src="img/card-2.jpg" class="card-img-top rounded-circle align-self-center" alt="...">
+                        <div class="card-body">
+                        <a class="card-title">@annehathaway</a>
+                        <p class="card-text">Anne Hathaway</p>
+                        <a href="#" class="btn btn-primary">Follow</a>
+                        </div>
+                    </div>
+                    <div class="card col">
+                        <img src="img/card-3.jpg" class="card-img-top rounded-circle align-self-center" alt="...">
+                        <div class="card-body">
+                        <a class="card-title">@benedictcumbers</a>
+                        <p class="card-text">Benedict Cumberbatch</p>
+                        <a href="#" class="btn btn-primary">Follow</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="container">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators"  data-slide-to="0" class="active">
+                        <svg width="0.688em" height="0.688em" viewBox="0 0 16 16" class="bi bi-grid-3x3" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M0 1.5A1.5 1.5 0 0 1 1.5 0h13A1.5 1.5 0 0 1 16 1.5v13a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 14.5v-13zM1.5 1a.5.5 0 0 0-.5.5V5h4V1H1.5zM5 6H1v4h4V6zm1 4V6h4v4H6zm-1 1H1v3.5a.5.5 0 0 0 .5.5H5v-4zm1 0h4v4H6v-4zm5 0v4h3.5a.5.5 0 0 0 .5-.5V11h-4zm0-1h4V6h-4v4zm0-5h4V1.5a.5.5 0 0 0-.5-.5H11v4zm-1 0H6V1h4v4z"/>
+                        </svg><span>Posts</span>
+                    </li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1">
+                        <svg width="0.688em" height="0.688em" viewBox="0 0 16 16" class="bi bi-person-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                            <path fill-rule="evenodd" d="M2 15v-1c0-1 1-4 6-4s6 3 6 4v1H2zm6-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                        </svg><span>Tagged</span>
+                    </li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <a  data-fancybox="gallery" href="img/gallery-1.jpg">
+                                        <img src="img/gallery-1.jpg" class="w-100 h-100 img-fluid" alt="...">
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a data-fancybox="gallery" href="img/gallery-2.jpg">
+                                    <img src="img/gallery-2.jpg" class="w-100 h-100 img-fluid" alt="...">
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a  data-fancybox="gallery" href="img/gallery-3.jpg">
+                                        <img src="img/gallery-3.jpg" class="w-100 h-100 img-fluid" alt="...">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <a  data-fancybox="gallery" href="img/gallery-4.jpg">
+                                        <img src="img/gallery-4.jpg" class="w-100 h-100 img-fluid" alt="...">
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a  data-fancybox="gallery" href="img/gallery-5.jpg">
+                                        <img src="img/gallery-5.jpg" class="w-100 h-100 img-fluid" alt="...">
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a  data-fancybox="gallery" href="img/gallery-6.jpg">
+                                        <img src="img/gallery-6.jpg" class="w-100 h-100 img-fluid" alt="...">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <a  data-fancybox="gallery" href="img/gallery-7.jpg">
+                                        <img src="img/gallery-7.jpg" class="w-100 h-100 img-fluid" alt="...">
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a  data-fancybox="gallery" href="img/gallery-8.jpg">
+                                        <img src="img/gallery-8.jpg" class="w-100 h-100 img-fluid" alt="...">
+                                    </a>
+                                
+                                </div>
+                                <div class="col">
+                                    <a  data-fancybox="gallery" href="img/gallery-9.jpg">
+                                        <img src="img/gallery-9.jpg" class="w-100 h-100 img-fluid" alt="...">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <a  data-fancybox="gallery-tagged" href="img/tagged-1.jpg">
+                                        <img src="img/tagged-1.jpg" class="w-100 h-100 img-fluid" alt="...">
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a  data-fancybox="gallery-tagged" href="img/tagged-2.jpg">
+                                        <img src="img/tagged-2.jpg" class="w-100 h-100 img-fluid" alt="...">
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a  data-fancybox="gallery-tagged" href="img/tagged-3.png">
+                                        <img src="img/tagged-3.png" class="w-100 h-100 img-fluid" alt="...">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <a  data-fancybox="gallery-tagged" href="img/tagged-4.jpg">
+                                        <img src="img/tagged-4.jpg" class="w-100 h-100 img-fluid" alt="...">
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a  data-fancybox="gallery-tagged" href="img/tagged-5.jpg">
+                                        <img src="img/tagged-5.jpg" class="w-100 h-100 img-fluid" alt="...">
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a  data-fancybox="gallery-tagged" href="img/tagged-6.jpg">
+                                        <img src="img/tagged-6.jpg" class="w-100 h-100 img-fluid" alt="...">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer class="container">
+        <ul class="nav">
+            <li class="nav-item"><a class="nav-link active" href="#">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Press</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Api</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Jobs</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Privacy</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Terms</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Location</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Top accounts</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Hashtags</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Language</a></li>
+            <li><p class="copyright align-self-end" >© 2020 Instagram from Facebook</p></li>
+          </ul>
+        
+    </footer>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+</body>
+</html>
