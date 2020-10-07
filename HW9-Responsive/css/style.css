@@ -981,4 +981,36 @@ footer .logo-text {color: #FFFFFF;}
     .arrow-right {
         right: 3px;
     }
+
+    .phone-img::before,
+    .phone-img::after {
+    content: '';
+    width: 80px;
+    height: 80px;
+}
+
+.phone-img::after {
+    content: "";
+    right: -10px;
+}
+@media (max-width: 360px) {
+    .phone-img::before, .phone-img::after {
+        content: '';
+        width: 80px;
+        height: 80px;
+    }
+    .phone-img::before {
+        content: "";
+        left: 30px;
+    }
+
+    .nav-footer li+li {
+        margin-left: 9px;
+    }
+
+    .list-featured-in {
+        column-gap: 1px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
 } 
