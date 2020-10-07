@@ -964,6 +964,7 @@ footer .logo-text {color: #FFFFFF;}
 
     .commands-emblem {
         left: 120px;
+        right: 0;
         bottom: 110px;
     }
 }
