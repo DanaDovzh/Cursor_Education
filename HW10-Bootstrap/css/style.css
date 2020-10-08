@@ -98,6 +98,20 @@ header {
     text-align: start;
 }
 
+.messages {
+    position: relative;
+}
+.number-messages {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 100%;
+    background: #ff484e;
+    bottom: 12px;
+    left: 22px;
+    text-align: center;
+}
+
  
 .nav {
     align-items: baseline;
@@ -252,7 +266,7 @@ a.card-title:hover {
 .figure-caption {
     font-style: normal;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 0.875em;
     text-align: center;
 }
 
@@ -367,18 +381,38 @@ footer {
     .card:nth-child(3) {
         display: none;
     }
+
+    .figure img {
+        width: 3.9em;
+        height: 3.9em;
+    }
 }
 
 @media (max-width: 500px) {
     .form-control {
         display: none;
     }
+
+    .nav-link {
+        display: block;
+        padding: .5rem 10px;
+    }
+
 }
 
 @media (max-width: 450px) {
     .header-wrapper { flex-direction: column; }
     .card:nth-child(2) {
         display: none;
+    }
+
+    .figure img {
+        width: 2.9em;
+        height: 2.9em;
+    }
+
+    .figure-caption {
+        font-size: 0.688em;
     }
 }
 
