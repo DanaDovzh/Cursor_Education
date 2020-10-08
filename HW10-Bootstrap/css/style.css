@@ -55,9 +55,6 @@ p {
 
 main {
     border-top: 1px solid #DBDBDB;
-}
-
-main {
     margin-top: 55px;
 }
 
@@ -82,6 +79,11 @@ header {
 /* -------------------------------------- */
 .main-container {
     flex: 1 0 auto;
+}
+
+.main-photo {
+    width: 22px;
+    height: 22px;
 }
 
  .navbar {
@@ -165,7 +167,7 @@ button.btn.btn-primary {
 .btn-primary,
 .btn-primary:hover {
     background: #4094EF;
-    border-color: #4094EF;
+    border: 1px solid #4094EF;
 }
 
 button.btn.btn-primary.dropdown-toggle {
