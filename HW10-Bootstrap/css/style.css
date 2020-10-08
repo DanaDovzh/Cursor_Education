@@ -58,6 +58,9 @@ main {
     margin-top: 55px;
 }
 
+.main-info {
+    font-size: 0.875em;
+}
 header {
     margin-top: 29px;
 }
@@ -73,8 +76,8 @@ header {
 }
 
 .header-photo img {
-    width: 154px;
-    height: 155px;
+    width: 9.688rem;
+    height:  9.688rem;
 }
 /* -------------------------------------- */
 .main-container {
@@ -123,7 +126,7 @@ header {
     text-transform: uppercase;
     color: #00376b;
     font-weight: 600;
-    font-size: 12px;
+    font-size: 0.750em;
 }
 
 .link-black {
@@ -139,7 +142,7 @@ header {
 .nickname-user {
     font-style: normal;
     font-weight: 500;
-    font-size: 26px;
+    font-size: 1.625em;
     color: #262626;
 }
 
@@ -160,7 +163,7 @@ button.btn.btn-primary {
     padding: 0;
     font-style: normal;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 0.875em;
     line-height: 17px;
 }
 
@@ -186,7 +189,7 @@ button.btn.btn-primary.dropdown-toggle {
 .username {
     font-style: normal;
     font-weight: 500;
-    font-size: 17px;
+    font-size: 1em;
     color: #262626;
 }
 
@@ -216,7 +219,7 @@ button.btn.btn-primary.dropdown-toggle {
 .card-title {
     font-weight: 700;
     color: #00376b;
-    font-size: 12px;
+    font-size: 0.750em;
     cursor: pointer;
 }
 
@@ -225,7 +228,7 @@ a.card-title:hover {
 }
 .card-text {
     color: #8e8e8e;
-    font-size: 11px;
+    font-size: 0.688em;
 }
 
 .card-deck .card {
@@ -244,7 +247,7 @@ a.card-title:hover {
     width: auto;
     font-style: normal;
     font-weight: 500;
-    font-size: 17px;
+    font-size: 1em;
     line-height: 21px;
 }
 
@@ -339,7 +342,7 @@ a.card-title:hover {
 
 .copyright {
     color: #8e8e8e;
-    font-size: 12px;
+    font-size: 0.750em;
     text-transform: uppercase;
 }
 
@@ -363,6 +366,10 @@ footer {
     flex: 0 0 auto;
 }
 
+.personal-info-user-sm {
+    display: none;
+}
+
 @media (max-width: 735px) {
     .general-data-user {display: none;}
 
@@ -377,6 +384,19 @@ footer {
     }
 
     .dots{order:2;}
+
+    .header-photo img {
+        width: 77px;
+        height: 77px;
+    }
+
+    .personal-info-user-lg {
+        display: none;
+    }
+
+    .personal-info-user-sm {
+        display: block;
+    }
 }
 
 @media (max-width: 580px) {
