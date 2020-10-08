@@ -1,5 +1,5 @@
 # CURSOR EDUCATION
-## Front-End Education <img src="https://media.giphy.com/media/L4T3K3YBxtE5vuRauD/giphy.gif" width="30px">
+## Front-End Education <img src="https://media.giphy.com/media/d3MKBzBTtCUIDwwU/giphy.gif" width="25px">
 
 **List of homeworks**
 
@@ -14,7 +14,7 @@
 | 7  | "Псевдокласи"                            | [Link](https://danadovzh.github.io/Cursor_Education/HW7-Pseudo-classes/index.html) | [Directory](https://github.com/DanaDovzh/Cursor_Education/tree/master/HW7-Pseudo-classes) |
 | 8  | "HTML5, CSS3"                            | [Link](https://danadovzh.github.io/Cursor_Education/HW8-HTML5-CSS3/index.html) | [Directory](https://github.com/DanaDovzh/Cursor_Education/tree/master/HW8-HTML5-CSS3) |
 | 9  |  "Responsive"                            | [Link](https://danadovzh.github.io/Cursor_Education/HW9-Responsive/index.html) | [Directory](https://github.com/DanaDovzh/Cursor_Education/tree/master/HW9-Responsive) |
-| 10 |   "Bootstrap"                            | [Link] | [Directory] |
+| 10 |   "Bootstrap"                            | [Link](https://danadovzh.github.io/Cursor_Education/HW10-Bootstrap/index.html) | [Directory](https://github.com/DanaDovzh/Cursor_Education/tree/master/HW10-Bootstrap) |
 | 11 |                                          | [Link] | [Directory] |
 | 12 |                                          | [Link] | [Directory] |
 | 13 |                                          | [Link] | [Directory] |
