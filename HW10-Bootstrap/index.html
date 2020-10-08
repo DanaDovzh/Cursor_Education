@@ -10,6 +10,7 @@
         crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" /> 
     <link rel="shortcut icon" href="img/instagram-icon.svg" type="image/x-icon">
+    
     <link rel="stylesheet" href="css/style.css">   
     <title>Instagram</title>
 </head>
@@ -32,10 +33,12 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link-black" href="#mdo">
+                        <a class="nav-link link-black messages" href="#mdo">
                             <svg width="1.375em" height="1.188em" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M21.5131 0H0.460947C0.0399037 0 -0.147226 0.509019 0.133469 0.786666L7.61868 8.09803L10.1917 18.6486C10.2853 19.0651 10.8467 19.1113 11.0338 18.7874L21.9341 0.694117C22.1213 0.370196 21.8874 0 21.5131 0ZM2.75329 1.38823H18.4254L8.69468 6.7098C8.50755 6.80234 8.27363 6.75607 8.13329 6.61725L2.75329 1.38823ZM11.0338 16.1035L9.1625 8.42195C9.11572 8.23685 9.20928 8.00548 9.39641 7.91293L19.174 2.54509L11.0338 16.1035Z" fill="#262626"/>
                             </svg>
+
+                            <div class="number-messages"><span id="num-messages">0</span></div>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -98,7 +101,7 @@
                             <p class="nickname-user" id="nicknameUser">Peace_of_mind</p>
 
                             <div class="btn-header">
-                                <button type="button" class="btn btn-primary">Follow</button> 
+                                <button type="button" class="btn btn-primary" id="Follow" onclick="changeFollow(this.id)">Follow</button> 
                                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="collapse" 
                                     data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></button>
                             </div>
@@ -124,7 +127,7 @@
                                 <p>Believe in every dream that you got</p>
                                 <p>You only living one so tell me?</p>
                                 <p>What are you, what are you waiting for?</p>
-                                <a class="standard-link" href="https://github.com/DanaDovzh/Cursor_Education" target="_blank">https://github.com/DanaDovzh/Cursor_Education</a>
+                                <a class="standard-link" href="https://github.com/DanaDovzh/Cursor_Education" target="_blank">https://cutt.ly/5grqv8g</a>
                             </div>
                         </div>
                     </div>
@@ -135,27 +138,27 @@
                     <div class="row">
                         <div class="col-2">
                             <figure class="figure">
-                                <img src="img/story-1.jpg" class="figure-img img-fluid rounded rounded-circle" alt="Story">
-                                <figcaption class="figure-caption">Happy </figcaption>
+                                <img src="img/story-1.jpg" class="figure-img rounded rounded-circle" alt="Story" aria-hidden="true">
+                                <figcaption class="figure-caption">Happy</figcaption>
                             </figure>
                         </div>
                         <div class="col-2"><figure class="figure">
-                            <img src="img/story-2.jpg" class="figure-img img-fluid rounded rounded-circle" alt="...">
+                            <img src="img/story-2.jpg" class="figure-img  rounded rounded-circle" alt="Story" aria-hidden="true">
                             <figcaption class="figure-caption">Smile</figcaption>
                             </figure>
                         </div>
                         <div class="col-2"><figure class="figure">
-                            <img src="img/story-3.jpg" class="figure-img img-fluid rounded rounded-circle" alt="...">
+                            <img src="img/story-3.jpg" class="figure-img  rounded rounded-circle" alt="Story" aria-hidden="true">
                             <figcaption class="figure-caption">Hugs</figcaption>
                             </figure>
                         </div>
                         <div class="col-2"><figure class="figure">
-                            <img src="img/story-4.jpg" class="figure-img img-fluid rounded rounded-circle" alt="...">
+                            <img src="img/story-4.jpg" class="figure-img  rounded rounded-circle" alt="Story" aria-hidden="true">
                             <figcaption class="figure-caption">People</figcaption>
                             </figure>
                         </div>
                         <div class="col-2"><figure class="figure">
-                            <img src="img/story-5.jpg" class="figure-img img-fluid rounded rounded-circle" alt="...">
+                            <img src="img/story-5.jpg" class="figure-img  rounded rounded-circle" alt="Story" aria-hidden="true">
                             <figcaption class="figure-caption">World</figcaption>
                             </figure>
                         </div>
@@ -182,7 +185,7 @@
             <div class="collapse container" id="collapseExample">
                 <div class="card-deck row">
                     <div class="card col">
-                        <img src="img/card-1.jpg" class="card-img-top rounded-circle align-self-center" alt="...">
+                        <img src="img/card-1.jpg" class="card-img-top rounded-circle align-self-center" alt="Robert>
                         <div class="card-body">
                         <a class="card-title">@robertdowneyjr</a>
                         <p class="card-text">Robert Downey Jr.</p>
@@ -190,7 +193,7 @@
                         </div>
                     </div>
                     <div class="card col">
-                        <img src="img/card-2.jpg" class="card-img-top rounded-circle align-self-center" alt="...">
+                        <img src="img/card-2.jpg" class="card-img-top rounded-circle align-self-center" alt="Anne">
                         <div class="card-body">
                         <a class="card-title">@annehathaway</a>
                         <p class="card-text">Anne Hathaway</p>
@@ -198,7 +201,7 @@
                         </div>
                     </div>
                     <div class="card col">
-                        <img src="img/card-3.jpg" class="card-img-top rounded-circle align-self-center" alt="...">
+                        <img src="img/card-3.jpg" class="card-img-top rounded-circle align-self-center" alt="Benedict">
                         <div class="card-body">
                         <a class="card-title">@benedictcumbers</a>
                         <p class="card-text">Benedict Cumberbatch</p>
@@ -230,17 +233,17 @@
                             <div class="row">
                                 <div class="col">
                                     <a  data-fancybox="gallery" href="img/gallery-1.jpg">
-                                        <img src="img/gallery-1.jpg" class="w-100 h-100 img-fluid" alt="...">
+                                        <img src="img/gallery-1.jpg" class="w-100 h-100 img-fluid" alt="Photo from gallery" aria-hidden="true">
                                     </a>
                                 </div>
                                 <div class="col">
                                     <a data-fancybox="gallery" href="img/gallery-2.jpg">
-                                    <img src="img/gallery-2.jpg" class="w-100 h-100 img-fluid" alt="...">
+                                    <img src="img/gallery-2.jpg" class="w-100 h-100 img-fluid" alt="Photo from gallery" aria-hidden="true">
                                     </a>
                                 </div>
                                 <div class="col">
                                     <a  data-fancybox="gallery" href="img/gallery-3.jpg">
-                                        <img src="img/gallery-3.jpg" class="w-100 h-100 img-fluid" alt="...">
+                                        <img src="img/gallery-3.jpg" class="w-100 h-100 img-fluid" alt="Photo from gallery" aria-hidden="true">
                                     </a>
                                 </div>
                             </div>
@@ -248,17 +251,16 @@
                             <div class="row">
                                 <div class="col">
                                     <a  data-fancybox="gallery" href="img/gallery-4.jpg">
-                                        <img src="img/gallery-4.jpg" class="w-100 h-100 img-fluid" alt="...">
-                                    </a>
+                                        <img src="img/gallery-4.jpg" class="w-100 h-100 img-fluid" alt="Photo from gallery" aria-hidden="true">
                                 </div>
                                 <div class="col">
                                     <a  data-fancybox="gallery" href="img/gallery-5.jpg">
-                                        <img src="img/gallery-5.jpg" class="w-100 h-100 img-fluid" alt="...">
+                                        <img src="img/gallery-5.jpg" class="w-100 h-100 img-fluid" alt="Photo from gallery" aria-hidden="true">
                                     </a>
                                 </div>
                                 <div class="col">
                                     <a  data-fancybox="gallery" href="img/gallery-6.jpg">
-                                        <img src="img/gallery-6.jpg" class="w-100 h-100 img-fluid" alt="...">
+                                        <img src="img/gallery-6.jpg" class="w-100 h-100 img-fluid" alt="Photo from gallery" aria-hidden="true">
                                     </a>
                                 </div>
                             </div>
@@ -266,18 +268,18 @@
                             <div class="row">
                                 <div class="col">
                                     <a  data-fancybox="gallery" href="img/gallery-7.jpg">
-                                        <img src="img/gallery-7.jpg" class="w-100 h-100 img-fluid" alt="...">
+                                        <img src="img/gallery-7.jpg" class="w-100 h-100 img-fluid" alt="Photo from gallery" aria-hidden="true">
                                     </a>
                                 </div>
                                 <div class="col">
                                     <a  data-fancybox="gallery" href="img/gallery-8.jpg">
-                                        <img src="img/gallery-8.jpg" class="w-100 h-100 img-fluid" alt="...">
+                                        <img src="img/gallery-8.jpg" class="w-100 h-100 img-fluid" alt="Photo from gallery" aria-hidden="true">
                                     </a>
                                 
                                 </div>
                                 <div class="col">
                                     <a  data-fancybox="gallery" href="img/gallery-9.jpg">
-                                        <img src="img/gallery-9.jpg" class="w-100 h-100 img-fluid" alt="...">
+                                        <img src="img/gallery-9.jpg" class="w-100 h-100 img-fluid" alt="Photo from gallery" aria-hidden="true">
                                     </a>
                                 </div>
                             </div>
@@ -288,34 +290,34 @@
                             <div class="row">
                                 <div class="col">
                                     <a  data-fancybox="gallery-tagged" href="img/tagged-1.jpg">
-                                        <img src="img/tagged-1.jpg" class="w-100 h-100 img-fluid" alt="...">
+                                        <img src="img/tagged-1.jpg" class="w-100 h-100 img-fluid" alt="Photo from gallery" aria-hidden="true">
                                     </a>
                                 </div>
                                 <div class="col">
                                     <a  data-fancybox="gallery-tagged" href="img/tagged-2.jpg">
-                                        <img src="img/tagged-2.jpg" class="w-100 h-100 img-fluid" alt="...">
+                                        <img src="img/tagged-2.jpg" class="w-100 h-100 img-fluid" alt="Photo from gallery" aria-hidden="true">
                                     </a>
                                 </div>
                                 <div class="col">
                                     <a  data-fancybox="gallery-tagged" href="img/tagged-3.png">
-                                        <img src="img/tagged-3.png" class="w-100 h-100 img-fluid" alt="...">
+                                        <img src="img/tagged-3.png" class="w-100 h-100 img-fluid" alt="Photo from gallery" aria-hidden="true">
                                     </a>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col">
                                     <a  data-fancybox="gallery-tagged" href="img/tagged-4.jpg">
-                                        <img src="img/tagged-4.jpg" class="w-100 h-100 img-fluid" alt="...">
+                                        <img src="img/tagged-4.jpg" class="w-100 h-100 img-fluid" alt="Photo from gallery" aria-hidden="true">
                                     </a>
                                 </div>
                                 <div class="col">
                                     <a  data-fancybox="gallery-tagged" href="img/tagged-5.jpg">
-                                        <img src="img/tagged-5.jpg" class="w-100 h-100 img-fluid" alt="...">
+                                        <img src="img/tagged-5.jpg" class="w-100 h-100 img-fluid" alt="Photo from gallery" aria-hidden="true">
                                     </a>
                                 </div>
                                 <div class="col">
                                     <a  data-fancybox="gallery-tagged" href="img/tagged-6.jpg">
-                                        <img src="img/tagged-6.jpg" class="w-100 h-100 img-fluid" alt="...">
+                                        <img src="img/tagged-6.jpg" class="w-100 h-100 img-fluid" alt="Photo from gallery" aria-hidden="true">
                                     </a>
                                 </div>
                             </div>
@@ -350,5 +352,7 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+<script src="js/main.js"></script>
 </body>
 </html>
