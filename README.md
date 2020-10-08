@@ -1,5 +1,5 @@
 # CURSOR EDUCATION
-## Front-End Education
+## Front-End Education <img src="https://media.giphy.com/media/L4T3K3YBxtE5vuRauD/giphy.gif" width="30px">
 
 **List of homeworks**
 
@@ -12,9 +12,9 @@
 | 5  |"Блочна верстка"                          | [Link](https://danadovzh.github.io/Cursor_Education/HW5-Block-layout/index.html) | [Directory](https://github.com/DanaDovzh/Cursor_Education/tree/master/HW5-Block-layout) |
 | 6  | "Flexbox/Grid"                           | [Link](https://danadovzh.github.io/Cursor_Education/HW6-Flexbox-Grid/index.html) | [Directory](https://github.com/DanaDovzh/Cursor_Education/tree/master/HW6-Flexbox-Grid) |
 | 7  | "Псевдокласи"                            | [Link](https://danadovzh.github.io/Cursor_Education/HW7-Pseudo-classes/index.html) | [Directory](https://github.com/DanaDovzh/Cursor_Education/tree/master/HW7-Pseudo-classes) |
-| 8  | "HTML5, CSS3"                            | [Link] | [Directory] |
-| 9  |                                          | [Link] | [Directory] |
-| 10 |                                          | [Link] | [Directory] |
+| 8  | "HTML5, CSS3"                            | [Link](https://danadovzh.github.io/Cursor_Education/HW8-HTML5-CSS3/index.html) | [Directory](https://github.com/DanaDovzh/Cursor_Education/tree/master/HW8-HTML5-CSS3) |
+| 9  |  "Responsive"                            | [Link](https://danadovzh.github.io/Cursor_Education/HW9-Responsive/index.html) | [Directory](https://github.com/DanaDovzh/Cursor_Education/tree/master/HW9-Responsive) |
+| 10 |   "Bootstrap"                            | [Link] | [Directory] |
 | 11 |                                          | [Link] | [Directory] |
 | 12 |                                          | [Link] | [Directory] |
 | 13 |                                          | [Link] | [Directory] |
