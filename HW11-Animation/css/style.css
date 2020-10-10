@@ -131,6 +131,11 @@ main {
     background: linear-gradient(90deg, rgba(131,26,181,1) 79%, rgba(155,35,177,1) 87%);
 }
 
+.ball:first-child, 
+.ball:last-child {
+    animation-duration: 1s;
+}
+
 .ball:first-child,
 .ball:last-child {
     animation-iteration-count: infinite;
@@ -149,11 +154,12 @@ main {
     z-index: -1;
 }
 
-.ball:first-child,
+
 .ball:last-child,
 .ball:last-child .shadow {
     animation-delay: 1s;
 }
+
 
 .ball:first-child .shadow,
 .ball:last-child .shadow{
