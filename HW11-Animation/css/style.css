@@ -4,7 +4,6 @@ body {
 
 main {
   padding: 20px;
-   
 }
 
 .container{
@@ -20,9 +19,15 @@ main {
     font-size: 2em;
     font-family: 'Chilanka', cursive;
     font-weight: 700;
-
     color: #FFFFFF;
-    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #c350f0 0px 0px 20px, #7d16c2 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
+    text-shadow: #FFF 0px 0px 5px, 
+        #FFF 0px 0px 10px, 
+        #FFF 0px 0px 15px, 
+        #c350f0 0px 0px 20px, 
+        #7d16c2 0px 0px 30px, 
+        #FF2D95 0px 0px 40px, 
+        #FF2D95 0px 0px 50px, 
+        #FF2D95 0px 0px 75px;
 }
 
 .newtons-pendulum {
@@ -34,21 +39,19 @@ main {
     border-radius:44px 44px 0 0;
     border-bottom: none;
     z-index: -10;
-    width: 470px;
+    width: 33%;
     height: 250px;
     background: rgb(230, 225, 225, 0.95);
-    box-shadow: 0px 0px 104px 41px rgba(255,255,255,1);
-   
+    box-shadow: 0px 0px 104px 41px rgba(255,255,255,1); 
 }
 
 .bottom-pendulum {
     transform: translateY(7px);
     background: rgb(66,4,115);
     background: linear-gradient(45deg, #2c1109, #ee4141, #f5186d, #5938e9, #3cffd2, #fffb0d, #131010);
-
     border-radius: 18px 18px 0 0;
     height: 48px;
-    width: 538px;
+    width: 120%;
     z-index: -5;
 }
 
@@ -60,8 +63,8 @@ main {
 }
 
 .ball {
-    width: 50px;
-    height: 50px;
+    width: 3.125em;
+    height: 3.125em;
     border-radius: 50%;
     position: relative;
 }
@@ -80,14 +83,15 @@ main {
   }
   
  .ball::after {
-    position:absolute;
-    display:block;
-    content:" ";
-    width:1px;
-    height:150px;
-    left:21px;
-    top:-150px;
+    position: absolute;
+    display: block;
+    content: " ";
+    width: 1px;
+    height: 154px;
+    left: 24px;
+    top: -151px;
     background-color: rgb(0, 0, 0);
+    z-index: -15;
  }
 
 .ball:first-child {
@@ -160,9 +164,108 @@ main {
     animation-timing-function: ease-out;
 }
 
+.jedi-swords {
+    margin-bottom: 50px;
+    padding: 25px 18px 25px 2px;
+    
+}
+
+.sword {
+    width: 3.125em;
+    height: 4px;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    margin-top: -4px;
+}
+
+.sword:nth-child(3)::before,
+.sword:first-child::before {
+    content: '';
+    height: 4px;
+    width: 12px;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    left: -18px;
+}
+
+.sword:nth-child(2)::before {
+    content: '';
+    height: 4px;
+    width: 12px;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    right: -18px;
+}
+
+.sword-hidden {
+    transform: translateY(-24px)  translateX(18px);
+    visibility: hidden; 
+    transition-duration: 0.5s;
+}
+
+.sword-stand-second {
+    transition-duration: 0.5s;
+    transform: rotate(45deg);
+}
+
+.sword-stand-third {
+    transition-duration: 0.5s;
+    transform: rotate(-45deg);
+}
+
+.jedi-swords:hover .sword:nth-child(2) {
+    box-shadow: 0 0 5px #ff1717,
+    0 0 10px #ff1717,
+    0 0 20px #ff1717,
+    0 0 40px #ff1717,
+    0 0 80px #ff1717,
+    0 0 90px #ff1717,
+    0 0 100px #ff1717,
+    0 0 250px #ff1717;
+}
+
+.jedi-swords:hover .sword:nth-child(1) {
+    box-shadow: 0 0 5px #003cff,
+    0 0 10px #003cff,
+    0 0 20px #003cff,
+    0 0 40px #003cff,
+    0 0 80px #003cff,
+    0 0 90px #003cff,
+    0 0 100px #003cff,
+    0 0 250px #003cff;
+}
+
+.sword-animation-first {
+    transition-duration: 1s;
+    transform: translateY(-16px) translateX(18px);
+    visibility: visible;
+}
+
+.sword-animation-second {
+    transition-duration: 1s;
+    transform: rotate(0deg);
+}
+
+.sword-animation-third {
+    transition-duration: 1s;
+    transform: rotate(0deg) translateX(18px) translateY(16px);
+}
+
+.jedi-swords:hover .sword:last-child {
+    box-shadow: 0 0 5px #25f31e,
+    0 0 10px #25f31e,
+    0 0 20px #25f31e,
+    0 0 40px #25f31e,
+    0 0 80px #25f31e,
+    0 0 90px #25f31e,
+    0 0 100px #25f31e,
+    0 0 150px #25f31e;
+}
+
+
 @keyframes ball-left {
     0%, 50% {transform: rotate(0) translateX(0);}
-      100% {transform: rotate(25deg) translateX(-3em);}
+    100% {transform: rotate(25deg) translateX(-3em);}
 }
 
 @keyframes ball-right {

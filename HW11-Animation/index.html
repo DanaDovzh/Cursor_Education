@@ -11,13 +11,11 @@
 <body>
     <main>
         <div class="container">
-            <h2 class="heading">Jedi swords</h2>
-            <div class="jedi-swords">
-                <div id="burger">
-                    <div class="bun top"></div>
-                    <div class="filling"></div>
-                    <div class="bun bottom"></div>
-                </div>
+            <h2 class="heading" id="h">Jedi swords</h2>
+            <div class="jedi-swords" onclick="swords()">
+                    <div class="sword sword-hidden" id="FirstSword"></div>
+                    <div class="sword sword-stand-second" id="SecondSword"></div>
+                    <div class="sword sword-stand-third" id="ThirdSword"></div>
             </div>
         </div>
 
@@ -37,5 +35,8 @@
             </div>
         </div>
     </main>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
