@@ -208,6 +208,25 @@ footer {
   padding-top: 61px;
   background-color: #E7ECFF;
 }
+footer .nav-footer .nav-link {
+  padding-left: 0;
+}
+footer .align-items-baseline .nav-link {
+  padding-right: 0;
+}
+footer .navbar {
+  border-top: 2px solid #CDD1D4;
+  margin-top: 40px;
+}
+footer .btn {
+  width: 109px;
+  height: 26px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
 footer .copyright, footer .nav-footer .nav-link {
   color: #929ECC;
   font-family: Roboto;
