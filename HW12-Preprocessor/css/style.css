@@ -417,6 +417,7 @@ footer .copyright, footer .nav-footer .nav-link {
 footer svg:hover {
   animation-name: network-icon;
   animation-duration: 0.7s;
+  animation-timing-function: steps(5, start);
 }
 @media (max-width: 425px) {
   footer {
@@ -429,9 +430,9 @@ footer svg:hover {
 
 @keyframes network-icon {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(0deg) scale(1.2);
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(360deg) scale(1.5);
   }
 }

@@ -303,6 +303,7 @@ footer
         &:hover
             animation-name: network-icon
             animation-duration: 0.7s
+            animation-timing-function: steps(5,start)
     @media(max-width: 425px)
         padding-top: px_to_em(10)
         svg 
@@ -310,8 +311,8 @@ footer
 
 @keyframes network-icon
     0%
-        transform: rotate(0deg)
+        transform: rotate(0deg) scale(1.2)
     100%
-        transform: rotate(360deg)
+        transform: rotate(360deg) scale(1.5)
         
         
