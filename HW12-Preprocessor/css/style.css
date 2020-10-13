@@ -105,8 +105,8 @@ header .row {
 .header-site {
   background-image: url(../img/main_photo.png);
   background-repeat: no-repeat;
-  background-size: inherit;
-  background-position-y: -300px;
+  background-size: 1000px;
+  background-position: right bottom;
   padding-bottom: 24.125em;
 }
 .header-site .btn {
@@ -292,16 +292,29 @@ header .row {
   color: #5D6970;
 }
 
-.price-suit-everyone {
-  background: #E7ECFF;
-  mix-blend-mode: normal;
-  padding-bottom: 8.25em;
-  padding-top: 15em;
-  border-radius: 50;
+.price-suit-everyone .border-top {
+  height: 3.125em;
+  background: white;
+  border-radius: 0 0 70% 70%;
+  border-bottom: 1px solid #f8f9fa;
+  width: 100%;
+  position: relative;
+  top: 38px;
 }
-.price-suit-everyone > div {
+.price-suit-everyone .content_price {
+  background: #E7ECFF;
+  padding-top: 13.125em;
+  padding-bottom: 7.5em;
+}
+.price-suit-everyone .content_price > div {
   width: calc((0.5405405405 * 100%));
   text-align: center;
+}
+@media (max-width: 768px) {
+  .price-suit-everyone .content_price {
+    padding-bottom: 5em;
+    padding-top: 5em;
+  }
 }
 .price-suit-everyone .price {
   font-family: Roboto;
@@ -348,12 +361,6 @@ header .row {
   font-weight: 400;
   font-size: calc(12px + 2 * ((100vw - 320px) / 1120));
   line-height: 24px;
-}
-@media (max-width: 768px) {
-  .price-suit-everyone {
-    padding-bottom: 5em;
-    padding-top: 5em;
-  }
 }
 
 footer {

@@ -93,10 +93,10 @@ header
     color: $color-nav-list
 
 .header-site 
-    background-image: url(../img/main_photo.png)
+    background-image: url(../img/main_photo.png) 
     background-repeat: no-repeat  
-    background-size: inherit  
-    background-position-y: -300px
+    background-size: 1000px  
+    background-position: right bottom
     padding-bottom: px_to_em(386)
     .btn
         @include font_style(500, 12, 18px, 9)
@@ -227,14 +227,26 @@ header
     color: $color-goes-here
 
 .price-suit-everyone 
-    background: #E7ECFF
-    mix-blend-mode: normal
-    padding-bottom: px_to_em(132)
-    padding-top: px_to_em(240)
-    border-radius: 50
-    > div
-        @include width_block(1110px, 600px)
-        text-align: center
+
+    .border-top
+        height: px_to_em(50)
+        background: white
+        border-radius: 0 0 70% 70%
+        border-bottom: 1px solid #f8f9fa
+        width: 100%
+        position: relative
+        top: 38px
+        
+    .content_price
+        background: #E7ECFF
+        padding-top: px_to_em(210)
+        padding-bottom: px_to_em(120)
+        > div
+            @include width_block(1110px, 600px)
+            text-align: center
+        @media(max-width: 768px)
+            padding-bottom: px_to_em(80)
+            padding-top: px_to_em(80)
     .price
         @include font_style(500, 66, 66px, 55)
         letter-spacing: 1px
@@ -255,9 +267,7 @@ header
     .btn
         align-self: center
         @include font_style(400, 14, 24px, 12)
-    @media(max-width: 768px)
-        padding-bottom: px_to_em(80)
-        padding-top: px_to_em(80)
+    
  
 footer
     padding-top: px_to_em(61)
