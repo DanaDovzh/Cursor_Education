@@ -40,6 +40,7 @@ a
         color: $color-nav-list
         &:hover
             color: $color-nav-list
+            @include font_style(700, 14, 24px, 12)
 
 .btn
     border-radius: 2px
@@ -50,10 +51,18 @@ a
     &.btn-primary
         border: 1px solid $color-btn-dark-fill
         background: $color-btn-dark-fill
+        &:hover 
+            transform: scale(1.2)
+            background: transparent
+            color: $color-btn-light
     &.btn-light
         background: transparent
         border: 1px solid $color-btn-light
         color: $color-btn-light
+        &:hover 
+            transform: scale(1.2)
+            background: $color-btn-dark-fill
+            color: #FFFFFF
 
 .btns 
     margin-top: px_to_em(69)
@@ -290,7 +299,19 @@ footer
     .copyright, .nav-footer .nav-link
         color: $color-footer-text
         @include font_style(400, 14, 24px, 11)
+    svg
+        &:hover
+            animation-name: network-icon
+            animation-duration: 0.7s
     @media(max-width: 425px)
         padding-top: px_to_em(10)
         svg 
             width: 12
+
+@keyframes network-icon
+    0%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(360deg)
+        
+        

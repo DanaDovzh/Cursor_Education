@@ -14,6 +14,11 @@ a.nav-link {
 }
 a.nav-link:hover {
   color: #505F98;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: calc(12px + 2 * ((100vw - 320px) / 1120));
+  line-height: 24px;
 }
 
 .btn {
@@ -31,10 +36,20 @@ a.nav-link:hover {
   border: 1px solid #111B47;
   background: #111B47;
 }
+.btn.btn-primary:hover {
+  transform: scale(1.2);
+  background: transparent;
+  color: #091133;
+}
 .btn.btn-light {
   background: transparent;
   border: 1px solid #091133;
   color: #091133;
+}
+.btn.btn-light:hover {
+  transform: scale(1.2);
+  background: #111B47;
+  color: #FFFFFF;
 }
 
 .btns {
@@ -399,11 +414,24 @@ footer .copyright, footer .nav-footer .nav-link {
   font-size: calc(11px + 3 * ((100vw - 320px) / 1120));
   line-height: 24px;
 }
+footer svg:hover {
+  animation-name: network-icon;
+  animation-duration: 0.7s;
+}
 @media (max-width: 425px) {
   footer {
     padding-top: 0.625em;
   }
   footer svg {
     width: 12;
+  }
+}
+
+@keyframes network-icon {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
