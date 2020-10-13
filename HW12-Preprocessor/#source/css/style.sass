@@ -44,7 +44,7 @@ a
 .btn
     border-radius: 2px
     width: 160px
-    height: 18px
+    height: 24px
     padding: 0px
     @include font_style(500, 16, 26px, 14)
     &.btn-primary
@@ -56,26 +56,33 @@ a
         color: $color-btn-light
 
 .btns 
-    padding-top: px_to_em(69)
-    padding-bottom: px_to_em(386) 
+    margin-top: px_to_em(69)
     display: flex
-    justify-content: center
+    justify-content: flex-start
     @media (max-width: 768px)
         padding-bottom: px_to_em(100) 
+    @media (max-width: 425px)
+        justify-content: center
 
 header 
     margin-top: px_to_em(243)
     .btn
         width: 189px
         height: 36px
-        margin-right: 30px
         @media(max-width: 768px)
             width: 160px
+    .btn+.btn
+        margin-left: 30px
+        
+    .row
+        flex-wrap: wrap-reverse
+    
+    @media (max-width: 575px)
+        margin-top: px_to_em(15)
     @media (max-width: 425px)
         margin-top: px_to_em(50)
         text-align: center
-    .row
-        flex-wrap: wrap-reverse
+
 .heading-main
     @include font_style(500, 50, 66px, 42)
     letter-spacing: 1px
@@ -88,8 +95,9 @@ header
 .header-site 
     background-image: url(../img/main_photo.png)
     background-repeat: no-repeat  
-    background-size: cover  
+    background-size: inherit  
     background-position-y: -300px
+    padding-bottom: px_to_em(386)
     .btn
         @include font_style(500, 12, 18px, 9)
         @media (max-width: 425px)
@@ -100,8 +108,14 @@ header
     @media(max-width: 768px)
         background-image: none
         background-color: #f2f5ff
+        padding-bottom: px_to_em(120)
         .navbar
             justify-content: space-around
+    @media (max-width: 575px)
+        padding-bottom: px_to_em(20)
+        .navbar
+            justify-content: start
+
 
 .navbar-brand
     @include font_style(900, 26, 38px, 18)
@@ -126,15 +140,16 @@ header
     .row
         >div 
             @include width_block(555px, 445px)
+        align-items: center
         flex-wrap: wrap-reverse
  
         
 
 .first-section
     .heading-section
-        margin-top: px_to_em(160)
-        @media (max-width: 768px)
-            margin-top: px_to_em(50)
+        // margin-top: px_to_em(140)
+        // @media (max-width: 768px)
+        //     margin-top: px_to_em(50)
     img
         margin-top: px_to_em(109)
         margin-bottom: px_to_em(108)
@@ -145,48 +160,63 @@ header
         flex-wrap: wrap
 .second-section 
     .heading-section
-        margin-top: px_to_em(172)
-        @media (max-width: 768px)
-            margin-top: px_to_em(50)
+        // margin-top: px_to_em(172)
+        // @media (max-width: 768px)
+        //     margin-top: px_to_em(50)
     img
         margin-top: px_to_em(122)
         margin-bottom: px_to_em(130)
+        margin-right: px_to_em(155)
         @media (max-width: 768px)
             margin-top: px_to_em(50)
             margin-bottom: px_to_em(55)
+            margin-right: px_to_em(10)
    
 .third-section 
     .heading-section
-        margin-top: px_to_em(172)
-        @media (max-width: 768px)
-            margin-top: px_to_em(50)
+        // margin-top: px_to_em(172)
+        // @media (max-width: 768px)
+        //     margin-top: px_to_em(50)
     img
         margin-top: px_to_em(91)
         margin-bottom: px_to_em(114)
+        margin-right: px_to_em(125)
         @media (max-width: 768px)
             margin-top: px_to_em(50)
             margin-bottom: px_to_em(55)
+            margin-right: px_to_em(5)
 
 .fourth-section 
     .heading-section
-        margin-top: px_to_em(144)
-        @media (max-width: 768px)
-            margin-top: px_to_em(50)    
+        // margin-top: px_to_em(144)
+        // @media (max-width: 768px)
+        //     margin-top: px_to_em(50)    
     img
         margin-top: px_to_em(141)
         margin-bottom: px_to_em(130)
+        margin-right: px_to_em(172)
         @media (max-width: 768px)
             margin-top: px_to_em(50)
             margin-bottom: px_to_em(55)
+            margin-right: px_to_em(5)
     .btn 
         margin-top: px_to_em(40)
         height: px_to_em(24)
-
+        @media(max-width: 425px)
+            display: block
+            margin: px_to_em(20) auto
+           
 .goes-here
     display: flex
     margin-top: px_to_em(80)
     > div 
-        @include width_block(540px, 255px) 
+        @include width_block(540px, 255px)
+        &:first-child
+            margin-right: px_to_em(7)
+    @media (max-width: 425px)
+        margin-top: px_to_em(40)
+        text-align: center
+     
 
 .heading-goes-here
     @include font_style(500, 16, 26px, 14)
@@ -199,7 +229,7 @@ header
 .price-suit-everyone 
     background: #E7ECFF
     mix-blend-mode: normal
-    padding-bottom: px_to_em(240)
+    padding-bottom: px_to_em(132)
     padding-top: px_to_em(240)
     border-radius: 50
     > div
@@ -211,6 +241,8 @@ header
         color: $color-price
         margin-top: px_to_em(35)
         margin-bottom: px_to_em(5)
+        @media(max-width: 768px)
+            margin-top: px_to_em(10)
     .text-ui-design
         @include font_style(500, 16, 26px, 14)
         color: $color-logo
@@ -218,8 +250,14 @@ header
         @include font_style(400, 14, 24px, 12)
         color: $color-goes-here
         margin-top: px_to_em(60)
+        @media(max-width: 768px)
+            margin-top: px_to_em(15)
     .btn
         align-self: center
+        @include font_style(400, 14, 24px, 12)
+    @media(max-width: 768px)
+        padding-bottom: px_to_em(80)
+        padding-top: px_to_em(80)
  
 footer
     padding-top: px_to_em(61)
@@ -233,10 +271,16 @@ footer
     .navbar 
         border-top: 2px solid #CDD1D4
         margin-top: px_to_em(40)
+        @media(max-width: 768px)
+            margin-top: px_to_em(20)
     .btn 
         width: 109px
         height: 26px
         @include font_style(400, 12, 18px, 9)
     .copyright, .nav-footer .nav-link
         color: $color-footer-text
-        @include font_style(400, 14, 24px, 12)
+        @include font_style(400, 14, 24px, 11)
+    @media(max-width: 425px)
+        padding-top: px_to_em(10)
+        svg 
+            width: 12
