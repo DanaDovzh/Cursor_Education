@@ -1,0 +1,155 @@
+$color-logo:  #37447E
+$color-nav-list: #505F98
+$color-btn-dark-fill: #111B47
+$color-btn-light: #091133
+$color-main-heading: #091133
+$color-text: #6F7CB2
+$color-goes-here: #5D6970
+$color-price: #222F65
+$color-footer-text: #929ECC
+
+
+@mixin font_style($fw, $fs, $lh)
+    font-family: Roboto
+    font-style: normal
+    font-weight: $fw
+    font-size: $fs
+    line-height: $lh
+
+@mixin width_block ($parent_w, $this_w)    
+    width: calc((#{$this_w/$parent_w} * 100%))
+a
+    text-decoration: none
+    &:focus
+        outline: none
+    
+    &.nav-link
+        @include font_style(400, 14px, 24px)
+        color: $color-nav-list
+        &:hover
+            color: $color-nav-list
+
+header 
+    margin-top: 240px
+
+.heading-main
+    @include font_style(500, 50px, 66px)
+    letter-spacing: 1px
+    color: $color-main-heading
+
+.block-text-main
+    @include font_style(400, 18px, 30px)
+    color: $color-nav-list
+
+.header-site 
+    background-image: url(../img/main_photo.png)
+    background-repeat: no-repeat  
+    background-size: cover  
+
+.navbar-brand
+    @include font_style(900, 26px, 38px)
+    color: $color-logo
+    &:hover
+        color: $color-logo
+
+.btns 
+    padding-top: 69px
+    padding-bottom: 386px 
+.btn
+    border-radius: 2px
+    width: 160px
+    height: 26px
+    padding: 0px
+    @include font_style(500, 16px, 26px)
+    &.btn-primary
+        border: 1px solid $color-btn-dark-fill
+        background: $color-btn-dark-fill
+    &.btn-light
+        background: transparent
+        border: 1px solid $color-btn-light
+        color: $color-btn-light
+
+.heading-section
+    @include font_style(500, 36px, 48px)
+    color: $color-main-heading
+    margin-bottom: 16px
+
+.block-text
+    @include font_style(400, 16px, 26px)
+    color: $color-text 
+
+.light-fast-powerful 
+    .row
+        >div 
+            @include width_block(555px, 445px)
+
+.first-section
+    .heading-section
+        margin-top: 160px
+    img
+        margin-top: 109px
+        margin-bottom: 108px
+
+.second-section 
+    .heading-section
+       margin-top: 172px
+    img
+        margin-top: 122px
+        margin-bottom: 130px
+
+.third-section 
+    .heading-section
+            margin-top: 172px
+    img
+        margin-top: 91px
+        margin-bottom: 114px
+
+.fourth-section 
+    .heading-section
+            margin-top: 144px
+    img
+        margin-top: 141px
+        margin-bottom: 130px
+    .btn 
+        margin-top: 40px
+
+.goes-here
+    display: flex
+    margin-top: 80px
+    > div 
+        @include width_block(540px, 255px) 
+
+.heading-goes-here
+    @include font_style(500, 16px, 26px)
+    color: $color-main-heading
+
+.text-goes-here
+    @include font_style(400, 12px, 18px)
+    color: $color-goes-here
+
+.price-suit-everyone 
+    text-align: center
+    @include width_block(1110px, 600px)
+    .price
+        @include font_style(500, 66px, 66px)
+        letter-spacing: 1px
+        color: $color-price
+        margin-top: 35px
+        margin-bottom: 5px
+    .text-ui-design
+        @include font_style(500, 16px, 26px)
+        color: $color-logo
+    .one-price
+        @include font_style(400, 14px, 24px)
+        color: $color-goes-here
+        margin-top: 60px
+    .btn
+        align-self: center
+ 
+footer
+    margin-top: 230px
+    padding-top: 61px
+    background-color: #E7ECFF
+    .copyright, .nav-footer .nav-link
+        color: $color-footer-text
+        @include font_style(400, 14px, 24px)
