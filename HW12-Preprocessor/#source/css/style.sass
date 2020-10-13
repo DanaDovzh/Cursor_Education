@@ -8,59 +8,45 @@ $color-goes-here: #5D6970
 $color-price: #222F65
 $color-footer-text: #929ECC
 
+$maxWidth: 1440
+$context: 16
 
-@mixin font_style($fw, $fs, $lh)
+@function px_to_em($pixels)
+    @return #{$pixels/$context}em
+
+@mixin adaptiv-font($pcSize, $mobSize)
+    $addSize: $pcSize - $mobSize
+    $maxWidth: $maxWidth - 320
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
+
+@mixin font_style($fw, $fs, $lh, $mobFSize)
     font-family: Roboto
     font-style: normal
     font-weight: $fw
-    font-size: $fs
+    @include adaptiv-font($fs, $mobFSize)
     line-height: $lh
 
 @mixin width_block ($parent_w, $this_w)    
     width: calc((#{$this_w/$parent_w} * 100%))
+
+
 a
     text-decoration: none
     &:focus
         outline: none
     
     &.nav-link
-        @include font_style(400, 14px, 24px)
+        @include font_style(400, 14, 24px, 12)
         color: $color-nav-list
         &:hover
             color: $color-nav-list
 
-header 
-    margin-top: 240px
-
-.heading-main
-    @include font_style(500, 50px, 66px)
-    letter-spacing: 1px
-    color: $color-main-heading
-
-.block-text-main
-    @include font_style(400, 18px, 30px)
-    color: $color-nav-list
-
-.header-site 
-    background-image: url(../img/main_photo.png)
-    background-repeat: no-repeat  
-    background-size: cover  
-
-.navbar-brand
-    @include font_style(900, 26px, 38px)
-    color: $color-logo
-    &:hover
-        color: $color-logo
-
-.btns 
-    padding-top: 69px
-    padding-bottom: 386px 
 .btn
     border-radius: 2px
     width: 160px
-    height: 26px
+    height: 18px
     padding: 0px
-    @include font_style(500, 16px, 26px)
+    @include font_style(500, 16, 26px, 14)
     &.btn-primary
         border: 1px solid $color-btn-dark-fill
         background: $color-btn-dark-fill
@@ -69,86 +55,174 @@ header
         border: 1px solid $color-btn-light
         color: $color-btn-light
 
-.heading-section
-    @include font_style(500, 36px, 48px)
+.btns 
+    padding-top: px_to_em(69)
+    padding-bottom: px_to_em(386) 
+    display: flex
+    justify-content: center
+    @media (max-width: 768px)
+        padding-bottom: px_to_em(100) 
+
+header 
+    margin-top: px_to_em(243)
+    .btn
+        width: 189px
+        height: 36px
+        margin-right: 30px
+        @media(max-width: 768px)
+            width: 160px
+    @media (max-width: 425px)
+        margin-top: px_to_em(50)
+        text-align: center
+    .row
+        flex-wrap: wrap-reverse
+.heading-main
+    @include font_style(500, 50, 66px, 42)
+    letter-spacing: 1px
     color: $color-main-heading
-    margin-bottom: 16px
+
+.block-text-main
+    @include font_style(400, 18, 30px, 16)
+    color: $color-nav-list
+
+.header-site 
+    background-image: url(../img/main_photo.png)
+    background-repeat: no-repeat  
+    background-size: cover  
+    background-position-y: -300px
+    .btn
+        @include font_style(500, 12, 18px, 9)
+        @media (max-width: 425px)
+            width: 105px
+    .nav-link
+        @media (max-width: 425px)
+            padding-left: px_to_em(3)
+    @media(max-width: 768px)
+        background-image: none
+        background-color: #f2f5ff
+        .navbar
+            justify-content: space-around
+
+.navbar-brand
+    @include font_style(900, 26, 38px, 18)
+    color: $color-logo
+    &:hover
+        color: $color-logo
+
+.heading-section
+    @include font_style(500, 36, 48px, 32)
+    color: $color-main-heading
+    margin-bottom: px_to_em(16)
+    @media(max-width: 720px)
+        text-align: center
 
 .block-text
-    @include font_style(400, 16px, 26px)
-    color: $color-text 
+    @include font_style(400, 16, 26px, 14)
+    color: $color-text
+    @media(max-width: 720px)
+        text-align: center
 
 .light-fast-powerful 
     .row
         >div 
             @include width_block(555px, 445px)
+        flex-wrap: wrap-reverse
+ 
+        
 
 .first-section
     .heading-section
-        margin-top: 160px
+        margin-top: px_to_em(160)
+        @media (max-width: 768px)
+            margin-top: px_to_em(50)
     img
-        margin-top: 109px
-        margin-bottom: 108px
-
+        margin-top: px_to_em(109)
+        margin-bottom: px_to_em(108)
+        @media (max-width: 768px)
+            margin-top: px_to_em(50)
+            margin-bottom: px_to_em(55)
+    .row
+        flex-wrap: wrap
 .second-section 
     .heading-section
-       margin-top: 172px
+        margin-top: px_to_em(172)
+        @media (max-width: 768px)
+            margin-top: px_to_em(50)
     img
-        margin-top: 122px
-        margin-bottom: 130px
-
+        margin-top: px_to_em(122)
+        margin-bottom: px_to_em(130)
+        @media (max-width: 768px)
+            margin-top: px_to_em(50)
+            margin-bottom: px_to_em(55)
+   
 .third-section 
     .heading-section
-            margin-top: 172px
+        margin-top: px_to_em(172)
+        @media (max-width: 768px)
+            margin-top: px_to_em(50)
     img
-        margin-top: 91px
-        margin-bottom: 114px
+        margin-top: px_to_em(91)
+        margin-bottom: px_to_em(114)
+        @media (max-width: 768px)
+            margin-top: px_to_em(50)
+            margin-bottom: px_to_em(55)
 
 .fourth-section 
     .heading-section
-            margin-top: 144px
+        margin-top: px_to_em(144)
+        @media (max-width: 768px)
+            margin-top: px_to_em(50)    
     img
-        margin-top: 141px
-        margin-bottom: 130px
+        margin-top: px_to_em(141)
+        margin-bottom: px_to_em(130)
+        @media (max-width: 768px)
+            margin-top: px_to_em(50)
+            margin-bottom: px_to_em(55)
     .btn 
-        margin-top: 40px
+        margin-top: px_to_em(40)
+        height: px_to_em(24)
 
 .goes-here
     display: flex
-    margin-top: 80px
+    margin-top: px_to_em(80)
     > div 
         @include width_block(540px, 255px) 
 
 .heading-goes-here
-    @include font_style(500, 16px, 26px)
+    @include font_style(500, 16, 26px, 14)
     color: $color-main-heading
 
 .text-goes-here
-    @include font_style(400, 12px, 18px)
+    @include font_style(400, 12, 18px, 9)
     color: $color-goes-here
 
 .price-suit-everyone 
-    text-align: center
-    @include width_block(1110px, 600px)
+    background: #E7ECFF
+    mix-blend-mode: normal
+    padding-bottom: px_to_em(240)
+    padding-top: px_to_em(240)
+    border-radius: 50
+    > div
+        @include width_block(1110px, 600px)
+        text-align: center
     .price
-        @include font_style(500, 66px, 66px)
+        @include font_style(500, 66, 66px, 55)
         letter-spacing: 1px
         color: $color-price
-        margin-top: 35px
-        margin-bottom: 5px
+        margin-top: px_to_em(35)
+        margin-bottom: px_to_em(5)
     .text-ui-design
-        @include font_style(500, 16px, 26px)
+        @include font_style(500, 16, 26px, 14)
         color: $color-logo
     .one-price
-        @include font_style(400, 14px, 24px)
+        @include font_style(400, 14, 24px, 12)
         color: $color-goes-here
-        margin-top: 60px
+        margin-top: px_to_em(60)
     .btn
         align-self: center
  
 footer
-    margin-top: 230px
-    padding-top: 61px
+    padding-top: px_to_em(61)
     background-color: #E7ECFF
     .nav-footer
         .nav-link
@@ -158,11 +232,11 @@ footer
             padding-right: 0
     .navbar 
         border-top: 2px solid #CDD1D4
-        margin-top: 40px
+        margin-top: px_to_em(40)
     .btn 
         width: 109px
         height: 26px
-        @include font_style(400, 12px, 18px)
+        @include font_style(400, 12, 18px, 9)
     .copyright, .nav-footer .nav-link
         color: $color-footer-text
-        @include font_style(400, 14px, 24px)
+        @include font_style(400, 14, 24px, 12)
