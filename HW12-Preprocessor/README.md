@@ -1,4 +1,4 @@
-# Доманя робота №12. Тема *"Animation"*
+# Домашня робота №12. Тема *"Preprocessor"*
 ## Завдання:
  
  - [Ссылка на макет](https://www.figma.com/file/sbrzVKkw4o4mad640MPIPf/SaaS-Landing-Template?node-id=0%3A88);
