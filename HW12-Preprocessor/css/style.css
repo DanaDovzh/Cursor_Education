@@ -29,7 +29,7 @@ a.nav-link:hover {
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
-  font-size: calc(14px + 2 * ((100vw - 320px) / 1120));
+  font-size: calc(16px + 0 * ((100vw - 320px) / 1120));
   line-height: 26px;
 }
 .btn.btn-primary {
