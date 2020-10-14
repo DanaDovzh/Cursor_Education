@@ -15,8 +15,8 @@
 | 8  | "HTML5, CSS3"                            | [Link](https://danadovzh.github.io/Cursor_Education/HW8-HTML5-CSS3/index.html) | [Directory](https://github.com/DanaDovzh/Cursor_Education/tree/master/HW8-HTML5-CSS3) |
 | 9  |  "Responsive"                            | [Link](https://danadovzh.github.io/Cursor_Education/HW9-Responsive/index.html) | [Directory](https://github.com/DanaDovzh/Cursor_Education/tree/master/HW9-Responsive) |
 | 10 |   "Bootstrap"                            | [Link](https://danadovzh.github.io/Cursor_Education/HW10-Bootstrap/index.html) | [Directory](https://github.com/DanaDovzh/Cursor_Education/tree/master/HW10-Bootstrap) |
-| 11 |                                          | [Link] | [Directory] |
-| 12 |                                          | [Link] | [Directory] |
+| 11 |  "Animation"                             | [Link](https://danadovzh.github.io/Cursor_Education/HW11-Animation/index.html) | [Directory](https://github.com/DanaDovzh/Cursor_Education/tree/master/HW11-Animation) |
+| 12 |  "Preprocessor"                          | [Link](https://danadovzh.github.io/Cursor_Education/HW12-Preprocessor/index.html) | [Directory](https://github.com/DanaDovzh/Cursor_Education/tree/master/HW12-Preprocessor) |
 | 13 |                                          | [Link] | [Directory] |
 | 14 |                                          | [Link] | [Directory] |
 
