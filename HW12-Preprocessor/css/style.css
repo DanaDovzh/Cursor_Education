@@ -166,9 +166,12 @@ header .row {
   font-weight: 900;
   font-size: calc(18px + 8 * ((100vw - 320px) / 1120));
   line-height: 38px;
-  color: #37447E;
 }
 .navbar-brand:hover {
+  color: #37447E;
+}
+
+.navbar-light .navbar-brand {
   color: #37447E;
 }
 
@@ -307,7 +310,7 @@ header .row {
   color: #5D6970;
 }
 
-.price-suit-everyone .border-top {
+.price-suit-everyone .border-topp {
   height: 3.125em;
   background: white;
   border-radius: 0 0 70% 70%;

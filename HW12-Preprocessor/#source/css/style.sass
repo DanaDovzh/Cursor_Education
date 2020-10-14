@@ -125,10 +125,13 @@ header
 
 .navbar-brand
     @include font_style(900, 26, 38px, 18)
-    color: $color-logo
     &:hover
         color: $color-logo
 
+.navbar-light
+    .navbar-brand
+        color: $color-logo
+        
 .heading-section
     @include font_style(500, 36, 48px, 32)
     color: $color-main-heading
@@ -216,7 +219,7 @@ header
     color: $color-goes-here
 
 .price-suit-everyone 
-    .border-top
+    .border-topp
         height: px_to_em(50)
         background: white
         border-radius: 0 0 70% 70%
