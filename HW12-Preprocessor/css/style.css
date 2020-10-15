@@ -312,7 +312,7 @@ header .row {
 
 .price-suit-everyone .border-topp {
   height: 3.125em;
-  background: white;
+  background: #FFFFFF;
   border-radius: 0 0 70% 70%;
   border-bottom: 1px solid #f8f9fa;
   width: 100%;
@@ -320,7 +320,7 @@ header .row {
   top: 38px;
 }
 .price-suit-everyone .content_price {
-  background: #E7ECFF;
+  background: rgba(231, 236, 255, 0.5);
   padding-top: 13.125em;
   padding-bottom: 7.5em;
 }
