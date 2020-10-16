@@ -157,12 +157,7 @@
   border: 1px solid #E0E0E0;
 }
 
-.icon-box--dark path {
-  stroke: #2C2C2C;
-}
-
 .icon-search--dark path {
-  stroke: #2C2C2C;
   fill: #2C2C2C;
 }
 
