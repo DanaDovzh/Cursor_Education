@@ -1,0 +1,65 @@
+@import btns-download.sass
+@import button-couple.sass
+@import button-tag.sass
+@import button-search.sass
+$width-big: 144px
+$height-big: 46px
+
+$width-small: 111px
+$height-small: 36px
+
+
+
+body
+    background-color: #797979
+
+.wrapper 
+    padding: 44px 128px 80px 61px
+    display: grid
+    grid-template-rows: auto auto
+    grid-template-columns: auto
+    row-gap: 73px
+
+.wrapper__item-title
+    margin-bottom: px_to_em(26)
+
+.wrapper__item 
+    display: grid
+    grid-template-rows: auto auto auto
+    grid-template-columns: auto auto 
+    column-gap: 70px
+    &-title
+        grid-area: 1 / 1 / 2 / 3
+    &-second
+        grid-template-columns: auto auto auto
+        grid-template-rows: auto auto
+        & .title
+            grid-area: 1 / 1 / 2 / 4
+.title
+    font-family: Inter
+    font-style: normal
+    font-weight: 600
+    @include adaptiv-font(25, 20)
+    line-height: 30px
+
+
+button
+    border: none
+    cursor: pointer
+    &:focus
+        outline: none
+
+.wrapper__item-buttons
+    &.buttons-down 
+        &--big
+            display: grid
+            grid-template-columns: repeat(4, $width-big)
+            grid-template-rows: repeat(3, $height-big)
+            row-gap: 24px
+            column-gap: 20px
+        &--small
+            display: grid
+            grid-template-columns: repeat(4, $width-small)
+            grid-template-rows: repeat(3, $height-small)
+            row-gap: 21px
+            column-gap: 48px

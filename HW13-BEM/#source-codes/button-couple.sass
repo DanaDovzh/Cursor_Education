@@ -1,0 +1,73 @@
+$width-couple-itemB-s: 56px
+$width-couple-itemS-s: 48px
+$height-couple-itemB: 46px
+$height-couple-itemS: 36px
+$width-couple-itemB-m: 134px
+$width-couple-itemS-m: 58px
+$width-couple-itemB-l: 106px
+$width-couple-itemS-l: 86px
+
+
+@mixin couple-grid($n-columns, $height-row, $width-row)
+    display: grid
+    grid-template-rows: $height-row
+    grid-template-columns: repeat($n-columns, $width-row)
+    column-gap: 0px
+
+.buttons-couple 
+    display: grid
+    grid-template-rows: repeat(3, $height-couple-itemB)
+    grid-template-columns: auto
+    row-gap: 24px
+    &--smalls
+        row-gap: 20px
+        grid-template-rows: repeat(3, $height-couple-itemS)
+.button-couple
+    font-family: Inter
+    font-style: normal
+    font-weight: 500
+    @include adaptiv-font(15, 9)
+    line-height: 18px
+.button-couple__part 
+    font-family: Inter
+    font-style: normal
+    font-weight: 500
+    @include adaptiv-font(15, 9)
+    line-height: 18px
+.buttons-couple__button
+    &--cf
+        @include couple-grid(3, $height-couple-itemB, $width-couple-itemB-s)
+        &-small
+            @include couple-grid(2, $height-couple-itemS, $width-couple-itemS-l)
+    &--cs
+        @include couple-grid(2, $height-couple-itemB, $width-couple-itemB-m)
+        &-small
+            @include couple-grid(3, $height-couple-itemS, $width-couple-itemS-s)
+    &--cl
+        @include couple-grid(3, $height-couple-itemB, $width-couple-itemB-l)
+        &-small
+            @include couple-grid(3, $height-couple-itemS, $width-couple-itemS-m)
+
+.buttons-couple_part
+    &--first
+        background-color: #18A0FB
+        border-radius: 5px 0px 0px 5px
+        color: $color-light
+    &--second
+        background-color: $color-light
+        border: 1px solid #E0E0E0
+    &--last
+        background-color: $color-light
+        border-radius: 0px 5px 5px 0px
+        border: 1px solid #E0E0E0
+
+.icon-box
+    &--dark
+        path
+            stroke: $color-dark
+
+.icon-search
+    &--dark
+        path
+            stroke: $color-dark
+            fill: $color-dark
