@@ -1,23 +1,32 @@
 $big-icon: 24px
 $small-icon: 20px
+$width-small: 36px
+$width-big: 48px
 .buttons-search
     display: grid
     grid-template-rows: auto
-    grid-template-columns: auto auto
+    grid-template-columns: $width-small $width-big
     row-gap: 14px
     column-gap: 12px
 
 .buttons-search__
     border-radius: 100%
+
 .buttons-search__btn
     &--small
-        width: 36px
-        height: 36px
+        width: $width-small
+        height: $width-small
     &--big
-        width: 48px
-        height: 48px
+        width: $width-big
+        height: $width-big
+
 .buttons-search__btn
     &--orange
+        animation-name: gradietn-search
+        animation-duration: 2s
+        animation-iteration-count: infinite
+        animation-direction: reverse
+        animation-timing-function: linear
         background-color: #FF3E1D
     &--green
         background-color: #00D200
@@ -29,3 +38,13 @@ $small-icon: 20px
     &--big
         width: $big-icon
         height: $big-icon
+
+@keyframes gradietn-search
+    0%
+        background-color: #FF3E1D
+    50%
+        background-color: #910606
+    70%
+        background-color: #7a097a
+    100%
+        background-color: #FF3E1D

@@ -8,8 +8,6 @@ $height-big: 46px
 $width-small: 111px
 $height-small: 36px
 
-
-
 body
     background-color: #797979
 
@@ -26,13 +24,14 @@ body
 .wrapper__item 
     display: grid
     grid-template-rows: auto auto auto
-    grid-template-columns: auto auto 
+    grid-template-columns: 1fr 1fr 
     column-gap: 70px
     &-title
         grid-area: 1 / 1 / 2 / 3
     &-second
-        grid-template-columns: auto auto auto
+        grid-template-columns: 1fr 1fr 1fr
         grid-template-rows: auto auto
+        column-gap: 117px
         & .title
             grid-area: 1 / 1 / 2 / 4
 .title
@@ -41,7 +40,6 @@ body
     font-weight: 600
     @include adaptiv-font(25, 20)
     line-height: 30px
-
 
 button
     border: none

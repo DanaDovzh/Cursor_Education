@@ -11,10 +11,14 @@
 .buttons-down__button--small {
   font-size: calc(9px + 4 * ((100vw - 320px) / 1120));
 }
+.buttons-down__button:hover {
+  transition-duration: 0.7s;
+  transform: scale(1.2);
+}
 
 .buttons-down__button--big {
   height: 46px;
-  weight: 144px;
+  weight: 114px;
 }
 .buttons-down__button--small {
   height: 36px;
@@ -89,7 +93,7 @@
   font-family: Inter;
   font-style: normal;
   font-weight: 500;
-  font-size: calc(9px + 6 * ((100vw - 320px) / 1120));
+  font-size: calc(12px + 3 * ((100vw - 320px) / 1120));
   line-height: 18px;
 }
 
@@ -97,7 +101,7 @@
   font-family: Inter;
   font-style: normal;
   font-weight: 500;
-  font-size: calc(9px + 6 * ((100vw - 320px) / 1120));
+  font-size: calc(12px + 3 * ((100vw - 320px) / 1120));
   line-height: 18px;
 }
 
@@ -174,7 +178,7 @@
   font-family: Inter;
   font-style: normal;
   font-weight: 500;
-  font-size: 13px;
+  font-size: calc(9px + 4 * ((100vw - 320px) / 1120));
   line-height: 16px;
   border-radius: 5px;
 }
@@ -193,14 +197,14 @@
 }
 .btn-tag--light {
   border: 1px solid #E0E0E0;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   color: #2C2C2C;
 }
 
 .buttons-search {
   display: grid;
   grid-template-rows: auto;
-  grid-template-columns: auto auto;
+  grid-template-columns: 36px 48px;
   row-gap: 14px;
   column-gap: 12px;
 }
@@ -219,6 +223,11 @@
 }
 
 .buttons-search__btn--orange {
+  animation-name: gradietn-search;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+  animation-timing-function: linear;
   background-color: #FF3E1D;
 }
 .buttons-search__btn--green {
@@ -234,6 +243,20 @@
   height: 24px;
 }
 
+@keyframes gradietn-search {
+  0% {
+    background-color: #FF3E1D;
+  }
+  50% {
+    background-color: #910606;
+  }
+  70% {
+    background-color: #7a097a;
+  }
+  100% {
+    background-color: #FF3E1D;
+  }
+}
 body {
   background-color: #797979;
 }
@@ -253,15 +276,16 @@ body {
 .wrapper__item {
   display: grid;
   grid-template-rows: auto auto auto;
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr 1fr;
   column-gap: 70px;
 }
 .wrapper__item-title {
   grid-area: 1/1/2/3;
 }
 .wrapper__item-second {
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto;
+  column-gap: 117px;
 }
 .wrapper__item-second .title {
   grid-area: 1/1/2/4;

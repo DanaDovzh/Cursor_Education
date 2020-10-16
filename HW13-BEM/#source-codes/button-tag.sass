@@ -9,7 +9,7 @@
     font-family: Inter
     font-style: normal
     font-weight: 500
-    font-size: 13px
+    @include adaptiv-font(13, 9)
     line-height: 16px
     border-radius: 5px
     &--big
@@ -22,8 +22,8 @@
 .btn-tag
     &--blue
         background-color:#18A0FB
-        color: #FFFFFF
+        color: $color-light
     &--light
         border: 1px solid #E0E0E0
-        background-color:#ffffff
-        color: #2C2C2C
+        background-color:$color-light
+        color: $color-dark

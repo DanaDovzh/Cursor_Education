@@ -15,7 +15,6 @@ $context: 16
     font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
 
 
-
 .buttons-down__button
     border-radius: 5px
     font-family: Inter
@@ -26,12 +25,15 @@ $context: 16
         @include adaptiv-font(15, 12)
     &--small
         @include adaptiv-font(13, 9)
+    &:hover
+        transition-duration: 0.7s
+        transform: scale(1.2)
 
 
 .buttons-down__button
     &--big
         height: 46px
-        weight: 144px
+        weight: 114px
     &--small
         height: 36px
         weight: 111px
