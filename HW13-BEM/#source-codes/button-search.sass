@@ -30,6 +30,12 @@ $width-big: 48px
         background-color: #FF3E1D
     &--green
         background-color: #00D200
+        & svg
+            &:hover
+                animation-name: move-search
+                animation-duration: 1s
+                animation-timing-function: linear
+            
 
 .icon-search
     &--small
@@ -48,3 +54,24 @@ $width-big: 48px
         background-color: #7a097a
     100%
         background-color: #FF3E1D
+
+@keyframes move-search
+    10% 
+        transform: translateX(9px)
+    20% 
+        transform: translateX(-9px)
+    30% 
+        transform: translateX(7px)
+    40% 
+        transform: translateX(-7px)
+    50% 
+        transform: translateX(5px)
+    60% 
+        transform: translateX(-5px)
+    70% 
+        transform: translateX(3px)
+    80% 
+        transform: translateX(-3px)
+    100%
+        transform: translateX(0)
+    

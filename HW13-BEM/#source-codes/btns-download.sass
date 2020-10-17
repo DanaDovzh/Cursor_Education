@@ -23,12 +23,16 @@ $context: 16
     line-height: 18px
     &--big
         @include adaptiv-font(15, 12)
+        &:hover
+            transition-duration: 0.7s
+            transform: scale(1.2)
     &--small
         @include adaptiv-font(13, 9)
-    &:hover
-        transition-duration: 0.7s
-        transform: scale(1.2)
+        &:hover
+            transition-duration: 0.7s
+            transform: scale(0.8)
 
+    
 
 .buttons-down__button
     &--big

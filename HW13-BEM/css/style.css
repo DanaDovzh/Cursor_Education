@@ -8,12 +8,16 @@
 .buttons-down__button--big {
   font-size: calc(12px + 3 * ((100vw - 320px) / 1120));
 }
+.buttons-down__button--big:hover {
+  transition-duration: 0.7s;
+  transform: scale(1.2);
+}
 .buttons-down__button--small {
   font-size: calc(9px + 4 * ((100vw - 320px) / 1120));
 }
-.buttons-down__button:hover {
+.buttons-down__button--small:hover {
   transition-duration: 0.7s;
-  transform: scale(1.2);
+  transform: scale(0.8);
 }
 
 .buttons-down__button--big {
@@ -157,6 +161,10 @@
   border: 1px solid #E0E0E0;
 }
 
+.buttons-couple_part--first-tabs {
+  border-radius: 5px 0px 0px 5px;
+}
+
 .icon-search--dark path {
   fill: #2C2C2C;
 }
@@ -228,6 +236,11 @@
 .buttons-search__btn--green {
   background-color: #00D200;
 }
+.buttons-search__btn--green svg:hover {
+  animation-name: move-search;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+}
 
 .icon-search--small {
   width: 20px;
@@ -250,6 +263,35 @@
   }
   100% {
     background-color: #FF3E1D;
+  }
+}
+@keyframes move-search {
+  10% {
+    transform: translateX(9px);
+  }
+  20% {
+    transform: translateX(-9px);
+  }
+  30% {
+    transform: translateX(7px);
+  }
+  40% {
+    transform: translateX(-7px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  60% {
+    transform: translateX(-5px);
+  }
+  70% {
+    transform: translateX(3px);
+  }
+  80% {
+    transform: translateX(-3px);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 body {
@@ -311,10 +353,16 @@ button:focus {
 }
 .wrapper__item-buttons.buttons-down--small {
   display: grid;
-  grid-template-columns: repeat(4, 111px);
+  grid-template-columns: repeat(4, minmax(111px, 1fr));
   grid-template-rows: repeat(3, 36px);
   row-gap: 21px;
   column-gap: 48px;
+}
+
+.active {
+  background-color: #18A0FB;
+  color: white;
+  border: none;
 }
 
 .magic {
