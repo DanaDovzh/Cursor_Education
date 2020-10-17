@@ -17,6 +17,6 @@
 | 10 |   "Bootstrap"                            | [Link](https://danadovzh.github.io/Cursor_Education/HW10-Bootstrap/index.html) | [Directory](https://github.com/DanaDovzh/Cursor_Education/tree/master/HW10-Bootstrap) |
 | 11 |  "Animation"                             | [Link](https://danadovzh.github.io/Cursor_Education/HW11-Animation/index.html) | [Directory](https://github.com/DanaDovzh/Cursor_Education/tree/master/HW11-Animation) |
 | 12 |  "Preprocessor"                          | [Link](https://danadovzh.github.io/Cursor_Education/HW12-Preprocessor/index.html) | [Directory](https://github.com/DanaDovzh/Cursor_Education/tree/master/HW12-Preprocessor) |
-| 13 |                                          | [Link] | [Directory] |
+| 13 |  "BEM"                                   | [Link](https://danadovzh.github.io/Cursor_Education/HW13-BEM/index.html) | [Directory](https://github.com/DanaDovzh/Cursor_Education/tree/master/HW13-BEM) |
 | 14 |                                          | [Link] | [Directory] |
 
