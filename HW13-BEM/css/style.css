@@ -22,11 +22,11 @@
 
 .buttons-down__button--big {
   height: 46px;
-  weight: 114px;
+  width: 144px;
 }
 .buttons-down__button--small {
   height: 36px;
-  weight: 111px;
+  width: 111px;
 }
 
 .buttons-down__button--bg-blue {
