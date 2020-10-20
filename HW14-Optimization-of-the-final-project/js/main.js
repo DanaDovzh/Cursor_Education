@@ -1,6 +1,5 @@
 'use strict';
 $(document).ready(function () {
-    $('.single-item').slick({
- 
+    $('.single-item').slick({ 
     });
  });
