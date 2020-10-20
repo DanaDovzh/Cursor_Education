@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="css/screen.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/sprite-css.css">
@@ -183,7 +184,7 @@
     <div class="wrapper">
         <h2 class="h2">отзывы о нашем <span class="yellow">видеопарктронике</span></h2>
         <div class="bg-arrow_left arrow-left"></div>
-        <div class="review-slider">
+        <div class="review-slider single-item">
             <div class="slide">
                     <img src="img/review1.webp" alt="" class="main-review-img">
                 <p class="review-text">
@@ -201,8 +202,19 @@
                     зеркало
                     любой машины, вообщем то что доктор прописал!
                 </p>
-                <div class="review-author"><img class="bg-review_ava ava"><b>Константин</b><i>г.
+                <div class="review-author"><div class="bg-review_ava ava"></div><b>Константин</b><i>г.
                     Днепропетровск</i></div>
+            </div>
+
+            <div class="slide">
+                    <img src="img/review1.webp" alt="" class="main-review-img">
+                <p class="review-text">
+                    Существует лишь один шанс из миллиарда, что наша реальность подлинная. 
+                    Но это устройство просто что-то невообразимое! И это и есть этот один шанс
+                </p>
+                <div class="review-author"><div class="bg-Ilon_Mask ava"></div><b>Илон Маск</b><i>г.
+                    Претория</i></div>
+               
             </div>
         </div>
         <div class="bg-arrow_right arrow-right"></div>
@@ -286,11 +298,14 @@
 
     </div>
 </footer>
-<script src="lib/plugins.js"></script>
+
+
 <script>
-    window.onload = function () {
-    document.body.classList.add('loaded');
-  }
+   
+  window.onload = function () {
+        document.body.classList.add('loaded');
+      }
+
     // 2. This code loads the IFrame Player API code asynchronously.
     var tag = document.createElement('script');
 
@@ -332,5 +347,14 @@
         player.stopVideo();
     }
 </script>
+<!-- <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+<!-- slick Carousel CDN -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+<!-- <script src="lib/plugins.js"></script> -->
+<script src="js/main.js"></script>
 </body>
 </html>
