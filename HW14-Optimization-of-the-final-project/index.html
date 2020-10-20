@@ -5,6 +5,7 @@
     <title>Title</title>
     <link rel="stylesheet" href="css/screen.css">
     <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/sprite-css.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -56,7 +57,10 @@
                 <p class="value">648х488</p>
             </div>
             <div class="description">
-                <img src="img/about-1.jpg" alt="">
+                <picture>
+                    <source srcset="img/about-1.webp" type="image/webp">
+                    <img src="img/about-1.jpg" alt="">
+                </picture>
             </div>
         </div>
         <div class="column-block">
@@ -77,7 +81,10 @@
                 <p class="value">черный, серый</p>
             </div>
             <div class="description">
-                <img src="img/about-2.jpg" alt="">
+                <picture>
+                    <source srcset="img/about-2.webp" type="image/webp">
+                    <img src="img/about-2.jpg" alt="">
+                </picture>
             </div>
         </div>
         <div class="column-block last">
@@ -92,7 +99,10 @@
                 </p>
             </div>
             <div class="description">
-                <img src="img/about-3.jpg" alt="">
+                <picture>
+                    <source srcset="img/about-3.webp" type="image/webp">
+                    <img src="img/about-3.jpg" alt="">
+                </picture>
             </div>
         </div>
         <button class="btn-order centred">Заказать</button>
@@ -105,7 +115,8 @@
         </h2>
         <div class="reason">
             <div class="square">
-                <img src="img/reason1.png" alt="" class="width60">
+                <div class="bg-reason1"></div>
+                
             </div>
             <h4 class="h4">Быстрый и легкий монтаж</h4>
             <div class="reason-text">Зеркало с монитором крепится поверх штатного и не требует дополнительных установок.
@@ -113,7 +124,7 @@
         </div>
         <div class="reason">
             <div class="square">
-                <img src="img/reason2.png" alt="">
+                <div class="bg-reason2"></div>
             </div>
             <h4 class="h4">Стоимость</h4>
             <div class="reason-text">Цена видеопарктроника у дилера от 19990 грн.Наша цена всего 3990 грн.
@@ -121,7 +132,7 @@
         </div>
         <div class="reason">
             <div class="square">
-                <img src="img/reason3.png" alt="" class="width35">
+                <div class="bg-reason3"></div>
             </div>
             <h4 class="h4">Экономия</h4>
             <div class="reason-text">В случае наезда на препятствие при движении задним ходом, стоимость ремонта бампера
@@ -130,7 +141,7 @@
         </div>
         <div class="reason">
             <div class="square">
-                <img src="img/reason4.png" alt="">
+                <div class="bg-reason4"></div>
             </div>
             <h4 class="h4">Безопасность для пешеходов</h4>
             <div class="reason-text">при движении задним ходом (угол обзора нашей камеры 170 градусов)
@@ -150,16 +161,36 @@
         <div class="left-block">
             <p>ремонт бампера стоит от</p>
             <p class="cost"><span class="yellow">6000</span> рублей</p>
-            <img src="img/girl-in-car.jpg" alt="" class="full-width">
-            <img src="img/broken-car1.jpg" alt="" class="half-width">
-            <img src="img/broken-car2.jpg" alt="" class="half-width">
+           
+            <picture>
+                <source srcset="img/girl-in-car.webp" type="image/webp">
+                <img src="img/girl-in-car.jpg" alt="" class="full-width">
+            </picture>
+            <picture>
+                <source srcset="img/broken-car1.webp" type="image/webp">
+                <img src="img/broken-car1.jpg" alt="" class="half-width">
+            </picture>
+            <picture>
+                <source srcset="img/broken-car2.webp" type="image/webp">
+                <img src="img/broken-car2.jpg" alt="" class="half-width">
+            </picture>
+            
         </div>
         <div class="right-block">
             <p>Видеопарктроник с подарком стоит</p>
             <p class="cost"><span class="yellow">3990</span> рублей</p>
-            <img src="img/product.jpg" alt="" class="full-width small-height-fix">
+           
+            <picture>
+                <source srcset="img/product.webp" type="image/webp">
+                <img src="img/product.jpg" alt="" class="full-width small-height-fix">
+            </picture>
+            
             <span class="plus yellow">+</span>
-            <img src="img/gift.jpg" alt="" class="full-width">
+            
+            <picture>
+                <source srcset="img/gift.webp" type="image/webp">
+                <img src="img/gift.jpg" alt="" class="full-width">
+            </picture>
         </div>
         <button class="btn-order centred">Заказать</button>
     </div>
@@ -167,10 +198,14 @@
 <section class="reviews">
     <div class="wrapper">
         <h2 class="h2">отзывы о нашем <span class="yellow">видеопарктронике</span></h2>
-        <img src="img/arrow-left.png" alt="" class="arrow-left">
+        <div class="bg-arrow_left arrow-left"></div>
         <div class="review-slider">
             <div class="slide">
-                <img src="img/review1.jpg" alt="" class="main-review-img">
+                
+                <picture>
+                    <source srcset="img/review1.webp" type="image/webp">
+                    <img src="img/review1.jpg" alt="" class="main-review-img">
+                </picture>
                 <p class="review-text">
                     Опять долгие ночи в интернете в поисках обзоров и сравнений… Проблема таких устройств что у них либо
                     дизайн
@@ -186,11 +221,11 @@
                     зеркало
                     любой машины, вообщем то что доктор прописал!
                 </p>
-                <div class="review-author"><img src="img/review1-ava.jpg" alt="" class="ava"><b>Константин</b><i>г.
+                <div class="review-author"><div class="bg-review_ava ava"></div><b>Константин</b><i>г.
                     Днепропетровск</i></div>
             </div>
         </div>
-        <img src="img/arrow-right.png" alt="" class="arrow-right">
+        <div class="bg-arrow_right arrow-right"></div>
     </div>
 </section>
 <section class="delivery">
@@ -204,13 +239,13 @@
         </ul>
         <p>Мы заботимся о своей репутации, клиенты для нас на первом месте!</p>
         <div class="advantages">
-            <div class="adv"><img src="img/adv1.png" alt="">
+            <div class="adv"><div class="bg-adv1"></div>
                 <div class="adv-title yellow">Оплата при получении</div>
             </div>
-            <div class="adv"><img src="img/adv2.png" alt="">
+            <div class="adv"><div class="bg-adv2"></div>
                 <div class="adv-title yellow">365 дней гарантии</div>
             </div>
-            <div class="adv"><img src="img/adv3.png" alt="">
+            <div class="adv"><div class="bg-adv3"></div>
                 <div class="adv-title yellow">Возврат денег в течение 14 дней</div>
             </div>
         </div>
@@ -245,9 +280,17 @@
         <h2 class="h2">закажите свой видеопарктроник <span class="yellow">до конца дня</span>
             И <span class="yellow">получите в подарок</span> антибликовое стекло</h2>
         <div class="left-block">
-            <img src="img/product-reverse.jpg" alt="">
+           
+            <picture>
+                <source srcset="img/product-reverse.webp" type="image/webp">
+                <img src="img/product-reverse.jpg" alt="">
+            </picture>
             <span class="plus">+</span>
-            <img src="img/gift-reverse.jpg" alt="">
+           
+            <picture>
+                <source srcset="img/gift-reverse.webp" type="image/webp">
+                <img src="img/gift-reverse.jpg" alt="">
+            </picture>
             <div class="price">
                 <div class="old-price">6999 грн.</div>
                 <div class="new-price">3999 грн.</div>
