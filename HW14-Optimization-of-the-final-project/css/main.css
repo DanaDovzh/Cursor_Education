@@ -15,17 +15,36 @@ body {
     letter-spacing: 0.05em;
 }
 
+.slick-prev.slick-arrow,
+.slick-next.slick-arrow {
+    /* border-radius: 50%; */
+    position: absolute;
+    top: 31%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+
+    font-size: 0;
+}
+
+.slick-prev {
+    left: -41px;
+    width: 23px; height: 62px;
+    background: url('../img/css_sprites_small_img.png') -240px -10px;
+}
+
+.slick-next {
+    right: -27px;
+    width: 23px; height: 62px;
+    background: url('../img/css_sprites_small_img.png') -240px -92px;
+}
 .preloader {
-    /*фиксированное позиционирование*/
     position: fixed;
-    /* координаты положения */
     left: 0;
     top: 0;
     right: 0;
     bottom: 0;
-    /* фоновый цвет элемента */
     background: #ffffff;
-    /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
     z-index: 1001;
   }
   
@@ -538,7 +557,7 @@ button {
 .reviews .review-author {
     display: block;
     text-align: right;
-    margin: 10px 0 auto 0;
+    margin: -25px 0 auto 0;
     vertical-align: top;
     padding-top: 15px;
 }
@@ -549,7 +568,7 @@ button {
 
 .reviews .review-author .ava {
     position: relative;
-    top: -15px;
+    top: 18px;
     margin-right: 10px;
 }
 
