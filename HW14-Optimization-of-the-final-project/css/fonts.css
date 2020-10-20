@@ -1,0 +1,97 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'HelveticaNeueBlack';
+  src: local("☺"), url("../fonts/HelveticaNeueCyr-Black.woff") format("woff"), url("../fonts/HelveticaNeueCyr-Black.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'HelveticaNeueBold';
+  src: local("☺"), url("../fonts/HelveticaNeueCyr-Bold.woff") format("woff"), url("../fonts/HelveticaNeueCyr-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'HelveticaNeueItalic';
+  src: local("☺"), url("../fonts/HelveticaNeueCyr-Italic.woff") format("woff"), url("../fonts/HelveticaNeueCyr-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'HelveticaNeueLight';
+  src: local("☺"), url("../fonts/HelveticaNeueCyr-Light.woff") format("woff"), url("../fonts/HelveticaNeueCyr-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'HelveticaNeueMedium';
+  src: local("☺"), url("../fonts/HelveticaNeueCyr-Medium.woff") format("woff"), url("../fonts/HelveticaNeueCyr-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+font-family: 'HelveticaNeueThin';
+src: local('☺'), url('../fonts/HelveticaNeueCyr-Thin.woff') format('woff'), url('../fonts/HelveticaNeueCyr-Thin.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+/*@font-face {*/
+/*font-family: 'HelveticaNeueBoldItalic';*/
+/*src: local('☺'), url('../fonts/HelveticaNeueCyr-BoldItalic.woff') format('woff'), url('../fonts/HelveticaNeueCyr-BlackItalic.ttf.ttf') format('truetype');*/
+/*font-weight: normal;*/
+/*font-style: normal;*/
+/*}*/
+@font-face {
+  font-family: 'HelveticaNeueLightItalic';
+  src: local("☺"), url("../fonts/HelveticaNeueCyr-LightItalic.woff") format("woff"), url("../fonts/HelveticaNeueCyr-LightItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+/*@font-face {*/
+/*font-family: 'HelveticaNeueThinItalic';*/
+/*src: local('☺'), url('../fonts/HelveticaNeueCyr-ThinItalic.woff') format('woff'), url('../fonts/HelveticaNeueCyr-ThinItalic.ttf') format('truetype');*/
+/*font-weight: normal;*/
+/*font-style: normal;*/
+/*}*/
+/*@font-face {*/
+/*font-family: 'HelveticaNeueUltraLight';*/
+/*src: local('☺'), url('../fonts/HelveticaNeueCyr-UltraLight_0.woff') format('woff'), url('../fonts/HelveticaNeueCyr-UltraLight_0.ttf') format('truetype');*/
+/*font-weight: normal;*/
+/*font-style: normal;*/
+/*}*/
+/*@font-face {*/
+/*font-family: 'HelveticaNeueUltraLightItalic';*/
+/*src: local('☺'), url('../fonts/HelveticaNeueCyr-UltraLightItalic.woff') format('woff'), url('../fonts/HelveticaNeueCyr-UltraLightItalic.ttf') format('truetype');*/
+/*font-weight: normal;*/
+/*font-style: normal;*/
+/*}*/
+/*@font-face {*/
+/*font-family: 'bebas';*/
+/*src: local('☺'), url('../fonts/bebas-bold.woff') format('woff'), url('../fonts/bebas-bold.ttf') format('truetype');*/
+/*font-weight: normal;*/
+/*font-style: normal;*/
+/*}*/
+/*@font-face {*/
+/*font-family: 'RobotoRegular';*/
+/*src: local('☺'), url('../fonts/roboto/RobotoRegular.woff') format('woff'), url('../fonts/roboto/RobotoRegular.ttf') format('truetype');*/
+/*font-weight: normal;*/
+/*font-style: normal;*/
+/*}*/
+/*@font-face {*/
+/*font-family: 'RobotoBold';*/
+/*src: local('☺'), url('../fonts/roboto/RobotoBold.woff') format('woff'), url('../fonts/roboto/RobotoBold.ttf') format('truetype');*/
+/*font-weight: normal;*/
+/*font-style: normal;*/
+/*}*/
+/*@font-face {*/
+/*font-family: 'RobotoLight';*/
+/*src: local('☺'), url('../fonts/roboto/RobotoLight.woff') format('woff'), url('../fonts/roboto/RobotoLight.ttf') format('truetype');*/
+/*font-weight: normal;*/
+/*font-style: normal;*/
+/*}*/
+/*@font-face {*/
+/*font-family: 'RobotoMedium';*/
+/*src: local('☺'), url('../fonts/roboto/RobotoMedium.woff') format('woff'), url('../fonts/roboto/RobotoMedium.ttf') format('truetype');*/
+/*font-weight: normal;*/
+/*font-style: normal;*/
+/*}*/
