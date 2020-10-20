@@ -17,14 +17,10 @@
 }
 
 .bg-arrow_left {
-    /* width: 23px; height: 62px;
-    background: url('../img/css_sprites_small_img.png') -240px -10px; */
     cursor: pointer;
 }
 
 .bg-arrow_right {
-    /* width: 23px; height: 62px;
-    background: url('../img/css_sprites_small_img.png') -240px -92px; */
     cursor: pointer;
 }
 
