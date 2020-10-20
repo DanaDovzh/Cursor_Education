@@ -52,8 +52,8 @@ body {
     position: relative;
     top: 50%;
     left: 50%;
-    width: 70px;
-    height: 70px;
+    width: 85px;
+    height: 85px;
     margin-top: -35px;
     margin-left: -35px;
     text-align: center;
@@ -66,12 +66,13 @@ body {
     top: 0;
     background-color: #ffe600;
     border-radius: 100%;
-    width: 35px;
-    height: 35px;
+    width: 55px;
+    height: 55px;
     animation: preloader-bounce 2s infinite ease-in-out;
   }
   
   .preloader__item:last-child {
+    background-color: #e5fa24;
     top: auto;
     bottom: 0;
     animation-delay: -1s;
@@ -79,7 +80,7 @@ body {
   
   @keyframes preloader-rotate {
     100% {
-      transform: rotate(360deg);
+      transform: rotate(300deg);
     }
   }
   
@@ -89,9 +90,12 @@ body {
     100% {
       transform: scale(0);
     }
-  
+    25% {
+        transform: scale(0.8);
+    }
+
     50% {
-      transform: scale(1);
+      transform: scale(1.1);
     }
   }
   
@@ -535,6 +539,7 @@ button {
     width: 90%;
     max-width: 900px;
     margin: 50px auto;
+    
 }
 
 .reviews .review-text {
@@ -560,6 +565,7 @@ button {
     margin: 10px 0 auto 0;
     vertical-align: top;
     padding-top: 15px;
+    padding-left: 590px;
 }
 
 .reviews .review-author > * {
