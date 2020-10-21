@@ -21,7 +21,7 @@ body {
     width: 100%;
     left:50%;
     top:50%;
-    padding: 45% 40%;
+    
     -webkit-transform: translateX(-50%) translateY(-50%);
             transform: translateX(-50%) translateY(-50%);
     -webkit-perspective:400px;
@@ -30,51 +30,52 @@ body {
             z-index: 1001;
 }
 .cube{
-    height:200px;
-    width:200px;
+    height:150px;
+    width:150px;
+    margin: 30% 46%;
     -webkit-transform-origin:50% 50%;
             transform-origin:50% 50%;
     -webkit-transform-style:preserve-3d;
             transform-style:preserve-3d;
-    -webkit-animation:rotate 3s infinite ease-in-out;
-            animation:rotate 3s infinite ease-in-out;
+    -webkit-animation:rotate 2s infinite ease-in-out;
+            animation:rotate 2s infinite ease-in-out;
   
 }
 .side{
     position:absolute;
     display:block;
-    height:150px;
-    width:150px;
+    height:80px;
+    width:80px;
   }
   .side1{
     background:#41C3AC;
-    -webkit-transform:translateZ(100px);
-            transform:translateZ(100px);
+    -webkit-transform:translateZ(70px);
+            transform:translateZ(70px);
   }
   .side2{
     background:#FF884D;
-    -webkit-transform:rotateY(90deg) translateZ(100px);
-            transform:rotateY(90deg) translateZ(100px);
+    -webkit-transform:rotateY(90deg) translateZ(70px);
+            transform:rotateY(90deg) translateZ(70px);
   }
   .side3{
     background:#32526E;
-    -webkit-transform:rotateY(180deg) translateZ(100px);
-            transform:rotateY(180deg) translateZ(100px);
+    -webkit-transform:rotateY(180deg) translateZ(70px);
+            transform:rotateY(180deg) translateZ(70px);
   }
   .side4{
     background:#65A2C5;
-    -webkit-transform:rotateY(-90deg) translateZ(100px);
-            transform:rotateY(-90deg) translateZ(100px);
+    -webkit-transform:rotateY(-90deg) translateZ(70px);
+            transform:rotateY(-90deg) translateZ(70px);
   }
   .side5{
     background:#FFCC5C;
-    -webkit-transform:rotateX(90deg) translateZ(100px);
-            transform:rotateX(90deg) translateZ(100px);
+    -webkit-transform:rotateX(90deg) translateZ(70px);
+            transform:rotateX(90deg) translateZ(70px);
   }
   .side6{
     background:#FF6B57;
-    -webkit-transform:rotateX(-90deg) translateZ(100px);
-            transform:rotateX(-90deg) translateZ(100px);
+    -webkit-transform:rotateX(-90deg) translateZ(70px);
+            transform:rotateX(-90deg) translateZ(70px);
   }
   
   @-webkit-keyframes rotate{
