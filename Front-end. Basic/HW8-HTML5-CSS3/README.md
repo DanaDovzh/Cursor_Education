@@ -6,4 +6,4 @@
  - Рекомендовано встановити *мінімальну ширину/висоту тегу body 1100x600*;
  - Верстати потрібно МАКСИМАЛЬНО БЛИЗЬКО ДО МАКЕТУ, тому рекомендую перевіряти та виконувати роботу на розмірі екрану в *1400х900*. Для цього використовуйте **Chrome Device Emulation**.
 
-**[Результат домашнього завдання.](https://danadovzh.github.io/Cursor_Education/HW8-HTML5-CSS3/index.html)**
+**[Результат домашнього завдання.](https://danadovzh.github.io/Cursor_Education/Front-end.%20Basic/HW8-HTML5-CSS3/index.html)**

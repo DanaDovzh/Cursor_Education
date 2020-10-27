@@ -5,3 +5,4 @@
 Додати в цю *html* сторiнку шпаргалку за командами гіта. 
 
 Підключити github через **SSH**.
+[Результат](https://danadovzh.github.io/Cursor_Education/Front-end.%20Basic/HW1-Git-GitHub/index.html)

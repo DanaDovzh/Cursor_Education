@@ -8,4 +8,4 @@
 
 Нещасні спроби **js** :sweat_smile:
 
-**[Результат домашнього завдання.](https://danadovzh.github.io/Cursor_Education/HW7-Pseudo-classes/index.html)**
+**[Результат домашнього завдання.](https://danadovzh.github.io/Cursor_Education/Front-end.%20Basic/HW7-Pseudo-classes/index.html)**

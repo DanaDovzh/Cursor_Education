@@ -15,4 +15,4 @@
 
   ![Exemple HW](imgRM/04-homework.jpg)
 
-  [Результат роботи](https://danadovzh.github.io/Cursor_Education/HW3-HTML-CSS/index.html)
+  [Результат роботи](https://danadovzh.github.io/Cursor_Education/Front-end.%20Basic/HW3-HTML-CSS/index.html)

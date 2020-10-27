@@ -9,4 +9,4 @@
 - Пам'ятайте, щоб ДЗ було красивим, ширину робимо в відсотках, а висоту auto або сталим значенням;
 - Маленькі зображення та кнопку за шириною можно робити сталим значенням.
 
-**[Результат домашнього завдання.](https://danadovzh.github.io/Cursor_Education/HW5-Block-layout/index.html)**
+**[Результат домашнього завдання.](https://danadovzh.github.io/Cursor_Education/Front-end.%20Basic/HW5-Block-layout/index.html)**

@@ -6,7 +6,7 @@
 - Експортуємо фон як зображення, та підключаємо за допомогою *background-image*;
 - Шрифти підключаємо з **Google Fonts**.
 
-[Результат домашнього завдання.](https://danadovzh.github.io/Cursor_Education/HW4-Work-with-layouts/index.html)
+[Результат домашнього завдання.](https://danadovzh.github.io/Cursor_Education/Front-end.%20Basic/HW4-Work-with-layouts/index.html)
 
 Спроби зробити трішки адаптивного дизайну:
 

@@ -9,4 +9,4 @@
  - Увага! Класс надаємо саме до тега path.
  - Пам'ятайте, що вам потрібно використовувати srcset для адаптивних зображень.
 
-**[Результат домашнього завдання.](https://danadovzh.github.io/Cursor_Education/HW9-Responsive/index.html)**
+**[Результат домашнього завдання.](https://danadovzh.github.io/Cursor_Education/Front-end.%20Basic/HW9-Responsive/index.html)**

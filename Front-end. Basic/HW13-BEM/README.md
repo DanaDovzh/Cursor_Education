@@ -10,4 +10,4 @@
 - Иконки импортируйте как SVG и настраивайте их цвет с помощью CSS
 
 
-**[Результат домашнього завдання.](https://danadovzh.github.io/Cursor_Education/HW13-BEM/index.html)** 
+**[Результат домашнього завдання.](https://danadovzh.github.io/Cursor_Education/Front-end.%20Basic/HW13-BEM/index.html)** 

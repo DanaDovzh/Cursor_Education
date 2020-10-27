@@ -10,4 +10,4 @@
  - Адаптацию делать обязательно, но стили по своему усмотрению. Главное чтобы с телефона смотрелось читабельно.
 
 
-**[Результат домашнього завдання.](https://danadovzh.github.io/Cursor_Education/HW11-Animation/index.html)** 
+**[Результат домашнього завдання.](https://danadovzh.github.io/Cursor_Education/Front-end.%20Basic/HW11-Animation/index.html)** 

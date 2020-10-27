@@ -13,4 +13,4 @@
 - Ссылка на макет
 - **Дополнительное задание:** Для тех кто немного знаком с *Javascript* – выпдающие кнопки с переключением табов из библиотеки Bootstrap
 
-**[Результат домашнього завдання.](https://danadovzh.github.io/Cursor_Education/HW10-Bootstrap/index.html)** 
+**[Результат домашнього завдання.](https://danadovzh.github.io/Cursor_Education/Front-end.%20Basic/HW10-Bootstrap/index.html)** 

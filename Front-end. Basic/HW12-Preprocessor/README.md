@@ -10,4 +10,4 @@
  - Адаптацию делать обязательно, но стили по своему усмотрению. Главное чтобы с телефона смотрелось читабельно.
 
 
-**[Результат домашнього завдання.](https://danadovzh.github.io/Cursor_Education/HW12-Preprocessor/index.html)** 
+**[Результат домашнього завдання.](https://danadovzh.github.io/Cursor_Education/Front-end.%20Basic/HW12-Preprocessor/index.html)** 

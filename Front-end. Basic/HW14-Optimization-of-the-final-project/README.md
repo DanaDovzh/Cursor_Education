@@ -10,4 +10,4 @@
 - Слайдер можно любой, если не можете выбрать, то попробуйте slick
 
 
-**[Результат домашнього завдання.](https://danadovzh.github.io/Cursor_Education/HW14-Optimization-of-the-final-project/index.html)** 
+**[Результат домашнього завдання.](https://danadovzh.github.io/Cursor_Education/HW14-Optimization-of-the-final-project/Front-end.%20Basic/index.html)** 
