@@ -15,4 +15,4 @@
 что была currency значение переменных придумываете сами и пишите статично
 - Приветсвуется хорошее оформление с помощью css но не обязательное условие
 
-***[Результат](https://danadovzh.github.io/Cursor_Education/mini-course-JavaScript-v4/HW#1-Currency/index.html)***
+***[Результат](https://danadovzh.github.io/Cursor_Education/mini-course-JavaScript-v4/HW1-Currency/index.html)***
