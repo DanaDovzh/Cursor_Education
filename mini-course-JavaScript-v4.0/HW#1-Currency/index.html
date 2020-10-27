@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Currency</title>
+</head>
+<body>
+    <div class="preloader">
+        <img class="preloader__image" src="img/money.svg" alt="">
+      </div>
+    <main class="wrapper">
+        <div class="exchanger">
+            <table class="exchanger__table">
+                <thead>
+                    <tr class="exchanger__table-row">
+                        <th>Currency</th>
+                        <th>Buy</th>
+                        <th>Sell</th>
+                    </tr>
+                </thead>
+         
+                <tbody>
+                    <tr class="exchanger__table-row">
+                        <td class="exchanger__currency">Usd <img class="exchanger__currency-icon" src="img/dollar.svg" alt=""></td>
+                        <td class="exchanger__currency-buy"><span id="usdBuy"></span></td>
+                        <td class="exchanger__currency-sell"><span id="usdSell"></span></td>
+                     </tr>
+                    <tr class="exchanger__table-row"> 
+                        <td class="exchanger__currency">Eur <img class="exchanger__currency-icon" src="img/euro.svg" alt=""></td>
+                        <td class="exchanger__currency-buy"><span id="eurBuy">34</span></td>
+                        <td class="exchanger__currency-sell"><span id="eurSell"></span></td>
+                     </tr>
+                    <tr class="exchanger__table-row">
+                        <td class="exchanger__currency">Pln    <img class="exchanger__currency-icon" src="img/poland-zloty.svg" alt=""></td>
+                        <td class="exchanger__currency-buy"><span id="plnBuy"></span></td>
+                        <td class="exchanger__currency-sell"><span id="plnSell"></span></td>
+                     </tr>
+                     <tr class="exchanger__table-row">
+                        <td class="exchanger__currency">Rub <img class="exchanger__currency-icon" src="img/ruble-currency.svg" alt=""></td>
+                        <td class="exchanger__currency-buy"><span id="rubBuy"></span></td>
+                        <td class="exchanger__currency-sell"><span id="rubSell"></span></td>
+                     </tr>
+                </tbody>
+            </table>
+         
+            
+        </div>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+</html>
