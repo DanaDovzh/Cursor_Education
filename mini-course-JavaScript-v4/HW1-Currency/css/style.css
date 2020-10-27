@@ -1,3 +1,7 @@
+body {
+  background-color: #575252;
+}
+
 .preloader {
   position: fixed;
   left: 0;
@@ -43,16 +47,34 @@
   justify-content: center;
   align-content: center;
 }
+.exchanger__title {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: url("../img/heading-bg.jpg");
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-attachment: unset;
+  background-position: 0%;
+  font-family: "Grenze Gotisch";
+  font-weight: 900;
+  animation: heading-moving infinite 50s;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  animation-timing-function: linear;
+  text-align: center;
+  margin: 0;
+  font-size: 52px;
+}
 .exchanger__table {
   border-collapse: collapse;
-  border: 3px solid #414141;
+  border: 3px solid #000000;
   margin: 15% 0;
   padding: 10px;
   text-align: center;
-  box-shadow: 22px 29px 28px 8px rgba(0, 0, 0, 0.75);
+  box-shadow: 22px 29px 28px 8px #f8e2e2cc;
 }
 .exchanger__table thead {
-  border-bottom: 1px solid #000;
+  border-bottom: 3px solid #000000;
   background-color: #fabf52;
 }
 .exchanger__table tbody {
@@ -68,10 +90,21 @@
   justify-content: center;
 }
 .exchanger__currency-icon {
-  height: 15px;
+  height: 20px;
   margin-left: 5px;
 }
 
+@keyframes heading-moving {
+  0% {
+    background-position-y: 0%;
+  }
+  50% {
+    background-position-y: 100%;
+  }
+  100% {
+    background-position-y: 0%;
+  }
+}
 .exchanger__table-row td,
 .exchanger__table-row th {
   padding: 5px 10px;
