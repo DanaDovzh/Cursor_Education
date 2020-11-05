@@ -45,7 +45,7 @@ body {
 .exchanger {
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
 }
 .exchanger__title {
   -webkit-background-clip: text;
@@ -68,8 +68,8 @@ body {
 .exchanger__table {
   border-collapse: collapse;
   border: 3px solid #000000;
-  margin: 15% 0;
   padding: 10px;
+  align-self: center;
   text-align: center;
   box-shadow: 22px 29px 28px 8px #f8e2e2cc;
 }
