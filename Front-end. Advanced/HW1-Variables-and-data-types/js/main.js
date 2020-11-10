@@ -6,8 +6,8 @@ const cloakPriceSelector = document.querySelector("#cloak-price");
 const btnBuyHallows = document.querySelector("#btn-buyHallows");
 const btnBuyWithoutCoins = document.querySelector("#btn-buyHallows-withoutCoins");
 const btnDiscount = document.querySelector("#btn-discount");
-const spaceForDiscount = document.querySelector("#discount").innerHTML;
-const spaceForPriceDiscount = document.querySelector("#final-amount-with-discount").innerHTML;
+const spaceForDiscount = document.querySelector("#discount");
+const spaceForPriceDiscount = document.querySelector("#final-amount-with-discount");
 const calcilationsSelector = document.querySelector("#calcilations");
 
 const PRICE_OF_WAND = 15.678;
