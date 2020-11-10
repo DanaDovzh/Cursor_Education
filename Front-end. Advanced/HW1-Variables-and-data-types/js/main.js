@@ -1,36 +1,23 @@
+const placeFinalAmount = document.querySelector("#final-amount");
+const placeFinalAmountWithoutCoins = document.querySelector("#final-amount-withoutCoins");
+const wandPriceSelector = document.querySelector("#wand-price");
+const stonePriceSelector = document.querySelector("#stone-price");
+const cloakPriceSelector = document.querySelector("#cloak-price");
+const btnBuyHallows = document.querySelector("#btn-buyHallows");
+const btnBuyWithoutCoins = document.querySelector("#btn-buyHallows-withoutCoins");
+const btnDiscount = document.querySelector("#btn-discount");
+const spaceForDiscount = document.querySelector("#discount").innerHTML;
+const spaceForPriceDiscount = document.querySelector("#final-amount-with-discount").innerHTML;
+const calcilationsSelector = document.querySelector("#calcilations");
+
 const PRICE_OF_WAND = 15.678;
 const PRICE_OF_STONE = 123.965;
 const PRICE_OF_CLOAK = 90.2345;
-let finalAmount = PRICE_OF_WAND + PRICE_OF_STONE + PRICE_OF_CLOAK;
-let finalAmountWithoutCoins, discount, finalAmountWithDiscount;
-let placeFinalAmount = document.querySelector("#final-amount");
-let placeFinalAmountWithoutCoins = document.querySelector("#final-amount-withoutCoins");
 
-let maxPrice = Math.max(PRICE_OF_CLOAK, PRICE_OF_STONE, PRICE_OF_WAND);
-let minPrice = Math.min(PRICE_OF_CLOAK, PRICE_OF_STONE, PRICE_OF_WAND);
-
-finalAmountWithoutCoins = Math.trunc(PRICE_OF_WAND) +  Math.trunc(PRICE_OF_STONE) + Math.trunc(PRICE_OF_CLOAK);
-let roundedFinalAmount = Math.floor(finalAmountWithoutCoins/100)*100;
-
-discount = Math.trunc(Math.random()*25);
-finalAmountWithDiscount = (finalAmount - (discount*finalAmount)/100).toFixed(2);
-
-document.querySelector("#wand-price").innerHTML = PRICE_OF_WAND;
-document.querySelector("#stone-price").innerHTML = PRICE_OF_STONE;
-document.querySelector("#cloak-price").innerHTML = PRICE_OF_CLOAK;
-
-document.querySelector("#btn-buyHallows").addEventListener('click', function(){
-    placeFinalAmount.innerHTML = finalAmount;
-});
-
-document.querySelector("#btn-buyHallows-withoutCoins").addEventListener('click', function(){
-    placeFinalAmountWithoutCoins.innerHTML = finalAmountWithoutCoins;
-});
-
-document.querySelector("#btn-discount").addEventListener('click', function(){
-    document.querySelector("#discount").innerHTML = `Your discount is ${discount}%.`;
-    document.querySelector("#final-amount-with-discount").innerHTML = `Amount with discount is  ${finalAmountWithDiscount}!`;
-});
+const finalAmount, finalAmountWithoutCoins;
+const discount, finalAmountWithDiscount;
+const maxPrice, minPrice;
+const roundedFinalAmount;
 
 let textResult =  `
 Maximum price: ${maxPrice};
@@ -49,9 +36,37 @@ The price is less on ${(finalAmount - finalAmountWithDiscount).toFixed(2)};
 Cost of goods(собівартість): ${(Math.trunc(finalAmountWithDiscount/2))};
 Net profit: ${Math.trunc(finalAmountWithDiscount/2 - (finalAmount - finalAmountWithDiscount))};
 `;
+
+finalAmount = PRICE_OF_WAND + PRICE_OF_STONE + PRICE_OF_CLOAK;
+finalAmountWithoutCoins = Math.trunc(PRICE_OF_WAND) +  Math.trunc(PRICE_OF_STONE) + Math.trunc(PRICE_OF_CLOAK);
+
+maxPrice = Math.max(PRICE_OF_CLOAK, PRICE_OF_STONE, PRICE_OF_WAND);
+minPrice = Math.min(PRICE_OF_CLOAK, PRICE_OF_STONE, PRICE_OF_WAND);
+roundedFinalAmount = Math.floor(finalAmountWithoutCoins/100)*100;
+
+discount = Math.trunc(Math.random()*25);
+finalAmountWithDiscount = (finalAmount - (discount*finalAmount)/100).toFixed(2);
+
+wandPriceSelector.innerHTML = PRICE_OF_WAND;
+stonePriceSelector.innerHTML = PRICE_OF_STONE;
+cloakPriceSelector.innerHTML = PRICE_OF_CLOAK;
+
+btnBuyHallows.addEventListener('click', function(){
+    placeFinalAmount.innerHTML = finalAmount;
+});
+
+btnBuyWithoutCoins.addEventListener('click', function(){
+    placeFinalAmountWithoutCoins.innerHTML = finalAmountWithoutCoins;
+});
+
+btnDiscount.addEventListener('click', function(){
+    spaceForDiscount.innerHTML = `Your discount is ${discount}%.`;
+    spaceForPriceDiscount.innerHTML = `Amount with discount is  ${finalAmountWithDiscount}!`;
+});
+
 document.querySelector("#btn-show-calcilations").addEventListener('click', function(){
-    document.querySelector("#calcilations").classList.add("other-calcilations__text");
-    document.querySelector("#calcilations").innerHTML = textResult;
+    calcilationsSelector.classList.add("other-calcilations__text");
+    calcilationsSelector.innerHTML = textResult;
 });
 
 console.log(textResult);
