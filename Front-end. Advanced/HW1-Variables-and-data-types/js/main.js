@@ -32,29 +32,7 @@ document.querySelector("#btn-discount").addEventListener('click', function(){
     document.querySelector("#final-amount-with-discount").innerHTML = `Amount with discount is  ${finalAmountWithDiscount}!`;
 });
 
-
-document.querySelector("#btn-show-calcilations").addEventListener('click', function(){
-    document.querySelector("#calcilations").classList.add("other-calcilations__text");
-    document.querySelector("#calcilations").innerHTML = `
-    Maximum price: ${maxPrice};
-    Minimum price: ${minPrice};
-    Total cost: ${finalAmount};
-    Total cost without coins: ${finalAmountWithoutCoins};
-    Total cost without coins and rounded: ${roundedFinalAmount};
-    
-    Is the sum of all goods an even number? - ${(roundedFinalAmount & 1 ? false : true)};
-    If the customer pays 500, the rest will be ${500 - finalAmount};
-    Mean value of price, rounded to another sign: ${(finalAmount/[PRICE_OF_WAND, PRICE_OF_STONE, PRICE_OF_CLOAK].length).toFixed(2)};
-    
-    Discount: ${discount}%;
-    Amount with discount: ${finalAmountWithDiscount};
-    The price is less on ${(finalAmount - finalAmountWithDiscount).toFixed(2)};
-    Cost of goods(собівартість): ${(Math.trunc(finalAmountWithDiscount/2))};
-    Net profit: ${Math.trunc(finalAmountWithDiscount/2 - (finalAmount - finalAmountWithDiscount))};
-    `;
-});
-
-console.log(`
+let textResult =  `
 Maximum price: ${maxPrice};
 Minimum price: ${minPrice};
 Total cost: ${finalAmount};
@@ -70,5 +48,11 @@ Amount with discount: ${finalAmountWithDiscount};
 The price is less on ${(finalAmount - finalAmountWithDiscount).toFixed(2)};
 Cost of goods(собівартість): ${(Math.trunc(finalAmountWithDiscount/2))};
 Net profit: ${Math.trunc(finalAmountWithDiscount/2 - (finalAmount - finalAmountWithDiscount))};
-`)
+`;
+document.querySelector("#btn-show-calcilations").addEventListener('click', function(){
+    document.querySelector("#calcilations").classList.add("other-calcilations__text");
+    document.querySelector("#calcilations").innerHTML = textResult;
+});
+
+console.log(textResult);
 
