@@ -86,15 +86,18 @@ button
         border: none
         margin-right: px_to_em(15)
         padding: px_to_em(4) px_to_em(15)
-        font-size: px_to_em(14)
+        font-size: px_to_em(16)
+        span
+            z-index: -1
         &::before
             content: ''
             width: 20px
             height: 20px
-            background-image: url(../img/btn-bg.png)
+            background-image: url(../img/btn-bg.svg)
             position: absolute
             background-size: cover
             left: 4px
+            z-index: 0
     &__btn,
     &__final-amount
         font-family: 'Gochi Hand', cursive

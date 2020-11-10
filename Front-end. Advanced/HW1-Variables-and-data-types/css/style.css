@@ -93,16 +93,20 @@ button:focus {
   border: none;
   margin-right: 0.9375em;
   padding: 0.25em 0.9375em;
-  font-size: 0.875em;
+  font-size: 1em;
+}
+.deathly-hallows__btn span {
+  z-index: -1;
 }
 .deathly-hallows__btn::before {
   content: "";
   width: 20px;
   height: 20px;
-  background-image: url(../img/btn-bg.png);
+  background-image: url(../img/btn-bg.svg);
   position: absolute;
   background-size: cover;
   left: 4px;
+  z-index: 0;
 }
 .deathly-hallows__btn, .deathly-hallows__final-amount {
   font-family: "Gochi Hand", cursive;
