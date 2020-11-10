@@ -1,0 +1,172 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(90deg, rgba(20, 20, 20, 0.3) 0%, rgba(238, 233, 233, 0.43) 0%), url("../img/wallpaper.png");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  cursor: pointer;
+}
+button:focus {
+  outline: none;
+}
+
+.wrapper {
+  padding: 3.4375em 1.25em 0;
+  flex: 1 0 auto;
+}
+
+.deathly-hallows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.deathly-hallows__heading {
+  font-family: "Rock Salt", cursive;
+}
+.deathly-hallows__heading--main {
+  font-size: 2.25em;
+  font-weight: 900;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: url("../img/fog.jpg");
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-attachment: unset;
+  background-position: 0%;
+  animation: heading-moving infinite 50s;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  animation-timing-function: linear;
+}
+.deathly-hallows__heading--secondly {
+  font-size: 0.75em;
+  font-weight: 500;
+  margin-top: 0.625em;
+}
+
+.deathly-hallows__table {
+  border-collapse: collapse;
+  margin-top: 3.125em;
+  padding: 10px;
+  box-shadow: 0px 0px 48px 20px #f8e2e2cc;
+  border: 2px solid #161616;
+  background: linear-gradient(90deg, rgba(41, 41, 41, 0.788) 0%, rgba(0, 0, 0, 0.74) 0%), url(../img/wallpaper-table.jpg);
+  background-size: cover;
+  background-position-y: -35px;
+}
+.deathly-hallows__table thead {
+  border-bottom: 3px solid #000000;
+}
+.deathly-hallows__head {
+  margin: 0 9.375em;
+}
+.deathly-hallows__row td,
+.deathly-hallows__row th {
+  padding: 5px 10px;
+  border-bottom: 2px solid #000000;
+  color: #ffffff;
+}
+.deathly-hallows__head {
+  font-size: 1.375em;
+  font-family: "Rock Salt", cursive;
+}
+.deathly-hallows__data {
+  font-size: 1em;
+  font-family: "Gochi Hand", cursive;
+}
+
+.deathly-hallows__btns {
+  margin-top: 0.9375em;
+  position: relative;
+}
+.deathly-hallows__btn {
+  height: 30px;
+  border-radius: 20px;
+  border: none;
+  margin-right: 0.9375em;
+  padding: 0.25em 0.9375em;
+  font-size: 0.875em;
+}
+.deathly-hallows__btn::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/btn-bg.png);
+  position: absolute;
+  background-size: cover;
+  left: 4px;
+}
+.deathly-hallows__btn, .deathly-hallows__final-amount {
+  font-family: "Gochi Hand", cursive;
+}
+
+.deathly-hallows__stars {
+  position: relative;
+}
+.deathly-hallows__stars img {
+  width: 100px;
+  position: absolute;
+  top: -60px;
+  left: 100px;
+}
+
+.other-calcilations {
+  font-family: "Gochi Hand", cursive;
+}
+.other-calcilations__text {
+  background: linear-gradient(90deg, rgba(240, 233, 233, 0.14) 0%, rgba(240, 219, 219, 0.74) 0%), url(../img/Phoenix.png);
+  border: 2px solid;
+  border-radius: 40px;
+  margin: 1.25em auto;
+  width: 40%;
+  text-align: center;
+  box-shadow: 0px 0px 29px 20px #f0cef0;
+}
+.other-calcilations__text {
+  white-space: pre;
+}
+.other-calcilations__btn {
+  height: 50;
+  border-radius: 10px;
+  border: none;
+  background-image: url("../img/calc.jpg");
+  background-repeat: np-repeat;
+  background-size: cover;
+  color: #ffffff;
+  font-family: "Rock Salt", cursive;
+}
+
+footer {
+  flex: 0 0 auto;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(41, 41, 41, 0.788) 0%, rgba(0, 0, 0, 0.74) 0%), url(../img/footer-bg.jpg);
+}
+footer a {
+  font-family: "Rock Salt", cursive;
+  font-size: 1em;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+@keyframes heading-moving {
+  0% {
+    background-position-y: 0%;
+  }
+  50% {
+    background-position-y: 100%;
+  }
+  100% {
+    background-position-y: 0%;
+  }
+}

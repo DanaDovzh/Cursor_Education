@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Syne+Tactile&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="shortcut icon" href="img/deathly-hallows.svg" type="image/x-icon">
+    <title>Deathly Hallows</title>
+</head>
+<body>
+    <main class="wrapper">
+        <div class="deathly-hallows">
+            <h1 class="deathly-hallows__heading deathly-hallows__heading--main">Deathly Hallows</h1>
+            <h6 class="deathly-hallows__heading deathly-hallows__heading--secondly">buy it just now!</h6>
+        
+            <table class="deathly-hallows__table">
+                <thead>
+                    <tr class="deathly-hallows__row">
+                        <th class="deathly-hallows__head">Hallows</th>
+                        <th class="deathly-hallows__head">Price</th>
+                    </tr>
+                </thead>
+        
+                <tbody>
+                    <tr class="deathly-hallows__row">
+                        <td class="deathly-hallows__data">The Elder Wand</td>
+                        <td class="deathly-hallows__data"><span id="wand-price"></span></td>
+                    </tr>
+                    <tr class="deathly-hallows__row">
+                        <td class="deathly-hallows__data">The Resurrection Stone</td>
+                        <td class="deathly-hallows__data"><span id="stone-price"></span></td>
+                    </tr>
+                    <tr class="deathly-hallows__row">
+                        <td class="deathly-hallows__data">The cloak of invisibility</td>
+                        <td class="deathly-hallows__data"><span id="cloak-price"></span></td>
+                    </tr>
+                <tbody>
+                
+                
+            </table>
+            <div>
+                <div class="deathly-hallows__btns deathly-hallows__buy">
+                    <button class="deathly-hallows__btn" id="btn-buyHallows">Buy all</button>
+                    <span class="deathly-hallows__final-amount" id="final-amount"></span>
+                </div>
+
+                <div class="deathly-hallows__btns deathly-hallows__buy">
+                    <button class="deathly-hallows__btn" id="btn-buyHallows-withoutCoins">Buy all without coins</button>
+                    <span class="deathly-hallows__final-amount" id="final-amount-withoutCoins"></span>
+                </div>
+
+                <div class="deathly-hallows__btns deathly-hallows__discount">
+                    <button class="deathly-hallows__btn" id="btn-discount">I wanna discount</button>
+                    <span class="deathly-hallows__final-amount" id="discount"></span>
+                    <span class="deathly-hallows__final-amount" id="final-amount-with-discount"></span>
+                </div>
+            </div>
+            
+        </div>
+
+
+        <div class="other-calcilations" >
+            <button class="other-calcilations__btn" id="btn-show-calcilations">Other calcilations</button>
+            <div id="calcilations"></div>
+        </div>
+    </main>
+    <footer>
+        <a href="" target="_blank">GitHub</a>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

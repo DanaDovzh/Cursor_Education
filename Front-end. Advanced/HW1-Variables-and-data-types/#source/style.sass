@@ -1,0 +1,155 @@
+$context: 16
+
+@function px_to_em($pixels)
+    @return #{$pixels/$context}em
+html, 
+body
+    height: 100%
+body 
+    background: linear-gradient(90deg, rgba(20, 20, 20, 0.3) 0%, rgba(238, 233,233, 0.43)0%), url("../img/wallpaper.png")
+    background-size: cover
+    display: flex
+    flex-direction: column
+    
+button
+    cursor: pointer
+    &:focus
+        outline: none
+.wrapper 
+    padding: px_to_em(55) px_to_em(20) 0
+    flex: 1 0 auto
+
+.deathly-hallows
+    display: flex
+    flex-direction: column
+    align-items: center
+
+
+.deathly-hallows
+    &__heading
+        font-family: 'Rock Salt', cursive
+        &--main
+            font-size: px_to_em(36)
+            font-weight: 900
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent	
+            background-image: url('../img/fog.jpg')
+            background-repeat: repeat-y
+            background-size: cover
+            background-attachment: unset
+            background-position: 0%
+            animation: heading-moving infinite 50s
+            animation-fill-mode: forwards
+            animation-play-state: running
+            animation-timing-function: linear
+
+        &--secondly
+            font-size: px_to_em(12)
+            font-weight: 500
+            margin-top: px_to_em(10)
+    
+.deathly-hallows
+    &__table
+        border-collapse: collapse
+        margin-top: px_to_em(50)
+        padding: 10px
+        box-shadow: 0px 0px 48px 20px #f8e2e2cc
+        border: 2px solid #161616
+        background: linear-gradient(90deg, rgba(41, 41, 41, 0.788) 0%, rgb(0 0 0 / 74%) 0%), url(../img/wallpaper-table.jpg)
+        background-size: cover
+        background-position-y: -35px 
+        thead
+           border-bottom: 3px solid #000000
+    &__head
+        margin: 0 px_to_em(150)
+    &__row
+        td,
+        th
+            padding: 5px 10px
+            
+            border-bottom: 2px solid #000000
+            color: #ffffff
+    &__head
+        font-size: px_to_em(22)
+        font-family: 'Rock Salt', cursive
+    &__data
+        font-size: px_to_em(16)
+        font-family: 'Gochi Hand', cursive
+
+.deathly-hallows
+    &__btns
+        margin-top: px_to_em(15)
+        position: relative
+    &__btn
+        height: 30px
+        border-radius: 20px
+        border: none
+        margin-right: px_to_em(15)
+        padding: px_to_em(4) px_to_em(15)
+        font-size: px_to_em(14)
+        &::before
+            content: ''
+            width: 20px
+            height: 20px
+            background-image: url(../img/btn-bg.png)
+            position: absolute
+            background-size: cover
+            left: 4px
+    &__btn,
+    &__final-amount
+        font-family: 'Gochi Hand', cursive
+
+.deathly-hallows
+    &__stars
+        position: relative
+        img 
+            width: 100px
+            position: absolute
+            top: -60px
+            left: 100px
+
+.other-calcilations
+    font-family: 'Gochi Hand', cursive
+    &__text
+        background: linear-gradient(90deg, rgb(240 233 233 / 14%) 0%, rgb(240 219 219 / 74%) 0%), url(../img/Phoenix.png)
+        border: 2px solid
+        border-radius: 40px
+        margin: px_to_em(20) auto
+        width: 40%
+        text-align: center
+        box-shadow: 0px 0px 29px 20px rgba(240,206,240,1)
+        
+    
+    &__text
+        white-space: pre
+        
+    &__btn
+        height: 50
+        border-radius: 10px
+        border: none
+        background-image: url('../img/calc.jpg')
+        background-repeat: np-repeat
+        background-size: cover
+        color: #ffffff
+        font-family: 'Rock Salt', cursive
+        
+footer
+    flex: 0 0 auto
+    height: 10%
+    display: flex
+    justify-content: center
+    align-items: center
+    background: linear-gradient(90deg, rgba(41, 41, 41, 0.788) 0%, rgb(0 0 0 / 74%) 0%), url(../img/footer-bg.jpg)
+    a
+        font-family: 'Rock Salt', cursive
+        font-size: px_to_em(16)
+        color: #ffffff
+        font-weight: 600
+          
+@keyframes heading-moving 
+    0%
+        background-position-y: 0%	
+    50% 
+        background-position-y: 100%	
+    100% 
+        background-position-y: 0%
