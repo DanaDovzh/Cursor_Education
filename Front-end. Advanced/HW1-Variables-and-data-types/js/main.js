@@ -13,13 +13,14 @@ const calcilationsSelector = document.querySelector("#calcilations");
 const PRICE_OF_WAND = 15.678;
 const PRICE_OF_STONE = 123.965;
 const PRICE_OF_CLOAK = 90.2345;
-const finalAmount, finalAmountWithoutCoins;
-const discount, finalAmountWithDiscount;
-const maxPrice, minPrice;
-const roundedFinalAmount;
-const textResult; 
-
-textResult = `
+const finalAmount = PRICE_OF_WAND + PRICE_OF_STONE + PRICE_OF_CLOAK;
+const finalAmountWithoutCoins = Math.trunc(PRICE_OF_WAND) +  Math.trunc(PRICE_OF_STONE) + Math.trunc(PRICE_OF_CLOAK);
+const discount = Math.trunc(Math.random()*25);
+const finalAmountWithDiscount = (finalAmount - (discount*finalAmount)/100).toFixed(2);
+const maxPrice = Math.max(PRICE_OF_CLOAK, PRICE_OF_STONE, PRICE_OF_WAND);
+const minPrice = Math.min(PRICE_OF_CLOAK, PRICE_OF_STONE, PRICE_OF_WAND);
+const roundedFinalAmount = Math.floor(finalAmountWithoutCoins/100)*100;
+const textResult = `
 Maximum price: ${maxPrice};
 Minimum price: ${minPrice};
 Total cost: ${finalAmount};
@@ -36,16 +37,6 @@ The price is less on ${(finalAmount - finalAmountWithDiscount).toFixed(2)};
 Cost of goods(собівартість): ${(Math.trunc(finalAmountWithDiscount/2))};
 Net profit: ${Math.trunc(finalAmountWithDiscount/2 - (finalAmount - finalAmountWithDiscount))};
 `;
-
-finalAmount = PRICE_OF_WAND + PRICE_OF_STONE + PRICE_OF_CLOAK;
-finalAmountWithoutCoins = Math.trunc(PRICE_OF_WAND) +  Math.trunc(PRICE_OF_STONE) + Math.trunc(PRICE_OF_CLOAK);
-
-maxPrice = Math.max(PRICE_OF_CLOAK, PRICE_OF_STONE, PRICE_OF_WAND);
-minPrice = Math.min(PRICE_OF_CLOAK, PRICE_OF_STONE, PRICE_OF_WAND);
-roundedFinalAmount = Math.floor(finalAmountWithoutCoins/100)*100;
-
-discount = Math.trunc(Math.random()*25);
-finalAmountWithDiscount = (finalAmount - (discount*finalAmount)/100).toFixed(2);
 
 wandPriceSelector.innerHTML = PRICE_OF_WAND;
 stonePriceSelector.innerHTML = PRICE_OF_STONE;
