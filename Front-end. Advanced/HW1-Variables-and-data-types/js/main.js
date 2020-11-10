@@ -7,7 +7,7 @@ let placeFinalAmount = document.querySelector("#final-amount");
 let placeFinalAmountWithoutCoins = document.querySelector("#final-amount-withoutCoins");
 
 let maxPrice = Math.max(PRICE_OF_CLOAK, PRICE_OF_STONE, PRICE_OF_WAND);
-let minPrice = Math.min(PRICE_OF_CLOAK, PRICE_OF_STONE, priceOfWand);
+let minPrice = Math.min(PRICE_OF_CLOAK, PRICE_OF_STONE, PRICE_OF_WAND);
 
 finalAmountWithoutCoins = Math.trunc(PRICE_OF_WAND) +  Math.trunc(PRICE_OF_STONE) + Math.trunc(PRICE_OF_CLOAK);
 let roundedFinalAmount = Math.floor(finalAmountWithoutCoins/100)*100;
