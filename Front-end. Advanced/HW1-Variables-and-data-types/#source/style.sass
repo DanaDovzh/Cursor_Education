@@ -1,7 +1,14 @@
 $context: 16
+$maxWidth: 1440
 
 @function px_to_em($pixels)
     @return #{$pixels/$context}em
+
+@mixin adaptiv-font($pcSize, $mobSize)
+    $addSize: $pcSize - $mobSize
+    $maxWidth: $maxWidth - 320
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
+
 html, 
 body
     height: 100%
@@ -29,7 +36,7 @@ button
     &__heading
         font-family: 'Rock Salt', cursive
         &--main
-            font-size: px_to_em(36)
+            @include adaptiv-font(36, 28)
             font-weight: 900
             -webkit-background-clip: text
             -webkit-text-fill-color: transparent	
@@ -44,7 +51,7 @@ button
             animation-timing-function: linear
 
         &--secondly
-            font-size: px_to_em(12)
+            @include adaptiv-font(12, 10)
             font-weight: 500
             margin-top: px_to_em(10)
     
@@ -70,10 +77,10 @@ button
             border-bottom: 2px solid #000000
             color: #ffffff
     &__head
-        font-size: px_to_em(22)
+        @include adaptiv-font(22, 18)
         font-family: 'Rock Salt', cursive
     &__data
-        font-size: px_to_em(16)
+        @include adaptiv-font(16, 14)
         font-family: 'Gochi Hand', cursive
 
 .deathly-hallows
@@ -86,7 +93,7 @@ button
         border: none
         margin-right: px_to_em(15)
         padding: px_to_em(4) px_to_em(15)
-        font-size: px_to_em(16)
+        @include adaptiv-font(16, 14)
         span
             z-index: -1
         &::before
@@ -120,7 +127,10 @@ button
         margin: px_to_em(20) auto
         width: 40%
         text-align: center
+        @include adaptiv-font(14, 10)
         box-shadow: 0px 0px 29px 20px rgba(240,206,240,1)
+        @media (max-width: 765px) 
+            width: 90%
         
     
     &__text
@@ -135,6 +145,7 @@ button
         background-size: cover
         color: #ffffff
         font-family: 'Rock Salt', cursive
+        margin-top: px_to_em(20)
         
 footer
     flex: 0 0 auto
