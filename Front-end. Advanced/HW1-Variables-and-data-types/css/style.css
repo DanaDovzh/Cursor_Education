@@ -108,6 +108,9 @@ button:focus {
   left: 4px;
   z-index: 0;
 }
+.deathly-hallows__btn:active {
+  transform: scale(0.8);
+}
 .deathly-hallows__btn, .deathly-hallows__final-amount {
   font-family: "Gochi Hand", cursive;
 }
@@ -153,6 +156,13 @@ button:focus {
   color: #ffffff;
   font-family: "Rock Salt", cursive;
   margin-top: 1.25em;
+  transition-duration: 1s;
+}
+.other-calcilations__btn:hover {
+  transform: scale(1.1);
+  color: #111111;
+  background-image: none;
+  background-color: #ffffff;
 }
 
 footer {
