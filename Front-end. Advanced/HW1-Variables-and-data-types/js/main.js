@@ -1,23 +1,23 @@
-let priceOfWand = 15.678;
-let priceOfStone = 123.965;
-let priceOfCloak = 90.2345;
-let finalAmount = priceOfWand + priceOfStone + priceOfCloak;
+const PRICE_OF_WAND = 15.678;
+const PRICE_OF_STONE = 123.965;
+const PRICE_OF_CLOAK = 90.2345;
+let finalAmount = PRICE_OF_WAND + PRICE_OF_STONE + PRICE_OF_CLOAK;
 let finalAmountWithoutCoins, discount, finalAmountWithDiscount;
 let placeFinalAmount = document.querySelector("#final-amount");
 let placeFinalAmountWithoutCoins = document.querySelector("#final-amount-withoutCoins");
 
-let maxPrice = Math.max(priceOfCloak, priceOfStone, priceOfWand);
-let minPrice = Math.min(priceOfCloak, priceOfStone, priceOfWand);
+let maxPrice = Math.max(PRICE_OF_CLOAK, PRICE_OF_STONE, PRICE_OF_WAND);
+let minPrice = Math.min(PRICE_OF_CLOAK, PRICE_OF_STONE, priceOfWand);
 
-finalAmountWithoutCoins = Math.trunc(priceOfWand) +  Math.trunc(priceOfStone) + Math.trunc(priceOfCloak);
+finalAmountWithoutCoins = Math.trunc(PRICE_OF_WAND) +  Math.trunc(PRICE_OF_STONE) + Math.trunc(PRICE_OF_CLOAK);
 let roundedFinalAmount = Math.floor(finalAmountWithoutCoins/100)*100;
 
 discount = Math.trunc(Math.random()*25);
 finalAmountWithDiscount = (finalAmount - (discount*finalAmount)/100).toFixed(2);
 
-document.querySelector("#wand-price").innerHTML = priceOfWand;
-document.querySelector("#stone-price").innerHTML = priceOfStone;
-document.querySelector("#cloak-price").innerHTML = priceOfCloak;
+document.querySelector("#wand-price").innerHTML = PRICE_OF_WAND;
+document.querySelector("#stone-price").innerHTML = PRICE_OF_STONE;
+document.querySelector("#cloak-price").innerHTML = PRICE_OF_CLOAK;
 
 document.querySelector("#btn-buyHallows").addEventListener('click', function(){
     placeFinalAmount.innerHTML = finalAmount;
@@ -44,7 +44,7 @@ document.querySelector("#btn-show-calcilations").addEventListener('click', funct
     
     Is the sum of all goods an even number? - ${(roundedFinalAmount & 1 ? false : true)};
     If the customer pays 500, the rest will be ${500 - finalAmount};
-    Mean value of price, rounded to another sign: ${(finalAmount/[priceOfWand, priceOfStone, priceOfCloak].length).toFixed(2)};
+    Mean value of price, rounded to another sign: ${(finalAmount/[PRICE_OF_WAND, PRICE_OF_STONE, PRICE_OF_CLOAK].length).toFixed(2)};
     
     Discount: ${discount}%;
     Amount with discount: ${finalAmountWithDiscount};
@@ -63,7 +63,7 @@ Total cost without coins and rounded: ${roundedFinalAmount};
 
 Is the sum of all goods an even number? - ${(roundedFinalAmount & 1 ? false : true)};
 If the customer pays 500, the rest will be ${500 - finalAmount};
-Mean value of price, rounded to another sign: ${(finalAmount/[priceOfWand, priceOfStone, priceOfCloak].length).toFixed(2)};
+Mean value of price, rounded to another sign: ${(finalAmount/[PRICE_OF_WAND, PRICE_OF_STONE, PRICE_OF_CLOAK].length).toFixed(2)};
 
 Discount: ${discount}%;
 Amount with discount: ${finalAmountWithDiscount};
