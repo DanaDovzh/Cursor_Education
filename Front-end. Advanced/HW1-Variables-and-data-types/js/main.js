@@ -13,13 +13,13 @@ const calcilationsSelector = document.querySelector("#calcilations");
 const PRICE_OF_WAND = 15.678;
 const PRICE_OF_STONE = 123.965;
 const PRICE_OF_CLOAK = 90.2345;
-
 const finalAmount, finalAmountWithoutCoins;
 const discount, finalAmountWithDiscount;
 const maxPrice, minPrice;
 const roundedFinalAmount;
+const textResult; 
 
-let textResult =  `
+textResult = `
 Maximum price: ${maxPrice};
 Minimum price: ${minPrice};
 Total cost: ${finalAmount};
