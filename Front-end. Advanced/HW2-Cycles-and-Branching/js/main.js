@@ -22,14 +22,11 @@ btnCalculate.addEventListener('click', function(e) {
     secondNumber = +document.querySelector('[name="second-number"]').value;
     countEven = +isEven.querySelector("input:checked").value;
     textLoss.style.display = "none";
-    if (!Number.isInteger(firstNumber) || !Number.isInteger(secondNumber)) {
-        changeNumber.innerHTML = "Потрібно ввести ціле число";
-        changeNumber.classList.add("form__error");
-    }
         
-    if (firstNumber >= secondNumber) {
+    if ((firstNumber >= secondNumber) || !Number.isInteger(firstNumber) || (!Number.isInteger(secondNumber))) {
         changeNumber.classList.add("form__error");
-        changeNumber.innerHTML = ("Здається ти зробив помилку! Перше число має бути менше за друге! А ну давай, введи без помилок!");
+        firstNumber >= secondNumber ? changeNumber.innerHTML = ("Здається ти зробив помилку! Перше число має бути менше за друге! А ну давай, введи без помилок!") : changeNumber.innerHTML = "Введи ціле число";
+
     } else {
         changeNumber.classList.remove("form__error");
         changeNumber.innerHTML = "";
