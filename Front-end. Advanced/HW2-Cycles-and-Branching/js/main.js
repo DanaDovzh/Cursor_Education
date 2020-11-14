@@ -10,8 +10,8 @@ let firstNumber = +document.querySelector('[name="first-number"]').value;
 let secondNumber = +document.querySelector('[name="second-number"]').value;
 let isEven = document.querySelector('#choose-even');
 let countEven = +isEven.querySelector("input:checked").value;
-let sum = 0;
-let sumControl;
+let constrolSum = 0;
+let saveSum;
 let firstDeviationBtn, secondDeviationBtn, thirdDeviationBtn;
 let randNumBtnFirst, randNumBtnSecond, randNumBtnThird; 
 let numberRightBtn;
@@ -29,27 +29,27 @@ btnCalculate.addEventListener('click', function(e) {
         changeNumber.innerHTML = "";
         for (let i = firstNumber; i <= secondNumber; i++) {
             if ((!countEven) && i&1) {
-                sum += i; 
+                constrolSum += i; 
             }
             else if(countEven) {
-                sum += i;
+                constrolSum += i;
             }
         }
         firstDeviationBtn = Math.trunc(Math.random(2)*25);
         secondDeviationBtn = Math.trunc(Math.random(2)*35);
-        averageNumberBtn = Math.trunc(Math.random(5)*45);
-        randNumBtnFirst = Math.trunc((sum - (firstDeviationBtn*sum)/100).toFixed(2));
-        randNumBtnSecond = Math.trunc((sum + (secondDeviationBtn*sum)/100).toFixed(2));
-        randNumBtnThird = Math.trunc((sum + (thirdDeviationBtn*sum)/100).toFixed(2));
+        thirdDeviationBtn = Math.trunc(Math.random(5)*45);
+        randNumBtnFirst = Math.trunc((constrolSum - (firstDeviationBtn*constrolSum)/100).toFixed(2));
+        randNumBtnSecond = Math.trunc((constrolSum + (secondDeviationBtn*constrolSum)/100).toFixed(2));
+        randNumBtnThird = Math.trunc((constrolSum + (thirdDeviationBtn*constrolSum)/100).toFixed(2));
         arrayGamesBtn[0].value = randNumBtnFirst;
         arrayGamesBtn[1].value = randNumBtnSecond;
         arrayGamesBtn[2].value = randNumBtnThird;
 
         numberRightBtn = Math.floor(Math.random() * (2));
-        arrayGamesBtn[numberRightBtn].value = sum;
+        arrayGamesBtn[numberRightBtn].value = constrolSum;
         GameBtns.style.display = "block";
-        sumControl = sum;
-        sum = 0; 
+        saveSum = constrolSum;
+        constrolSum = 0; 
     }
     e.preventDefault();
  });
@@ -61,7 +61,7 @@ btnCalculate.addEventListener('click', function(e) {
 });
 
 function checlBtn(idBtn) {
-   if (document.getElementById(idBtn).value == sumControl) {
+   if (document.getElementById(idBtn).value == saveSum) {
     window.open('https://www.stb.ua/bitva/ua/anketa-uchastnika-bitva-e-kstrasensov-18/', '_blank');
    }
    else {
