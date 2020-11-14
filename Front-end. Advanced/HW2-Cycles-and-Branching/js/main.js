@@ -21,6 +21,11 @@ btnCalculate.addEventListener('click', function(e) {
     firstNumber = +document.querySelector('[name="first-number"]').value;
     secondNumber = +document.querySelector('[name="second-number"]').value;
     countEven = +isEven.querySelector("input:checked").value;
+    if (!Number.isInteger(firstNumber) || !Number.isInteger(secondNumber)) {
+        changeNumber.innerHTML = "Потрібно ввести ціле число";
+        changeNumber.classList.add("form__error");
+    }
+        
     if (firstNumber >= secondNumber) {
         changeNumber.classList.add("form__error");
         changeNumber.innerHTML = ("Здається ти зробив помилку! Перше число має бути менше за друге! А ну давай, введи без помилок!");
