@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>psychic game</title>
+</head>
+<body>
+    <main>
+        <div class="greating">
+            <div class="greating__text greating__hello">
+                Привітик, <span id="greating-name">noname</span>
+            </div>
+            <div class="greating__text greating__ready">
+                Ти готовий зіграти одну гру?
+            </div>
+
+            <div>
+                <p class="greating__text greating__rule">Правила наступні:</p>
+                <p class="greating__text greating__rule">ти задаєш діапазон чисел,</p> 
+                <p class="greating__text greating__rule">пам'ятай перше число має бути менше за друге!</p>
+                <p class="greating__text greating__rule">а далі програма має розрахувати суму чисел</p>
+                <p class="greating__text greating__rule">в цьому діапазоні.</p>
+                <p class="greating__text greating__rule">Все просто!</p>
+            </div>
+        </div>
+        <div class="game">
+            <form class="form">
+                <div class="form__inps form__part">
+                    <div class="form__text">
+                        <p><label for="first-number">Перше число</label></p>
+                        <p><input type="number" name="first-number" class="form__inp"></p>
+                    </div>
+                    <div class="form__text">
+                        <p><label for="second-number">Друге число</label></p>
+                        <p><input type="number" name="second-number" class="form__inp"></p>
+                    </div>
+                    <div class="form__message-change">
+                        <span id="change-numbers"></span>
+                    </div>
+                </div>
+                
+
+                <div class="form__text form__part"> <label for="even-all">Потрібно враховувати парні числа?</label>
+                    <div id="choose-even">
+                        <input name="even-all" type="radio" value="0"><label for="even-all">Ні</label>
+                        <input name="even-all" type="radio" value="1" checked><label for="even-all">Так</label>
+                    </div>
+                </div>
+
+                <div class="form__btns form__part">
+                    <input type="submit" value="Розрахувати" id="btn-calculate" class="form__btn">
+                    <input type="reset" value="Скинути" class="form__btn">
+                </div>
+            </form>
+
+            <div id="extra">
+                <p class="game__text">Ха, думав так просто? Давай перевіремо твої здібності екстрасенса</p> 
+                <p class="game__text">або... юного генія</p>
+                <p class="game__text">Твоя задача проста: клацни на вірну відповідь</p>
+                <div class="game__random-btns">
+                    <input type="button" class="game__random-btn" id="1" onclick="checlBtn(this.id)" value=" ">
+                    <input type="button" class="game__random-btn" id="2" onclick="checlBtn(this.id)" value=" ">
+                    <input type="button" class="game__random-btn" id="3" onclick="checlBtn(this.id)" value=" ">
+                </div>
+            </div>
+            <div class="game__lose" id="game-lost">
+                Оу, нічого страшного. Не пощастило тут, можливо не пощастить ще десь.. Не засмучуйся
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <a class="link-git" href="https://github.com/DanaDovzh/Cursor_Education/tree/master/Front-end.%20Advanced/HW2-Cycles-and-Branching" target="_blank">GitHub</a>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

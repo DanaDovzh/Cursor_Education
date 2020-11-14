@@ -1,0 +1,201 @@
+$context: 16
+$maxWidth: 1440
+$font-style: monospace
+
+@function px_to_em($pixels)
+    @return #{$pixels/$context}em
+
+@mixin adaptiv_font($pcSize, $mobSize)
+    $addSize: $pcSize - $mobSize
+    $maxWidth: $maxWidth - 320
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
+
+html, 
+body
+    height: 100%
+body
+    padding: 25px
+    position: relative
+    background-color: rgb(78, 75, 75)
+    background-size: cover
+    box-shadow: inset 53px -13px 54px 10px rgba(0,0,0,0.75)
+    color: #ffffff
+    display: flex
+    flex-direction: column
+
+main
+    flex: 1 0 auto
+.game
+    opacity: 0
+    animation:  opacity-yes 0.01s infinite
+    animation-delay: 27s
+    padding: px_to_em(40)
+input:focus,
+button:focus
+    outline: none
+button
+    border: none
+
+label,
+input,
+.game__text,
+.game__lost,
+.link-git
+    font-family: $font-style
+    @include adaptiv_font(18, 13)
+    letter-spacing: .15em
+
+.form
+    &__message-change
+        margin-top: 20px
+        width: 40%
+
+.form
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    &__inps
+        display: flex
+    &__text
+        margin: 10px
+        display: flex
+        flex-direction: column
+    &__inp
+        border: none
+        width: px_to_em(70)
+        border-bottom: 3px solid  rgb(202, 156, 156)
+        border-right: 3px solid rgb(202, 156, 156)
+        box-shadow: inset -5px -4px 9px 1px  rgb(202, 156, 156)
+        background-color: inherit
+        color: white
+        font-weight: 500
+        margin-top: px_to_em(5)
+        @include adaptiv_font(20, 18)
+    &__error
+        color: rgb(252, 0, 0)
+        font-family: $font-style
+        @include adaptiv_font(12, 10)
+    &__part
+        margin: px_to_em(20) 0
+       
+.form__btn,
+.game__random-btn
+        border-radius: 10px
+        
+        padding: 5px
+        color: rgb(255, 255, 255)
+        letter-spacing: 1px
+        &:active
+            top: 2px
+            transition-duration: 0.5s
+            transform: translateY(4px) 
+            box-shadow: none 
+.form__btn
+    background-color: #746767c9
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+
+.game__lose,
+#extra
+    display: none
+    @include adaptiv_font(20, 18)
+.game
+    &__random-btns
+        margin-top: px_to_em(10)
+    &__random-btn
+        background-color: #d62020c9
+        box-shadow: 0px 4px 4px rgba(255, 77, 23, 0.25)
+        background-image: url('../img/starts-btn.jpg')
+        animation: move-bg-btn 5s infinite linear
+        animation-direction: alternate
+    &__text
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button 
+    -webkit-appearance: none
+
+.greating
+    display: flex
+    justify-content: center
+    flex-direction: column
+    position: absolute
+    top: 20%
+    left: 6%
+    opacity: 1
+    animation:  opacity-no 2s ease 0s
+    animation-delay: 25s
+    animation-fill-mode: forwards
+    &__text
+        font-family: monospace
+        overflow: hidden
+        text-shadow: 5px 2px 2px rgba(206, 150, 150, 1)
+        border-right: .15em solid orange
+        white-space: nowrap
+        letter-spacing: .15em
+        margin-bottom: px_to_em(5)
+        @include adaptiv_font(54, 32)
+    &__hello
+        animation: greating-hello-move 2.5s steps(30, end), blink-caret .5s step-end infinite
+    &__ready
+        opacity: 0
+        animation: greating-hello-move 5s steps(50, end), blink-caret .5s step-end infinite, opacity-yes 0.01s infinite
+        animation-delay: 2.5s
+    &__rules
+        
+    &__rule
+        opacity: 0
+        @include adaptiv_font(26, 20)
+        &:first-child
+            animation: greating-hello-move 3s steps(10, end), blink-caret .5s step-end infinite, opacity-yes 0.01s infinite
+            animation-delay: 7.5s
+        &:nth-child(2)
+            animation: greating-hello-move 2s steps(50, end), blink-caret .5s step-end infinite, opacity-yes 0.01s infinite
+            animation-delay: 10.5s
+        &:nth-child(3)
+            animation: greating-hello-move 2s steps(50, end), blink-caret .5s step-end infinite, opacity-yes 0.01s infinite
+            animation-delay: 12.5s
+        &:nth-child(4)
+            animation: greating-hello-move 2s steps(50, end), blink-caret .5s step-end infinite, opacity-yes 0.01s infinite
+            animation-delay: 15.5s
+        &:nth-child(5)
+            animation: greating-hello-move 2s steps(50, end), blink-caret .5s step-end infinite, opacity-yes 0.01s infinite
+            animation-delay: 17.5s
+        &:nth-child(6)
+            animation: greating-hello-move 2s steps(50, end), blink-caret .5s step-end infinite, opacity-yes 0.01s infinite
+            animation-delay: 19.5s
+
+.link-git 
+    color: #ffffff        
+
+footer 
+    flex: 0 0 auto
+    display: flex
+    justify-content: center
+    align-items: center
+@keyframes greating-hello-move
+    from
+        width: 0 
+    to 
+        width: 100% 
+
+@keyframes blink-caret 
+    from, 
+    to 
+        border-color: transparent 
+    50%  
+        border-color: orange 
+
+@keyframes opacity-yes
+    from, to
+        opacity: 1
+
+@keyframes opacity-no
+    0%
+        opacity: 1
+    100%
+        opacity: 0
+
+@keyframes move-bg-btn
+    0%
+        background-size: 100%
+    100%
+        background-size: 150%
