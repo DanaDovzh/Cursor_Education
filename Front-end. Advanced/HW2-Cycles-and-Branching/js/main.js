@@ -21,6 +21,7 @@ btnCalculate.addEventListener('click', function(e) {
     firstNumber = +document.querySelector('[name="first-number"]').value;
     secondNumber = +document.querySelector('[name="second-number"]').value;
     countEven = +isEven.querySelector("input:checked").value;
+    textLoss.style.display = "none";
     if (!Number.isInteger(firstNumber) || !Number.isInteger(secondNumber)) {
         changeNumber.innerHTML = "Потрібно ввести ціле число";
         changeNumber.classList.add("form__error");
