@@ -1,4 +1,4 @@
-let nameUser = prompt("Привіт, друже. Як тебе звати?");
+const nameUser = prompt("Привіт, друже. Як тебе звати?");
 
 const btnCalculate = document.querySelector("#btn-calculate");
 const changeNumber = document.querySelector("#change-numbers");
