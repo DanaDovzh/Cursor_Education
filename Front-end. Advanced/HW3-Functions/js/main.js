@@ -1,4 +1,4 @@
-function getMaxDigit(numberGive) {
+const getMaxDigit = function (numberGive) {
     const array = String(numberGive).split('');
     let max = array[0];
     for (let i = 0; i < array.length; i++) {
@@ -7,7 +7,7 @@ function getMaxDigit(numberGive) {
     return max;
 } 
 
-function powNumber(number, degree) {
+const powNumber = function (number, degree) {
     let powNum = 1;
     if (degree === 0)
         return powNum;
@@ -22,21 +22,21 @@ function powNumber(number, degree) {
     
 }
 
-function upperFisrtLetter (name) {
+const upperFisrtLetter = function (name) {
     return name[0].toUpperCase() + name.substring(1).toLowerCase();
 }
 
-function amountAfterTaxes(salary = 1000, taxes = 19.5) {
+const amountAfterTaxes = function (salary = 1000, taxes = 19.5) {
     return (salary - (salary*taxes)/100);
 }
 
 
-function getRandomNumber(min = 1, max = 10) {
+const getRandomNumber = function (min = 1, max = 10) {
     return Math.floor(Math.random()* (max - min) + min);
 }
 
 
-function countLetter(findLetter = "А", world = "Асталавіста") {
+const countLetter = function (findLetter = "А", world = "Асталавіста") {
     const array = world.toLowerCase().split('');
     let cnt = 0;
 
@@ -47,7 +47,7 @@ function countLetter(findLetter = "А", world = "Асталавіста") {
     return cnt;
 }
 
-function getRandomPassword (passwordLength = 8) {
+const getRandomPassword = function (passwordLength = 8) {
     let newPassword = [];
     const maxDigitPass = 10;
     for (let i = 0; i < passwordLength; i++) {
@@ -56,7 +56,7 @@ function getRandomPassword (passwordLength = 8) {
     return newPassword.join('');
 }
 
-function deleteLetters(letterDel = "a", wordForDel = "blablabla") {
+const deleteLetters = function (letterDel = "a", wordForDel = "blablabla") {
     let array = wordForDel.toLowerCase().split('');
     let indLetterDel;
     while (array.indexOf(letterDel) !== -1) {
@@ -66,13 +66,13 @@ function deleteLetters(letterDel = "a", wordForDel = "blablabla") {
     return array.join('');
 }
 
-function isPalyndrom(wordPal = "Я несу гусеня") {
+const isPalyndrom = function (wordPal = "Я несу гусеня") {
     const wordWithoutSpace = wordPal.split(' ').join('').toLowerCase();
     const newString =  wordWithoutSpace.split('').reverse().join('');
     return wordWithoutSpace === newString; 
 }
 
-function deleteDuplicateLetter(sentence = "Бісквіт був дуже ніжним") {
+const deleteDuplicateLetter = function (sentence = "Бісквіт був дуже ніжним") {
     const sentenceWithoutSpace = sentence.split(' ').join('').toLowerCase();
     const array = sentenceWithoutSpace.split('');
     let newArray = [];
@@ -88,7 +88,7 @@ function deleteDuplicateLetter(sentence = "Бісквіт був дуже ніж
     return newArray.join('');
 }
 
-function convertCurrency(currency = "100 UAH") {
+const convertCurrency = function (currency = "100 UAH") {
     const DOLLAR_COEF = 28;
     const UAH_COEF = 30;
     if (!currency.includes("$") && (!currency.includes("UAH")) && (!currency.includes("uah")))
@@ -104,7 +104,7 @@ function convertCurrency(currency = "100 UAH") {
     }
 }
 
-function deleteCurrency(currency = "100 UAH") {
+const deleteCurrency = function (currency = "100 UAH") {
         if (currency.includes("UAH")) {
             indexTypeCurrency = currency.indexOf("UAH");
             return +currency.slice(0, indexTypeCurrency)
