@@ -114,14 +114,16 @@ formTable.onsubmit = function (e) {
                     resultText.innerHTML = `Твій результат ${correctAnswer} \u005C 4. Ну.... Ти старався`;
                     break;
                 case 2: 
+                case 3: 
                     taxes.value = (Math.random()*(30 - 20) + 20).toFixed(2);
                     resultText.innerHTML = `Твій результат ${correctAnswer} \u005C 4. Це краще ніж 0`;
                     break;
-                case 3: 
+                case 4:
+                case 5:
                     taxes.value = (Math.random()*(20 - 10) + 10).toFixed(2);
                     resultText.innerHTML = `Твій результат ${correctAnswer} \u005C 4. Ще трішки і виграєш гру \"Де? що? коли?\"`;
                     break;
-                case 4: 
+                case 6: 
                     taxes.value = (Math.random()*10).toFixed(2);
                     resultText.innerHTML = `Твій результат ${correctAnswer} \u005C 4. МИ ЗА ВАМИ ВИЇЖАЄМО. Світ потребує таких як ви!`;
                     break;
