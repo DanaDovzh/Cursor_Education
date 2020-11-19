@@ -1,0 +1,202 @@
+input:focus,
+input,
+button,
+button:focus {
+  outline: none;
+  border: none;
+}
+
+input[type=button] {
+  cursor: pointer;
+}
+
+select:focus {
+  outline: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(90deg, rgba(20, 20, 20, 0.3) 0%, rgba(238, 233, 233, 0.75) 0%), url("../img/google-bg.png");
+  background-size: 300px;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.wrapper {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading {
+  font-size: calc(28px + 4 * ((100vw - 320px) / 1120));
+  margin-bottom: 50px;
+  font-weight: 700;
+  text-align: center;
+  width: 50%;
+}
+
+.form {
+  background-color: grey;
+  border-radius: 20px;
+  box-shadow: inset 0px 0px 53px 16px rgba(56, 54, 54, 0.833);
+}
+.form__info {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  align-items: baseline;
+  padding: 20px 20px 20px 40px;
+}
+.form__text {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  column-gap: 1px;
+  padding-bottom: 5px;
+  align-items: baseline;
+}
+.form__text--test {
+  grid-template-columns: 45% 44% auto;
+}
+.form__text--field {
+  height: 30px;
+  border-radius: 10px;
+  background-color: #f0e8e8;
+}
+@media (max-width: 425px) {
+  .form__text--field {
+    width: 80px;
+  }
+}
+.form__text--pass {
+  font-size: calc(8px + 4 * ((100vw - 320px) / 1120));
+  margin-top: 5px;
+  border-radius: 15px;
+}
+.form__text--pass--btn {
+  width: 80px;
+  height: 20px;
+  justify-self: flex-end;
+}
+.form__text--select {
+  height: 20px;
+  width: 120px;
+  justify-self: center;
+}
+.form__text--salary {
+  width: 50px;
+  background-color: #524343;
+  color: #ffffff;
+}
+.form__task {
+  font-weight: 600;
+  font-family: cursive;
+}
+
+#taxes {
+  width: 70px;
+  background-color: #524343;
+  color: #ffffff;
+  height: 30px;
+  border-radius: 10px;
+}
+
+#btn-salary {
+  height: 30px;
+  border-radius: 20px;
+  background-color: black;
+  color: #ffffff;
+  cursor: pointer;
+}
+#btn-salary:hover {
+  transform: scale(0.9);
+}
+
+.form__btns {
+  display: flex;
+  justify-content: center;
+}
+.form__btn {
+  width: 55px;
+  height: 30px;
+  margin: 1px 10px 20px 10px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 42px 0px #f5bfbfbf;
+}
+.form__btn:active {
+  top: 2px;
+  transition-duration: 0.5s;
+  transform: translateY(4px);
+  box-shadow: none;
+}
+
+.form__next {
+  display: none;
+  margin: 0 40%;
+}
+
+.btn-next {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 42px 0px #f5bfbfbf;
+  margin: 15px;
+}
+.btn-next--href {
+  color: black;
+  text-decoration: none;
+}
+.btn-next:active {
+  top: 2px;
+  transition-duration: 0.5s;
+  transform: translateY(4px);
+  box-shadow: none;
+}
+
+.form__text--err {
+  box-shadow: 6px 4px 14px -3px rgba(244, 5, 5, 0.6);
+}
+
+.form__message-check--err {
+  color: red;
+  display: inline-block;
+  margin-left: 3px;
+  font-size: 14px;
+  align-self: center;
+}
+.form__message-check--good {
+  color: #7dff06;
+  display: inline-block;
+  margin-left: 3px;
+  font-size: 14px;
+  align-self: center;
+}
+
+.result {
+  display: none;
+  margin-top: 1.25em;
+  font-size: calc(16px + 2 * ((100vw - 320px) / 1120));
+}
+
+footer {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

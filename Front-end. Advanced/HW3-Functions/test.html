@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/google-web.svg">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title></title>
+</head>
+<body>
+    <div class="heading">
+        А тепер пройди тест
+    </div>
+    <main class="wrapper">
+        <form  name="profile" class="form" id="form">
+            <section class="form__info">
+            <p class="form__text form__text--test">
+                <label for="func-max-gigit">Найбільша цифра в числі <span id="max-gigit" class="form__task"></span>: </label>
+                <input name="func-max-gigit" id="max-gigit-answer" type="number" class="form__text--check form__text--field" value="">
+                <span id="max-gigit-sms" class="form__message-check"></span>
+            </p>
+            <p class="form__text form__text--test">
+                <label for="func-pow">Число <span id="base-number" class="form__task"></span> в ступіні <span class="form__task" id="degree-number"></span>:</label>
+                <input type="text" id="pow-answer" name="func-pow" class="form__text--check form__text--field" value="">
+                <span id="pow-sms" class="form__message-check"></span>
+            </p>
+            <p class="form__text form__text--test">
+                <label for="func-count-letters">Скільки разів в слові <span class="form__task" id="random-word"></span> повторяється літера 
+                    <span class="form__task" id="random-letter"></span> </label>
+                <input name="func-count-letters" id="count-letters" type="number" class="form__text--check form__text--field" value="">
+                <span id="firstName" class="form__message-check"></span>
+            </p>
+            <p class="form__text form__text--test">
+                <label for="func-word-without-letter">Запишіть слово <span class="form__task" id="random-word-WL"></span> без літери 
+                    <span class="form__task" id="random-letter-WL"></span></label>
+                <input type="text" id="word-without-letter" name="func-word-without-letter" class="form__text--check form__text--field" value="">
+                <span id="firstName" class="form__message-check"></span>
+            </p>
+            <p class="form__text form__text--test">
+                <label for="func-polindron">Вираз <span class="form__task" id="palindrom-word"></span> є паліндромом?</label>
+                <input name="func-polindron" id="polindrom-answer" type="text" class="form__text--check form__text--field" placeholder="Так/Ні" value="">
+                <span id="firstName" class="form__message-check"></span>
+            </p>
+            <p class="form__text form__text--test">
+                <label for="func-duplicate">Запиши вираз <span class="form__task" id="sentence"></span> без літер, які повторяються більше одного разу: </label>
+                <input type="text" id="aswer-duplicate" name="func-duplicate" class="form__text--check form__text--field" value="">
+                <span id="firstName" class="form__message-check"></span>
+            </p>                        
+            
+            
+            </section>
+            <p class="form__btns">
+                <input class="form__btn" type="submit" value="Send"  >
+                <input class="form__btn" type="reset" value="Reset">
+            </p>
+           
+        </form>
+
+        <div class="result">
+            <p class="result__number">Вітаю!</p>
+            <p><span id = "result"></span></p>
+            <div class="result__salary">
+                <label for="salary-dream">Давайте тепер помріємо!<br> Введи бажану зарплату: </label>
+                <input name="salary-dream" id="salary" type="type" class="form__text--field form__text--salary" placeholder="$/UAH" value="">
+                <input type="number" disabled id="taxes" value="" placeholder="податки">
+                <button id="btn-salary">
+                    Розрахувати
+                </button>
+                <p>Податки залежать від кількості вірних відповідей.</p>
+                <p>Зарплата: <span id="convers"></span></p>
+                <p>Зарплата з врахуванням податків: <span id="salaryi-with-taxes"></span></p>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <a class="link-git" href="https://github.com/DanaDovzh/Cursor_Education/tree/master/Front-end.%20Advanced/HW3-Functions" target="_blank">GitHub</a>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/test.js"></script>
+</body>
+</html>

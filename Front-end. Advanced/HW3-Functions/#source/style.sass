@@ -1,0 +1,169 @@
+$context: 16
+$maxWidth: 1440
+
+
+@function px_to_em($pixels)
+    @return #{$pixels/$context}em
+
+@mixin adaptiv_font($pcSize, $mobSize)
+    $addSize: $pcSize - $mobSize
+    $maxWidth: $maxWidth - 320
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
+@mixin text-for-err($color-Err)
+    color: $color-Err
+    display: inline-block
+    margin-left: 3px
+    font-size: 14px
+    align-self: center
+
+input:focus,
+input,
+button,
+button:focus
+    outline: none
+    border: none
+input[type="button"]
+    cursor: pointer
+
+
+select:focus
+    outline: none
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button 
+  -webkit-appearance: none
+
+html, 
+body
+    height: 100%
+body
+   
+    display: flex
+    flex-direction: column
+    background: linear-gradient(90deg, rgba(20, 20, 20, 0.3) 0%, rgba(238, 233,233, 0.75)0%), url("../img/google-bg.png")
+    background-size: 300px
+
+main
+    flex: 1 0 auto
+
+.wrapper
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center 
+
+.heading 
+    @include adaptiv-font(32, 28)
+    margin-bottom: 50px
+    font-weight: 700
+    text-align: center
+    width: 50%
+
+.form
+    background-color: grey
+    border-radius: 20px 
+    box-shadow: inset 0px 0px 53px 16px  rgba(56, 54, 54, 0.833)
+    &__info
+        display: grid
+        grid-template-columns: auto
+        grid-template-rows: auto
+        align-items: baseline
+        padding: 20px 20px 20px 40px
+        
+    &__text
+        display: grid
+        grid-template-columns: 50% 50% 
+        grid-template-rows: auto
+        column-gap: 1px
+        padding-bottom: 5px
+        align-items: baseline
+        &--test
+            grid-template-columns: 45% 44% auto
+        &--field
+            height: 30px
+            border-radius: 10px
+            background-color: rgb(240, 232, 232)
+            @media (max-width: 425px)
+                width: 80px
+        &--pass
+            @include adaptiv-font(12, 8)
+            margin-top: 5px
+            border-radius: 15px
+            &--btn
+                width: 80px
+                height: 20px
+                justify-self: flex-end
+        &--select
+            height: 20px
+            width: 120px
+            justify-self: center
+        &--salary
+            width: 50px
+            background-color: rgb(82, 67, 67)
+            color: #ffffff
+    &__task
+        font-weight: 600
+        font-family: cursive
+#taxes
+    width: 70px
+    background-color: rgb(82, 67, 67)
+    color: #ffffff
+    height: 30px
+    border-radius: 10px
+#btn-salary
+    height: 30px
+    border-radius: 20px
+    background-color: rgb(0, 0, 0)
+    color: #ffffff
+    cursor: pointer
+    &:hover
+        transform: scale(0.9)
+.form
+    &__btns
+        display: flex
+        justify-content: center
+    &__btn
+        width: 55px
+        height: 30px
+        margin: 1px 10px 20px 10px
+        border-radius: 20px
+        box-shadow: 0px 0px 42px 0px #f5bfbfbf
+        &:active
+            top: 2px
+            transition-duration: 0.5s
+            transform: translateY(4px) 
+            box-shadow: none 
+.form__next
+    display: none
+    margin: 0 40%
+.btn-next
+    width: 40px
+    height: 40px
+    border-radius: 20px
+    box-shadow: 0px 0px 42px 0px #f5bfbfbf
+    margin: 15px
+    &--href
+        color: black
+        text-decoration: none
+    &:active
+        top: 2px
+        transition-duration: 0.5s
+        transform: translateY(4px) 
+        box-shadow: none 
+.form__text--err 
+    box-shadow: 6px 4px 14px -3px rgba(244, 5, 5, 0.6)       
+.form__message-check
+    &--err 
+        @include text-for-err(rgb(255, 0, 0))
+    &--good 
+        @include text-for-err(#7dff06)
+.result 
+    display: none
+    margin-top: px_to_em(20)
+    @include adaptiv-font(18, 16)
+footer 
+    flex: 0 0 auto
+    display: flex
+    justify-content: center
+    align-items: center
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/google-web.svg">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title></title>
+</head>
+<body>
+    <main class="wrapper">
+        <div class="heading">
+            Привіт. Хочеш перевірити чи візьмуть тебе працювати в Google?
+            Якщо так, заповнюй анкету!
+        </div>
+        <form  name="profile" class="form" id="form">
+            <section class="form__info">
+            <p class="form__text">
+                <label for="first-name">Як тебе звати? </label>
+                <input name="first-name" id="first-name" type="text" placeholder="ім'я" class="form__text--check form__text--field" value="">
+                <span id="firstName" class="form__message-check"></span>
+            </p>
+            <p class="form__text">
+                <label for="last-name">Вкажи прізвище: </label>
+                <input type="text" id="last-name" name="last-name" placeholder="прізвище" class="form__text--check form__text--field" value="">
+                <span id="firstName" class="form__message-check"></span>
+            </p>
+                        
+            <p class="form__text"><label for="password">Пароль: </label>
+                <input name="password" id="password" type="text" placeholder="пароль" class="form__text--check form__text--field">
+                <input type="button" id="generation-btn" value="Згенерувати" class="form__text--pass form__text--pass--btn">
+                <select id="generation-length" name="lengthOfPassword" class="form__text--pass form__text--select">
+                    <option disabled="disabled" selected="selected">Кількість символів</option>
+                    <option value="4">4</option>
+                    <option value="6">6</option>
+                    <option value="8">8</option>
+                    <option value="10">10</option>
+                    <option value="12">12</option>
+                </select>
+            </p>
+            
+            </section>
+            <p class="form__btns">
+                <input class="form__btn" type="submit" value="Send"  >
+                <input class="form__btn" type="reset" value="Reset">
+            </p>
+            <div class="form__next " id="btn-next">
+                <button class="btn-next">
+                    <a href="test.html" class="btn-next--href">Далі</a>
+                </button>
+            </div>
+            
+        </form>
+
+    </main>
+    
+    <footer>
+        <a class="link-git" href="https://github.com/DanaDovzh/Cursor_Education/tree/master/Front-end.%20Advanced/HW3-Functions" target="_blank">GitHub</a>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/first.js"></script>
+</body>
+</html>
