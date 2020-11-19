@@ -143,5 +143,5 @@ btnReset.addEventListener('click', function(){
         inputs[i].classList.remove("form__text--err");
         messages[i].innerHTML = "";
     }
-    resultBlock.style.body = "none";
+    resultBlock.style.display = "none";
 });
