@@ -106,7 +106,7 @@ formTable.onsubmit = function (e) {
             }
         }
         if(!error) {
-            resultBlock.style.body = "block";
+            resultBlock.style.display = "block";
             switch (correctAnswer) {
                 case 0:
                 case 1:
