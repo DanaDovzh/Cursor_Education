@@ -111,21 +111,21 @@ formTable.onsubmit = function (e) {
                 case 0:
                 case 1:
                     taxes.value = (Math.random()*(40 - 30) + 30).toFixed(2);
-                    resultText.innerHTML = `Твій результат ${correctAnswer} \u005C 4. Ну.... Ти старався`;
+                    resultText.innerHTML = `Твій результат ${correctAnswer} \u005C 6. Ну.... Ти старався`;
                     break;
                 case 2: 
                 case 3: 
                     taxes.value = (Math.random()*(30 - 20) + 20).toFixed(2);
-                    resultText.innerHTML = `Твій результат ${correctAnswer} \u005C 4. Це краще ніж 0`;
+                    resultText.innerHTML = `Твій результат ${correctAnswer} \u005C 6. Це краще ніж 0`;
                     break;
                 case 4:
                 case 5:
                     taxes.value = (Math.random()*(20 - 10) + 10).toFixed(2);
-                    resultText.innerHTML = `Твій результат ${correctAnswer} \u005C 4. Ще трішки і виграєш гру \"Де? що? коли?\"`;
+                    resultText.innerHTML = `Твій результат ${correctAnswer} \u005C 6. Ще трішки і виграєш гру \"Де? що? коли?\"`;
                     break;
                 case 6: 
                     taxes.value = (Math.random()*10).toFixed(2);
-                    resultText.innerHTML = `Твій результат ${correctAnswer} \u005C 4. МИ ЗА ВАМИ ВИЇЖАЄМО. Світ потребує таких як ви!`;
+                    resultText.innerHTML = `Твій результат ${correctAnswer} \u005C 6. МИ ЗА ВАМИ ВИЇЖАЄМО. Світ потребує таких як ви!`;
                     break;
             }
         }
