@@ -65,6 +65,7 @@ formTable.onsubmit = function (e) {
 };
 
 document.querySelector("input[type='reset']").addEventListener('click', function(){
+    tnNext.style.display = "none";
     for(let i = 0; i <= inputs.length; i++) {
         inputs[i].classList.remove("form__text--err");
         messages[i].innerHTML = "";
