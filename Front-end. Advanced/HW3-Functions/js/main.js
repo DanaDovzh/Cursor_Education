@@ -76,7 +76,7 @@ function deleteDuplicateLetter(sentence = "Бісквіт був дуже ніж
     const sentenceWithoutSpace = sentence.split(' ').join('').toLowerCase();
     const array = sentenceWithoutSpace.split('');
     let newArray = [];
-    let cnt = 0, currentIndex, nextIndex;
+    let currentIndex, nextIndex;
     for (let i = 0; i < array.length; i++) {
         currentIndex = array.indexOf(array[i]);
         if (currentIndex != -1) {
