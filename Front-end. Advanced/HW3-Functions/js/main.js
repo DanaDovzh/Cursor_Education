@@ -92,7 +92,7 @@ function convertCurrency(currency = "100 UAH") {
     const DOLLAR_COEF = 28;
     const UAH_COEF = 30;
     if (!currency.includes("$") && (!currency.includes("UAH")) && (!currency.includes("uah")))
-        return "Введіть коректно валюту"
+        return "Введіть коректно валюту. Вкінці суми має бути $/UAH"
     else {
         if (currency.includes("UAH")) {
             indexTypeCurrency = currency.indexOf("UAH");
