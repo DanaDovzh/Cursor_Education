@@ -83,14 +83,4 @@ const convertCurrency = function (currency = "100 UAH") {
         }
     }
 }
-console.log(convertCurrency("100uah"));
 
-const deleteCurrency = function (currency = "100 UAH") {
-        if (currency.includes("UAH")) {
-            indexTypeCurrency = currency.indexOf("UAH");
-            return +currency.slice(0, indexTypeCurrency)
-        } else {
-            indexTypeCurrency = currency.indexOf("$");
-            return +currency.slice(0, indexTypeCurrency)
-        }
-}

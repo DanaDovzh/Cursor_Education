@@ -133,12 +133,12 @@ formTable.onsubmit = function (e) {
             
         e.preventDefault();
 };
-btnSalary.addEventListener('click', ()=>{
+btnSalary.addEventListener('click', () => {
     salaryResult.innerHTML = convertCurrency(inputSalary.value);
     if (!salaryResult.innerHTML.includes("$") && !salaryResult.innerHTML.includes("UAH"))
-    salaryWithTaxes.innerHTML = "";
+        salaryWithTaxes.innerHTML = "";
     else 
-     salaryWithTaxes.innerHTML = amountAfterTaxes(deleteCurrency(salaryResult.innerHTML), +taxes.value);
+        salaryWithTaxes.innerHTML = amountAfterTaxes(parseInt(salaryResult.innerHTML), +taxes.value);
 });
 
 btnReset.addEventListener('click', function(){
