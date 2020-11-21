@@ -1,0 +1,109 @@
+$context: 16
+$maxWidth: 1440
+
+
+@function px_to_em($pixels)
+    @return #{$pixels/$context}em
+
+@mixin adaptiv_font($pcSize, $mobSize)
+    $addSize: $pcSize - $mobSize
+    $maxWidth: $maxWidth - 320
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
+
+@mixin picture-for-cards( $top, $left)
+    background-size: cover
+    height: 50px
+    width: 50px
+    position: absolute
+    z-index: 1
+    top: $top
+    left: $left
+
+html, 
+body
+    height: 100%
+body
+   
+    display: flex
+    flex-direction: column
+    
+
+main
+    flex: 1 0 auto
+
+.wrapper
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center 
+
+.link-git 
+    color: #164205
+    text-decoration: none
+    font-family: 'Fredoka One', cursive
+    font-weight: 500
+    @include adaptiv_font(24, 20)
+    &:hover
+        color: #88ff00
+        text-decoration: underline
+.mb-0
+    text-align: center
+.btn-link
+    color: #111111
+    font-family: 'Fredoka One', cursive
+    font-weight: 600
+    @include adaptiv_font(24, 20)
+    &:hover
+        color: #1c4626
+.table 
+    & thead 
+        & th
+            vertical-align: bottom
+            text-align: center
+            font-weight: 600
+            font-family: 'Patrick Hand', cursive
+            @include adaptiv_font(20, 18)
+            border-bottom: 2px solid #295c08
+.card
+    position: relative
+    &:first-child
+        &::before
+            content: ''
+            @include picture-for-cards(5px, 60px)
+            background-image: url(../img/cactus-1.svg)
+    &:nth-child(2)
+        &::before
+            content: ''
+            @include picture-for-cards(5px, 375px)
+            background-image: url(../img/cactus-4.svg)
+    &:nth-child(3)
+        &::before
+            content: ''
+            @include picture-for-cards(5px, 15px)
+            background-image: url(../img/cactus-3.svg)
+    &:last-child
+        &::before
+            content: ''
+            @include picture-for-cards(5px, 51px)
+            background-image: url(../img/cactus-2.svg)
+.card-header 
+    padding: .75rem 2.2rem
+    background-color: #28a74573
+
+.table td, .table th 
+    border-top: 1px solid #237134
+    text-align: center
+    font-family: 'Noto Sans SC', sans-serif
+.btn.focus, .btn:focus 
+    outline: 0
+    box-shadow: none
+
+footer 
+    flex: 0 0 auto
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 10%
+    background-color: #2a2525
+
