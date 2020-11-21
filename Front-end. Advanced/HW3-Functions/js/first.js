@@ -10,19 +10,19 @@ const btnNext = document.querySelector("#btn-next");
 let error = false;
 let cntNameError = 0;
 
-function isError(message, i) {
-    messages[i].innerHTML = message;
-    messages[i].classList.remove("form__message-check--good");
-    messages[i].classList.add("form__message-check--err");
-    inputs[i].classList.add("form__text--err");
+const errorHandler = (message, i, isError) => {
+    if (isError) {
+        messages[i].innerHTML = message;
+        messages[i].classList.remove("form__message-check--good");
+        messages[i].classList.add("form__message-check--err");
+        inputs[i].classList.add("form__text--err");
+    } else {
+        inputs[i].classList.remove("form__text--err");
+        messages[i].innerHTML = "";
+        messages[i].classList.remove("form__message-check--err");
+        messages[i].classList.add("form__message-check--good");
+    }
 }
-function notError(i) {
-    inputs[i].classList.remove("form__text--err");
-    messages[i].innerHTML = "";
-    messages[i].classList.remove("form__message-check--err");
-    messages[i].classList.add("form__message-check--good");
-}
-
 btnGeneration.addEventListener('click', ()=>{
     if (Number.isInteger(+selectGeneration.value))
         fieldPassword.value = getRandomPassword(+selectGeneration.value);
@@ -40,13 +40,13 @@ formTable.onsubmit = function (e) {
             } else {
                 if ((inputs[i].name === "first-name" || inputs[i].name === "last-name")) {
                     if (inputs[i].value.search(/\d/) != -1) {
-                        isError("  Enter without numbers", i);
+                        errorHandler("  Enter without numbers", i, true); 
                         error = true;
                         cntNameError++;
                     } else {
                         fieldName.value = upperFisrtLetter(fieldName.value);
                         fieldSurname.value = upperFisrtLetter(fieldSurname.value);
-                        notError(i);
+                        errorHandler("", i, false); 
                         if (cntNameError === 2)
                             error = false;
                     }

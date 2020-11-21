@@ -45,23 +45,24 @@ baseNumberForPow.innerHTML = getRandomNumber(-10, 20);
 degreeNumberForPow.innerHTML = getRandomNumber(-5, 5);
 randomWord.innerHTML = arrayWords[getRandomNumber(0, arrayWords.length)];
 letterForRandomWord.innerHTML = alphabetUA[getRandomNumber(0, alphabetUA.length)];
-randomWordWithoutLetter.innerHTML = arrayWords[getRandomNumber(0, arrayWords.length)];
-letterForRandomWordWithoutLetter.innerHTML = alphabetUA[getRandomNumber(0, alphabetUA.length)];
+randomWordWithoutLetter.innerHTML = "Дихлордифенілтрихлорметилметан";
+letterForRandomWordWithoutLetter.innerHTML = "о";
 palindromWord.innerHTML = arrayWordsPolindrom[getRandomNumber(0, arrayWordsPolindrom.length)];
 sentenceDeleteDuplicate.innerHTML = arraySentence[getRandomNumber(0, arraySentence.length)];
 
-function isError(message, i) {
-    messages[i].innerHTML = message;
-    messages[i].classList.remove("form__message-check--good");
-    messages[i].classList.add("form__message-check--err");
-    inputs[i].classList.add("form__text--err");
-}
-function notError(i) {
-    inputs[i].classList.remove("form__text--err");
-    messages[i].innerHTML = "  &#10004";
-    messages[i].classList.remove("form__message-check--err");
-    messages[i].classList.add("form__message-check--good");
-    correctAnswer++;
+const errorHandler = (message, i, isError) => {
+    if (isError) {
+        messages[i].innerHTML = message;
+        messages[i].classList.remove("form__message-check--good");
+        messages[i].classList.add("form__message-check--err");
+        inputs[i].classList.add("form__text--err");
+    } else {
+        inputs[i].classList.remove("form__text--err");
+        messages[i].innerHTML = "  &#10004";
+        messages[i].classList.remove("form__message-check--err");
+        messages[i].classList.add("form__message-check--good");
+        correctAnswer++;
+    }
 }
 
 formTable.onsubmit = function (e) {
@@ -72,16 +73,16 @@ formTable.onsubmit = function (e) {
                     error = true;
             } else {
                 if(inputs[i].name === "func-max-gigit") {
-                    (valueMaxDigit.value === getMaxDigit(+maxDigit.innerHTML)) ? notError(i) : isError("&#10007;", i);
+                    (valueMaxDigit.value === getMaxDigit(+maxDigit.innerHTML)) ? notError(i) : errorHandler("&#10007;", i, true);;
                 }
                 if(inputs[i].name === "func-pow") {
-                    (+valueAnswerPow.value === powNumber(+baseNumberForPow.innerHTML, +degreeNumberForPow.innerHTML)) ? notError(i) : isError("&#10007;", i);
+                    (+valueAnswerPow.value === powNumber(+baseNumberForPow.innerHTML, +degreeNumberForPow.innerHTML)) ? notError(i) : errorHandler("&#10007;", i, true);;
                 }
                 if(inputs[i].name === "func-count-letters") {
-                    (+answerCountLetters.value === countLetter(letterForRandomWord.innerHTML, randomWord.innerHTML)) ? notError(i) : isError("&#10007;", i);
+                    (+answerCountLetters.value === countLetter(letterForRandomWord.innerHTML, randomWord.innerHTML)) ? notError(i) : errorHandler("&#10007;", i, true);;
                 } 
                 if(inputs[i].name === "func-word-without-letter") {
-                    (answerWordWithoutLetter.value.toLowerCase().trim() === deleteLetters(letterForRandomWordWithoutLetter.innerHTML, randomWordWithoutLetter.innerHTML)) ? notError(i) : isError("&#10007;", i);
+                    (answerWordWithoutLetter.value.toLowerCase().trim() === deleteLetters(letterForRandomWordWithoutLetter.innerHTML, randomWordWithoutLetter.innerHTML)) ? errorHandler("", i, false) : errorHandler("&#10007;", i, true);;
                 }
                 if(inputs[i].name === "func-polindron") {
                     if (answerPolindrom.value.toLowerCase() === "так" || answerPolindrom.value.toLowerCase() === "ні") {
@@ -91,12 +92,12 @@ formTable.onsubmit = function (e) {
                             checkPolindrom = false;
                         }
                         if (checkPolindrom === isPalyndrom(palindromWord.innerHTML))
-                            notError(i);
+                            errorHandler("", i, false);
                         else 
-                            isError("&#10007;", i);
+                            errorHandler("&#10007;", i, true);
                     } else {
-                        isError("Введіть \"так\" або \"ні\"", i);
-                        error = true;
+                            errorHandler("Введіть \"так\" або \"ні\"", i, true);
+                            error = true;
                     }
                 }
                 if(inputs[i].name === "func-duplicate") {

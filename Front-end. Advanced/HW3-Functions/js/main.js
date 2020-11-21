@@ -56,7 +56,7 @@ const getRandomPassword = function (passwordLength = 8) {
     return newPassword.join('');
 }
 
-const deleteLetters = function (letterDel = "a", wordForDel = "blablabla") {
+const deleteLetters = function (letterDel = "a", wordForDel = "z") {
     let array = wordForDel.toLowerCase().split('');
     let indLetterDel;
     while (array.indexOf(letterDel) !== -1) {
