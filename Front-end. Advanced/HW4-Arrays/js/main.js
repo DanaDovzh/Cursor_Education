@@ -53,7 +53,6 @@ const marksForTeams = marksTeamsStudents(themesForTeamsStudents(teamsStudents));
 const markForStudent = markOneStudent(students);
 const placeTeamStudent = document.querySelectorAll(".team-students");
 const placeTeamTheme = document.querySelectorAll(".theme-for-team");
-console.log(typeof(placeTeamTheme));
 const placeMarkTeam = document.querySelectorAll(".mark-for-team");
 const placeNameStudent = document.querySelectorAll(".student");
 const placeMarkStudent = document.querySelectorAll(".mark-for-student");
