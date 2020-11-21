@@ -61,9 +61,9 @@ const deleteDuplicateLetter = function (sentence = "Бісквіт був дуж
     let currentIndex, nextIndex;
     for (let i = 0; i < array.length; i++) {
         currentIndex = array.indexOf(array[i]);
-        if (currentIndex != -1) {
+        if (currentIndex !== -1) {
             nextIndex = array.indexOf(array[i], currentIndex+1);
-            if(nextIndex == -1)
+            if(nextIndex === -1)
                 newArray.push(array[i]);
         }
     }
