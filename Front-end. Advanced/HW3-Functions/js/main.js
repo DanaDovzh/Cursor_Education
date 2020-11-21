@@ -1,6 +1,8 @@
 const getMaxDigit = (numberInput) => 
     Math.max(...Array.from(String(numberInput)).map((digitArray) => parseInt(digitArray)))
 
+console.log(getMaxDigit(951889));
+
 const powNumber = function (number, power) {
     let powNum = 1;
     if (power === 0)

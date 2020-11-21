@@ -41,8 +41,8 @@ let checkPolindrom;
 let correctAnswer = 0;
 
 maxDigit.innerHTML = getRandomNumber(10, 2000000);
-baseNumberForPow.innerHTML = getRandomNumber(-10, 20);
-degreeNumberForPow.innerHTML = getRandomNumber(-5, 5);
+baseNumberForPow.innerHTML = getRandomNumber(-5, 20);
+degreeNumberForPow.innerHTML = getRandomNumber(-2, 5);
 randomWord.innerHTML = arrayWords[getRandomNumber(0, arrayWords.length)];
 letterForRandomWord.innerHTML = alphabetUA[getRandomNumber(0, alphabetUA.length)];
 randomWordWithoutLetter.innerHTML = "Дихлордифенілтрихлорметилметан";
@@ -67,22 +67,23 @@ const errorHandler = (message, i, isError) => {
 
 formTable.onsubmit = function (e) {
     error  = false;
+    correctAnswer = 0;
         for (let i = 0; i < inputs.length; i++) {
             if(inputs[i].value === "") {
                 inputs[i].classList.add("form__text--err");
                     error = true;
             } else {
                 if(inputs[i].name === "func-max-gigit") {
-                    (valueMaxDigit.value === getMaxDigit(+maxDigit.innerHTML)) ? notError(i) : errorHandler("&#10007;", i, true);;
+                    (+valueMaxDigit.value === getMaxDigit(+maxDigit.innerHTML)) ? errorHandler("", i, false) : errorHandler("&#10007;", i, true);
                 }
                 if(inputs[i].name === "func-pow") {
-                    (+valueAnswerPow.value === powNumber(+baseNumberForPow.innerHTML, +degreeNumberForPow.innerHTML)) ? notError(i) : errorHandler("&#10007;", i, true);;
+                    (+valueAnswerPow.value === powNumber(+baseNumberForPow.innerHTML, +degreeNumberForPow.innerHTML)) ? errorHandler("", i, false) : errorHandler("&#10007;", i, true);
                 }
                 if(inputs[i].name === "func-count-letters") {
-                    (+answerCountLetters.value === countLetter(letterForRandomWord.innerHTML, randomWord.innerHTML)) ? notError(i) : errorHandler("&#10007;", i, true);;
+                    (+answerCountLetters.value === countLetter(letterForRandomWord.innerHTML, randomWord.innerHTML)) ? errorHandler("", i, false) : errorHandler("&#10007;", i, true);
                 } 
                 if(inputs[i].name === "func-word-without-letter") {
-                    (answerWordWithoutLetter.value.toLowerCase().trim() === deleteLetters(letterForRandomWordWithoutLetter.innerHTML, randomWordWithoutLetter.innerHTML)) ? errorHandler("", i, false) : errorHandler("&#10007;", i, true);;
+                    (answerWordWithoutLetter.value.toLowerCase().trim() === deleteLetters(letterForRandomWordWithoutLetter.innerHTML, randomWordWithoutLetter.innerHTML)) ? errorHandler("", i, false) : errorHandler("&#10007;", i, true);
                 }
                 if(inputs[i].name === "func-polindron") {
                     if (answerPolindrom.value.toLowerCase() === "так" || answerPolindrom.value.toLowerCase() === "ні") {
@@ -101,8 +102,7 @@ formTable.onsubmit = function (e) {
                     }
                 }
                 if(inputs[i].name === "func-duplicate") {
-
-                    (answerDuplicate.value === deleteDuplicateLetter(sentenceDeleteDuplicate.innerHTML)) ? notError(i) : isError("&#10007;", i);
+                    (answerDuplicate.value === deleteDuplicateLetter(sentenceDeleteDuplicate.innerHTML)) ? errorHandler("", i, false) : errorHandler("&#10007;", i, true);
                 }
             }
         }
@@ -135,7 +135,7 @@ formTable.onsubmit = function (e) {
 };
 btnSalary.addEventListener('click', () => {
     salaryResult.innerHTML = convertCurrency(inputSalary.value);
-    if (!salaryResult.innerHTML.includes("$") && !salaryResult.innerHTML.includes("UAH"))
+    if (!salaryResult.innerHTML.includes("$") && !salaryResult.innerHTML.includes("UAH") && !salaryResult.innerHTML.includes("uah"))
         salaryWithTaxes.innerHTML = "";
     else 
         salaryWithTaxes.innerHTML = amountAfterTaxes(parseInt(salaryResult.innerHTML), +taxes.value);
