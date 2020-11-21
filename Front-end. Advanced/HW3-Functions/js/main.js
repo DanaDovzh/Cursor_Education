@@ -12,22 +12,13 @@ const powNumber = function (number, power) {
     else if (power < 0) {
         for(let i=0; i < Math.abs(power);i++) powNum/=number;
         return powNum;
-    }
-    
+    } 
 }
 
-const upperFisrtLetter = function (name) {
-    return name[0].toUpperCase() + name.substring(1).toLowerCase();
-}
+const upperFisrtLetter = (name) => name[0].toUpperCase() + name.substring(1).toLowerCase();
+const amountAfterTaxes = (salary = 1000, taxes = 19.5) => (salary - (salary*taxes)/100);
+const getRandomNumber = (min = 1, max = 10) =>  Math.floor(Math.random()* (max - min) + min);
 
-const amountAfterTaxes = function (salary = 1000, taxes = 19.5) {
-    return (salary - (salary*taxes)/100);
-}
-
-
-const getRandomNumber = function (min = 1, max = 10) {
-    return Math.floor(Math.random()* (max - min) + min);
-}
 
 
 const countLetter = function (findLetter = "А", world = "Асталавіста") {
