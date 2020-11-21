@@ -1,8 +1,6 @@
 const getMaxDigit = (numberInput) => 
     Math.max(...Array.from(String(numberInput)).map((digitArray) => parseInt(digitArray)))
 
-console.log(getMaxDigit(951889));
-
 const powNumber = function (number, power) {
     let powNum = 1;
     if (power === 0)
@@ -18,7 +16,7 @@ const powNumber = function (number, power) {
 }
 
 const upperFisrtLetter = (name) => name[0].toUpperCase() + name.substring(1).toLowerCase();
-const amountAfterTaxes = (salary = 1000, taxes = 19.5) => (salary - (salary*taxes)/100);
+const amountAfterTaxes = (salary = 1000, taxes = 19.5) => (salary - (salary*taxes)/100).toFixed(2);
 const getRandomNumber = (min = 1, max = 10) =>  Math.floor(Math.random()* (max - min) + min);
 
 const countLetter = function (findLetter = "А", world = "Асталавіста") {

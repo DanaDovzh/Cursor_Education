@@ -178,14 +178,12 @@ main {
   display: inline-block;
   margin-left: 3px;
   font-size: 14px;
-  align-self: center;
 }
 .form__message-check--good {
   color: #7dff06;
   display: inline-block;
   margin-left: 3px;
   font-size: 14px;
-  align-self: center;
 }
 
 .result {
