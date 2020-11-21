@@ -36,29 +36,25 @@ formTable.addEventListener('submit', event => {
         for (let i = 0; i < inputs.length; i++) {
             if(inputs[i].value === "") {
                 inputs[i].classList.add("form__text--err");
-                    error = true;
+                error = true;
             } else {
                 if ((inputs[i].name === "first-name" || inputs[i].name === "last-name")) {
                     if (inputs[i].value.search(/\d/) != -1) {
-                        errorHandler("  Enter without numbers", i, true); 
+                        errorHandler("Enter without numbers", i, true); 
                         error = true;
                         cntNameError++;
                     } else {
                         fieldName.value = upperFisrtLetter(fieldName.value);
                         fieldSurname.value = upperFisrtLetter(fieldSurname.value);
                         errorHandler("", i, false); 
-                        if (cntNameError === 2)
-                            error = false;
+                        if (cntNameError === 2) error = false;
                     }
 
                 }
-                if (inputs[i].name === "password")
-                    inputs[i].classList.remove("form__text--err");
+                if (inputs[i].name === "password") inputs[i].classList.remove("form__text--err");
             }
         }
-        if(!error) {
-            btnNext.style.display = "block";
-        } 
+        if(!error) btnNext.style.display = "block";
         event.preventDefault();  
 });
 
