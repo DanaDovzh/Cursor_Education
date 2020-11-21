@@ -76,15 +76,14 @@ const convertCurrency = function (currency = "100 UAH") {
     if (!currency.includes("$") && (!currency.includes("UAH")) && (!currency.includes("uah")))
         return "Введіть коректно валюту. Вкінці суми має бути $/UAH"
     else {
-        if (currency.includes("UAH")) {
-            indexTypeCurrency = currency.indexOf("UAH");
-            return +currency.slice(0, indexTypeCurrency)/UAH_COEF + " $"
+        if (currency.includes("UAH") || currency.includes("uah")) {
+            return String((parseInt(currency)/UAH_COEF).toFixed(2)) + "$";
         } else {
-            indexTypeCurrency = currency.indexOf("$");
-            return +currency.slice(0, indexTypeCurrency)*DOLLAR_COEF + " UAH"
+            return String((parseInt(currency)*DOLLAR_COEF).toFixed(2)) + "UAH";
         }
     }
 }
+console.log(convertCurrency("100uah"));
 
 const deleteCurrency = function (currency = "100 UAH") {
         if (currency.includes("UAH")) {
