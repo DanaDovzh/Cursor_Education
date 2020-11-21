@@ -45,8 +45,8 @@ baseNumberForPow.innerHTML = getRandomNumber(-5, 20);
 degreeNumberForPow.innerHTML = getRandomNumber(-2, 5);
 randomWord.innerHTML = arrayWords[getRandomNumber(0, arrayWords.length)];
 letterForRandomWord.innerHTML = alphabetUA[getRandomNumber(0, alphabetUA.length)];
-randomWordWithoutLetter.innerHTML = "Дихлордифенілтрихлорметилметан";
-letterForRandomWordWithoutLetter.innerHTML = "о";
+randomWordWithoutLetter.innerHTML = arrayWords[getRandomNumber(0, arrayWords.length)];
+letterForRandomWordWithoutLetter.innerHTML = alphabetUA[getRandomNumber(0, alphabetUA.length)];
 palindromWord.innerHTML = arrayWordsPolindrom[getRandomNumber(0, arrayWordsPolindrom.length)];
 sentenceDeleteDuplicate.innerHTML = arraySentence[getRandomNumber(0, arraySentence.length)];
 
@@ -65,7 +65,7 @@ const errorHandler = (message, i, isError) => {
     }
 }
 
-formTable.onsubmit = function (e) {
+formTable.addEventListener('submit', event => {
     error  = false;
     correctAnswer = 0;
         for (let i = 0; i < inputs.length; i++) {
@@ -129,10 +129,10 @@ formTable.onsubmit = function (e) {
                     resultText.innerHTML = `Твій результат ${correctAnswer} \u005C 6. МИ ЗА ВАМИ ВИЇЖАЄМО. Світ потребує таких як ви!`;
                     break;
             }
-        }
-            
-        e.preventDefault();
-};
+        }            
+        event.preventDefault();
+});
+
 btnSalary.addEventListener('click', () => {
     salaryResult.innerHTML = convertCurrency(inputSalary.value);
     if (!salaryResult.innerHTML.includes("$") && !salaryResult.innerHTML.includes("UAH") && !salaryResult.innerHTML.includes("uah"))
