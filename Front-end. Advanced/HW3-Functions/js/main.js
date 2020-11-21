@@ -1,22 +1,16 @@
-const getMaxDigit = function (numberGive) {
-    const array = String(numberGive).split('');
-    let max = array[0];
-    for (let i = 0; i < array.length; i++) {
-        (max < array[i]) ?  max = array[i] : max;
-    }
-    return max;
-} 
+const getMaxDigit = (numberInput) => 
+    Math.max(...Array.from(String(numberInput)).map((digitArray) => parseInt(digitArray)))
 
-const powNumber = function (number, degree) {
+const powNumber = function (number, power) {
     let powNum = 1;
-    if (degree === 0)
+    if (power === 0)
         return powNum;
-    else if (degree > 0) {
-        for (let i = 1; i <= degree; i++) powNum *= number;
+    else if (power > 0) {
+        for (let i = 1; i <= power; i++) powNum *= number;
         return powNum;
     }
-    else if (degree < 0) {
-        for(let i=0; i < Math.abs(degree);i++) powNum/=number;
+    else if (power < 0) {
+        for(let i=0; i < Math.abs(power);i++) powNum/=number;
         return powNum;
     }
     

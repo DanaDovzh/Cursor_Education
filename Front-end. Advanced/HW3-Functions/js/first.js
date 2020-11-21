@@ -30,7 +30,7 @@ btnGeneration.addEventListener('click', ()=>{
         fieldPassword.value = getRandomPassword();
 });
 
-formTable.onsubmit = function (e) {
+formTable.addEventListener('click', function() =>  {
     error  = false;
     cntNameError = 0;
         for (let i = 0; i < inputs.length; i++) {
@@ -39,7 +39,7 @@ formTable.onsubmit = function (e) {
                     error = true;
             } else {
                 if ((inputs[i].name === "first-name" || inputs[i].name === "last-name")) {
-                    if (inputs[i].value.search(/\d/) != -1) {
+                    if (inputs[i].value.search(/\d/) !== -1) {
                         errorHandler("  Enter without numbers", i, true); 
                         error = true;
                         cntNameError++;
@@ -62,7 +62,7 @@ formTable.onsubmit = function (e) {
         
         e.preventDefault();
         
-};
+)};
 
 document.querySelector("input[type='reset']").addEventListener('click', function(){
     tnNext.style.display = "none";
