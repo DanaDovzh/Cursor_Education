@@ -19,15 +19,12 @@ const upperFisrtLetter = (name) => name[0].toUpperCase() + name.substring(1).toL
 const amountAfterTaxes = (salary = 1000, taxes = 19.5) => (salary - (salary*taxes)/100);
 const getRandomNumber = (min = 1, max = 10) =>  Math.floor(Math.random()* (max - min) + min);
 
-
-
 const countLetter = function (findLetter = "А", world = "Асталавіста") {
     const array = world.toLowerCase().split('');
     let cnt = 0;
-
-    findLetter = findLetter.toLowerCase();
+    const letterForSearch = findLetter.toLowerCase();
     for (let i = 0; i < array.length; i++) {
-        findLetter === array[i] ? cnt++ : cnt;
+        letterForSearch === array[i] ? cnt++ : cnt;
     }
     return cnt;
 }
