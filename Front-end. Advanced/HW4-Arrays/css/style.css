@@ -119,10 +119,23 @@ main {
   box-shadow: none;
 }
 
+.footer__text {
+  color: #fafafa;
+  display: flex;
+  font-family: "Fredoka One", cursive;
+  font-size: calc(10px + 3 * ((100vw - 320px) / 1120));
+  align-items: center;
+}
+.footer__img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
 footer {
   flex: 0 0 auto;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   height: 10%;
   background-color: #2a2525;
