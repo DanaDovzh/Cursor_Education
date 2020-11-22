@@ -25,7 +25,7 @@ const pairing = (names) => {
 
 const themesForTeamsStudents = (pairsStudents) => {
     const pairsStudentsWithThemes = [];
-    for (let i = 0; i < themes.length; i++) pairsStudentsWithThemes.push([pairsStudents[i].join(" і "),themes[i]]);
+    for (let i = 0; i < themes.length; i++) pairsStudentsWithThemes.push([pairsStudents[i].join("\u00A0і\u00A0"),themes[i]]);
     return pairsStudentsWithThemes;
 };
 
@@ -79,7 +79,7 @@ const makePairsThemesMarksForLog = (arrayForTransform) => {
     const arrayTransformed = [];
     for (let i = 0; i < arrayForTransform.length; i ++) {
         arrayTransformed.push({  "Студенти" : `${arrayForTransform[i][0]}`,
-        "Тема проєкту" : `${arrayForTransform[i][1]}`, "Оцінка" : `${arrayForTransform[i][2]}` });
+        "Тема проєкту" : `${arrayForTransform[i][1]}`, "Оцінка" : +`${arrayForTransform[i][2]}` });
         placeMarkTeam[i].innerHTML = arrayForTransform[i][2];
         placeTeamTheme[i].innerHTML = arrayForTransform[i][1];
     }
@@ -89,7 +89,7 @@ const makePairsThemesMarksForLog = (arrayForTransform) => {
 const makeMarkStudent = (arrayForTransform) => {
     const arrayTransformed = [];
     for (let i = 0; i < arrayForTransform.length; i ++) {
-        arrayTransformed.push({  "Студент" : `${arrayForTransform[i][0]}`, "Успішність" : `${arrayForTransform[i][1]}` });
+        arrayTransformed.push({  "Студент" : `${arrayForTransform[i][0]}`, "Успішність" : +`${arrayForTransform[i][1]}` });
         placeNameStudent[i].innerHTML = arrayForTransform[i][0];
         placeMarkStudent[i].innerHTML = arrayForTransform[i][1];
     }
