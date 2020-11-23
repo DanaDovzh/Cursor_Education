@@ -17,7 +17,9 @@ const styleForLog = ['padding: 3px;',
 const createStudentPairs = (names) => {
     let studentsPairs = [];
     const numberOfPairs = Math.ceil((students.length)/2);
-    for (let i = 0; i < numberOfPairs; i++) studentsPairs[i] = [];
+    for (let i = 0; i < numberOfPairs; i++) {
+        studentsPairs[i] = [];
+    };
     let indexNewStudent = 0;
         divideIntoGenders(maleNames, 0);
         indexNewStudent = 0;
@@ -36,8 +38,9 @@ const createStudentPairs = (names) => {
 
 const themesForTeamsStudents = (pairsStudents, themesForTeam) => {
     const pairsStudentsWithThemes = [];
-    for (let i = 0; i < themes.length; i++)     
+    for (let i = 0; i < themes.length; i++) {  
         pairsStudentsWithThemes.push([pairsStudents[i].join("\u00A0і\u00A0"),themesForTeam[i]]);
+    };
     return pairsStudentsWithThemes;
 };
 
@@ -47,13 +50,17 @@ const getRandomNumber = function (min = 1, max = 5) {
 
 const marksTeamsStudents = (marksProject) => {
     const marksAndTeams = JSON.parse(JSON.stringify(marksProject));
-    for (let i = 0; i < marksAndTeams.length; i++)  marksAndTeams[i].push(getRandomNumber(1,5));
+    for (let i = 0; i < marksAndTeams.length; i++) {
+        marksAndTeams[i].push(getRandomNumber(1,5));
+    }
     return marksAndTeams;
 };
 
 const markOneStudent = (students, markToStudent) => {
     const markStudent = [];
-    for (let i = 0; i < students.length; i++) markStudent.push([students[i], markToStudent[i]]);
+    for (let i = 0; i < students.length; i++) {
+        markStudent.push([students[i], markToStudent[i]]);
+    };
     return markStudent;
 };
 
