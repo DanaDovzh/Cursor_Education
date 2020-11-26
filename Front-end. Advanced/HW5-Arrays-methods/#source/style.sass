@@ -28,13 +28,13 @@ html,
 body
     height: 100%
 body
-    // background: linear-gradient(90deg, rgba(20, 20, 20, 0.3) 0%, rgba(238, 233,233, 0.43)0%), url("../img/autumn.jpg")
     background: linear-gradient(to bottom right, #080808 44%, #f53d00 100%)
     display: flex
     flex-direction: column
 
 main
     flex: 1 0 auto
+
 .slider 
     display: flex
     flex-direction: column
@@ -44,6 +44,7 @@ main
 
 .slick-slider 
     width: 600px
+
 .wrapper
     display: flex
     flex-direction: column
@@ -61,6 +62,7 @@ main
             width: 200px
             height: 200px
             bottom: -60px
+
 .slider
     &__function
         &-block
@@ -69,7 +71,6 @@ main
             border: 3px solid #FF4500
             border-radius: 20px
             margin: 10px 
-
             color: #ffffff 
             @include adaptiv-font(18, 14)
             box-shadow: inset 0px -4px 61px 80px #470101bf  
@@ -90,8 +91,8 @@ main
             position: relative
             opacity: 0.5
             &:hover
-                    opacity: 1
-                    transform: scale(1.1)
+                opacity: 1
+                transform: scale(1.1)
             &::before
                 content: ''
                 background-image: url(../img/pumpkin.svg)
@@ -99,18 +100,13 @@ main
                 height: 35px
                 position: absolute
                 background-repeat: no-repeat
-                
                 background-size: contain
-                // &:hover
-                //     opacity: 1
-                //     transform: scale(1.4)
-
+ 
 .block-img
     position: absolute
     width: 50px
     height: 50px
     background-size: contain
-    
     bottom: 20px
     right: 20px
     &1
@@ -133,6 +129,7 @@ main
         background-image: url(../img/9.svg)
     &10
         background-image: url(../img/10.svg)
+
 .warning
     position: absolute
     bottom: 20px
@@ -143,28 +140,30 @@ main
 .slick-initialized .slick-slide 
     display: flex
     flex-direction: column
-.slider
 
+.slider
     &__heading
         text-align: center
         display: block
         margin-top: 10px
         margin-bottom: 20px
-        // font-family: 'Permanent Marker', cursive
         font-family: 'Courgette', cursive
         font-style: cursive
         font-weight: 500
         font-size: 32px
     &__function-block
+
 .rule
     text-align: center
     font-family: 'Courgette', cursive
     @include adaptiv-font(18, 16)
+
 .field
     height: 20px
     border-radius: 20px
     text-align: center
     width: 150px
+
 .block-field
     margin: 10px 0px 10px 10px
     
@@ -174,15 +173,19 @@ input
 
 .part-block
     margin-bottom: 10px
+
 .length-field
     width: 100px
+
 .number-field
     width: 50px 
-    margin-top: 5px  
+    margin-top: 5px 
+
 .btn-answer
     display: flex
     justify-content: center
     z-index: 500
+
 .btns-get-answers
     height: 40px
     width: 125px
@@ -213,7 +216,6 @@ label[for=before]
         right: 130px
         z-index: 400
 
-
 .answer-ready
     text-align: center
     font-size: 20px
@@ -222,11 +224,11 @@ label[for=before]
     font-weight: 700
     letter-spacing: 1px
     word-wrap: break-word
+
 .link-git 
     font-family: 'Permanent Marker', cursive
     color: #ffffff
     text-decoration: none
-    // font-weight: 500
     @include adaptiv_font(32, 28)
     &:hover
         color: #ff6600
