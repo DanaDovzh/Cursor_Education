@@ -1,0 +1,243 @@
+$context: 16
+$maxWidth: 1440
+
+@function px_to_em($pixels)
+    @return #{$pixels/$context}em
+
+@mixin adaptiv_font($pcSize, $mobSize)
+    $addSize: $pcSize - $mobSize
+    $maxWidth: $maxWidth - 320
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
+
+input:focus,
+input,
+button,
+button:focus
+    outline: none
+    border: none
+input[type="button"]
+    cursor: pointer
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button 
+  -webkit-appearance: none
+input[type=number]
+    -moz-appearance: textfield
+
+html, 
+body
+    height: 100%
+body
+    // background: linear-gradient(90deg, rgba(20, 20, 20, 0.3) 0%, rgba(238, 233,233, 0.43)0%), url("../img/autumn.jpg")
+    background: linear-gradient(to bottom right, #080808 44%, #f53d00 100%)
+    display: flex
+    flex-direction: column
+
+main
+    flex: 1 0 auto
+.slider 
+    display: flex
+    flex-direction: column
+    align-items: normal
+    justify-content: center
+    margin: auto
+
+.slick-slider 
+    width: 600px
+.wrapper
+    display: flex
+    flex-direction: column
+    position: relative
+    &__img
+        background-image: url("../img/autumn-bg.png")
+        background-size: contain
+        background-repeat: no-repeat
+        position: absolute
+        right: 10px
+        bottom: -80px
+        width: 300px
+        height: 300px
+        @media (max-width: 768px)
+            width: 200px
+            height: 200px
+            bottom: -60px
+.slider
+    &__function
+        &-block
+            min-height: 300px
+            width: 450px 
+            border: 3px solid #FF4500
+            border-radius: 20px
+            margin: 10px 
+
+            color: #ffffff 
+            @include adaptiv-font(18, 14)
+            box-shadow: inset 0px -4px 61px 80px #470101bf  
+            position: relative
+    &__dots
+        width: 100%
+        display: flex !important
+        justify-content: center
+        position: absolute
+        & .slick-active
+            opacity: 1
+        & button
+            display: none
+        & li
+            width: 40px
+            height: 40px
+            margin: 3px
+            position: relative
+            opacity: 0.5
+            &:hover
+                    opacity: 1
+                    transform: scale(1.1)
+            &::before
+                content: ''
+                background-image: url(../img/pumpkin.svg)
+                width: 35px
+                height: 35px
+                position: absolute
+                background-repeat: no-repeat
+                
+                background-size: contain
+                // &:hover
+                //     opacity: 1
+                //     transform: scale(1.4)
+
+.block-img
+    position: absolute
+    width: 50px
+    height: 50px
+    background-size: contain
+    
+    bottom: 20px
+    right: 20px
+    &1
+        background-image: url(../img/1.svg)
+    &2
+        background-image: url(../img/2.svg)
+    &3
+        background-image: url(../img/3.svg)
+    &4
+        background-image: url(../img/4.svg)
+    &5
+        background-image: url(../img/5.svg)
+    &6
+        background-image: url(../img/6.svg)
+    &7
+        background-image: url(../img/7.svg)
+    &8
+        background-image: url(../img/8.svg)
+    &9
+        background-image: url(../img/9.svg)
+    &10
+        background-image: url(../img/10.svg)
+.warning
+    position: absolute
+    bottom: 20px
+    left: 20px
+    font-family: 'Kalam', cursive
+    @include adaptiv-font(12, 10)
+
+.slick-initialized .slick-slide 
+    display: flex
+    flex-direction: column
+.slider
+
+    &__heading
+        text-align: center
+        display: block
+        margin-top: 10px
+        margin-bottom: 20px
+        // font-family: 'Permanent Marker', cursive
+        font-family: 'Courgette', cursive
+        font-style: cursive
+        font-weight: 500
+        font-size: 32px
+    &__function-block
+.rule
+    text-align: center
+    font-family: 'Courgette', cursive
+    @include adaptiv-font(18, 16)
+.field
+    height: 20px
+    border-radius: 20px
+    text-align: center
+    width: 150px
+.block-field
+    margin: 10px 0px 10px 10px
+    
+.block-field,
+input
+    font-family: 'Kalam', cursive
+
+.part-block
+    margin-bottom: 10px
+.length-field
+    width: 100px
+.number-field
+    width: 50px 
+    margin-top: 5px  
+.btn-answer
+    display: flex
+    justify-content: center
+    z-index: 500
+.btns-get-answers
+    height: 40px
+    width: 125px
+    padding: 7px
+    padding-left: 45px
+    border-radius: 40px
+    color: #ffffff
+    font-weight: 500
+    cursor: poiner
+    @include adaptiv-font(18, 16)
+    background-color: #810505
+    background: linear-gradient(341deg, #810505 19%, #0a0909 50%)
+    background-repeat: no-repeat
+
+label[for=before]
+    position: relative
+    width: 50px
+    height: 50px
+    &::before
+        content: ''
+        background-image: url(../img/forest-btn.svg)
+        width: 30px
+        height: 30px
+        position: absolute
+        background-repeat: no-repeat   
+        background-size: contain
+        top: 6px
+        right: 130px
+        z-index: 400
+
+
+.answer-ready
+    text-align: center
+    font-size: 20px
+    margin: 20px   
+    color: #b84300
+    font-weight: 700
+    letter-spacing: 1px
+    word-wrap: break-word
+.link-git 
+    font-family: 'Permanent Marker', cursive
+    color: #ffffff
+    text-decoration: none
+    // font-weight: 500
+    @include adaptiv_font(32, 28)
+    &:hover
+        color: #ff6600
+        text-decoration: underline
+
+footer 
+    flex: 0 0 auto
+    display: flex
+    justify-content: space-evenly
+    align-items: center
+    height: 10%
+    background: linear-gradient(90deg, rgba(20, 20, 20, 0.3) 0%, #3d3c3c6e0%), url("../img/footer-bg.jpg")
+   
+
