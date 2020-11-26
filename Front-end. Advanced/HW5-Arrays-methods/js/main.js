@@ -33,15 +33,16 @@ const getMedian = (numbers) => {
 
 const getModa = (numbers) => {
     let modaArray = [];
-    let cntItems = 0;
+    let cntItems = 0, countModa = 0;
     let result = numbers.map((element) => {
-            if(cntItems < numbers.filter(item => item === element).length) {
-                cntItems = numbers.filter(item => item === element).length;
+            countModa = numbers.filter(item => item === element).length;
+            if(cntItems < countModa) {
+                cntItems = countModa;
                 modaArray = [];
                 if(!modaArray.includes(element))
                     modaArray.push(element);
                 } else if
-                    (cntItems === numbers.filter(item => item === element).length) 
+                    (cntItems === countModa) 
                     if (!modaArray.includes(element))
                         modaArray.push(element);
             return element;
