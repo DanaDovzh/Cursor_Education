@@ -175,6 +175,11 @@ main {
   font-weight: 500;
   font-size: 32px;
 }
+
+.slick-initialized .slick-slide {
+  outline: none;
+}
+
 .rule {
   text-align: center;
   font-family: "Courgette", cursive;
