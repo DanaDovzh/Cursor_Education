@@ -18,31 +18,20 @@ button:focus
 input[type="button"]
     cursor: pointer
 
-
 .btn:focus
      box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24)
+
 html, 
 body
     height: 100%
+
 body
     display: flex
     flex-direction: column
-    background: linear-gradient(272deg, #036564, #033649, #4297b6)
-    background-size: 600% 600%
-    animation: bg-animation 16s ease infinite
-
-@keyframes bg-animation 
-    0%
-        background-position:56% 0%
-    50%
-        background-position:45% 100%
-    100%
-        background-position:56% 0%
-
+    background: linear-gradient(to right, #360033, #0b8793)
 
 main
     flex: 1 0 auto
-
 
 .wrapper
     display: flex
@@ -64,17 +53,22 @@ main
         width: 130%  
         @media (max-width: 800px)
             width: 100%
+
 .name-student
     font-family: 'Aclonica', sans-serif
     @include adaptiv_font(28, 22)
+
 .name-subject
     font-weight: 600
+
 .avatar
     align-self: center
+
 .title-in-modal
     font-family: 'Ranchers', cursive
     @include adaptiv_font(16, 14)
     letter-spacing: 1px
+
 .subjects-students,
 .course-student,
 .btn
@@ -120,6 +114,7 @@ main
         height: px_to_em(40)
         border-radius: 30px
         @include adaptiv_font(20, 18)
+
 .best-star
     position: relative
     &::before
@@ -132,8 +127,13 @@ main
         position: absolute
         right: 115px
         top: -9px
+        @media (max-width:435px)
+            right: 155px
+            top: -2px
+
 .card-best
     box-shadow: 0 0 5px #ffff00, 0 0 10px #ffff00, 0 0 20px #ffff00, 0 0 40px #ffff00
+
 .link-git 
     font-family: 'Permanent Marker', cursive
     color: #000000
@@ -171,26 +171,29 @@ main
         text-align: center
         font-family: 'Aclonica', sans-serif
         @include adaptiv_font(16, 14)
+
 .marks,
 .subject
     letter-spacing: 2px
     font-family: 'Texturina', serif
+
 .average-mark
     letter-spacing: 2px
     @include adaptiv_font(20, 18)
     font-family: 'Texturina', serif
+
 .marks
     text-align: center
 
 .subject
     font-weight: 600
     @include adaptiv_font(16, 14)
+
 footer 
     flex: 0 0 auto
     display: flex
     justify-content: space-evenly
     align-items: center
     height: 5%
-    background: linear-gradient(272deg, #09e6e2, #abe5fa, #4297b6)
+    background: linear-gradient(272deg, #a085f8, #6f31d1, #650781)
    
-

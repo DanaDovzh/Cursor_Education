@@ -22,22 +22,9 @@ body {
 body {
   display: flex;
   flex-direction: column;
-  background: linear-gradient(272deg, #036564, #033649, #4297b6);
-  background-size: 600% 600%;
-  animation: bg-animation 16s ease infinite;
+  background: linear-gradient(to right, #360033, #0b8793);
 }
 
-@keyframes bg-animation {
-  0% {
-    background-position: 56% 0%;
-  }
-  50% {
-    background-position: 45% 100%;
-  }
-  100% {
-    background-position: 56% 0%;
-  }
-}
 main {
   flex: 1 0 auto;
 }
@@ -160,6 +147,12 @@ main {
   right: 115px;
   top: -9px;
 }
+@media (max-width: 435px) {
+  .best-star::before {
+    right: 155px;
+    top: -2px;
+  }
+}
 
 .card-best {
   box-shadow: 0 0 5px #ffff00, 0 0 10px #ffff00, 0 0 20px #ffff00, 0 0 40px #ffff00;
@@ -237,5 +230,5 @@ footer {
   justify-content: space-evenly;
   align-items: center;
   height: 5%;
-  background: linear-gradient(272deg, #09e6e2, #abe5fa, #4297b6);
+  background: linear-gradient(272deg, #a085f8, #6f31d1, #650781);
 }
