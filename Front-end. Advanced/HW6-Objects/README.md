@@ -38,4 +38,4 @@ const students = [{
 - Створіть функцію `calculateWordLetters("тест") --> { "т": 2, "е": 1, "с": 1 }` – яка повертає обє'кт, в якому ключі це букви у слові, а значення – кількість їх повторень.
 
 
-[Результат](https://danadovzh.github.io/Cursor_Education/Front-end.%20Advanced/HW5-Arrays-methods/index.html)
+[Результат](https://danadovzh.github.io/Cursor_Education/Front-end.%20Advanced/HW6-Objects/index.html)
