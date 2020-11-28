@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="shortcut icon" href="img/open-book.svg">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Texturina:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Object</title>
+</head>
+<body>
+    <main class="wrapper container ">
+      <div class="row d-flex justify-content-around">
+        <div class="card col-md-4">
+          <div class="row no-gutters">
+            <div class="col-md-4 avatar">
+              <img src="img/girl.svg" class="card-img" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title name-student"></h5>
+                <p class="card-text"><span class="title-in-modal">Course:</span> <span class="course-student"></span></p>
+                <p class="card-text name-subject title-in-modal">Subjects:</p>
+                <p class="card-text subjects-students"></p>
+                <button type="button" class="btn btn-marks" data-toggle="modal" data-target="#modalMarksStudent">
+                  Marks
+                </button>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+        <div class="card col-md-4">
+          <div class="row no-gutters">
+            <div class="col-md-4 avatar">
+              <img src="img/boy1.svg" class="card-img" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title name-student"></h5>
+                <p class="card-text"><span class="title-in-modal">Course:</span> <span class="course-student"></span></p>
+                <p class="card-text name-subject title-in-modal">Subjects:</p>
+                <p class="card-text subjects-students"></p>
+                <button type="button" class="btn btn-marks" data-toggle="modal" data-target="#modalMarksStudent">
+                  Marks
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card col-md-4">
+          <div class="row no-gutters">
+            <div class="col-md-4 avatar">
+              <img src="img/boy2.svg" class="card-img" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title name-student"></h5>
+                <p class="card-text"><span class="title-in-modal">Course:</span> <span class="course-student"></span></p>
+                <p class="card-text name-subject title-in-modal">Subjects:</p>
+                <p class="card-text subjects-students"></p>
+                <button type="button" class="btn btn-marks" data-toggle="modal" data-target="#modalMarksStudent">
+                  Marks
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modalMarksStudent" tabindex="-1" role="dialog" aria-labelledby="modalMarksStudentTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Student grades</h5>
+              <button type="button" class="close btn-close-modal" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col" class="table-header">Subject</th>
+                    <th scope="col" colspan="1" class="table-header">Marks</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row" class="subject">1</th>
+                    <td class="marks"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="subject">2</th>
+                    <td class="marks"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="subject">3</th>
+                    <td colspan="2" class="marks"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-average-count">Average marks</button>
+              <p class="average-mark"></p>
+              <button type="button" class="btn btn-secondary btn-close-modal" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="best-student btn d-flex justify-content-center">
+        <button id="best">Best student</button>
+      </div>
+    </main>
+    
+    <footer>
+        <a class="link-git" href="https://github.com/DanaDovzh/Cursor_Education/tree/master/Front-end.%20Advanced/HW6-Objects" target="_blank">GitHub</a>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</body>
+</html>

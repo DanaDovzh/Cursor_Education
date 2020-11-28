@@ -1,0 +1,196 @@
+$context: 16
+$maxWidth: 1440
+
+@function px_to_em($pixels)
+    @return #{$pixels/$context}em
+
+@mixin adaptiv_font($pcSize, $mobSize)
+    $addSize: $pcSize - $mobSize
+    $maxWidth: $maxWidth - 320
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
+
+input:focus,
+input,
+button,
+button:focus
+    outline: none
+    border: none
+input[type="button"]
+    cursor: pointer
+
+
+.btn:focus
+     box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24)
+html, 
+body
+    height: 100%
+body
+    display: flex
+    flex-direction: column
+    background: linear-gradient(272deg, #036564, #033649, #4297b6)
+    background-size: 600% 600%
+    animation: bg-animation 16s ease infinite
+
+@keyframes bg-animation 
+    0%
+        background-position:56% 0%
+    50%
+        background-position:45% 100%
+    100%
+        background-position:56% 0%
+
+
+main
+    flex: 1 0 auto
+
+
+.wrapper
+    display: flex
+    flex-direction: column
+    padding-top: 10%
+   
+.card
+    max-width: 300px
+    min-height: 250px
+    border-radius: 30px
+    background-color: #d9d9d9
+    background-image: linear-gradient(315deg, #d9d9d9 0%, #f6f2f2 74%)
+    &-title
+        text-align: center
+    &-text
+        margin-left: 20px
+        
+    &-img
+        width: 130%  
+        @media (max-width: 800px)
+            width: 100%
+.name-student
+    font-family: 'Aclonica', sans-serif
+    @include adaptiv_font(28, 22)
+.name-subject
+    font-weight: 600
+.avatar
+    align-self: center
+.title-in-modal
+    font-family: 'Ranchers', cursive
+    @include adaptiv_font(16, 14)
+    letter-spacing: 1px
+.subjects-students,
+.course-student,
+.btn
+    font-family: 'Kalam', cursive
+
+.subjects-students
+    @include adaptiv_font(16, 14)
+    text-align: center
+
+.btn-marks
+    color: #000000
+    font-weight: 600
+    width: px_to_em(80)
+    border-radius: 30px
+    height: px_to_em(30)
+    padding: 0
+    background-color: #bfccd8
+    &:hover
+        background-color: #58595a
+    &:active
+        transition-duration: 0.5s
+        transform: translateY(4px) 
+
+.btn-average-count
+    background-color: #c3d2e0  
+    box-shadow: 5px 5px 10px
+    &:hover 
+        background-color: #c8f4ff
+    &:active
+        box-shadow: inset 0 0 10px
+        
+#best
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset
+    &:hover
+        transform: scale(1.1)
+        background: linear-gradient(to top right, #eb0000 0%, #ffe97a 40%)
+        
+.best-student 
+    margin-top: px_to_em(50)
+    
+    & button
+        width: px_to_em(100)
+        height: px_to_em(40)
+        border-radius: 30px
+        @include adaptiv_font(20, 18)
+.best-star
+    position: relative
+    &::before
+        content: ''
+        background-image: url("../img/star.svg")
+        background-repeat: no-repeat
+        background-size: cover
+        width: px_to_em(25)
+        height: px_to_em(25)
+        position: absolute
+        right: 115px
+        top: -9px
+.card-best
+    box-shadow: 0 0 5px #ffff00, 0 0 10px #ffff00, 0 0 20px #ffff00, 0 0 40px #ffff00
+.link-git 
+    font-family: 'Permanent Marker', cursive
+    color: #000000
+    text-decoration: none
+    @include adaptiv_font(14, 12)
+    &:hover
+        color: #575452
+        text-decoration: underline
+
+.modal
+    &-header
+        background: linear-gradient(272deg, #888888, #506066, #05384b)
+    &-body
+        background: linear-gradient(272deg, #e2e1e1d0, #9da2a3d0, #4aaacee3)
+    &-footer
+        background: linear-gradient(272deg, #888888d5, #06066ca6, #05384bd3)
+    &-title
+        @include adaptiv_font(24, 20)
+        font-family: 'Ranchers', cursive
+        font-weight: 600
+        letter-spacing: 1.5px
+        color: #e1e5ff
+        position: relative
+        &::after
+            content: ''
+            background-image: url("../img/grade.svg")
+            background-repeat: no-repeat
+            background-size: cover
+            width: px_to_em(25)
+            height: px_to_em(25)
+            position: absolute
+.table
+    &-header
+        font-weight: 600
+        text-align: center
+        font-family: 'Aclonica', sans-serif
+        @include adaptiv_font(16, 14)
+.marks,
+.subject
+    letter-spacing: 2px
+    font-family: 'Texturina', serif
+.average-mark
+    letter-spacing: 2px
+    @include adaptiv_font(20, 18)
+    font-family: 'Texturina', serif
+.marks
+    text-align: center
+
+.subject
+    font-weight: 600
+    @include adaptiv_font(16, 14)
+footer 
+    flex: 0 0 auto
+    display: flex
+    justify-content: space-evenly
+    align-items: center
+    height: 5%
+    background: linear-gradient(272deg, #09e6e2, #abe5fa, #4297b6)
+   
+
