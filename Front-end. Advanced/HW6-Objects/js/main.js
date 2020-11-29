@@ -1,3 +1,9 @@
+const styleForSubject = ['color: #202b23;', 'font-size: 16px;', 'font-weight: 600;', 
+  'margin-left: 30%;', 'text-shadow: 5px 5px 3px #ffd800;'].join('');
+const styleForInfo = ['color: #041f69;', 'font-size: 16px;', 'font-weight: 600;', 
+  'margin-left: 30%;', 'text-shadow: 5px 5px 3px #28a745;'].join('');
+const styleForWords = ['color: #630070;', 'font-size: 14px;'].join('');
+const wordForCount = ["text", "opportunity", "peace", "array", "challenge"];
 const students = [{
     name: "Tanya",
     course: 3,
@@ -72,65 +78,6 @@ const calculateWordLetters = (word) => {
   return calcLetters;
 };
 
-const namesStudents = document.querySelectorAll(".name-student");
-const coursesStudents = document.querySelectorAll(".course-student");
-const subjectsStudents = document.querySelectorAll(".subjects-students");
-let infoForStudent = [];
-const subjectModal = document.querySelectorAll(".subject");
-const subjectBtnModal = document.querySelectorAll(".btn-marks");
-const marksModal = document.querySelectorAll(".marks");
-const countAverage = document.querySelector(".btn-average-count");
-const averageMark = document.querySelector(".average-mark");
-const closeModal = document.querySelectorAll(".btn-close-modal");
-const cardBestStudent = document.querySelectorAll(".card-img");
-const btnForBest = document.querySelector("#best");
-
-  for (student of students) {
-    infoForStudent.push(getStudentInfo(student));
-  };
-
-for (let i = 0; i < students.length; i++) {
-  namesStudents[i].innerHTML = students[i].name;
-  btnForBest.addEventListener("click", () => {
-    if (namesStudents[i].innerHTML === getBestStudent(students)) {
-      cardBestStudent[i].classList.add("card-best");
-      namesStudents[i].classList.add("best-star");
-    };
-    btnForBest.style.display = "none";
-  });
-  coursesStudents[i].innerHTML = students[i].course;
-};
-
-for (let i = 0; i < students.length; i++) {
-  for (let j = 0; j < students.length; j++)
-      subjectsStudents[i].innerHTML += `${(getSubjects(students[i]))[j]} <br/>`;
-};
-
-for (let i = 0; i < closeModal.length; i++) {
-  closeModal[i].addEventListener("click", () => {
-    averageMark.innerHTML = " ";
-  });
-}
-for (let i = 0; i < subjectBtnModal.length; i++) {
-  subjectBtnModal[i].addEventListener("click", () => {
-    fillHTMLStudentInfo(i)
-  })
-}
-
-const fillHTMLStudentInfo = (indexStudent) => {
-  for (let i = 0; i < students.length; i++) {
-    subjectModal[i].innerHTML = (getSubjects(students[indexStudent]))[i];
-    marksModal[i].innerHTML = (Object.values(students[indexStudent].subjects))[i];
-  };
-  countAverage.addEventListener("click", () =>{
-    averageMark.innerHTML = getAverageMark(students[indexStudent]);
-  });
-}
-const styleForSubject = ['color: #202b23;', 'font-size: 16px;', 'font-weight: 600;', 
-  'margin-left: 30%;', 'text-shadow: 5px 5px 3px #ffd800;'].join('');
-const styleForInfo = ['color: #041f69;', 'font-size: 16px;', 'font-weight: 600;', 
-  'margin-left: 30%;', 'text-shadow: 5px 5px 3px #28a745;'].join('');
-const styleForWords = ['color: #630070;', 'font-size: 14px;'].join('');
 for (student of students) {
   console.groupCollapsed('%c%s', styleForSubject, `Subjects for ${student.name}`);
   console.table(getSubjects(student));
@@ -143,7 +90,6 @@ for (student of students) {
   console.groupEnd();
 };
 
-const wordForCount = ["text", "opportunity", "peace", "array", "challenge"];
 
 console.groupCollapsed('%c%s', styleForWords, "Words for function  calculateWordLetters()");
 for(let i = 0; i < wordForCount.length; i++) {
