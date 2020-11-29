@@ -5,30 +5,22 @@ const checkOnString = (arrayForCheck) => {
 };
 
 const makeArrayForFunctions = (arrayForTransform) =>  {
-        let arrayInteger = [];
-        arrayInteger = arrayForTransform.split(" ").join("").split(",");
-        const result = arrayInteger.filter(number => (Number.isInteger(+number) && number !== "")).map((num) => num).join(",");
-        const arrayNumbers = result.split(",").map((element) => parseInt(element));
-        return arrayNumbers;
+    const arrayInteger = arrayForTransform.split(" ").join("").split(",");
+    const result = arrayInteger.filter(number => (Number.isInteger(+number) && number !== "")).map((num) => num).join(",");
+    const arrayNumbers = result.split(",").map((element) => parseInt(element));
+    return arrayNumbers;
 };
 
 const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
-
-const getRandomArray = (length, min, max) => {
-    const arrayRandomNumber = [];
-    for(let i = 0; i < length; i++) {
-        arrayRandomNumber.push(getRandomNumber(min, max));
-    }
-    return arrayRandomNumber;
-};
+const getRandomArray = (length, min, max) => new Array(length).fill(1).map(number => getRandomNumber(min, max));
 
 const getAverage = (numbers) => numbers.reduce((total, number) => total + number, 0)/numbers.length; 
 
 const getMedian = (numbers) => {    
-    const sortArray = numbers.sort((start, next) => start - next);
+    const sortArray = numbers.sort((a, b) => a - b);
     const indexHalfArray = Math.floor(sortArray.length/2);
     return (sortArray.length % 2) ? sortArray[indexHalfArray] : 
-                                    ((sortArray[indexHalfArray] + sortArray[indexHalfArray-1]) / 2.0);
+                                    ((sortArray[indexHalfArray] + sortArray[indexHalfArray-1]) / 2);
 };
 
 const getModa = (numbers) => {
@@ -63,10 +55,8 @@ const generateCombinations = (word="man") => {
                 for (let i = 0; i < initialWord.length; i++) {
                     newComb += initialWord[i];
                     newInitialWord = initialWord.substring(0, i) + initialWord.substring(i + 1);
-                    // console.log(i, newInitialWord, newComb);
                     createAnagrams(newInitialWord, newComb);
                     newComb = newComb.slice(0, newComb.length - 1);
-                    // console.log("2 ", newComb, i);
             };
         };
     };
