@@ -48,22 +48,18 @@ const getAverageMark = (studentSubject) => {
 };
 
 const getStudentInfo = (studentInfo) => {
-  const infoCard = {
-    name: studentInfo.name,
-    course: studentInfo.course,
-    averageMark: +getAverageMark(studentInfo)
-  };
+  const { name, course } = studentInfo; 
+  const infoCard = {name, course, averageMark: +getAverageMark(studentInfo)};
   return infoCard;
 };
-
 const getStudentsNames = (studentsInfo) => studentsInfo.map(nameStudent => nameStudent.name).sort();
 
 const getBestStudent = (students) => {
-  const sortByMarks = (array) => array.sort((a, b) => a.averageMark > b.averageMark ? -1 : 1);
+  const sortByMarks = (array) => array.sort((a, b) => b.averageMark - a.averageMark);
   let array = [];
-  for (student of students) 
+  for (student of students) {
     array.push(getStudentInfo(student));
-  
+  };
   sortByMarks(array);
   return array[0].name;
 };
@@ -89,7 +85,6 @@ for (student of students) {
   console.table(getStudentInfo(student));
   console.groupEnd();
 };
-
 
 console.groupCollapsed('%c%s', styleForWords, "Words for function  calculateWordLetters()");
 for(let i = 0; i < wordForCount.length; i++) {

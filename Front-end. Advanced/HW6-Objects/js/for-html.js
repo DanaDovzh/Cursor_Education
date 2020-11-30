@@ -11,10 +11,10 @@ const cardBestStudent = document.querySelectorAll(".card-img");
 const btnForBest = document.querySelector("#best");
 
 const fillHTMLStudentInfo = (indexStudent) => {
-  for (let i = 0; i < students.length; i++) {
-    subjectModal[i].innerHTML = (getSubjects(students[indexStudent]))[i];
-    marksModal[i].innerHTML = (Object.values(students[indexStudent].subjects))[i];
-  };
+  students.forEach((el, index) => {
+    subjectModal[index].innerHTML = (getSubjects(students[indexStudent]))[index];
+    marksModal[index].innerHTML = (Object.values(students[indexStudent].subjects))[index];
+  });
   countAverage.addEventListener("click", () =>{
     averageMark.innerHTML = getAverageMark(students[indexStudent]);
   });
@@ -30,11 +30,12 @@ students.forEach((el, index) => {
     btnForBest.style.display = "none";
   });
   coursesStudents[index].innerHTML = students[index].course;
-  })
+  });
 
 students.forEach((el, index) => {
-  for (let j = 0; j < students.length; j++)
+  students.forEach((el, j) => {
       subjectsStudents[index].innerHTML += `${(getSubjects(students[index]))[j]} <br/>`;
+  });
 });
 
 closeModal.forEach((el, index) => {
