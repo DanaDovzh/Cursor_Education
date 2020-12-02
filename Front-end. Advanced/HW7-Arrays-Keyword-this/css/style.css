@@ -1,0 +1,439 @@
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  background: #383232;
+  z-index: 1001;
+}
+
+.preloader__image {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  margin-top: -35px;
+  margin-left: -35px;
+  text-align: center;
+  animation: preloader-rotate 2s infinite linear;
+  animation-direction: alternate;
+}
+
+@keyframes preloader-rotate {
+  50% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1.6);
+  }
+}
+.loaded_hiding .preloader {
+  transition: 0.01s;
+}
+
+.loaded .preloader {
+  display: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: #2d3436;
+  background-image: linear-gradient(315deg, #2d3436 0%, #d3d3d3 74%);
+}
+
+main {
+  flex: 1 0 auto;
+  display: flex;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.dropdown-toggle::after {
+  display: none;
+  content: "";
+  border: none;
+}
+
+.btn {
+  padding: 0;
+  margin: 5px;
+}
+
+.btn-secondary.focus,
+.btn-secondary,
+.btn-secondary:focus,
+.btn-secondary:hover {
+  color: #000000 !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show > .btn-secondary.dropdown-toggle {
+  color: #000000;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active:focus, .btn-secondary:not(:disabled):not(.disabled):active:focus, .show > .btn-secondary.dropdown-toggle:focus {
+  box-shadow: none;
+}
+
+.countries-img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 300px);
+  grid-template-rows: repeat(2, auto);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.heading-card {
+  font-family: "Yeon Sung", cursive;
+  font-size: calc(22px + 4 * ((100vw - 320px) / 1120));
+}
+
+.salary-card {
+  font-family: "Gugi", cursive;
+  font-size: calc(16px + 2 * ((100vw - 320px) / 1120));
+}
+
+.salary,
+.taxes,
+.profit {
+  font-family: "Chakra Petch", sans-serif;
+  font-size: calc(16px + 2 * ((100vw - 320px) / 1120));
+}
+
+.programmers {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(3, auto);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.programmers__card {
+  position: relative;
+  width: 200px;
+  height: 400px;
+  border: 1px solid black;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-header {
+  font-family: "Chakra Petch", sans-serif;
+  font-size: calc(14px + 2 * ((100vw - 320px) / 1120));
+  color: #464343;
+  text-align: center;
+}
+
+.dropdown-item {
+  font-family: "Gugi", cursive;
+  font-size: calc(12px + 2 * ((100vw - 320px) / 1120));
+  text-align: center;
+}
+
+.programmer-img {
+  position: absolute;
+  display: flex;
+}
+.programmer-latvia {
+  grid-area: 1/1/2/2;
+  transform: rotate(90deg) translateX(-150px) translateY(69px);
+  display: flex;
+  height: 500px;
+  text-align: right;
+  background-color: #ffffff;
+  box-shadow: inset 0px 75px 61px -69px rgba(0, 0, 0, 0.75);
+}
+.programmer-latvia .heading-card {
+  text-align: left;
+}
+.programmer-latvia .latvia-info {
+  transform: rotate(-90deg) translateX(112px) translateY(137px);
+  font-size: 18px;
+}
+.programmer-latvia-img {
+  bottom: 60px;
+  right: -15px;
+}
+.programmer-latvia .dropdown {
+  transform: rotate(-90deg) translateY(227px) translateX(216px);
+  z-index: 1000;
+}
+.programmer-lithuania {
+  grid-area: 1/2/3/3;
+  width: 300px;
+  background-color: #fdfdfd;
+  box-shadow: inset -23px -19px 59px -28px rgba(0, 0, 0, 0.75);
+}
+.programmer-lithuania .lithuania-info {
+  transform: rotate(360deg) translateX(13px) translateY(200px);
+  font-size: 18px;
+}
+.programmer-ukraine {
+  grid-area: 2/1/4/2;
+  transform: translate(-20px, -282px);
+  width: 300px;
+  display: flex;
+  flex-direction: column-reverse;
+  background-color: #f7f8fa;
+  box-shadow: inset -23px 19px 59px -28px rgba(0, 0, 0, 0.75);
+}
+.programmer-ukraine-img {
+  flex-direction: column-reverse;
+  bottom: 10px;
+}
+.programmer-ukraine-img .card-img {
+  bottom: 10px;
+}
+.programmer-ukraine .ukraine-info {
+  transform: rotate(360deg) translateX(13px) translateY(-160px);
+  font-size: 18px;
+}
+.programmer-ukraine .dropdown {
+  transform: translateY(-364px);
+  z-index: 1000;
+}
+
+.programmer-lithuania-img,
+.programmer-ukraine-img {
+  transform: rotate(90deg);
+}
+
+.card-img {
+  width: 250px;
+  top: 0;
+  left: 0;
+  transform: rotate(-90deg);
+}
+
+.arrow {
+  font-size: 20px;
+  font-weight: 700;
+}
+.arrow-good {
+  color: #3bb602;
+}
+.arrow-bad {
+  color: #ee0000;
+}
+
+.country-img img {
+  width: 250px;
+}
+.country-img:first-child {
+  grid-area: 1/1/2/3;
+}
+.country-img:nth-child(2) {
+  grid-area: 2/1/3/2;
+}
+.country-img:last-child {
+  grid-area: 2/2/3/3;
+}
+
+.link-git {
+  font-family: "Yeon Sung", cursive;
+  color: #f8f8f8;
+  text-decoration: none;
+  font-size: calc(16px + 4 * ((100vw - 320px) / 1120));
+  font-weight: 600;
+}
+.link-git:hover {
+  color: #0a0a0a;
+  text-decoration: underline;
+}
+
+footer {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 5px;
+  width: auto;
+  background-color: #726e6e;
+}
+
+.box {
+  position: absolute;
+  bottom: 40px;
+}
+
+.glitch {
+  color: #fff;
+  font-family: "Yeon Sung", cursive;
+  font-weight: 600;
+  font-size: calc(70px + 7 * ((100vw - 320px) / 1120));
+  position: relative;
+  padding: 20px;
+}
+.glitch:before, .glitch:after {
+  content: "JS do it";
+  color: #fff;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  padding: 20px;
+  bottom: 0px;
+  padding-bottom: 0px;
+}
+.glitch:before {
+  left: 3px;
+  text-shadow: -3px 0 red;
+  animation: glitch-before 2s linear 0s infinite alternate;
+}
+.glitch:after {
+  left: -3px;
+  text-shadow: -3px 0 blue;
+  animation: glitch-after 2s linear 0s infinite alternate;
+}
+
+@keyframes glitch-before {
+  0% {
+    clip: rect(111px, 350px, 40px, 30px);
+  }
+  5% {
+    clip: rect(137px, 350px, 145px, 30px);
+  }
+  10% {
+    clip: rect(56px, 350px, 18px, 30px);
+  }
+  15% {
+    clip: rect(53px, 350px, 111px, 30px);
+  }
+  20% {
+    clip: rect(63px, 350px, 97px, 30px);
+  }
+  25% {
+    clip: rect(20px, 350px, 114px, 30px);
+  }
+  30% {
+    clip: rect(14px, 350px, 103px, 30px);
+  }
+  35% {
+    clip: rect(4px, 350px, 87px, 30px);
+  }
+  40% {
+    clip: rect(23px, 350px, 3px, 30px);
+  }
+  45% {
+    clip: rect(120px, 350px, 53px, 30px);
+  }
+  50% {
+    clip: rect(77px, 350px, 66px, 30px);
+  }
+  55% {
+    clip: rect(143px, 350px, 79px, 30px);
+  }
+  60% {
+    clip: rect(22px, 350px, 12px, 30px);
+  }
+  65% {
+    clip: rect(127px, 350px, 72px, 30px);
+  }
+  70% {
+    clip: rect(87px, 350px, 43px, 30px);
+  }
+  75% {
+    clip: rect(23px, 350px, 47px, 30px);
+  }
+  80% {
+    clip: rect(118px, 350px, 125px, 30px);
+  }
+  85% {
+    clip: rect(18px, 350px, 6px, 30px);
+  }
+  90% {
+    clip: rect(104px, 350px, 93px, 30px);
+  }
+  95% {
+    clip: rect(20px, 350px, 56px, 30px);
+  }
+  100% {
+    clip: rect(61px, 350px, 118px, 30px);
+  }
+}
+@keyframes glitch-after {
+  0% {
+    clip: rect(123px, 350px, 103px, 30px);
+  }
+  5% {
+    clip: rect(127px, 350px, 119px, 30px);
+  }
+  10% {
+    clip: rect(103px, 350px, 14px, 30px);
+  }
+  15% {
+    clip: rect(96px, 350px, 91px, 30px);
+  }
+  20% {
+    clip: rect(65px, 350px, 97px, 30px);
+  }
+  25% {
+    clip: rect(25px, 350px, 68px, 30px);
+  }
+  30% {
+    clip: rect(15px, 350px, 4px, 30px);
+  }
+  35% {
+    clip: rect(28px, 350px, 12px, 30px);
+  }
+  40% {
+    clip: rect(60px, 350px, 57px, 30px);
+  }
+  45% {
+    clip: rect(48px, 350px, 9px, 30px);
+  }
+  50% {
+    clip: rect(46px, 350px, 28px, 30px);
+  }
+  55% {
+    clip: rect(104px, 350px, 97px, 30px);
+  }
+  60% {
+    clip: rect(37px, 350px, 112px, 30px);
+  }
+  65% {
+    clip: rect(116px, 350px, 147px, 30px);
+  }
+  70% {
+    clip: rect(142px, 350px, 101px, 30px);
+  }
+  75% {
+    clip: rect(85px, 350px, 4px, 30px);
+  }
+  80% {
+    clip: rect(17px, 350px, 130px, 30px);
+  }
+  85% {
+    clip: rect(37px, 350px, 129px, 30px);
+  }
+  90% {
+    clip: rect(137px, 350px, 134px, 30px);
+  }
+  95% {
+    clip: rect(103px, 350px, 87px, 30px);
+  }
+  100% {
+    clip: rect(24px, 350px, 67px, 30px);
+  }
+}
