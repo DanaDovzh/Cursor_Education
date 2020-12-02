@@ -7,6 +7,15 @@ function getTotalTaxes() {
 function getMyTaxes(salary) {
   return +(salary * this.tax).toFixed(2);
 }
+function getMySalary() {
+  const minSalary = 1500;
+  const maxSalary = 2000;
+  let salary = Math.floor(Math.random() * (maxSalary - minSalary + 1)) + minSalary;
+  let taxes = Number((salary * this.tax).toFixed(2));
+  let profit = Number((salary - taxes).toFixed(2));
+  infoSalary = { salary, taxes, profit };
+  return infoSalary;
+};
 const ukraine = {
   tax: 0.195,
   middleSalary: 1789,

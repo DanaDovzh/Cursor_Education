@@ -19,15 +19,6 @@ function printNumberSpecialist(index) {
 printNumberSpecialist.call(latvia, 0);
 printNumberSpecialist.call(litva, 1);
 printNumberSpecialist.call(ukraine, 2);
-function getMySalary() {
-    const minSalary = 1500;
-    const maxSalary = 2000;
-    let salary = Math.floor(Math.random() * (maxSalary - minSalary + 1)) + minSalary;
-    let taxes = Number((salary * this.tax).toFixed(2));
-    let profit = Number((salary - taxes).toFixed(2));
-    infoSalary = { salary, taxes, profit };
-    return infoSalary;
-};
 
 function printCard(countryForSalary, indexForCountry, addForIndex) {
     let currentSalary = 0;
