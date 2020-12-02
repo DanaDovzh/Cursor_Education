@@ -6,6 +6,12 @@ const numbersSpecialist = document.querySelectorAll(".number-specialist");
 const placeForTaxesFromSalary = document.querySelectorAll(".taxes-salary");
 const placeForTotalTaxes = document.querySelectorAll(".total-taxes");
 const placeForCurrentSalary = document.querySelectorAll(".current-salary");
+const bodyHTML = document.body;
+bodyHTML.classList.add('loaded_hiding');
+  window.setTimeout(function () {
+    bodyHTML.classList.add('loaded');
+    bodyHTML.classList.remove('loaded_hiding');
+  }, 2000);
 
 function printNumberSpecialist (index) {
   numbersSpecialist[index].innerHTML = this.vacancies;
@@ -76,6 +82,6 @@ printNumberSpecialist.call(ukraine, 2);
   let prLatvia = printCard(latvia, 0, 0);
   let prLithuania = printCard(litva, 1, 2);
   let prUkraine = printCard(ukraine, 2, 4);
- setInterval(prLatvia, 5000);
- setInterval(prLithuania, 6500);
- setInterval(prUkraine, 3000);
+ setInterval(prLatvia, 2000);
+ setInterval(prLithuania, 2500);
+ setInterval(prUkraine, 1500);

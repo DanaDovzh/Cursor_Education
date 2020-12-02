@@ -1,9 +1,3 @@
-document.body.classList.add('loaded_hiding');
-  window.setTimeout(function () {
-    document.body.classList.add('loaded');
-    document.body.classList.remove('loaded_hiding');
-  }, 1500);
-
   function getMiddleTaxes(){
     return +(this.tax*this.middleSalary).toFixed(2);
   };
