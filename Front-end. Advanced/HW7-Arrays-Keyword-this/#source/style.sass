@@ -91,22 +91,22 @@ main
     bottom: 0
     left: 0
     display: grid
-    grid-template-columns: repeat(2, 300px)
+    grid-template-columns: repeat(2, minmax(300px, auto))
     grid-template-rows: repeat(2, auto)
     grid-column-gap: 0px
     grid-row-gap: 0px
 .heading-card
     font-family: 'Yeon Sung', cursive
-    @include adaptiv_font(26, 22)
+    @include adaptiv_font(26, 20)
     
 .salary-card
     font-family: 'Gugi', cursive
-    @include adaptiv_font(18, 16)
+    @include adaptiv_font(18, 14)
 .salary,
 .taxes,
 .profit
     font-family: 'Chakra Petch', sans-serif
-    @include adaptiv_font(18, 16)
+    @include adaptiv_font(18, 14)
 .programmers
     position: absolute
     top: 40px
@@ -139,7 +139,7 @@ main
         display: flex
     &-latvia
         grid-area: 1 / 1 / 2 / 2
-        transform: rotate(90deg) translateX(-150px) translateY(69px)
+        transform: rotate(90deg) translateX(-150px) translateY(172px)
         display: flex
         height: 500px
         text-align: right
@@ -159,6 +159,7 @@ main
     &-lithuania
         grid-area: 1 / 2 / 3 / 3
         width: 300px
+        max-height: 450px
         background-color: #fdfdfd
         box-shadow: inset -23px -19px 59px -28px rgba(0,0,0,0.75)
         &-img
@@ -168,7 +169,8 @@ main
             
     &-ukraine
         grid-area: 2 / 1 / 4 / 2
-        transform: translate(-20px, -282px)
+        transform: translate(-121px, 225px)
+        position: fixed
         width: 300px
         display: flex
         flex-direction: column-reverse
