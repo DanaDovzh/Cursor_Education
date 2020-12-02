@@ -8,7 +8,6 @@
   background: #383232
   z-index: 1001
 
-
 .preloader__image 
     position: relative
     top: 50%
@@ -52,15 +51,12 @@ body
 body
     display: flex
     flex-direction: row-reverse
-    
     background-color: #2d3436
     background-image: linear-gradient(315deg, #2d3436 0%, #d3d3d3 74%)
 
 main
     flex: 1 0 auto
-    // height: 100%
     display: flex
-    // flex-direction: row
 .wrapper
     display: flex
     flex-direction: row
@@ -89,7 +85,6 @@ main
     border-color: transparent
 .btn-secondary:not(:disabled):not(.disabled).active:focus, .btn-secondary:not(:disabled):not(.disabled):active:focus, .show>.btn-secondary.dropdown-toggle:focus 
     box-shadow: none
-
 
 .countries-img 
     position: absolute
@@ -137,7 +132,6 @@ main
     font-family: 'Gugi', cursive
     @include adaptiv_font(14, 12)
     text-align: center
-
 
 .programmer
     &-img
@@ -244,7 +238,7 @@ footer
     color:#fff
     font-family: 'Yeon Sung', cursive
     font-weight: 600
-    @include adaptiv_font(77, 70)
+    @include adaptiv_font(77, 72)
     position: relative
     padding: 20px
     &:before, 
@@ -268,13 +262,11 @@ footer
         text-shadow: -3px 0 blue
         animation: glitch-after 2s linear 0s infinite alternate
 
-
 @keyframes glitch-before 
    $steps: 20
    @for $i from 0 through $steps 
       #{percentage($i*(1/$steps))} 
          clip: rect(random(150)+px, 350px, random(150)+px, 30px)
-
 
 @keyframes glitch-after 
    $steps: 20
