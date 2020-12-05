@@ -74,3 +74,33 @@ class BudgetStudents extends Students {
     this.getScholarship();
   }
 }
+
+const student = new BudgetStudents("Institute of Avengers", 4, "Robert John Downey Jr.");
+const styleHeading = ["font-size: 16px;", "color:#68200a;"].join("");
+const styleCenter = ["font-size: 16px;", "color:#a0a0a0;", "padding-left: 40px;"].join("");
+const sizeInfo = ["font-size: 14px;", "padding-left: 20px;"].join("");
+
+console.log("%c%s", styleHeading, "Створюємо студента:");
+console.log(student);
+
+console.log("%c%s", styleHeading,"Порахуємо його середній бал");
+console.log("%c%s", sizeInfo, '-> ' + student.getAverageMark());
+
+console.log("%c%s", styleCenter, "ВІДРАХУВАННЯ СТУДЕНТА");
+student.dismiss();
+console.log("%c%s", styleHeading,"Які оцінки у відрахованого студента?");
+console.log("%c%s", sizeInfo, '-> ' + student.getMarks);
+
+console.log("%c%s", styleCenter,"Зробимо подарунок студенту! Повернемо його");
+student.recover();
+console.log("%c%s", styleHeading,"Давайте поставимо  його оцінку 4");
+student.setNewMarks = 4;
+console.log("%c%s", sizeInfo, '-> ' + student.getMarks);
+
+console.log("%c%s", styleHeading,"Кінцева інформація про студента");
+console.log("%c%s", sizeInfo, '-> ' + student.getInfo);
+console.log(student);
+
+
+
+
