@@ -5,6 +5,7 @@ const placeForMarks = document.querySelectorAll(".info__marks");
 const placeForAverageMark = document.querySelectorAll(".average-mark-place");
 const btnForCountAverageMark = document.querySelectorAll(".average-mark-btn");
 const placeForScholarship = document.querySelectorAll(".info__scholarship");
+const cards = document.querySelectorAll(".card-body");
 
 const valueNewMark = document.querySelectorAll(".new-mark");
 const btnDismiss = document.querySelectorAll(".dismiss");
@@ -43,6 +44,7 @@ studentsArray.forEach((student, index) => {
         studentsArray[index].dismiss();
         btnRecover[index].disabled = false;
         btnDismiss[index].disabled = true;
+        cards[index].classList.toggle("card-dismiss");
         placeForScholarship[index].innerHTML = studentsArray[index].startScholarship();
     })
 
@@ -50,6 +52,7 @@ studentsArray.forEach((student, index) => {
         btnRecover[index].disabled = true;
         btnDismiss[index].disabled = false;
         studentsArray[index].recover();
+        cards[index].classList.toggle("card-dismiss");
         placeForScholarship[index].innerHTML = studentsArray[index].startScholarship();  
     })
 
