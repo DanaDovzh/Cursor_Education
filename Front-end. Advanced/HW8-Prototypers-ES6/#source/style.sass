@@ -1,0 +1,147 @@
+.preloader 
+    position: fixed
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    overflow: hidden
+    background: #c7c7c7
+    z-index: 1001
+
+.preloader__image 
+    position: relative
+    top: 50%
+    left: 50%
+    width: 70px
+    height: 70px
+    margin-top: -35px
+    margin-left: -35px
+    text-align: center
+    animation: preloader-rotate 2s infinite linear
+    animation-direction: alternate
+
+@keyframes preloader-rotate 
+    100% 
+        transform: rotate(360deg)
+        
+.loaded_hiding .preloader 
+  transition: 0.01s
+
+.loaded .preloader 
+  display: none
+    
+$context: 16
+$maxWidth: 1440
+
+@function px_to_em($pixels)
+    @return #{$pixels/$context}em
+
+@mixin adaptiv_font($pcSize, $mobSize)
+    $addSize: $pcSize - $mobSize
+    $maxWidth: $maxWidth - 320
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
+
+
+html, 
+body
+    height: 100%
+
+body
+    display: flex
+    flex-direction: column
+    background: linear-gradient(90deg, rgba(255, 205, 97, 0.3) 0%, #b6b6b66e 0%), url("../img/bg.jpg")
+
+main
+    flex: 1 0 auto
+button:focus,
+button,
+input:focus,
+input
+    outline: none
+    border: none  
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button 
+    -webkit-appearance: none
+input[type='submit']
+    border: 2px solid #1b1616
+    background-color: #bd4b09
+    border-radius: 10px
+    text-align: center
+    color: #ebe1e1
+input[type='number']
+    border: 2px solid #1b1616
+    border-radius: 10px
+    text-align: center
+.wrapper
+    display: flex
+    flex-direction: row
+    position: relative
+    justify-content: center
+    align-items: center
+.card
+    min-height: 350px
+    max-height: 450px
+    min-width: 500px
+    margin: 10px
+    padding: 0
+    border: 1px ridge #662f07c2
+    &-heard
+        height: 10px
+        background-color: #ffa96b
+    // opacity: 0.5
+    // box-shadow: inset -2px -200px 300px 155px rgba(0,0,0,0.75)
+    &-body
+        display: flex
+        padding-bottom: 10px
+        background-image: linear-gradient( 109.5deg,  rgba(229,233,177,1) 11.2%, rgba(223,205,187,1) 100.2% )
+    &-footer
+        background-color: #a14706c2
+
+.info
+    font-family: 'Syne Mono', monospace
+    font-weight: 600
+    @include adaptiv_font(18, 14)
+    &__name
+        font-family: 'Piedra', cursive
+        @include adaptiv_font(28, 22)
+.update-info
+    font-weight: 400
+
+.average-mark-place
+    font-family: 'Gloria Hallelujah', cursive
+.dismiss,
+.recover,
+.average-mark-btn
+    font-family: 'Gamja Flower', cursive
+    @include adaptiv_font(20, 18)
+    background-color: #feca57
+    background-image: linear-gradient(315deg, #feca57 0%, #d3d3d3 74%)
+
+.photo-students
+    height: 200px
+    width: 200px
+    margin-right: 15px
+
+button[disabled]
+    .card
+       background: red
+
+
+.link-git 
+    font-family: 'Yeon Sung', cursive
+    color: #f8f8f8
+    text-decoration: none
+    @include adaptiv_font(20, 16)
+    font-weight: 600
+    &:hover
+        color: #0a0a0a
+        text-decoration: underline
+
+footer 
+    flex: 0 0 auto
+    display: flex
+    justify-content: space-evenly
+    align-items: center
+    padding: 5px
+    width: auto
+    background-color: #582b00
