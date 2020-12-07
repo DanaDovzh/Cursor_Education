@@ -1,3 +1,8 @@
+const INTERVAL_DELAY_LOAD = 2000;
+const INTERVAL_DELAY_LATVIA_SALARY = 2000;
+const INTERVAL_DELAY_LITHUANIA_SALARY = 2500;
+const INTERVAL_DELAY_UKRAINE_SALARY = 1500;
+
 const salaryForProgrammer = document.querySelectorAll(".salary");
 const taxesForProgrammer = document.querySelectorAll(".taxes");
 const profitForProgrammer = document.querySelectorAll(".profit");
@@ -7,11 +12,13 @@ const placeForTaxesFromSalary = document.querySelectorAll(".taxes-salary");
 const placeForTotalTaxes = document.querySelectorAll(".total-taxes");
 const placeForCurrentSalary = document.querySelectorAll(".current-salary");
 const bodyHTML = document.body;
+
+
 bodyHTML.classList.add('loaded_hiding');
 window.setTimeout(function () {
     bodyHTML.classList.add('loaded');
     bodyHTML.classList.remove('loaded_hiding');
-}, 2000);
+}, INTERVAL_DELAY_LOAD);
 
 function printNumberSpecialist(index) {
     numbersSpecialist[index].innerHTML = this.vacancies;
@@ -73,6 +80,7 @@ function printCard(countryForSalary, indexForCountry, addForIndex) {
 let prLatvia = printCard(latvia, 0, 0);
 let prLithuania = printCard(litva, 1, 2);
 let prUkraine = printCard(ukraine, 2, 4);
-setInterval(prLatvia, 2000);
-setInterval(prLithuania, 2500);
-setInterval(prUkraine, 1500);
+
+setInterval(prLatvia, INTERVAL_DELAY_LATVIA_SALARY);
+setInterval(prLithuania, INTERVAL_DELAY_LITHUANIA_SALARY);
+setInterval(prUkraine, INTERVAL_DELAY_UKRAINE_SALARY);
