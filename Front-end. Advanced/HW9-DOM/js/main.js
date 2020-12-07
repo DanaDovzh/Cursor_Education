@@ -13,7 +13,7 @@ const bodyHTML = document.body;
 
 let blocksCreated = [];
 let createTime;
-
+let audio = new Audio();
 const generateColor = () => {
   let newColor = '#'+Math.random().toString(16).substr(2,6);
   if (newColor !== BLACK_COLOR)
@@ -80,14 +80,18 @@ const gamesResult = (numberSquare) => {
 
   btnAnswer.addEventListener('click', () => {
     if (+inputAnswer.value === numberSquare) {
-      bodyHTML.style.background = "#111111";
+      bodyHTML.style.background = BLACK_COLOR;
       ruleAsk.innerHTML = "WIN";
       ruleAsk.classList.add("win");
+      audio.src = 'audio/win.mp3'; 
+      
     } else {
       ruleAsk.classList.add("loss");
       bodyHTML.style.background = BLACK_COLOR;
       ruleAsk.innerHTML = "Game Over";
+      audio.src = 'audio/loss.mp3'; 
     }
+    audio.play();
     btnPlay.disabled = false;
     btnTask.disabled = false;
     blockAnswer.style.display = "none";
