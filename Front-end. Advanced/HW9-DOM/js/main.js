@@ -1,6 +1,6 @@
 const BOX_NUMBERS = 25;
 const TIME_TASK = 500;
-const TIME_GAME = 1200;
+const TIME_GAME = 1000;
 const maxNumberArray = 7,
       minNumberArray = 1;
 const BLACK_COLOR = '#111111';
@@ -89,6 +89,7 @@ const gamesResult = (numberSquare) => {
       ruleAsk.innerHTML = "Game Over";
     }
     btnPlay.disabled = false;
+    btnTask.disabled = false;
     blockAnswer.style.display = "none";
   })
 }
@@ -102,6 +103,7 @@ btnPlay.addEventListener('click', () => {
   blocksCreated = document.querySelectorAll('.block');
  
   btnPlay.disabled = true;
+  btnTask.disabled = true;
   clearInterval(createTime);
   mainBlock.classList.add("blocks");
   
