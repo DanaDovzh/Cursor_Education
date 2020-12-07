@@ -1,0 +1,158 @@
+.preloader 
+    position: fixed
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    overflow: hidden
+    background: #f6dcdc
+    z-index: 1001
+
+.preloader__image 
+    position: relative
+    top: 50%
+    left: 50%
+    width: 70px
+    height: 70px
+    margin-top: -35px
+    margin-left: -35px
+    text-align: center
+    animation: preloader-rotate 2s infinite linear
+    animation-direction: alternate
+
+@keyframes preloader-rotate 
+    100% 
+        transform: rotate(360deg)
+        
+.loaded_hiding .preloader 
+  transition: 0.01s
+
+.loaded .preloader 
+  display: none
+  
+$context: 16
+$maxWidth: 1440
+$sideBlock: 50px
+@function px_to_em($pixels)
+    @return #{$pixels/$context}em
+
+@mixin adaptiv_font($pcSize, $mobSize)
+    $addSize: $pcSize - $mobSize
+    $maxWidth: $maxWidth - 320
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button 
+    -webkit-appearance: none
+
+button
+    border: none
+    font-family: 'Ranchers', cursive
+    @include adaptiv_font(22, 18)
+    margin: 5px
+    padding: 5px
+    background-color: #581453
+    color: #ffe0e0
+    border-radius: 5px
+
+html, 
+body
+    height: 100%
+
+body
+    display: flex
+    flex-direction: column
+    background-color: #ffd3fb
+
+main
+    flex: 1 0 auto
+
+.wrapper
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+.blocks
+    display: grid
+    grid-template-columns: repeat(5, $sideBlock )
+    grid-template-rows: repeat(5, $sideBlock )
+    gap: 0px
+
+
+input
+    height: 30px
+    width: 35px
+    text-align: center
+    border-radius: 10px
+    font-family: 'Itim', cursive
+     @include adaptiv_font(18, 16)
+    border: none
+button:disabled
+    background: #ccc
+input:focus,
+button:focus
+    outline: none
+    
+.block 
+    height: 50px
+    width: 50px
+
+.question 
+    font-family: 'Chewy', cursive
+    @include adaptiv_font(20, 16)
+
+.win
+    font-family: 'Sansita Swashed', cursive
+    font-weight: 700
+    @include adaptiv_font(156, 72)
+    color: #fbfbfb
+    animation: neon .08s ease-in-out infinite alternate
+    // text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fbff00, 0 0 40px #fbff00, 0 0 80px #fbff00, 0 0 90px #fbff00
+
+@keyframes neon
+  from
+    text-shadow: 0 0 6px rgba(202, 228, 225, 0.92), 0 0 30px rgba(202, 228, 225, 0.34), 0 0 12px rgba(30, 132, 242, 0.52), 0 0 21px rgba(30, 132, 242, 0.92), 0 0 34px rgba(30, 132, 242, 0.78), 0 0 54px rgba(30, 132, 242, 0.92)
+
+  to
+    text-shadow: 0 0 6px rgba(202, 228, 225, 0.98), 0 0 30px rgba(202, 228, 225, 0.42), 0 0 12px rgba(30, 132, 242, 0.58), 0 0 22px rgba(30, 132, 242, 0.84), 0 0 38px rgba(30, 132, 242, 0.88), 0 0 60px rgba(30, 132, 242, 1)
+.loss
+    font-family: 'Eater', cursive
+    @include adaptiv_font(156, 72)
+    color: #690000
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #c01717, 0 0 40px #c01717, 0 0 80px #c01717, 0 0 90px #c01717, 0 0 100px #c01717, 0 0 150px #c01717
+    animation: .8s shake infinite alternate
+
+@keyframes shake 
+    0% 
+        transform: skewX(-15deg)
+    5% 
+        transform: skewX(15deg)
+    10% 
+        transform: skewX(-15deg)
+    15% 
+        transform: skewX(15deg)
+    20% 
+        transform: skewX(0deg)
+    100%
+        transform: skewX(0deg)
+
+    
+.btns 
+    display: flex
+.link-git 
+    text-decoration: none
+    @include adaptiv_font(20, 16)
+    font-weight: 600
+    &:hover
+        color: #0a0a0a
+        text-decoration: underline
+
+footer 
+    flex: 0 0 auto
+    display: flex
+    justify-content: space-evenly
+    align-items: center
+    padding: 5px
+    width: auto
+    background-color: #2e2e2e
