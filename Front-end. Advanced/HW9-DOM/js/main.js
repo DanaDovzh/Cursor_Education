@@ -3,7 +3,7 @@ const TIME_TASK = 500;
 const TIME_GAME = 1200;
 const maxNumberArray = 7,
       minNumberArray = 1;
-
+const BLACK_COLOR = '#111111';
 const wrapper = document.querySelector("main");
 const mainBlock = document.createElement("div");
 const btns = document.querySelector(".btns");
@@ -16,7 +16,7 @@ let createTime;
 
 const generateColor = () => {
   let newColor = '#'+Math.random().toString(16).substr(2,6);
-  if (newColor !== '#111111')
+  if (newColor !== BLACK_COLOR)
     return newColor;
   else generateColor();
 }
@@ -85,7 +85,7 @@ const gamesResult = (numberSquare) => {
       ruleAsk.classList.add("win");
     } else {
       ruleAsk.classList.add("loss");
-      bodyHTML.style.background = "black";
+      bodyHTML.style.background = BLACK_COLOR;
       ruleAsk.innerHTML = "Game Over";
     }
     btnPlay.disabled = false;
@@ -112,7 +112,7 @@ btnPlay.addEventListener('click', () => {
   }
 
   arrayPlay.forEach(index => {
-    blocksCreated[index].style.backgroundColor = 'black';
+    blocksCreated[index].style.backgroundColor = BLACK_COLOR;
   });
 
   setTimeout(gamesResult, TIME_GAME, lengthArray);
