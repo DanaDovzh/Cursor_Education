@@ -15,7 +15,7 @@ class Students {
     if (this.isDismiss) 
       return `This student is not studying`;
 
-    return this.marks.length > 0 ? `${this.marks.join(",")}` : `${this.fullName} doesnt have marks`;
+    return  this.marks.length ? `${this.marks.join(",")}` : `${this.fullName} doesnt have marks`;
   }
 
   set setNewMarks(newMark = 5) {
@@ -32,7 +32,7 @@ class Students {
     if (this.isDismiss) 
       return `This student is not studying`;
     const averageMark = Number((this.marks.reduce((total, mark) => total + mark, 0)/this.marks.length).toFixed(2));
-    return (averageMark.length === 0) ? 
+    return (!averageMark.length) ? 
       `Sorry, but this student doesnt have any marks` : 
       `${averageMark}`;
   }
