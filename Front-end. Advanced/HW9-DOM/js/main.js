@@ -92,6 +92,7 @@ const gamesResult = (numberSquare) => {
       audio.src = 'audio/loss.mp3'; 
     }
     audio.play();
+    audio.volume = 0.4;
     btnPlay.disabled = false;
     btnTask.disabled = false;
     blockAnswer.style.display = "none";
