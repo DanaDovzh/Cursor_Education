@@ -1,9 +1,11 @@
 const BOX_NUMBERS = 25;
-const TIME_TASK = 500;
+const TIME_TASK = 1000;
 const TIME_GAME = 1000;
+const TIME_LOADED = 2000;
 const maxNumberArray = 7,
       minNumberArray = 1;
 const BLACK_COLOR = '#111111';
+
 const wrapper = document.querySelector("main");
 const mainBlock = document.createElement("div");
 const btns = document.querySelector(".btns");
@@ -14,8 +16,9 @@ const bodyHTML = document.body;
 let blocksCreated = [];
 let createTime;
 let audio = new Audio();
+
 const generateColor = () => {
-  let newColor = '#'+Math.random().toString(16).substr(2,6);
+  let newColor = '#' + Math.random().toString(16).substr(2,6);
   if (newColor !== BLACK_COLOR)
     return newColor;
   else generateColor();
@@ -25,7 +28,7 @@ bodyHTML.classList.add('loaded_hiding');
 window.setTimeout(function () {
     bodyHTML.classList.add('loaded');
     bodyHTML.classList.remove('loaded_hiding');
-}, 1500);
+}, TIME_LOADED);
 
 const resetForNewMenu = () => {
   mainBlock.innerHTML = '';
@@ -43,15 +46,17 @@ const createBlocks = () => {
 }
 btns.before(mainBlock);
 
+// ---------------------------Main task--------------------------- //
+
 btnTask.addEventListener('click', () => {
   resetForNewMenu();
   btnPlay.disabled = false;
   createTime = setInterval(createBlocks, TIME_TASK)
   mainBlock.classList.add("blocks");
 })
-
+// --------------------------------------------------------------- //
 const gamesResult = (numberSquare) => {
-  const ruleAsk = document.createElement("div");
+  let ruleAsk = document.createElement("div");
   const blockAnswer = document.createElement("div");
   const inputAnswer = document.createElement("input");
   const btnAnswer = document.createElement("button");
@@ -80,17 +85,15 @@ const gamesResult = (numberSquare) => {
 
   btnAnswer.addEventListener('click', () => {
     if (+inputAnswer.value === numberSquare) {
-      bodyHTML.style.background = BLACK_COLOR;
       ruleAsk.innerHTML = "WIN";
       ruleAsk.classList.add("win");
       audio.src = 'audio/win.mp3'; 
-      
     } else {
       ruleAsk.classList.add("loss");
-      bodyHTML.style.background = BLACK_COLOR;
       ruleAsk.innerHTML = "Game Over";
       audio.src = 'audio/loss.mp3'; 
     }
+    bodyHTML.style.background = BLACK_COLOR;
     audio.play();
     audio.volume = 0.4;
     btnPlay.disabled = false;
