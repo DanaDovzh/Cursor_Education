@@ -1,34 +1,34 @@
-// .preloader 
-//     position: fixed
-//     left: 0
-//     top: 0
-//     right: 0
-//     bottom: 0
-//     overflow: hidden
-//     background: #f6dcdc
-//     z-index: 1001
+.preloader 
+    position: fixed
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    overflow: hidden
+    background: #ff6d6d
+    z-index: 1001
 
-// .preloader__image 
-//     position: relative
-//     top: 50%
-//     left: 50%
-//     width: 70px
-//     height: 70px
-//     margin-top: -35px
-//     margin-left: -35px
-//     text-align: center
-//     animation: preloader-rotate 2s infinite linear
-//     animation-direction: alternate
+.preloader__image 
+    position: relative
+    top: 50%
+    left: 50%
+    width: 100px
+    height: 100px
+    margin-top: -35px
+    margin-left: -35px
+    text-align: center
+    animation: preloader-rotate 2s infinite linear
+    animation-direction: alternate
 
-// @keyframes preloader-rotate 
-//     100% 
-//         transform: rotate(360deg)
+@keyframes preloader-rotate 
+    100% 
+        transform: rotate(360deg)
         
-// .loaded_hiding .preloader 
-//   transition: 0.01s
+.loaded_hiding .preloader 
+  transition: 0.01s
 
-// .loaded .preloader 
-//   display: none
+.loaded .preloader 
+  display: none
   
 $context: 16
 $maxWidth: 1440
@@ -73,6 +73,10 @@ main
         margin: px_to_em(10)
         padding: px_to_em(10)
         cursor: pointer
+        @media (max-width: 425px)
+            height: 60px
+        @media (max-width: 320px)
+            height: 40px
     &::before
         content: ''
         position: absolute
@@ -111,9 +115,11 @@ main
     background-image: url("../img/board.png")
     background-repeat: no-repeat
     background-size: contain
-    /* width: 588px; */
     height: 400px
     color: #ffffff
+    @media (max-width: 425px)
+        left: -25px
+        height: 220px
 
 .text
     margin-top: 124px
@@ -122,17 +128,30 @@ main
     font-family: 'Conv_MerryChristmasFlake'
     color: #ff0000
     text-shadow: 4px 2px 2px #ffffff
-    @include adaptiv_font(28, 26)
-
+    @include adaptiv_font(28, 18)
+    @media (max-width: 425px)
+        margin-top: 85px
+        margin-left: 27px
+        color: #000000
+        text-shadow: 4px 2px 2px #ffffff
+   
 .happy-text
     font-family: 'Conv_MerryChristmasFlake'
     color: #ffffff
     text-shadow: 4px 2px 2px #ff0000
-    @include adaptiv_font(62, 56)
+    @include adaptiv_font(62, 32)
     position: absolute
     right: px_to_em(20)
     top: px_to_em(7)
-    
+    @media (max-width: 768px)
+        right: px_to_em(7)
+        top: px_to_em(-5)
+    @media (max-width: 425px)
+        display: none
+    @media (max-width: 320px)
+        display: block
+        right: px_to_em(1)
+        top: px_to_em(-15)
 .link-git 
     text-decoration: none
     @include adaptiv_font(32, 26)

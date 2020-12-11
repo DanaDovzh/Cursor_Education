@@ -1,3 +1,40 @@
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  background: #ff6d6d;
+  z-index: 1001;
+}
+
+.preloader__image {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  margin-top: -35px;
+  margin-left: -35px;
+  text-align: center;
+  animation: preloader-rotate 2s infinite linear;
+  animation-direction: alternate;
+}
+
+@keyframes preloader-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loaded_hiding .preloader {
+  transition: 0.01s;
+}
+
+.loaded .preloader {
+  display: none;
+}
+
 html,
 body {
   height: 100%;
@@ -36,6 +73,16 @@ main {
   margin: 0.625em;
   padding: 0.625em;
   cursor: pointer;
+}
+@media (max-width: 425px) {
+  .snowman__img {
+    height: 60px;
+  }
+}
+@media (max-width: 320px) {
+  .snowman__img {
+    height: 40px;
+  }
 }
 .snowman::before {
   content: "";
@@ -96,9 +143,14 @@ main {
   background-image: url("../img/board.png");
   background-repeat: no-repeat;
   background-size: contain;
-  /* width: 588px; */
   height: 400px;
   color: #ffffff;
+}
+@media (max-width: 425px) {
+  .board-text {
+    left: -25px;
+    height: 220px;
+  }
 }
 
 .text {
@@ -108,17 +160,43 @@ main {
   font-family: "Conv_MerryChristmasFlake";
   color: #ff0000;
   text-shadow: 4px 2px 2px #ffffff;
-  font-size: calc(26px + 2 * ((100vw - 320px) / 1120));
+  font-size: calc(18px + 10 * ((100vw - 320px) / 1120));
+}
+@media (max-width: 425px) {
+  .text {
+    margin-top: 85px;
+    margin-left: 27px;
+    color: #000000;
+    text-shadow: 4px 2px 2px #ffffff;
+  }
 }
 
 .happy-text {
   font-family: "Conv_MerryChristmasFlake";
   color: #ffffff;
   text-shadow: 4px 2px 2px #ff0000;
-  font-size: calc(56px + 6 * ((100vw - 320px) / 1120));
+  font-size: calc(32px + 30 * ((100vw - 320px) / 1120));
   position: absolute;
   right: 1.25em;
   top: 0.4375em;
+}
+@media (max-width: 768px) {
+  .happy-text {
+    right: 0.4375em;
+    top: -0.3125em;
+  }
+}
+@media (max-width: 425px) {
+  .happy-text {
+    display: none;
+  }
+}
+@media (max-width: 320px) {
+  .happy-text {
+    display: block;
+    right: 0.0625em;
+    top: -0.9375em;
+  }
 }
 
 .link-git {
