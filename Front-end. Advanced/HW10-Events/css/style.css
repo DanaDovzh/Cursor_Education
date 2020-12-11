@@ -1,0 +1,142 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.58) 0%), url("../img/bg.jpg");
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.tree {
+  display: flex;
+}
+
+.snowman {
+  position: relative;
+}
+.snowman__img {
+  height: 80px;
+  background-color: #ff223f;
+  box-shadow: 13px 8px 28px 1px #ffffffe0;
+  border-radius: 50%;
+  margin: 0.625em;
+  padding: 0.625em;
+  cursor: pointer;
+}
+.snowman::before {
+  content: "";
+  position: absolute;
+  color: #ffffff;
+  text-shadow: 4px 2px 2px #fd0000;
+  font-size: calc(26px + 4 * ((100vw - 320px) / 1120));
+  font-family: "Kavoon", cursive;
+  right: 6px;
+  bottom: 15px;
+}
+
+.A::before {
+  content: "A";
+}
+
+.D::before {
+  content: "D";
+}
+
+.F::before {
+  content: "F";
+}
+
+.J::before {
+  content: "J";
+}
+
+.O::before {
+  content: "O";
+}
+
+.R::before {
+  content: "R";
+}
+
+.S::before {
+  content: "S";
+}
+
+.T::before {
+  content: "T";
+}
+
+.W::before {
+  content: "W";
+}
+
+.C::before {
+  content: "C";
+}
+
+.board-text {
+  display: none;
+  position: absolute;
+  left: 5px;
+  top: -50px;
+  background-image: url("../img/board.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* width: 588px; */
+  height: 400px;
+  color: #ffffff;
+}
+
+.text {
+  margin-top: 124px;
+  margin-left: 63px;
+  margin-right: 46px;
+  font-family: "Conv_MerryChristmasFlake";
+  color: #ff0000;
+  text-shadow: 4px 2px 2px #ffffff;
+  font-size: calc(26px + 2 * ((100vw - 320px) / 1120));
+}
+
+.happy-text {
+  font-family: "Conv_MerryChristmasFlake";
+  color: #ffffff;
+  text-shadow: 4px 2px 2px #ff0000;
+  font-size: calc(56px + 6 * ((100vw - 320px) / 1120));
+  position: absolute;
+  right: 1.25em;
+  top: 0.4375em;
+}
+
+.link-git {
+  text-decoration: none;
+  font-size: calc(26px + 6 * ((100vw - 320px) / 1120));
+  font-family: "NewYearFonts!";
+  background-image: linear-gradient(-315deg, #ff0000 20%, #c75e5e 95%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.link-git:hover {
+  text-decoration: underline;
+  background-image: linear-gradient(315deg, #ff0000 20%, #c75e5e 95%);
+}
+
+footer {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}

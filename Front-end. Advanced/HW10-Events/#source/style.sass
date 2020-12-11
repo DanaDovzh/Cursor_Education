@@ -1,0 +1,151 @@
+// .preloader 
+//     position: fixed
+//     left: 0
+//     top: 0
+//     right: 0
+//     bottom: 0
+//     overflow: hidden
+//     background: #f6dcdc
+//     z-index: 1001
+
+// .preloader__image 
+//     position: relative
+//     top: 50%
+//     left: 50%
+//     width: 70px
+//     height: 70px
+//     margin-top: -35px
+//     margin-left: -35px
+//     text-align: center
+//     animation: preloader-rotate 2s infinite linear
+//     animation-direction: alternate
+
+// @keyframes preloader-rotate 
+//     100% 
+//         transform: rotate(360deg)
+        
+// .loaded_hiding .preloader 
+//   transition: 0.01s
+
+// .loaded .preloader 
+//   display: none
+  
+$context: 16
+$maxWidth: 1440
+$sideBlock: 50px
+@function px_to_em($pixels)
+    @return #{$pixels/$context}em
+
+@mixin adaptiv_font($pcSize, $mobSize)
+    $addSize: $pcSize - $mobSize
+    $maxWidth: $maxWidth - 320
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
+
+
+html, 
+body
+    height: 100%
+
+body
+    display: flex
+    flex-direction: column
+    background: linear-gradient(90deg, rgb(0 0 0 / 20%) 0%, rgb(0 0 0 / 58%) 0%), url("../img/bg.jpg")
+
+main
+    flex: 1 0 auto
+
+.wrapper
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    position: relative
+.tree
+    display: flex
+    
+.snowman
+    position: relative
+    &__img
+        height: 80px
+        background-color: #ff223f
+        box-shadow: 13px 8px 28px 1px #ffffffe0
+        border-radius: 50%
+        margin: px_to_em(10)
+        padding: px_to_em(10)
+        cursor: pointer
+    &::before
+        content: ''
+        position: absolute
+        color: #ffffff
+        text-shadow: 4px 2px 2px #fd0000
+        @include adaptiv_font(30, 26)
+        font-family: 'Kavoon', cursive
+        right: 6px
+        bottom: 15px
+.A::before
+    content: 'A' 
+.D::before
+    content: 'D' 
+.F::before
+    content: 'F' 
+.J::before
+    content: 'J' 
+.O::before
+    content: 'O' 
+.R::before
+    content: 'R' 
+.S::before
+    content: 'S' 
+.T::before
+    content: 'T' 
+.W::before
+    content: 'W' 
+.C::before
+    content: 'C' 
+
+.board-text
+    display: none
+    position: absolute
+    left: 5px
+    top: -50px
+    background-image: url("../img/board.png")
+    background-repeat: no-repeat
+    background-size: contain
+    /* width: 588px; */
+    height: 400px
+    color: #ffffff
+
+.text
+    margin-top: 124px
+    margin-left: 63px
+    margin-right: 46px
+    font-family: 'Conv_MerryChristmasFlake'
+    color: #ff0000
+    text-shadow: 4px 2px 2px #ffffff
+    @include adaptiv_font(28, 26)
+
+.happy-text
+    font-family: 'Conv_MerryChristmasFlake'
+    color: #ffffff
+    text-shadow: 4px 2px 2px #ff0000
+    @include adaptiv_font(62, 56)
+    position: absolute
+    right: px_to_em(20)
+    top: px_to_em(7)
+    
+.link-git 
+    text-decoration: none
+    @include adaptiv_font(32, 26)
+    font-family: 'NewYearFonts!'
+    background-image: linear-gradient(-315deg, #ff0000 20%, #c75e5e 95%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    &:hover
+        text-decoration: underline
+        background-image: linear-gradient(315deg, #ff0000 20%, #c75e5e 95%)
+footer 
+    flex: 0 0 auto
+    display: flex
+    justify-content: space-evenly
+    align-items: center
+    
