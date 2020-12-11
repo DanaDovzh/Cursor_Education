@@ -25,4 +25,4 @@
 Вартість всіх товарів: 1345.66
 ...і так далі 
 
-[Результат](https://danadovzh.github.io/Cursor_Education/Front-end.%20Advanced/HW1-Variables-and-data-types/index.html)
+[Результат](https://danadovzh.github.io/Cursor_Education/Front-end.%20Advanced/HW01-Variables-and-data-types/index.html)
