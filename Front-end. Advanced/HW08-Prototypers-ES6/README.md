@@ -17,4 +17,4 @@
 Студент отримує стипендію тільки в тому випадку, якщо середній бал у нього вище або дорівнює 4.0
 Якщо студента виключено, він не отримує стипендію (думаю це було і так очевидно :) )
 
-[Результат](https://danadovzh.github.io/Cursor_Education/Front-end.%20Advanced/HW8-Prototypers-ES6/index.html)
+[Результат](https://danadovzh.github.io/Cursor_Education/Front-end.%20Advanced/HW08-Prototypers-ES6/index.html)

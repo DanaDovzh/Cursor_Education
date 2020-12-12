@@ -8,4 +8,4 @@
 зробіть так, щоб квадрати змінювали колір раз на секунду.
 Щоб квадрати з'явились на сторінці та почали змінюватись, необхідно викликати функцію `generateBlocksInterval()`;
 
-[Результат](https://danadovzh.github.io/Cursor_Education/Front-end.%20Advanced/HW9-DOM/index.html)
+[Результат](https://danadovzh.github.io/Cursor_Education/Front-end.%20Advanced/HW09-DOM/index.html)

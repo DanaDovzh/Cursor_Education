@@ -20,4 +20,4 @@
 - Створіть функцію, яка перевіряє, чи є слово паліндромом. `Приклад: isPalyndrom("мадам") -> true, isPalyndrom("кокос") -> false, isPalyndrom("Я несу гусеня") -> true`
 - Створіть функцію, яка видалить з речення букви, які зустрічаються більше 1 разу. Приклад: `deleteDuplicateLetter("Бісквіт був дуже ніжним") -> "сктдеим"`
 
-[Результат](https://danadovzh.github.io/Cursor_Education/Front-end.%20Advanced/HW3-Functions/index.html)
+[Результат](https://danadovzh.github.io/Cursor_Education/Front-end.%20Advanced/HW03-Functions/index.html)

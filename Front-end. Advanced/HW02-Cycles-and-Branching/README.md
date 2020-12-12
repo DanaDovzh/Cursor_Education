@@ -17,4 +17,4 @@
   - Приклад: користувач ввів такі значення для N=10, M=100, ПропускатиПарні=FALSE – сума чисел виведена на екрані буде === 5005
   - Приклад: користувач ввів такі значення для N=1, M=10, ПропускатиПарні=FALSE – сума чисел виведена на екрані буде === 55
 
-[Результат](https://danadovzh.github.io/Cursor_Education/Front-end.%20Advanced/HW2-Cycles-and-Branching/index.html)
+[Результат](https://danadovzh.github.io/Cursor_Education/Front-end.%20Advanced/HW02-Cycles-and-Branching/index.html)

@@ -52,4 +52,4 @@
 ```diff 
 + Приклад: generateCombinations("man") -> ["man", "mna", "amn", "anm", "nam", "nma"] Приклад: generateCombinations("ol") -> ["ol", "lo"]
 ```
-[Результат](https://danadovzh.github.io/Cursor_Education/Front-end.%20Advanced/HW5-Arrays-methods/index.html)
+[Результат](https://danadovzh.github.io/Cursor_Education/Front-end.%20Advanced/HW05-Arrays-methods/index.html)

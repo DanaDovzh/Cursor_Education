@@ -14,4 +14,4 @@
 - Створіть функцію `getMySalary(country)` – яка буде писати в консоль об'єкт виду: **{ salary: number, taxes: number, profit: number }** кожні 10 секунд. Значення salary – генеруйте випадковим чином у діапазоні 1500-2000. taxes – розраховується в залежності від вибраної країни та значення salary.
 profit = salary - taxes;
 
-[Результат](https://danadovzh.github.io/Cursor_Education/Front-end.%20Advanced/HW7-Arrays-Keyword-this/index.html)
+[Результат](https://danadovzh.github.io/Cursor_Education/Front-end.%20Advanced/HW07-Arrays-Keyword-this/index.html)

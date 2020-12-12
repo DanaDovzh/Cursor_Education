@@ -20,4 +20,4 @@ const marks = [4, 5, 5, 3, 4, 5];
 - Зіставте оцінки(marks) зі студентом(students): `[["Саша", 4], [...], [...]]`;
 - Поставте кожній парі випадкову оцінку(від 1 до 5) за проєкт(тут функція буде нечистою, але не повинна мутувати массив): `[["Олександр і Олена", "Теорія автоматів", 5], [...], [...]]`;
 
-[Результат](https://danadovzh.github.io/Cursor_Education/Front-end.%20Advanced/HW4-Arrays/index.html)
+[Результат](https://danadovzh.github.io/Cursor_Education/Front-end.%20Advanced/HW04-Arrays/index.html)
