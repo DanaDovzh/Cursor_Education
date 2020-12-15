@@ -1,0 +1,150 @@
+.preloader 
+    position: fixed
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    overflow: hidden
+    background: #999595
+    z-index: 1001
+
+.preloader__image 
+    position: relative
+    top: 50%
+    left: 50%
+    width: 100px
+    height: 100px
+    margin-top: -35px
+    margin-left: -35px
+    text-align: center
+    animation: preloader-rotate 2s infinite linear
+    animation-direction: alternate
+
+@keyframes preloader-rotate 
+    10% 
+        transform: translateX(-4px)
+    20% 
+        transform: translateX(4px)
+    30% 
+        transform: translateX(-6px)
+    40% 
+        transform: translateX(6px)
+    50% 
+        transform: translateX(-8px)
+    60% 
+        transform: translateX(8px)
+    70% 
+        transform: translateX(-10px)
+    80% 
+        transform: translateX(10px)
+    90% 
+        transform: translateX(-12px)
+    100% 
+        transform: translateX(12px)
+        
+.loaded_hiding .preloader 
+  transition: 0.01s
+
+.loaded .preloader 
+  display: none
+  
+$context: 16
+$maxWidth: 1440
+$sideBlock: 50px
+@function px_to_em($pixels)
+    @return #{$pixels/$context}em
+
+@mixin adaptiv_font($pcSize, $mobSize)
+    $addSize: $pcSize - $mobSize
+    $maxWidth: $maxWidth - 320
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
+
+
+html, 
+body
+    height: 100%
+
+body
+    display: flex
+    flex-direction: column
+    background: #fff
+    padding-top: px_to_em(15)
+    background: url("../img/bg.png")
+    background-repeat: no-repeat
+    background-size: contain
+    
+.wrapper
+    flex: 1 0 auto
+    padding-left: px_to_em(270)
+    
+.persons
+    display: flex
+    justify-content: space-evenly
+    &.center
+        justify-content: center
+    &.margin-top-minus
+        margin-top: -200px
+    &.margin-boton-minus
+        margin-bottom: -200px
+
+.person
+    &__photo
+        margin: px_to_em(25)
+        & img
+            max-height: 150px 
+.thought 
+    display: flex
+    background-color: #bf033b
+    background-image: linear-gradient(315deg, #bf033b 31%, #ffc719 82%)
+    font-family: 'Ma Shan Zheng', cursive
+    @include adaptiv_font(24, 16)
+    color: #000000
+    padding: px_to_em(7)
+    border-radius: 30px
+    min-width: 20px
+    max-width: 220px
+    min-height: 10px
+    margin: 10px
+    position: relative
+    align-items: center
+    justify-content: center
+    text-align: center
+    z-index: 1000
+
+.thought:before,
+.thought:after 
+  content:""
+  background-image: linear-gradient(315deg, #bf033b 31%, #ffc719 82%)
+  border-radius: 50%
+  display: block
+  position: absolute
+  z-index: -1
+
+.thought:before 
+  width: 30px
+  height: 30px
+  top: -20px
+  left: 28px
+  box-shadow: -50px 30px 0 -12px #bf033b
+
+.thought:after
+  bottom: -15px
+  right: 26px
+  width: 20px
+  height: 20px
+  box-shadow: 40px -34px 0 0 #bf033b, -28px -6px 0 -2px #bf033b, -24px 17px 0 -6px #bf033b, -5px 25px 0 -10px #bf033b
+  
+
+
+.link-git 
+    text-decoration: none
+    color: #9b0230
+    @include adaptiv_font(22, 18)
+    font-family: 'Langar', cursive
+    &:hover
+        color: #da5a05
+
+footer 
+    flex: 0 0 auto
+    padding-left: px_to_em(55)
+    
