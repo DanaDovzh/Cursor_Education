@@ -76,15 +76,31 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
 }
+@media (max-width: 425px) {
+  body {
+    background-image: none;
+    background-color: #ffffff;
+  }
+}
 
 .wrapper {
   flex: 1 0 auto;
   padding-left: 16.875em;
 }
+@media (max-width: 425px) {
+  .wrapper {
+    padding-left: 0em;
+  }
+}
 
 .persons {
   display: flex;
   justify-content: space-evenly;
+}
+@media (max-width: 800px) {
+  .persons {
+    justify-content: space-between;
+  }
 }
 .persons.center {
   justify-content: center;
@@ -92,8 +108,18 @@ body {
 .persons.margin-top-minus {
   margin-top: -200px;
 }
+@media (max-width: 800px) {
+  .persons.margin-top-minus {
+    margin-top: -100px;
+  }
+}
 .persons.margin-boton-minus {
   margin-bottom: -200px;
+}
+@media (max-width: 800px) {
+  .persons.margin-boton-minus {
+    margin-bottom: -100px;
+  }
 }
 
 .person__photo {
@@ -102,13 +128,23 @@ body {
 .person__photo img {
   max-height: 150px;
 }
+@media (max-width: 425px) {
+  .person__photo img {
+    max-height: 100px;
+  }
+}
+@media (max-width: 320px) {
+  .person__photo img {
+    max-height: 80px;
+  }
+}
 
 .thought {
   display: flex;
   background-color: #bf033b;
   background-image: linear-gradient(315deg, #bf033b 31%, #ffc719 82%);
   font-family: "Ma Shan Zheng", cursive;
-  font-size: calc(16px + 8 * ((100vw - 320px) / 1120));
+  font-size: calc(14px + 10 * ((100vw - 320px) / 1120));
   color: #000000;
   padding: 0.4375em;
   border-radius: 30px;
@@ -122,6 +158,12 @@ body {
   text-align: center;
   z-index: 1000;
 }
+@media (max-width: 320px) {
+  .thought {
+    max-width: 120px;
+    min-width: 10px;
+  }
+}
 
 .thought:before,
 .thought:after {
@@ -134,8 +176,8 @@ body {
 }
 
 .thought:before {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   top: -20px;
   left: 28px;
   box-shadow: -50px 30px 0 -12px #bf033b;

@@ -72,32 +72,47 @@ body
     background: url("../img/bg.png")
     background-repeat: no-repeat
     background-size: contain
-    
+    @media (max-width: 425px)
+        background-image: none
+        background-color: #ffffff
 .wrapper
     flex: 1 0 auto
     padding-left: px_to_em(270)
+    @media (max-width: 425px)
+        padding-left: px_to_em(0)
     
 .persons
     display: flex
     justify-content: space-evenly
+    @media (max-width: 800px)
+        justify-content: space-between
     &.center
         justify-content: center
     &.margin-top-minus
         margin-top: -200px
+        @media (max-width: 800px)
+            margin-top: -100px
     &.margin-boton-minus
         margin-bottom: -200px
+        @media (max-width: 800px)
+            margin-bottom: -100px
+    
 
 .person
     &__photo
         margin: px_to_em(25)
         & img
             max-height: 150px 
+            @media (max-width: 425px)
+                max-height: 100px 
+            @media (max-width: 320px)
+                max-height: 80px 
 .thought 
     display: flex
     background-color: #bf033b
     background-image: linear-gradient(315deg, #bf033b 31%, #ffc719 82%)
     font-family: 'Ma Shan Zheng', cursive
-    @include adaptiv_font(24, 16)
+    @include adaptiv_font(24, 14)
     color: #000000
     padding: px_to_em(7)
     border-radius: 30px
@@ -110,6 +125,9 @@ body
     justify-content: center
     text-align: center
     z-index: 1000
+    @media (max-width: 320px) 
+        max-width: 120px
+        min-width: 10px
 
 .thought:before,
 .thought:after 
@@ -121,8 +139,8 @@ body
   z-index: -1
 
 .thought:before 
-  width: 30px
-  height: 30px
+  width: 25px
+  height: 25px
   top: -20px
   left: 28px
   box-shadow: -50px 30px 0 -12px #bf033b
@@ -134,8 +152,6 @@ body
   height: 20px
   box-shadow: 40px -34px 0 0 #bf033b, -28px -6px 0 -2px #bf033b, -24px 17px 0 -6px #bf033b, -5px 25px 0 -10px #bf033b
   
-
-
 .link-git 
     text-decoration: none
     color: #9b0230
