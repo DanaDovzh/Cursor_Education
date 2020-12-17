@@ -27,9 +27,9 @@ const playSound = (nameSound) => {
 document.addEventListener('keydown', (event) => {
   const keyName = event.code;
   const enterLetter = keyName[3];
-  (keyName.startsWith(KEY_CODE)) && (soundLetter.includes(enterLetter) ?  
+  (keyName.startsWith(KEY_CODE)) && (soundLetter.includes(enterLetter) ?
     (playSound(enterLetter), styleActiveSound(enterLetter)) : (audio.pause(),
-                            textNotLetter.style.display = "block"));
+      textNotLetter.style.display = "block"));
 }, false);
 
 snowmans.forEach((snowman, index) => {
