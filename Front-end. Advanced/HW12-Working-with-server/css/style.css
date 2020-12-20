@@ -4,7 +4,7 @@
   top: 0;
   right: 0;
   bottom: 0;
-  background: url(../img/bg/bg-loader.jpg);
+  background: url(../img/bg/bg-loader.jpg) center center fixed;
   background-position: center;
   background-repeat: no-repeat;
   z-index: 1001;

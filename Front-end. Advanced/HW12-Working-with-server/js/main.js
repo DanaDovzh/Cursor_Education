@@ -123,29 +123,23 @@ function createTable() {
   gender.innerHTML = "Gender";
 };
 
-btnForInfo.addEventListener("click", () => {
-  const epizodValue = +epizod.value;
-  body.classList.remove('loaded');
-  body.classList.add('loaded_hiding');
-  loaded();
-  placePlanets.style.display = "none";
-  placeCharecters.style.display = "block";
-  body.classList.remove("bg-for-planet");
-  body.classList.add("bg-focharecters");
-  thead.innerHTML = "";
-  tbody.innerHTML = "";
-  createTable();
-
-  fetch(`http://swapi.dev/api/films/${epizodValue}/`)
-    .then((response) => {
-      return response.json();
-    })
+btnForInfo.addEventListener("click", function () {
+  fetch(`http://swapi.dev/api/films/${+epizod.value}/`)
+    .then((response) => response.json())
     .then((data) => {
-      data.characters.forEach(url => {
+      body.classList.remove('loaded');
+      body.classList.add('loaded_hiding');
+      loaded();
+      placePlanets.style.display = "none";
+      placeCharecters.style.display = "block";
+      body.classList.remove("bg-for-planet");
+      body.classList.add("bg-focharecters");
+      thead.innerHTML = "";
+      tbody.innerHTML = "";
+      createTable();
+      data.characters.map(url => {
         fetch(url)
-          .then((response) => {
-            return response.json();
-          })
+          .then((response) => response.json())
           .then((character) => {
             const tIcon = document.createElement("td");
             const tName = document.createElement("td");
@@ -153,8 +147,7 @@ btnForInfo.addEventListener("click", () => {
             const tGender = document.createElement("td");
             const info = [character.name, character.birth_year, character.gender];
             const imgIcon = document.createElement("img");
-            let row;
-            row = document.createElement("tr");
+            let row = document.createElement("tr");
             tbody.append(row);
             imgIcon.src = characters[character.name];
             imgIcon.classList.add("avatar");
@@ -171,27 +164,27 @@ btnForInfo.addEventListener("click", () => {
             (info[1] === "unknown") ? tBirth.innerHTML = "-" : tBirth.innerHTML = info[1];
 
             tName.innerHTML = info[0];
-            row.appendChild(tIcon);
-            row.appendChild(tName);
-            row.appendChild(tBirth);
-            row.appendChild(tGender);
+            row.append(tIcon);
+            row.append(tName);
+            row.append(tBirth);
+            row.append(tGender);
           })
       })
     })
 });
 
-planets.addEventListener("click", () => {
-  btnNextPage.disabled = false;
-  placePlanets.style.display = "block";
-  placeCharecters.style.display = "none";
-  placePlanets.innerHTML = "";
-  body.classList.add("bg-for-planet");
-  body.classList.remove("bg-focharecters");
+planets.addEventListener("click", function () {
   fetch('https://swapi.dev/api/planets/')
     .then((response) => {
       return response.json();
     })
     .then((planetList) => {
+      btnNextPage.disabled = false;
+      placePlanets.style.display = "block";
+      placeCharecters.style.display = "none";
+      placePlanets.innerHTML = "";
+      body.classList.add("bg-for-planet");
+      body.classList.remove("bg-focharecters");
       const list = document.createElement("ul");
 
       placePlanets.append(list);
@@ -201,10 +194,10 @@ planets.addEventListener("click", () => {
         item.innerHTML = planetList.results[i].name;
         item.style.listStyleImage = `url(img/1.ico)`;
         list.append(item);
-      }
+      };
     })
 });
 
 btnNextPage.addEventListener("click", () => {
   window.location.href = "planets.html"
-})
+});
