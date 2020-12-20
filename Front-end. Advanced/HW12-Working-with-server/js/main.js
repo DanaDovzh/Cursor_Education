@@ -124,12 +124,13 @@ function createTable() {
 };
 
 btnForInfo.addEventListener("click", function () {
+  body.classList.remove('loaded');
+      body.classList.add('loaded_hiding');
+      loaded();
   fetch(`http://swapi.dev/api/films/${+epizod.value}/`)
     .then((response) => response.json())
     .then((data) => {
-      body.classList.remove('loaded');
-      body.classList.add('loaded_hiding');
-      loaded();
+      
       placePlanets.style.display = "none";
       placeCharecters.style.display = "block";
       body.classList.remove("bg-for-planet");
