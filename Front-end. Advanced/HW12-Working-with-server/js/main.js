@@ -1,5 +1,4 @@
 const TIME_LOADED = 1500;
-let urlPlanets = 'https://swapi.dev/api/planets/';
 const btnForInfo = document.querySelector("#t-characters");
 const tbody = document.querySelector("tbody");
 const thead = document.querySelector("thead");
@@ -126,7 +125,6 @@ function createTable() {
 
 btnForInfo.addEventListener("click", () => {
   const epizodValue = +epizod.value;
-
   body.classList.remove('loaded');
   body.classList.add('loaded_hiding');
   loaded();
@@ -144,7 +142,6 @@ btnForInfo.addEventListener("click", () => {
     })
     .then((data) => {
       data.characters.forEach(url => {
-        console.log(url);
         fetch(url)
           .then((response) => {
             return response.json();
@@ -190,13 +187,13 @@ planets.addEventListener("click", () => {
   placePlanets.innerHTML = "";
   body.classList.add("bg-for-planet");
   body.classList.remove("bg-focharecters");
-  fetch(urlPlanets)
+  fetch('https://swapi.dev/api/planets/')
     .then((response) => {
       return response.json();
     })
     .then((planetList) => {
       const list = document.createElement("ul");
-      console.log(planetList);
+
       placePlanets.append(list);
       for (let i = 0; i < planetList.results.length; i++) {
         const item = document.createElement("li");
@@ -210,10 +207,4 @@ planets.addEventListener("click", () => {
 
 btnNextPage.addEventListener("click", () => {
   window.location.href = "planets.html"
-})
-
-const btnTranslate = document.querySelector("#translate");
-btnTranslate.addEventListener("click", () => {
-  urlPlanets += "?format=wookiee";
-  console.log(urlPlanets);
 })

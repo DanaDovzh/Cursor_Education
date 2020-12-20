@@ -2,7 +2,7 @@ const btnPreviousPage = document.querySelector("#back-btn");
 const placeListPlanets = document.querySelector("#list-planets");
 const rowPlanets = document.querySelectorAll(".planets");
 
-function showPlanets () {
+function showPlanets() {
     let i = 0;
     let cntRow = 0;
     let newPlanet = JSON.parse(localStorage.getItem(`planet ${i}`));
@@ -15,16 +15,15 @@ function showPlanets () {
             } else {
                 const item = document.createElement("div");
                 const imgItem = document.createElement("img");
-               
-                imgItem.src = `img/${newPlanet.replace( /\s/g, "")}.png`;
+
+                imgItem.src = `img/${newPlanet.replace(/\s/g, "")}.png`;
                 item.innerHTML = `${newPlanet}`;
                 rowPlanets[cntRow].append(item);
                 imgItem.classList.add("planet-img");
                 item.append(imgItem);
                 cntRow++;
-            }           
+            }
             i++;
-            console.log(newPlanet);
             newPlanet = JSON.parse(localStorage.getItem(`planet ${i}`));
         }
     }
