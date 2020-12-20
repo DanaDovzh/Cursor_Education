@@ -1,4 +1,5 @@
 const TIME_LOADED = 1500;
+const COLUMN_FOR_INFO = 4;
 const btnForInfo = document.querySelector("#t-characters");
 const tbody = document.querySelector("tbody");
 const thead = document.querySelector("thead");
@@ -106,21 +107,15 @@ function loaded (time = TIME_LOADED) {
 loaded (1000);
 function createTable() { 
   const row = document.createElement("tr");
-  const avatar = document.createElement("th");
-  const fullName = document.createElement("th");
-  const dateBirth = document.createElement("th");
-  const gender = document.createElement("th");
-
+  const arrayTh = Array(COLUMN_FOR_INFO).fill(1).map(el => document.createElement("th"));
   thead.innerHTML = "";
   thead.append(row);
-  row.appendChild(avatar);
-  row.appendChild(fullName);
-  row.appendChild(dateBirth);
-  row.appendChild(gender);
-
-  fullName.innerHTML = "Full name";
-  dateBirth.innerHTML = "Date of birth";
-  gender.innerHTML = "Gender";
+  arrayTh.forEach((el, index) => {
+    row.appendChild(arrayTh[index]);
+  });
+  arrayTh[1].innerHTML = "Full name";
+  arrayTh[2].innerHTML = "Date of birth";
+  arrayTh[3].innerHTML = "Gender";
 };
 
 btnForInfo.addEventListener("click", function () {
@@ -142,33 +137,28 @@ btnForInfo.addEventListener("click", function () {
         fetch(url)
           .then((response) => response.json())
           .then((character) => {
-            const tIcon = document.createElement("td");
-            const tName = document.createElement("td");
-            const tBirth = document.createElement("td");
-            const tGender = document.createElement("td");
+            const arrayInfo = Array(COLUMN_FOR_INFO).fill(1).map(el => document.createElement("td"));
             const info = [character.name, character.birth_year, character.gender];
             const imgIcon = document.createElement("img");
             let row = document.createElement("tr");
             tbody.append(row);
             imgIcon.src = characters[character.name];
             imgIcon.classList.add("avatar");
-            tIcon.append(imgIcon);
+            arrayInfo[0].append(imgIcon);
             if (info[2] === "n/a" || info[2] === "none") {
-              tGender.innerHTML = " - ";
+              arrayInfo[3].innerHTML = " - ";
             } else {
               const imgGender = document.createElement("img");
               imgGender.src = `img/${character.gender}.svg`;
               imgGender.classList.add("table__icon");
-              tGender.append(imgGender);
-            }
+              arrayInfo[3].append(imgGender);
+            };
 
-            (info[1] === "unknown") ? tBirth.innerHTML = "-" : tBirth.innerHTML = info[1];
-
-            tName.innerHTML = info[0];
-            row.append(tIcon);
-            row.append(tName);
-            row.append(tBirth);
-            row.append(tGender);
+            arrayInfo[2].innerHTML = (info[1] === "unknown") ? "-" : info[1];
+            arrayInfo[1].innerHTML = info[0];
+            arrayInfo.forEach((el, index) => {
+              row.append(arrayInfo[index]);
+            });
           })
       })
     })
