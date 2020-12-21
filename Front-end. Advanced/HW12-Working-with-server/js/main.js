@@ -9,6 +9,7 @@ const epizod = document.querySelector("#epizod");
 const placePlanets = document.querySelector("#planets__list");
 const placeCharecters = document.querySelector(".table-character");
 const btnNextPage = document.querySelector("#next-btn");
+const btnTranslate = document.querySelector("#translate");
 const body = document.body;
 const characters = {
   "Luke Skywalker": "img/lukeskywalker.png",
@@ -96,16 +97,16 @@ const characters = {
   "Grievous": "img/Grievous.png"
 };
 
-function loaded (time = TIME_LOADED) {
+function loaded(time = TIME_LOADED) {
   body.classList.add('loaded_hiding');
   window.setTimeout(function () {
     body.classList.add('loaded');
     body.classList.remove('loaded_hiding');
-}, time);
+  }, time);
 };
 
-loaded (1000);
-function createTable() { 
+loaded(1000);
+function createTable() {
   const row = document.createElement("tr");
   const arrayTh = Array(COLUMN_FOR_INFO).fill(1).map(el => document.createElement("th"));
   thead.innerHTML = "";
@@ -120,12 +121,12 @@ function createTable() {
 
 btnForInfo.addEventListener("click", function () {
   body.classList.remove('loaded');
-      body.classList.add('loaded_hiding');
-      loaded();
+  body.classList.add('loaded_hiding');
+  loaded();
   fetch(`http://swapi.dev/api/films/${+epizod.value}/`)
     .then((response) => response.json())
     .then((data) => {
-      
+
       placePlanets.style.display = "none";
       placeCharecters.style.display = "block";
       body.classList.remove("bg-for-planet");
@@ -189,30 +190,30 @@ btnNextPage.addEventListener("click", () => {
 });
 
 
-document.querySelector("#translate").addEventListener("click", () => {
+btnTranslate.addEventListener("click", () => {
   fetch('https://swapi.dev/api/planets/?format=wookiee')
     .then(response => response.text())
     .then(planets => {
       console.log(planets);
       createPlaceForPlanets();
-      plenats =JSON.parse(planets.replace(/whhuanan/g, '"whhuanan"'));
-        const list = document.createElement("ul");
-        placePlanets.append(list);
-        for (let i = 0; i < plenats.rcwochuanaoc.length; i++) {
-          const item = document.createElement("li");
-          item.innerHTML = plenats.rcwochuanaoc[i].whrascwo;
-          localStorage.setItem(`planet ${i}`, JSON.stringify(plenats.rcwochuanaoc[i].whrascwo));
-          item.style.listStyleImage = `url(img/2.ico)`;
-          list.append(item);
+      plenats = JSON.parse(planets.replace(/whhuanan/g, '"whhuanan"'));
+      const list = document.createElement("ul");
+      placePlanets.append(list);
+      for (let i = 0; i < plenats.rcwochuanaoc.length; i++) {
+        const item = document.createElement("li");
+        item.innerHTML = plenats.rcwochuanaoc[i].whrascwo;
+        localStorage.setItem(`planet ${i}`, JSON.stringify(plenats.rcwochuanaoc[i].whrascwo));
+        item.style.listStyleImage = `url(img/2.ico)`;
+        list.append(item);
       }
-      })
-  });
+    })
+});
 
-  function createPlaceForPlanets () {
-    btnNextPage.disabled = false;
-    placePlanets.style.display = "block";
-    placeCharecters.style.display = "none";
-    placePlanets.innerHTML = "";
-    body.classList.add("bg-for-planet");
-    body.classList.remove("bg-focharecters");
-  };
+function createPlaceForPlanets() {
+  btnNextPage.disabled = false;
+  placePlanets.style.display = "block";
+  placeCharecters.style.display = "none";
+  placePlanets.innerHTML = "";
+  body.classList.add("bg-for-planet");
+  body.classList.remove("bg-focharecters");
+};
