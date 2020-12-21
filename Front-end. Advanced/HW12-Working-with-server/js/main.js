@@ -170,14 +170,8 @@ planets.addEventListener("click", function () {
       return response.json();
     })
     .then((planetList) => {
-      btnNextPage.disabled = false;
-      placePlanets.style.display = "block";
-      placeCharecters.style.display = "none";
-      placePlanets.innerHTML = "";
-      body.classList.add("bg-for-planet");
-      body.classList.remove("bg-focharecters");
+      createPlaceForPlanets();
       const list = document.createElement("ul");
-
       placePlanets.append(list);
       for (let i = 0; i < planetList.results.length; i++) {
         const item = document.createElement("li");
@@ -189,6 +183,36 @@ planets.addEventListener("click", function () {
     })
 });
 
+
 btnNextPage.addEventListener("click", () => {
   window.location.href = "planets.html"
 });
+
+
+document.querySelector("#translate").addEventListener("click", () => {
+  fetch('https://swapi.dev/api/planets/?format=wookiee')
+    .then(response => response.text())
+    .then(planets => {
+      console.log(planets);
+      createPlaceForPlanets();
+      plenats =JSON.parse(planets.replace(/whhuanan/g, '"whhuanan"'));
+        const list = document.createElement("ul");
+        placePlanets.append(list);
+        for (let i = 0; i < plenats.rcwochuanaoc.length; i++) {
+          const item = document.createElement("li");
+          item.innerHTML = plenats.rcwochuanaoc[i].whrascwo;
+          localStorage.setItem(`planet ${i}`, JSON.stringify(plenats.rcwochuanaoc[i].whrascwo));
+          item.style.listStyleImage = `url(img/2.ico)`;
+          list.append(item);
+      }
+      })
+  });
+
+  function createPlaceForPlanets () {
+    btnNextPage.disabled = false;
+    placePlanets.style.display = "block";
+    placeCharecters.style.display = "none";
+    placePlanets.innerHTML = "";
+    body.classList.add("bg-for-planet");
+    body.classList.remove("bg-focharecters");
+  };

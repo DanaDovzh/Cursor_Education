@@ -2,6 +2,7 @@ const btnPreviousPage = document.querySelector("#back-btn");
 const placeListPlanets = document.querySelector("#list-planets");
 const rowPlanets = document.querySelectorAll(".planets");
 
+
 function showPlanets() {
     let i = 0;
     let cntRow = 0;
@@ -16,7 +17,7 @@ function showPlanets() {
                 const item = document.createElement("div");
                 const imgItem = document.createElement("img");
 
-                imgItem.src = `img/${newPlanet.replace(/\s/g, "")}.png`;
+                imgItem.src = `img/planets/${newPlanet.substr(0, 1)}.png`;
                 item.innerHTML = `${newPlanet}`;
                 rowPlanets[cntRow].append(item);
                 imgItem.classList.add("planet-img");
