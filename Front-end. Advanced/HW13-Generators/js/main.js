@@ -1,4 +1,3 @@
-const main = document.querySelector(".wrapper");
 const NUMBER_SWEETS = 10;
 const numberSweets = document.querySelector("#numbers-sweets");
 const screenWidth = window.innerWidth - 300;

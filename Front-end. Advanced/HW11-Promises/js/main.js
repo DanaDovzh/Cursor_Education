@@ -1,11 +1,11 @@
-const TIME_LOADED = 2500;
+const DELAY_LOADED = 2500;
 const bodyHTML = document.body;
 
 bodyHTML.classList.add('loaded_hiding');
 window.setTimeout(function () {
   bodyHTML.classList.add('loaded');
   bodyHTML.classList.remove('loaded_hiding');
-}, TIME_LOADED);
+}, DELAY_LOADED);
 
 const thoughtHeros = document.querySelectorAll(".thought");
 const TIME_FOR_PROMISE = 200;
@@ -13,8 +13,8 @@ const SMILE = ['^_^', '(╯°□°）╯', 'ヾ(´〇`)ﾉ♪♪♪' , '＼( °�
 const getRandomNumber = (min = 1, max = 10) => Math.floor(Math.random() * (max - min)) + min;
 
 const makeChineseWord = () => {
-    let newDate = Date.now();
-    let sign = String.fromCharCode(newDate.toString().slice(-5));
+    const newDate = Date.now();
+    const sign = String.fromCharCode(newDate.toString().slice(-5));
     return sign;
 }
 
@@ -45,13 +45,13 @@ async function makeCharacter(lengthWord) {
 
 async function fillThoughts () {
 try {
-   for (let i =0; i < thoughtHeros.length; i ++) {
+    thoughtHeros.forEach(async (e, i) => {
       thoughtHeros[i].innerHTML = await makeCharacter(getRandomNumber());
-    }
+    })
   }
   catch {
     console.log("Error");
   }
 }
 fillThoughts();
-setInterval(fillThoughts, TIME_FOR_PROMISE * thoughtHeros.length);
+setInterval(fillThoughts, TIME_FOR_PROMISE * thoughtHeros.length**2);
