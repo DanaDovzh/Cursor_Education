@@ -68,6 +68,7 @@ sweetsPlace.addEventListener("click", (event) => {
 })
 
 btnUpFontSize.addEventListener("click", () => {
+    console.log(changeFontSize.next("+").value);
     blockTextSmileRules.style.fontSize = `${changeFontSize.next("+").value}px`;
 })
 
