@@ -123,10 +123,8 @@ btnForInfo.addEventListener("click", function () {
   body.classList.remove('loaded');
   body.classList.add('loaded_hiding');
   loaded();
-  fetch(`http://swapi.dev/api/films/${+epizod.value}/`)
-    .then((response) => response.json())
+  axios.get(`http://swapi.dev/api/films/${+epizod.value}/`)
     .then((data) => {
-
       placePlanets.style.display = "none";
       placeCharecters.style.display = "block";
       body.classList.remove("bg-for-planet");
@@ -134,23 +132,24 @@ btnForInfo.addEventListener("click", function () {
       thead.innerHTML = "";
       tbody.innerHTML = "";
       createTable();
-      data.characters.map(url => {
-        fetch(url)
-          .then((response) => response.json())
+      data.data.characters.map(url => {
+        axios.get(url)
           .then((character) => {
+            console.log(character.data);
             const arrayInfo = Array(COLUMN_FOR_INFO).fill(1).map(el => document.createElement("td"));
-            const info = [character.name, character.birth_year, character.gender];
+            const {name, birth_year, gender} = character.data;
+            const info = [name, birth_year, gender];
             const imgIcon = document.createElement("img");
             let row = document.createElement("tr");
             tbody.append(row);
-            imgIcon.src = characters[character.name];
+            imgIcon.src = characters[info[0]];
             imgIcon.classList.add("avatar");
             arrayInfo[0].append(imgIcon);
             if (info[2] === "n/a" || info[2] === "none") {
               arrayInfo[3].innerHTML = " - ";
             } else {
               const imgGender = document.createElement("img");
-              imgGender.src = `img/${character.gender}.svg`;
+              imgGender.src = `img/${info[2]}.svg`;
               imgGender.classList.add("table__icon");
               arrayInfo[3].append(imgGender);
             };
