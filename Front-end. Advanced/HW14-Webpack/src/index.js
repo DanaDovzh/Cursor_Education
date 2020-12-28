@@ -50,25 +50,30 @@ document.addEventListener('keydown', (event) => {
     })
     console.log(letterBlocks);
     if (keyName.startsWith("Key")) {
-        const activeLetter = document.querySelector(`#${enterLetter}`)
+        let activeLetter;
         activeLetter.style.color = "#1e7e34";
         switch (enterLetter) {
             case "O":
+                activeLetter = document.querySelector(`#${enterLetter}`);
                 audio.pause();
                 playSound(audio, O);
                 break;
             case "S":
+                activeLetter = document.querySelector(`#${enterLetter}`);
                 audio.pause();
                 playSound(audio, S);
                 break;
             case "B":
+                activeLetter = document.querySelector(`#${enterLetter}`);
                 audio.pause();
                 playSound(audio, B);
                 break;
             case "N":
+                activeLetter = document.querySelector(`#${enterLetter}`);
                 playSound(audio, N);
                 break;
             case "H":
+                activeLetter = document.querySelector(`#${enterLetter}`);
                 playSound(audio, H);
                 break;
             default:
