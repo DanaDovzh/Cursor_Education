@@ -1,0 +1,107 @@
+@import "fonts.css";
+@import "btn.css";
+@import "snow.css";
+
+input, input:active {
+    outline: none;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-image: url('../img/bg.jpg');
+    background-repeat: no-repeat;
+}
+.wrapper {
+    padding: 50px 200px;
+    flex: 1 0 auto;
+}
+.carousel {
+    padding: 50px;
+}
+.carousel-inner {
+    height: 100%;
+}
+.carousel-item {
+    border: 2px dashed rgb(238, 238, 238);
+    box-shadow: inset 0px 0px 41px 14px rgba(216, 216, 216, 0.78);
+    border-radius: 25px;
+    height: 350px;
+}
+
+.card__contect {
+    margin-top: 20%;
+}
+.card__contect--chBg {
+    margin: 20%;
+}
+h5 {
+    font-family: 'Conv_kr';
+    font-size: 42px;
+    text-shadow: 4px -1px 2px rgba(0,0,0,0.6);
+}
+.letter-sound {
+    color: #ffffff;
+    font-size: 42px;
+    font-family: 'Conv_Meows-VGWjy';
+    margin: 3px;
+}
+.list-carusel {
+    position: relative;
+}
+
+.active.list-carusel::before {
+    content: "";
+    position: absolute;
+    width: 42px;
+    height: 30px;
+    background: url('../img/cat.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: 0px;
+    top: -25px;
+}
+
+
+.carousel-indicators {
+    bottom: -10px;
+}
+.answer {
+    color: #d4a8a8;
+    font-size: 22px;
+    font-family: 'Conv_Meows-VGWjy';
+    margin-top: 10px;
+}
+input[type="text"] {
+    font-family: 'Conv_Meows-VGWjy';
+    font-size: 20px;
+    width: 45%;
+    border-radius: 15px;
+    border: none;
+    padding: 4px;
+    padding-left: 10px;
+}
+
+input[type="text"]:focus {
+    box-shadow: 13px 12px 22px 1px rgba(255, 49, 49, 0.78);
+}
+
+form {
+    display: flex;
+    justify-content: space-evenly;
+}
+footer {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.link-git {
+    font-family: 'Conv_kr';
+    color:rgb(238, 238, 238);
+    font-size: 40px;
+}

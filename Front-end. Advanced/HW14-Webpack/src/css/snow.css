@@ -1,0 +1,32 @@
+.snow-blocks{
+    position: relative;
+    overflow: hidden;
+    background-size:cover;
+}
+
+.first-layer-snow{
+    background-image: url('../img/snow1.png');
+    position:absolute;
+    width: 100%;
+    height:600px;
+    animation: first-layer 18s linear infinite;    
+ }
+
+ .second-layer-snow{
+    background-image: url('../img/snow2.png'), url('../img/snow3.png');
+    animation: second-layer 10s linear infinite;
+    width: 100%;
+    height:600px;
+    position:absolute;
+}
+
+@keyframes second-layer{
+    0%{background-position: 0 0, 0 0;}
+    100%{background-position: 10% 600px, 10% 600px;}
+}
+@keyframes first-layer {
+    from {background-position: 0 -300px;}
+    20% {background-position: 20% -100px;}
+    40% {background-position: 30% 100px;}
+    to {background-position: 20% 700px;}
+}

@@ -1,0 +1,15 @@
+@font-face {
+	font-family: 'Conv_Meows-VGWjy';
+	src: url('../fonts/Meows-VGWjy.eot');
+	src: local('☺'), url('../fonts/Meows-VGWjy.woff') format('woff'), url('../fonts/Meows-VGWjy.ttf') format('truetype'), url('../fonts/Meows-VGWjy.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_kr';
+	src: url('../fonts/kr.eot');
+	src: local('☺'), url('../fonts/kr.woff') format('woff'), url('../fonts/kr.ttf') format('truetype'), url('../fonts/kr.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
