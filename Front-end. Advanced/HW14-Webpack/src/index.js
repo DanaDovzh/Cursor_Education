@@ -23,6 +23,12 @@ const answerChinese = document.querySelector("#answer-chinese");
 const audio = new Audio();
 const letterBlocks = document.querySelectorAll(".letter-sound");
 const textForPalindron = () => isPalyndrom(wordPalindrom.value) ? "is" : "is't";
+
+const activeLetterColor = (letter) => {
+    const activeLetter = document.querySelector(`#${letter}`);
+    activeLetter.style.color = "#1e7e34";
+}
+
 formPalindrom.addEventListener("submit", (event) => {
     answerPalindrom.innerHTML = `This word ${textForPalindron()} palindrom!`;
     event.preventDefault();
@@ -47,41 +53,45 @@ document.addEventListener('keydown', (event) => {
     const enterLetter = keyName[3];
     letterBlocks.forEach(element => {
         element.style.color = "#fff";
-    })
-    console.log(letterBlocks);
+    });
+   
     if (keyName.startsWith("Key")) {
-        let activeLetter;
-        activeLetter.style.color = "#1e7e34";
+        
         switch (enterLetter) {
             case "O":
-                activeLetter = document.querySelector(`#${enterLetter}`);
+                activeLetterColor(enterLetter);
                 audio.pause();
                 playSound(audio, O);
                 break;
             case "S":
-                activeLetter = document.querySelector(`#${enterLetter}`);
+                activeLetterColor(enterLetter);
                 audio.pause();
                 playSound(audio, S);
                 break;
             case "B":
-                activeLetter = document.querySelector(`#${enterLetter}`);
+                activeLetterColor(enterLetter);
                 audio.pause();
                 playSound(audio, B);
                 break;
             case "N":
-                activeLetter = document.querySelector(`#${enterLetter}`);
+                activeLetterColor(enterLetter);
+                audio.pause();
                 playSound(audio, N);
                 break;
             case "H":
-                activeLetter = document.querySelector(`#${enterLetter}`);
+                activeLetterColor(enterLetter);
+                audio.pause();
                 playSound(audio, H);
                 break;
             default:
+                audio.pause();
                 playSound(audio, other);
-
         };
+        
     };
 }, false);
+
+
 
 
 
