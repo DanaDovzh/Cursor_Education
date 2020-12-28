@@ -5,7 +5,10 @@
 input, input:active {
     outline: none;
 }
-
+button:focus {
+    border: none;
+    outline: none;
+}
 html, body {
     height: 100%;
 }
@@ -42,7 +45,7 @@ body {
 h5 {
     font-family: 'Conv_kr';
     font-size: 42px;
-    text-shadow: 4px -1px 2px rgba(0,0,0,0.6);
+    text-shadow: 4px -1px 2px rgb(20, 88, 10);
 }
 .letter-sound {
     color: #ffffff;
@@ -87,7 +90,7 @@ input[type="text"] {
 }
 
 input[type="text"]:focus {
-    box-shadow: 13px 12px 22px 1px rgba(255, 49, 49, 0.78);
+    box-shadow: 13px 12px 22px 1px rgba(60, 110, 2, 0.78);
 }
 
 form {
