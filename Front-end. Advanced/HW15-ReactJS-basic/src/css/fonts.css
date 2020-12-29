@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Acme';
+    src: url('../fonts/Acme-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'AdventPro';
+    src: url('../fonts/AdventPro-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'AdventPro';
+    src: url('../fonts/AdventPro-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'AdventPro';
+    src: url('../fonts/AdventPro-Medium.ttf') format('truetype');
+    font-weight: medium;
+}

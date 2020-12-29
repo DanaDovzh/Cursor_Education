@@ -1,0 +1,114 @@
+@import './fonts.css'
+@mixin iconBefore() 
+    content: ''
+    position: absolute
+    background-size: contain
+    width: 17px
+    height: 17px
+    top: 1px
+    left: -18px
+
+$context: 16
+$maxWidth: 1440
+
+@mixin adaptivFont($pcSize, $mobSize)
+    $addSize: $pcSize - $mobSize
+    $maxWidth: $maxWidth - 320
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
+.post
+    margin: 10px
+    display: flex
+    flex-direction: column
+    max-width: 45%
+    border-radius: 10px
+    padding: 10px
+    box-shadow: 2px 0px 48px 11px rgba(255, 255, 255, 0.6) inset
+    @media (max-width: 475px)
+        max-width: 100%
+        
+    &__heading
+        font-family: 'Acme'
+        @include adaptivFont(20, 14)
+        display: inherit
+        align-items: center
+        &--photo
+            width: 50px
+            height: 50px
+            border-radius: 50%
+        &--info
+            margin-left: 10px
+        &--content
+            font-family: 'AdventPro'
+            letter-spacing: 2px
+        &--personal-info
+            display: flex
+            align-items: baseline
+            position: relative
+            &-check
+                position: relative
+                margin-right: 20px
+                &::after
+                    content: ''
+                    position: absolute
+                    background-size: contain
+                    width: 17px
+                    height: 17px
+                    top: 3px
+                    right: -18px
+                    background-image: url(../img/icons/check.svg)
+            p+p
+                margin: 0 5px
+    &__body
+        width: 100%
+        margin: 5px 0
+        &--content
+            width: 100%
+            border-radius: 20px
+    &__footer
+        display: flex
+        justify-content: space-around
+        color: #111
+        @include adaptivFont(20, 14)
+        &--comments
+            position: relative
+            &::before
+                @include iconBefore()
+                background-image: url(../img/icons/comments.svg)
+        &--likes
+            position: relative
+            &::before
+                @include iconBefore()
+                
+        &--share
+            position: relative
+            &::before
+                @include iconBefore()
+                background-image: url(../img/icons/share.svg)
+        &--cloud
+            position: relative
+            &::before
+                @include iconBefore()
+                background-image: url(../img/icons/cloud.svg)
+.unlike
+    &::before
+        background-image: url(../img/icons/like.svg)
+.liked
+    &::before
+        background-image: url(../img/icons/liked.svg)
+ 
+.nickname 
+    @include adaptivFont(16, 12)
+    color: #5c5c5c      
+
+.date
+    @include adaptivFont(18, 13)
+    color: #363636
+.post
+    &-action
+        cursor: pointer
+        font-family: 'AdventPro'
+        letter-spacing: 1px
+        &:hover
+            font-weight: 700
+        &:focus
+            
