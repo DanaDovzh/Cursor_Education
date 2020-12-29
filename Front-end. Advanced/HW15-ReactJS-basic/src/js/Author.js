@@ -24,6 +24,10 @@ class newAuthor {
     addLike(like = 1) {
       this.likes += like;
     }
+
+    showLikes() {
+      return this.likes;
+    }
   };
 
   export default newAuthor;

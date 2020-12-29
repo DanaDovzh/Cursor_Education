@@ -11,13 +11,12 @@ const Walt = new newAuthor("Walt Disney", "@waltDisney", "Some people are worth 
 const Mark = new newAuthor("Mark Zuckerberg", "@finkd", "Move fast and break things. Unless you are breaking stuff, you are not moving fast enough!", secondPhoto,
 postSecond);
 const Joan = new newAuthor("J.K. Rowling", "@jk_rowling", "Every human life is worth the same, and worth saving.", thirdPhoto, postThird);
-console.log(Walt);
 function App() {
   return (
     <div className = "wrapper">
-      <Post {...Walt} />
-      <Post {...Mark} />
-      <Post {...Joan} />
+      <Post props = {Walt} />
+      <Post props = {Mark} />
+      <Post props = {Joan} />
     </div>
   );
 }
