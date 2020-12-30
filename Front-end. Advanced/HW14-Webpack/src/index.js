@@ -11,6 +11,7 @@ import B from './audio/B.mp3';
 import N from './audio/N.mp3';
 import H from './audio/H.mp3';
 import other from './audio/other.mp3';
+
 const formPalindrom = document.querySelector("#form-p");
 const formCombinations = document.querySelector("#form-c");
 const answerPalindrom = document.querySelector("#answer-palindrome");
@@ -89,7 +90,7 @@ document.addEventListener('keydown', (event) => {
         };
         
     };
-}, false);
+});
 
 
 
