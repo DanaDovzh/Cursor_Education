@@ -19,4 +19,6 @@
 | 11  |  "Promises"  | [Link](https://danadovzh.github.io/Cursor_Education/Front-end.%20Advanced/HW11-Promises/index.html) | [Directory](https://github.com/DanaDovzh/Cursor_Education/tree/master/Front-end.%20Advanced/HW11-Promises) |
 | 12  |  "Робота з сервером"  | [Link](https://danadovzh.github.io/Cursor_Education/Front-end.%20Advanced/HW12-Working-with-server/index.html) | [Directory](https://github.com/DanaDovzh/Cursor_Education/tree/master/Front-end.%20Advanced/HW12-Working-with-server) |
 | 13  |  "Генератори"  | [Link](https://danadovzh.github.io/Cursor_Education/Front-end.%20Advanced/HW13-Generators/index.html) | [Directory](https://github.com/DanaDovzh/Cursor_Education/tree/master/Front-end.%20Advanced/HW13-Generators) |
-| 14  |  "Webpack"  | [Link](https://danadovzh.github.io/Cursor_Education/Front-end.%20Advanced/HW14-Webpack/dist/index.html) | [Directory]((https://github.com/DanaDovzh/Cursor_Education/tree/master/Front-end.%20Advanced/HW14-Webpack) |
+| 14  |  "Webpack"  | [Link](https://danadovzh.github.io/Cursor_Education/Front-end.%20Advanced/HW14-Webpack/dist/index.html) | [Directory](https://github.com/DanaDovzh/Cursor_Education/tree/master/Front-end.%20Advanced/HW14-Webpack) |
+| 15  |  "Інтро до React"  | [Link](https://reactjspost.netlify.app/) | [Directory](https://github.com/DanaDovzh/Intro-ReactJS-Post) |
+| 16  |  "Класові компоненти"  | [Link](https://contactsbookcursor.netlify.app/) | [Directory](https://github.com/DanaDovzh/ReactJS-Contacts) |
