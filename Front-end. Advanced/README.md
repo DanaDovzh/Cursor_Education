@@ -22,3 +22,7 @@
 | 14  |  "Webpack"  | [Link](https://danadovzh.github.io/Cursor_Education/Front-end.%20Advanced/HW14-Webpack/dist/index.html) | [Directory](https://github.com/DanaDovzh/Cursor_Education/tree/master/Front-end.%20Advanced/HW14-Webpack) |
 | 15  |  "Інтро до React"  | [Link](https://reactjspost.netlify.app/) | [Directory](https://github.com/DanaDovzh/Intro-ReactJS-Post) |
 | 16  |  "Класові компоненти"  | [Link](https://contactsbookcursor.netlify.app/) | [Directory](https://github.com/DanaDovzh/ReactJS-Contacts) |
+| 17  |  "Методи життєвого циклу та хуки"  | [Link](https://react-timer-cursor.netlify.app/) | [Directory](https://github.com/DanaDovzh/ReactJS-Timer/tree/master) |
+| 18  |  "Поняття SPA. Навігація"  | [Link](https://mini-app-router.netlify.app/) | [Directory](https://github.com/DanaDovzh/React-Router) |
+| 19  |  "Підходи до стилізації. Styled Components"  | [Link](https://stoic-hoover-a5a425.netlify.app/) | [Directory](https://github.com/DanaDovzh/React-Styled-Components) |
+
