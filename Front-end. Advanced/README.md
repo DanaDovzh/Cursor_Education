@@ -25,4 +25,7 @@
 | 17  |  "Методи життєвого циклу та хуки"  | [Link](https://react-timer-cursor.netlify.app/) | [Directory](https://github.com/DanaDovzh/ReactJS-Timer/tree/master) |
 | 18  |  "Поняття SPA. Навігація"  | [Link](https://mini-app-router.netlify.app/) | [Directory](https://github.com/DanaDovzh/React-Router) |
 | 19  |  "Підходи до стилізації. Styled Components"  | [Link](https://stoic-hoover-a5a425.netlify.app/) | [Directory](https://github.com/DanaDovzh/React-Styled-Components) |
+| 20  |  "Redux"  | [Link](https://post-redux.netlify.app/) | [Directory](https://github.com/DanaDovzh/ReactJS-Redux) |
+| 21  |  "Redux-Thunk"  | [Link](https://unruffled-ride-78bad9.netlify.app/users-page) | [Directory](https://github.com/DanaDovzh/React-Redux-Thunk) |
+
 
